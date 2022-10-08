@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/risingembeddedmx/static/css/main.073c9b0a.css",
+    "main.js": "/risingembeddedmx/static/js/main.5c45287d.js",
+    "static/js/787.8c571df9.chunk.js": "/risingembeddedmx/static/js/787.8c571df9.chunk.js",
+    "static/media/logo.svg": "/risingembeddedmx/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/risingembeddedmx/index.html",
+    "main.073c9b0a.css.map": "/risingembeddedmx/static/css/main.073c9b0a.css.map",
+    "main.5c45287d.js.map": "/risingembeddedmx/static/js/main.5c45287d.js.map",
+    "787.8c571df9.chunk.js.map": "/risingembeddedmx/static/js/787.8c571df9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5c45287d.js"
+  ]
+}
