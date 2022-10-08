@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Rising embedded está en construcción, La paciencia es una virtud
         </p>
         <a
           className="App-link"
