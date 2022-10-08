@@ -9,6 +9,9 @@ function App() {
         <p>
           Rising embedded está en construcción, La paciencia es una virtud
         </p>
+        <p>
+          Algo esta pasando...
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
