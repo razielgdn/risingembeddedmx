@@ -4,8 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header">        
         <p>
           Rising embedded está en construcción, La paciencia es una virtud
         </p>
