@@ -14,12 +14,6 @@ bundle update
 # Get the presumed value for the baseurl (this folder name)
 var=$(pwd)
 BASEURL="$(basename $PWD)"
-
-#mkdir ../siteToUpdate
-#cd ../siteToUpdate/
-#git clone -b site git@github.com:razielgdn/risingembeddedmx.git .
-#cd ../risingembeddedmx/
-# Done! Provide informative text for next steps
 echo ""
 echo "\033[1;32mDone configuring your Jekyll site! Here are the next steps:\033[00m"
 echo "1. Modify the baseurl and url in your _config.yml file:"

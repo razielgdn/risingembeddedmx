@@ -157,8 +157,8 @@ exclude:
   - package-lock.json
   - package.json
   - Dockerfile
-  - publish.sh
-  - run-once.sh
+  - r*.sh  
+  - p*.sh
   - /node_modules
   - /screenshots
   - /test
