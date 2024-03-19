@@ -1,3 +1,1 @@
----
----
-{%- include search-providers/default/search-data.js -%}
+window.TEXT_SEARCH_DATA={'posts':[{'title':"Welcome to the jungle!",'url':"/risingembeddedmx/post/2024/03/16/first-post.html"},{'title':"Openblt to STM Nucleo-64",'url':"/risingembeddedmx/post/2024/03/18/star-with-openblt-project.html"}],'projects':[{'title':"Contents",'url':"/risingembeddedmx/projects/en/menu"},{'title':"First steps with openblt",'url':"/risingembeddedmx/projects/en/openblt-start"},{'title':"OpenBlt migration",'url':"/risingembeddedmx/projects/en/open-blt"},{'title':"OpenBlt results",'url':"/risingembeddedmx/projects/en/openblt-results"}]};
