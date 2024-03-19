@@ -156,7 +156,9 @@ exclude:
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  - /docs
+  - Dockerfile
+  - publish.sh
+  - run-once.sh
   - /node_modules
   - /screenshots
   - /test
