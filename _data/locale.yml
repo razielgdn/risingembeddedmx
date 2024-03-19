@@ -19,7 +19,7 @@ en: &EN
   FOLLOW_US               : "Follow us on [NAME]."
   EMAIL_ME                : "Send me an Email."
   EMAIL_US                : "Send us an Email."
-  COPYRIGHT_DATES         : "2021"
+  COPYRIGHT_DATES         : "2024"
 
 en-GB:
   <<: *EN
@@ -32,12 +32,12 @@ en-AU:
 ## => Spanish
 ########################
 es: &ES
-  SUBSCRIBE               : "Suscribete"
-  READMORE                : "Saber mas"
+  SUBSCRIBE               : "Suscríbete"
+  READMORE                : "Saber más"
   SEARCH                  : "Busqueda"
   CANCEL                  : "Cancelar"
   VIEWS                   : "Vistas"
-  LAST_UPDATED            : "Mas reciente"
+  LAST_UPDATED            : "Más reciente"
   PREVIOUS                : "ANTERIOR"
   NEXT                    : "SIGUIENTE"
   ARTICLE_DATE_FORMAT     : "%b %d, %Y"
