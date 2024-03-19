@@ -1,0 +1,300 @@
+diff --git a/_config.yml b/_config.yml
+index f83a2f9..18c6916 100644
+--- a/_config.yml
++++ b/_config.yml
+@@ -11,9 +11,6 @@
+ #    |  |  \   --. /  .'.  \  |  |
+ #    `--'   `----''--'   '--' `--'
+ 
+-
+-
+-
+ ## => Site Settings
+ ##############################
+ text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+@@ -28,8 +25,8 @@ description: > # this means to ignore newlines until "Language & timezone"
+ 
+ ## => Language and Timezone
+ ##############################
+-lang: # the language of your site, default as "en"
+-timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
++lang: en # the language of your site, default as "en"
++timezone: America/Monterrey # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+ 
+ 
+ 
+@@ -110,7 +107,7 @@ sources: # bootcdn (default), unpkg
+ ## => Sharing
+ ##############################
+ sharing:
+-  provider: false # false (default), "addtoany", "addthis", "custom"
++  provider:  # false (default), "addtoany", "addthis", "custom"
+ 
+   ## AddThis
+   addthis:
+@@ -197,26 +194,59 @@ exclude:
+   - jekyll-text-theme.gemspec
+   - package-lock.json
+   - package.json
+-  - /docs
++  #- /projects
+   - /node_modules
+-  - /screenshots
+-  - /test
++  #- /screenshots
++  #- /test
+   - /vendor
+ 
++collections_dir: projects
++collections:
++  projects:
++    output: true
++  sample_page:
++    output: true
++  sample_articles:
++    output: true
++  sample_languages:
++    output: true
++
+ defaults:
+-  - scope:
++## home  
++  - scope: 
++    path: "/"
++    values:
++      articles:
++        exerpt_type: html
++ ## posts
++   - scope:
+       path: ""
+       type: posts
+     values:
+       layout: article
+       sharing: true
+       license: true
++      category: post
+       aside:
+         toc: true
+       show_edit_on_github: true
+       show_subscribe: true
+       pageview: true
+-
++      # lightbox: true
++## projects
++  - scope:
++      path: "_projects/en"
++    values:
++      layout: article
++      nav_key: projects
++      sidebar:
++        nav: projects-en
++      license: true
++      aside:
++        toc: true
++      show_edit_on_github: true
++      show_date: false
++      # lightbox: true
+ 
+ ## => Plugins
+ ##############################
+@@ -224,4 +254,4 @@ plugins:
+   - jekyll-feed
+   - jekyll-paginate
+   - jekyll-sitemap
+-  - jemoji
+\ No newline at end of file
++  - jemoji
+diff --git a/_data/authors.yml b/_data/authors.yml
+index e69de29..75aef27 100644
+--- a/_data/authors.yml
++++ b/_data/authors.yml
+@@ -0,0 +1,17 @@
++Octavio Guendulain:
++  name: Octavio Guendulain # your Name
++  url: https://razielgdn.github.io
++  avatar:  # your photo
++  bio: 
++  email: octaviorazielgdn@gmail.com
++  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
++  twitter   : l31zar.gdn # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
++  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
++  googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
++  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
++  medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
++  zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
++  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
++  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
++  github    : razielgdn # "user_name" the last part of your profile url, e.g. https://github.com/user_name
++  npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+diff --git a/_data/navigation.yml b/_data/navigation.yml
+index d63c1ea..0ec0cc1 100644
+--- a/_data/navigation.yml
++++ b/_data/navigation.yml
+@@ -1,27 +1,12 @@
+ header:
+-  - titles:
+-      # @start locale config
+-      en      : &EN       Archive
+-      en-GB   : *EN
+-      en-US   : *EN
+-      en-CA   : *EN
+-      en-AU   : *EN
+-      es      : &ES      Linea de tiempo 
+-      es-MX   : *ES 
+-  
+-      # @end locale config
+-    url: /archive.html
+-
+-  - titles:
+-      # @start locale config
+-      en      : &EN       About
+-      en-GB   : *EN
+-      en-US   : *EN
+-      en-CA   : *EN
+-      en-AU   : *EN
+-      es      : &ES      Acerca De
+-      es-MX   : *ES 
+-      # @end locale config
+-    url: /about
+-  - title: Blog
+-    url: /blog  
+\ No newline at end of file
++  - title:      Home
++    url:        
++  - title:      Projects
++    url:        /projects/en/quick-start
++    key:        projects      
++  - title:      Archive
++    url:        /archive
++  - title:      About
++    url:        /about
++  - title:      GitHub
++    url:        https://github.com/razielgdn/risingembeddedmx
+\ No newline at end of file
+diff --git a/about.md b/about.md
+index 8b4e0b2..ad19542 100644
+--- a/about.md
++++ b/about.md
+@@ -1,18 +1,7 @@
+ ---
+ layout: page
+ title: About
+-permalink: /about/
++permalink: /about
+ ---
+ 
+-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+-
+-You can find the source code for Minima at GitHub:
+-[jekyll][jekyll-organization] /
+-[minima](https://github.com/jekyll/minima)
+-
+-You can find the source code for Jekyll at GitHub:
+-[jekyll][jekyll-organization] /
+-[jekyll](https://github.com/jekyll/jekyll)
+-
+-
+-[jekyll-organization]: https://github.com/jekyll
++Hello I am Octavio Guendulain, I was born in Oaxaca, Mexico very beatiful place to go to travel but unfortunately not for get a tech job...
+diff --git a/projects/_data/navigation.yml b/projects/_data/navigation.yml
+new file mode 100644
+index 0000000..6e5fc52
+--- /dev/null
++++ b/projects/_data/navigation.yml
+@@ -0,0 +1,17 @@
++#header:
++#  - title:      Home
++#    url:        
++#  - title:      Projects
++#    url:        /projects/en/quick-start
++#    key:        projects
++#  - title:      Samples
++#    url:        /samples.html
++#    key:        samples
++#  - title:      Archive
++#    url:        /archive.html
++#  - title:      About
++#    url:        /about
++#  - title:      GitHub
++#    url:        https://github.com/razielgdn/risingembeddedmx
++    
++#data_dir: /projects/_data
+\ No newline at end of file
+diff --git a/projects/_data/variables.yml b/projects/_data/variables.yml
+new file mode 100644
+index 0000000..e69de29
+diff --git a/projects/_projects/_posts/test-file.md b/projects/_projects/_posts/test-file.md
+new file mode 100644
+index 0000000..e69de29
+diff --git a/projects/_projects/en/quick.start.md b/projects/_projects/en/quick.start.md
+new file mode 100644
+index 0000000..9c79db9
+--- /dev/null
++++ b/projects/_projects/en/quick.start.md
+@@ -0,0 +1,6 @@
++---
++title: Quick Start
++permalink: /projects/en/quick-start
++key: projects-quick-start
++---
++First steps with openblt
+\ No newline at end of file
+diff --git a/projects/landing.html b/projects/landing.html
+new file mode 100644
+index 0000000..d1a9767
+--- /dev/null
++++ b/projects/landing.html
+@@ -0,0 +1,5 @@
++---
++layout: landing
++title: TeXt Theme
++
++---
+\ No newline at end of file
+diff --git a/publish.sh b/publish.sh
+new file mode 100644
+index 0000000..5cfcfa2
+--- /dev/null
++++ b/publish.sh
+@@ -0,0 +1,6 @@
++cp -r _site/* ../siteToUpdate/
++cd ../siteToUpdate/
++git add .
++git commit -a
++git push origin site
++cd ../risingembeddedmx/
+\ No newline at end of file
+diff --git a/run-once.sh b/run-once.sh
+index 8b01d70..53dc153 100644
+--- a/run-once.sh
++++ b/run-once.sh
+@@ -15,6 +15,10 @@ bundle update
+ var=$(pwd)
+ BASEURL="$(basename $PWD)"
+ 
++mkdir ../siteToUpdate
++cd ../siteToUpdate/
++git clone -b site git@github.com:razielgdn/risingembeddedmx.git .
++cd ../risingembeddedmx/
+ # Done! Provide informative text for next steps
+ echo ""
+ echo "\033[1;32mDone configuring your Jekyll site! Here are the next steps:\033[00m"
+@@ -27,13 +31,11 @@ echo "    Look for the site at port 4000 (ex http://127.0.0.1:4000/)"
+ echo "    After testing, type CONTROL+C to stop Jekyll"
+ echo "3. Commit all your changes to Git locally"
+ echo "4. Publish your site to a new GitHub repo"
+-echo "    In Visual Studio Code, type:"
+-echo "    COMMAND+SHIFT+P (Mac) or CONTROL+SHIFT+P (Windows)"
+-echo "    Search for and select \033[1mPublish to GitHub\033[0m"
+-echo "    In most cases, you will make the repo public"
+-echo "    Follow the steps to complete the process"
+-echo "5. In GitHub, enable GitHub Pages in the repo settings and test"
+-echo "    https://razielgdn.github.io/$BASEURL"
++echo "5. In GitHub, enable GitHub Pages in the repo settings with branch  \033site\033[0m"
++echo "some gems are not compatible with github pages, site should be created locally with:"
++echo "\033[1mJEKYLL_ENV=production bundle exec jekyll build\033[0m"
++echo " run script publish.sh and test:"
++echo "   https://razielgdn.github.io/$BASEURL"
+ echo "6. Continue developing locally and pushing changes to GitHub"
+ echo "    All your changes will publish to the website automatically after a few minutes"
+ echo ""

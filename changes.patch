@@ -1,0 +1,291 @@
+diff --git a/_config.yml b/_config.yml
+index f83a2f9..a87123b 100644
+--- a/_config.yml
++++ b/_config.yml
+@@ -10,10 +10,8 @@
+ #    |  |  | .-. :  .'    \ '-.  .-'
+ #    |  |  \   --. /  .'.  \  |  |
+ #    `--'   `----''--'   '--' `--'
+-
+-
+-
+-
++## !USE TEXT THEME
++theme: jekyll-text-theme # Gem-based Jekyll Themes
+ ## => Site Settings
+ ##############################
+ text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+@@ -28,10 +26,8 @@ description: > # this means to ignore newlines until "Language & timezone"
+ 
+ ## => Language and Timezone
+ ##############################
+-lang: # the language of your site, default as "en"
+-timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+-
+-
++lang: en # the language of your site, default as "en"
++timezone: America/Monterrey # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+ 
+ ## => Author and Social
+ ##############################
+@@ -110,7 +106,7 @@ sources: # bootcdn (default), unpkg
+ ## => Sharing
+ ##############################
+ sharing:
+-  provider: false # false (default), "addtoany", "addthis", "custom"
++  provider:  # false (default), "addtoany", "addthis", "custom"
+ 
+   ## AddThis
+   addthis:
+@@ -197,13 +193,30 @@ exclude:
+   - jekyll-text-theme.gemspec
+   - package-lock.json
+   - package.json
+-  - /docs
++  #- /projects
+   - /node_modules
+-  - /screenshots
+-  - /test
++  #- /screenshots
++  #- /test
+   - /vendor
+ 
+-defaults:
++#collections_dir: projects
++#collections:
++#  projects:
++#    output: true
++#  sample_page:
++#    output: true
++#  sample_articles:
++#    output: true
++#  sample_languages:
++#    output: true
++defaults:  
++  ## home
++  - scope:
++      path:
++    values:
++      articles:
++        excerpt_type: html
++ ## posts
+   - scope:
+       path: ""
+       type: posts
+@@ -211,11 +224,26 @@ defaults:
+       layout: article
+       sharing: true
+       license: true
++      category: post
+       aside:
+         toc: true
+       show_edit_on_github: true
+       show_subscribe: true
+       pageview: true
++      # lightbox: true
++## projects
++##  - scope:
++##      path: "_projects/en"
++##    values:
++##      layout: article
++##      nav_key: projects
++##      sidebar:
++##        nav: projects-en
++##      license: true
++#      aside:
++#        toc: true
++#      show_edit_on_github: true
++#      show_date: false
+ 
+ 
+ ## => Plugins
+@@ -224,4 +252,4 @@ plugins:
+   - jekyll-feed
+   - jekyll-paginate
+   - jekyll-sitemap
+-  - jemoji
+\ No newline at end of file
++  - jemoji
+diff --git a/_data/authors.yml b/_data/authors.yml
+index e69de29..75aef27 100644
+--- a/_data/authors.yml
++++ b/_data/authors.yml
+@@ -0,0 +1,17 @@
++Octavio Guendulain:
++  name: Octavio Guendulain # your Name
++  url: https://razielgdn.github.io
++  avatar:  # your photo
++  bio: 
++  email: octaviorazielgdn@gmail.com
++  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
++  twitter   : l31zar.gdn # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
++  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
++  googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
++  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
++  medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
++  zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
++  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
++  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
++  github    : razielgdn # "user_name" the last part of your profile url, e.g. https://github.com/user_name
++  npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+diff --git a/_data/navigation.yml b/_data/navigation.yml
+index d63c1ea..c5857d6 100644
+--- a/_data/navigation.yml
++++ b/_data/navigation.yml
+@@ -1,27 +1,15 @@
+ header:
+-  - titles:
+-      # @start locale config
+-      en      : &EN       Archive
+-      en-GB   : *EN
+-      en-US   : *EN
+-      en-CA   : *EN
+-      en-AU   : *EN
+-      es      : &ES      Linea de tiempo 
+-      es-MX   : *ES 
+-  
+-      # @end locale config
+-    url: /archive.html
+-
+-  - titles:
+-      # @start locale config
+-      en      : &EN       About
+-      en-GB   : *EN
+-      en-US   : *EN
+-      en-CA   : *EN
+-      en-AU   : *EN
+-      es      : &ES      Acerca De
+-      es-MX   : *ES 
+-      # @end locale config
+-    url: /about
+-  - title: Blog
+-    url: /blog  
+\ No newline at end of file
++  - title:      Home
++    url:        
++    key:        home
++  - title:      Projects
++    url:        /projects/en/quick-start
++    key:        projects      
++  - title:      Archive
++    url:        /archive
++  - title:      About
++    url:        /about
++  - title:      GitHub
++    url:        https://github.com/razielgdn/risingembeddedmx
++  - title:      Blog
++    url:        /blog  
+\ No newline at end of file
+diff --git a/_posts/2024-03-16-LogDay1.markdown b/_posts/2024-03-16-LogDay1.markdown
+deleted file mode 100644
+index b52b42c..0000000
+--- a/_posts/2024-03-16-LogDay1.markdown
++++ /dev/null
+@@ -1,11 +0,0 @@
+----
+-layout: page
+-tags: TeXt
+-type: cover
+-title: 
+-articles:
+-  data_source: site.sample_page
+-  show_excerpt: true
+-date:   2024-03-16 01:20:38 +0000
+----
+-Today I start to write this blog
+diff --git a/_posts/2024-03-16-first-post.md b/_posts/2024-03-16-first-post.md
+deleted file mode 100644
+index cbaf638..0000000
+--- a/_posts/2024-03-16-first-post.md
++++ /dev/null
+@@ -1,10 +0,0 @@
+----
+-title: Welcome to the jungle!
+-tags: TeXt
+-article_header:
+-  type: cover  
+----
+-#Welcome
+-This is my first post to this blog, first of all we are free and free man does know enemy. 
+-
+-<!--more-->
+diff --git a/about.md b/about.md
+index 8b4e0b2..ad19542 100644
+--- a/about.md
++++ b/about.md
+@@ -1,18 +1,7 @@
+ ---
+ layout: page
+ title: About
+-permalink: /about/
++permalink: /about
+ ---
+ 
+-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+-
+-You can find the source code for Minima at GitHub:
+-[jekyll][jekyll-organization] /
+-[minima](https://github.com/jekyll/minima)
+-
+-You can find the source code for Jekyll at GitHub:
+-[jekyll][jekyll-organization] /
+-[jekyll](https://github.com/jekyll/jekyll)
+-
+-
+-[jekyll-organization]: https://github.com/jekyll
++Hello I am Octavio Guendulain, I was born in Oaxaca, Mexico very beatiful place to go to travel but unfortunately not for get a tech job...
+diff --git a/projects/_data/navigation.yml b/projects/_data/navigation.yml
+new file mode 100644
+index 0000000..6e5fc52
+--- /dev/null
++++ b/projects/_data/navigation.yml
+@@ -0,0 +1,17 @@
++#header:
++#  - title:      Home
++#    url:        
++#  - title:      Projects
++#    url:        /projects/en/quick-start
++#    key:        projects
++#  - title:      Samples
++#    url:        /samples.html
++#    key:        samples
++#  - title:      Archive
++#    url:        /archive.html
++#  - title:      About
++#    url:        /about
++#  - title:      GitHub
++#    url:        https://github.com/razielgdn/risingembeddedmx
++    
++#data_dir: /projects/_data
+\ No newline at end of file
+diff --git a/projects/_data/variables.yml b/projects/_data/variables.yml
+new file mode 100644
+index 0000000..e69de29
+diff --git a/projects/_projects/_posts/test-file.md b/projects/_projects/_posts/test-file.md
+new file mode 100644
+index 0000000..e69de29
+diff --git a/projects/_projects/en/quick.start.md b/projects/_projects/en/quick.start.md
+new file mode 100644
+index 0000000..9c79db9
+--- /dev/null
++++ b/projects/_projects/en/quick.start.md
+@@ -0,0 +1,6 @@
++---
++title: Quick Start
++permalink: /projects/en/quick-start
++key: projects-quick-start
++---
++First steps with openblt
+\ No newline at end of file
+diff --git a/projects/landing.html b/projects/landing.html
+new file mode 100644
+index 0000000..d1a9767
+--- /dev/null
++++ b/projects/landing.html
+@@ -0,0 +1,5 @@
++---
++layout: landing
++title: TeXt Theme
++
++---
+\ No newline at end of file
