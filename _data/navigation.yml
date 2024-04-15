@@ -9,8 +9,8 @@ header:
     url:        /archive
   - title:      About
     url:        /about
-  - title:      Blog
-    url:        /blog    
+  #- title:      Blog
+  #  url:        /blog    
   - title:      GitHub
     url:        https://github.com/razielgdn
 projects-en:  
@@ -22,10 +22,10 @@ projects-en:
     children:
       - title:  First steps with openblt
         url:    /projects/en/openblt-start
-      - title:  First steps and project migration 
-        url:    /projects/en/open-blt
-      - title:  Results and possible applications
-        url:    /projects/en/openblt-results
+  #    - title:  First steps and project migration 
+  #      url:    /projects/en/open-blt
+  #    - title:  Results and possible applications
+  #      url:    /projects/en/openblt-results
 layouts:
   - title: Layouts
     children:

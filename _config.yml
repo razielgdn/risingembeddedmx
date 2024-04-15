@@ -163,6 +163,8 @@ exclude:
   - /screenshots
   - /test
   - /vendor
+  - blog.md
+  
 collections_dir: projects
 collections:
   projects:
