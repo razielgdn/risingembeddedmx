@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>First steps with openblt - Rising Embedded Mx</title>
 
-<meta name="description" content="OpenBLT is an open source project">
+<meta name="description" content="IntroductionOpenBLT is an open-source project. It can be used with multiple microcontrollers and protocols. This project can be ported to 8-bit, 16-bit, and ...">
 <link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/en/openblt-start"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
@@ -290,11 +290,34 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with openblt</h1></header></div><meta itemprop="headline" content="First steps with openblt"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-04-15T03:53:26+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with openblt</h1></header></div><meta itemprop="headline" content="First steps with openblt"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-10T21:17:00+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>OpenBLT is an open source project</p>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-04-15T03:53:26+00:00"><!-- start custom article footer snippet -->
+<div class="article__content" itemprop="articleBody"><h3 id="introduction">Introduction</h3>
+<p>OpenBLT is an open-source project. It can be used with multiple microcontrollers and protocols. This project can be ported to 8-bit, 16-bit, and 32-bit architectures and brands (such as NxP, Texas Instruments, and ST Microsystems). It supports communication interfaces such as RS-232, CAN, USB, TCP/IP, and Modbus RTU with PC software for initiating and monitoring firmware updates. Additionally, add-on modules can be used for features like firmware encryption, improved checksum mechanisms, and master/slave gateways. Finally, it is open source, and you can choose between a GNU GPL license or a commercial license if needed.</p>
+
+<h3 id="first-steps">First steps</h3>
+<p>After publishing in the blog, I read the documentation and checked the latest software for the Nucleo STMF446RE board. I noticed that only Modbus is available in the demo.</p>
+<ol>
+  <li>
+    <p>Download the sources from git or tarball, I used <a href="https://www.feaser.com/openblt/doku.php?id=download">tarball</a> from SourceForge, in a future update, I will use <a href="https://github.com/feaser/openblt">GitHub</a> repo.</p>
+  </li>
+  <li>Configure sources in STM32Cube IDE
+    <ul>
+      <li>Open the File menu.<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01ImportProject.png" alt="" /></li>
+      <li>Import the boot folder. You can also import Prog demo. In this example, we will import both folders. <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02ImportProject.png" alt="" /></li>
+      <li>Compile the Boot folder to create the bootloader binaries. <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/03ImportProject.png" alt="" /></li>
+      <li>After compiling, flash it to the board. When it is working, the green LED blinks.</li>
+    </ul>
+  </li>
+  <li>Test the software with a demo, I used the GPIO_IOToggle example from STM resources.
+    <ul>
+      <li>You should make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000” <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/04ImportProject.png" alt="" /></li>
+      <li>Once the srec file is done, you can flash the system with one of the tools provided by Feaser. I prefer Bootcommander because it runs on Linux. You can check Feaser documentation about their tools: <a href="https://www.feaser.com/openblt/doku.php?id=manual:microboot">MicroBoot</a> or <a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">BootCommander</a>.</li>
+    </ul>
+  </li>
+</ol>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-10T21:17:00+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
