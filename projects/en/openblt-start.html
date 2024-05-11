@@ -290,7 +290,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with openblt</h1></header></div><meta itemprop="headline" content="First steps with openblt"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-10T21:17:00+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with openblt</h1></header></div><meta itemprop="headline" content="First steps with openblt"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-11T05:47:50+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h3 id="introduction">Introduction</h3>
@@ -304,20 +304,32 @@
   </li>
   <li>Configure sources in STM32Cube IDE
     <ul>
-      <li>Open the File menu.<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01ImportProject.png" alt="" /></li>
-      <li>Import the boot folder. You can also import Prog demo. In this example, we will import both folders. <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02ImportProject.png" alt="" /></li>
-      <li>Compile the Boot folder to create the bootloader binaries. <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/03ImportProject.png" alt="" /></li>
+      <li>Open the <strong>File</strong> menu and select <strong>Import</strong> option. <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01ImportProject.png" alt="" /></li>
+      <li>Import the boot folder. You can also import Prog demo. In this example, we will import both folders.<br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02ImportProject.png" alt="" /></li>
+      <li>Compile the Boot folder to create the bootloader binaries.<br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/03ImportProject.png" alt="" /></li>
       <li>After compiling, flash it to the board. When it is working, the green LED blinks.</li>
     </ul>
   </li>
   <li>Test the software with a demo, I used the GPIO_IOToggle example from STM resources.
     <ul>
-      <li>You should make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000” <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/04ImportProject.png" alt="" /></li>
-      <li>Once the srec file is done, you can flash the system with one of the tools provided by Feaser. I prefer Bootcommander because it runs on Linux. You can check Feaser documentation about their tools: <a href="https://www.feaser.com/openblt/doku.php?id=manual:microboot">MicroBoot</a> or <a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">BootCommander</a>.</li>
+      <li>You should make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000”. 
+   <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/04ImportProject.png" alt="" /></li>
     </ul>
   </li>
 </ol>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-10T21:17:00+00:00"><!-- start custom article footer snippet -->
+
+<ul>
+  <li>Once the srec file is done, you can flash the system with one of the tools provided by Feaser. I prefer Bootcommander because it runs on Linux. You can check Feaser documentation about their tools: <a href="https://www.feaser.com/openblt/doku.php?id=manual:microboot">MicroBoot</a> or <a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">BootCommander</a>.</li>
+</ul>
+
+<p>Note: The default usart port to use the bootloader is a “virtual port” mounted with the STlink usb port. In linux this port is /dev/ttyACM0. 
+   The command to use bootcommander is:    <br />
+   <code class="language-plaintext highlighter-rouge">./BootCommander -s=xcp -t=xcp_mbrtu -d=/dev/ttyACM0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec</code></p>
+
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-11T05:47:50+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
