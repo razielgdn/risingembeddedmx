@@ -22,8 +22,8 @@ projects-en:
     children:
       - title:  First steps with openblt
         url:    /projects/en/openblt-start
-  #    - title:  First steps and project migration 
-  #      url:    /projects/en/open-blt
+      - title:  OpenBLT in Nucleo-F446RE
+        url:    /projects/en/open-blt
   #    - title:  Results and possible applications
   #      url:    /projects/en/openblt-results
 layouts:
@@ -33,5 +33,5 @@ layouts:
         url:    /page/single.html
       - title:  Aside
         url:    /page/aside.html
-#      - title:  Sidebar
-#        url:    /page/sidebar.html        
+      - title:  Sidebar
+        url:    /page/sidebar.html        
