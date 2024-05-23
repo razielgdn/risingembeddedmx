@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT results - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Usage of the custom OpenBLT on the Nucleo-F446RE board - Rising Embedded Mx</title>
 
-<meta name="description" content="Results and possibles applications">
+<meta name="description" content="Compiling BootCommander toolBootCommander is a tool available in the OpenBLT project. It is recommended to build it on the host system where it will be used ...">
 <link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/en/openblt-results"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
@@ -265,7 +265,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -290,11 +290,112 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT results</h1></header></div><meta itemprop="headline" content="OpenBLT results"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T13:12:11+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Usage of the custom OpenBLT on the Nucleo-F446RE board</h1></header></div><meta itemprop="headline" content="Usage of the custom OpenBLT on the Nucleo-F446RE board"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T23:15:40+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>Results and possibles applications</p>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T13:12:11+00:00"><!-- start custom article footer snippet -->
+<div class="article__content" itemprop="articleBody"><h1 id="compiling-bootcommander-tool">Compiling BootCommander tool</h1>
+<p>BootCommander is a tool available in the OpenBLT project. It is recommended to build it on the host system where it will be used to flash the microcontroller. The process is documented in the<a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">OpenBLT wiki</a>. 
+In my case, I compiled it on a Raspberry Pi running Raspbian, as well as on a PC with Ubuntu and Fedora. Follow the steps below to compile the tool. In this example, the process will be done on an Ubuntu PC.</p>
+<ol>
+  <li>Go to Host path of the openblt project sources. You can copy it in another location such my own case. You need the OpenBLT  Host library (LibOpenBLT) and sources of BootCommander.</li>
+  <li>Next step is build the library from build path to do it, execute following commands:<br />
+ <code class="language-plaintext highlighter-rouge">~/Host/Source/LibOpenBLT/build$ cmake ..</code> <br />
+ <code class="language-plaintext highlighter-rouge">~/Host/Source/LibOpenBLT/build$ make </code><br />
+ <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01results.png" /></li>
+  <li>After do it repeate the process with BootCommander. <br />
+  <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02results.png" /></li>
+  <li>The BootCommander tool is ready to be used Host path.</li>
+</ol>
+
+<h1 id="tool-usage">Tool usage</h1>
+<p>You can execute the command without arguments to see the help of the tool. Its usage is simple:</p>
+<ul>
+  <li>Usage: <code class="language-plaintext highlighter-rouge">$ ./BootCommander  [options]  [firmware file]</code></li>
+  <li>The available options depend on the specified communication session protocol and communication transport layer. The <strong>Nucleo-F446RE</strong> supports xcp_rs232, xcp_can, and xcp_mbrtu.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-s=[name]        Name of the communication session protocol:
+                   xcp (default) -&gt; XCP version 1.0.
+-t=[name]        Name of the communication transport layer:
+                   xcp_rs232 (default) -&gt; XCP on RS232.
+                   xcp_mbrtu           -&gt; XCP on Modbus RTU.
+                   xcp_can             -&gt; XCP on CAN.
+                   xcp_usb             -&gt; XCP on USB.
+                   xcp_net             -&gt; XCP on TCP/IP.
+</code></pre></div>    </div>
+    <p>-Each of the transport layer had options as baudrate, ID or stop bit depending of the interface.</p>
+    <ul>
+      <li>XCP on RS232 settings (xcp_rs232):
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   -d=[name]      Name of the communication device. For example COM1 or /dev/ttyUSB0 (Mandatory).   
+   -b=[value]     The communication speed, a.k.a baudrate in bits per second, as a 32-bit value (Default = 57600).   
+                  Supported values: 9600, 19200, 38400, 57600, 115200.
+</code></pre></div>        </div>
+      </li>
+      <li>XCP on Modbus RTU settings (xcp_mbrtu):
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-d=[name]        Name of the communication device. For example COM1 or /dev/ttyUSB0 (Mandatory).  
+-b=[value]       The communication speed, a.k.a baudrate in bits per second, as a 32-bit value (Default = 57600).  
+                 Supported values: 9600, 19200, 38400, 57600, 115200.   
+-pa=[value]      The UART parity bit configuration as a 8-bit value. (Default = 2). 
+                 Supported values: 0 (none), 1 (odd), 2 (even).  
+-sb=[value]      The number of UART stopbits as a 8-bit value. (Default = 1). Supported values: 1, 2.   
+-da=[value]      Destination address, i.e. the node ID of the receiver, as a 8-bit value (Default = 1). 
+                 Supported values: between 1 and 247.
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>XCP on CAN settings (xcp_can):<br />
+```
+-d=[name]        Name of the CAN device (Mandatory). On Linux this is
+                 the name of the SocketCAN network interface, such as
+                 can0, slcan0. On Windows it specifies the CAN adapter.
+                 Currently supported CAN adapters:
+                   peak_pcanusb     -&gt; Peak System PCAN-USB.
+                   kvaser_leaflight -&gt; Kvaser Leaf Light V2.
+                   lawicel_canusb   -&gt; Lawicel CANUSB.
+                   vector_xldriver  -&gt; Vector XL Driver.
+                   ixxat_vcidriver  -&gt; Ixxat VCI Driver.
+-c=[value]       Zero based index of the CAN channel if multiple CAN
+                 channels are supported for the CAN adapter, as a 32-
+                 bit value (Default = 0).
+-b=[value]       The communication speed, a.k.a baudrate in bits per
+                 second, as a 32-bit value (Default = 500000).
+                 Supported values: 1000000, 800000, 500000, 250000,
+                 125000, 100000, 50000, 20000, 10000.
+-tid=[value]     CAN identifier for transmitting XCP command messages
+                 from the host to the target, as a 32-bit hexadecimal
+                 value (Default = 667h).
+-rid=[value]     CAN identifier for receiving XCP response messages
+                 from the target to the host, as a 32-bit hexadecimal
+                 value (Default = 7E1h).
+-xid=[value]     Configures the ‘tid’ and ‘rid’ CAN identifier values
+                 as 29-bit CAN identifiers, if this 8-bit value is &gt; 0
+                 (Default = 0).``</li>
+</ul>
+
+<h1 id="examples-of-use">Examples of use</h1>
+<p>In linux systems (using a rapberrypi or another distro) You can useBootCommander to flash the software.</p>
+<ul>
+  <li>Flash with <strong>MBRTU</strong> using <strong>USART2</strong> with BootCommander using linux: <br />
+` sudo ./BootCommander -s=xcp -t=xcp_mbrtu -d=/dev/ttyACM0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec `</li>
+  <li>Flash with <strong>RS232</strong> using a USB - TTL converter in linux: <br />
+<code class="language-plaintext highlighter-rouge">sudo ./BootCommander -s=xcp -t=xcp_rs232 -d=/dev/ttyUSB0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec </code></li>
+  <li>Fash with <strong>CAN</strong> using <strong>CANable</strong> in a linux system:
+    <ol>
+      <li>Configure the Baudrate as <strong>blt_conf.h</strong> in the system. <br />
+<code class="language-plaintext highlighter-rouge">sudo ip link set can0 type can bitrate 125000</code>    <br />
+<code class="language-plaintext highlighter-rouge">sudo ip link set up can0 </code></li>
+      <li>Flash with BootCommander. <br />
+` sudo ./BootCommander -s=xcp -t=xcp_can -d=can0 -b=125000 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec `</li>
+      <li>You can se the output to check if it was successful:<br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/flashing.png" /></li>
+      <li>To see how to connect the system physically, check the README file in the custom <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT">OpenBLT repository</a>.</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>OpenBLT is a lightweight and useful bootloader that is easy to understand and customize. In this case, it has produced successful results, and I plan to use it in future projects.</p>
+
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T23:15:40+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">

@@ -265,7 +265,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -290,14 +290,16 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T13:12:11+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T23:15:40+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h1 id="before-start">Before Start</h1>
 <p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/openblt-start">post</a> only Modbus is available in the demo. <br />
-<img class="image image--md" src="../../../assets/images/openblt/01bltdoc.png" /></p>
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01bltdoc.png" /></p>
 
 <p>To <strong>activate</strong> RS232 and CAN bus as flash sources in <strong>OpenBLT</strong>, you need to enable the necessary resources such as <strong>GPIOs</strong>, <strong>clock sources</strong>, and their respective <strong>drivers</strong>. The following steps document the process of performing this task using the OpenBLT demo as a base and modifying it to enable the mentioned resources.</p>
+
+<p>The custom openBLT project is stored in a Github repository:</p>
 
 <h1 id="enabling-usartx-and-can-gpios">Enabling USARTx and CAN GPIOs</h1>
 <p>MBRTU and RS232 use the USART1 and USART2 resources to work. To enable the use of RS232 and CAN ports, the following changes were made to the code:</p>
@@ -305,24 +307,27 @@
 <p>First of all the Macros to manage RS232 and CAN were added to <strong>blt_conf.h</strong> file.</p>
 <ul>
   <li>RS232 macros.  <br />
-<img class="image image--md" src="../../../assets/images/openblt/01blt-conf.png" /></li>
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01blt-conf.png" /></li>
   <li>CAN macros. <br />
-<img class="image image--md" src="../../../assets/images/openblt/02blt-conf.png" /><br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02blt-conf.png" /><br />
 These lines were taken from another project that has support for both CAN and RS232.</li>
 </ul>
 
 <p>Studing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
 
 <p>The <strong>main.c</strong> file has been updated to improve this implementation. Since a function to enable <strong>GPIOs</strong> was previously declared, the code to enable port communication has been moved there. This utilizes macros from <strong>blt_conf.h</strong> to optimize resources using conditionals to enable code sections. <br />
-<img class="image image--md" src="../../../assets/images/openblt/main01.png" /> <br />
-<img class="image image--md" src="../../../assets/images/openblt/main02.png" /></p>
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main01.png" /> <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main02.png" /></p>
 
-<p>After enable the GPIOs and clocks you should check if the initialization is corrected. In a first momment the system didn’t work, with a debugging session I notice that function <strong>HAL_GetTick()</strong>. <br />
-<img class="image image--md" src="../../../assets/images/openblt/01timer.png" />    <br />
-The function was declared in two files <strong>timer.c</strong> and <strong>stm32f4xx_hal.c</strong> the solution was renamed the function in timer.c to <strong>HAL_GetTick_openblt()</strong>. <br />
-<img class="image image--md" src="../../../assets/images/openblt/02timer.png" /></p>
+<p>An important step to work with can is add hald driver for can on <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h</strong> and <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</strong> it can be obtained from a generic STMCubeIDE project.</p>
 
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T13:12:11+00:00"><!-- start custom article footer snippet -->
+<p>After enable the GPIOs and clocks you should check if the initialization is corrected. In a first momment the system didn’t work, with a debugging session I notice the function <strong>HAL_GetTick()</strong> do not return a correct value.    <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01timer.png" />    <br />
+The function was declared in two files <strong>timer.c</strong> and <strong>stm32f4xx_hal.c</strong> the solution was renamed the function in timer.<strong>HAL_GetTick_openblt()</strong>. <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02timer.png" /></p>
+
+<p>Finally the system works. See <a href="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/openblt-results">next post</a> with results.</p>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T23:15:40+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
@@ -332,7 +337,7 @@ The function was declared in two files <strong>timer.c</strong> and <strong>stm3
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></div></div></div>
 
 </div>
 

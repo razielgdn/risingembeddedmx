@@ -265,7 +265,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -290,7 +290,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with OpenBLT</h1></header></div><meta itemprop="headline" content="First steps with OpenBLT"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T13:12:11+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with OpenBLT</h1></header></div><meta itemprop="headline" content="First steps with OpenBLT"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T23:15:40+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h3 id="introduction">Introduction</h3>
@@ -316,21 +316,26 @@
   </li>
   <li>Test the software with a demo, I used the GPIO_IOToggle example from STM resources. A little tutorial to get it is stored in mi Github <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT/blob/Nucleo-F446RE/doc/exampleimport.md">Repository</a>.
     <ul>
-      <li>You should make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000”.  <br />
+      <li>You need to make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000”.  <br />
    <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/04ImportProject.png" alt="" /></li>
     </ul>
   </li>
 </ol>
 
 <ul>
-  <li>Once the srec file is done, you can flash the system with one of the tools provided by Feaser. I prefer Bootcommander because it runs on Linux. You can check Feaser documentation about their tools: <a href="https://www.feaser.com/openblt/doku.php?id=manual:microboot">MicroBoot</a> or <a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">BootCommander</a>.</li>
+  <li>
+    <p>Once the srec file is done, you can flash the system with one of the tools provided by Feaser. I prefer Bootcommander because it runs on Linux. You can check Feaser documentation about their tools: <a href="https://www.feaser.com/openblt/doku.php?id=manual:microboot">MicroBoot</a> or <a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">BootCommander</a>.</p>
+  </li>
+  <li>
+    <p>The last part of this article explains the procedure to build and use BootCommander tool.</p>
+  </li>
 </ul>
 
 <p>Note: The default usart port to use the bootloader is a “virtual port” mounted with the STlink usb port. In linux this port is /dev/ttyACM0. 
    The command to use bootcommander is:    <br />
    <code class="language-plaintext highlighter-rouge">./BootCommander -s=xcp -t=xcp_mbrtu -d=/dev/ttyACM0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec</code></p>
 
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T13:12:11+00:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T23:15:40+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
