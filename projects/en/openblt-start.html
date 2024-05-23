@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>First steps with openblt - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>First steps with OpenBLT - Rising Embedded Mx</title>
 
 <meta name="description" content="IntroductionOpenBLT is an open-source project. It can be used with multiple microcontrollers and protocols. This project can be ported to 8-bit, 16-bit, and ...">
 <link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/en/openblt-start"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
@@ -265,7 +265,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -290,17 +290,18 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with openblt</h1></header></div><meta itemprop="headline" content="First steps with openblt"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-11T05:47:50+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with OpenBLT</h1></header></div><meta itemprop="headline" content="First steps with OpenBLT"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T13:12:11+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h3 id="introduction">Introduction</h3>
 <p>OpenBLT is an open-source project. It can be used with multiple microcontrollers and protocols. This project can be ported to 8-bit, 16-bit, and 32-bit architectures and brands (such as NxP, Texas Instruments, and ST Microsystems). It supports communication interfaces such as RS-232, CAN, USB, TCP/IP, and Modbus RTU with PC software for initiating and monitoring firmware updates. Additionally, add-on modules can be used for features like firmware encryption, improved checksum mechanisms, and master/slave gateways. Finally, it is open source, and you can choose between a GNU GPL license or a commercial license if needed.</p>
 
 <h3 id="first-steps">First steps</h3>
-<p>After publishing in the blog, I read the documentation and checked the latest software for the Nucleo STMF446RE board. I noticed that only Modbus is available in the demo.</p>
+<p>The documentation states that for the OpenBLT project on the <strong>Nucleo-F446RE</strong> board, only Modbus is available for use. To begin working on this project, I tested the demo and used it to flash an example provided by STMicroelectronics.</p>
+
 <ol>
   <li>
-    <p>Download the sources from git or tarball, I used <a href="https://www.feaser.com/openblt/doku.php?id=download">tarball</a> from SourceForge, in a future update, I will use <a href="https://github.com/feaser/openblt">GitHub</a> repo.</p>
+    <p>Download the sources from <a href="https://github.com/feaser/openblt">GitHub</a> or <a href="https://www.feaser.com/openblt/doku.php?id=download">tarball</a> from SourceForge, I used GitHub sources (commit ba955f2c3b46bae54b6c08637792426be34d29c6) and taked only the resourses related to <strong>Nucleo-F446RE</strong> board,</p>
   </li>
   <li>Configure sources in STM32Cube IDE
     <ul>
@@ -313,9 +314,9 @@
       <li>After compiling, flash it to the board. When it is working, the green LED blinks.</li>
     </ul>
   </li>
-  <li>Test the software with a demo, I used the GPIO_IOToggle example from STM resources.
+  <li>Test the software with a demo, I used the GPIO_IOToggle example from STM resources. A little tutorial to get it is stored in mi Github <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT/blob/Nucleo-F446RE/doc/exampleimport.md">Repository</a>.
     <ul>
-      <li>You should make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000”. 
+      <li>You should make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000”.  <br />
    <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/04ImportProject.png" alt="" /></li>
     </ul>
   </li>
@@ -329,7 +330,7 @@
    The command to use bootcommander is:    <br />
    <code class="language-plaintext highlighter-rouge">./BootCommander -s=xcp -t=xcp_mbrtu -d=/dev/ttyACM0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec</code></p>
 
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-11T05:47:50+00:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T13:12:11+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
@@ -339,7 +340,7 @@
       </a>
     </p>
   </div></div></footer>
-</div>
+<div class="article__section-navigator clearfix"><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></div></div></div>
 
 </div>
 

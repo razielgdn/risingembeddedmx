@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT migration - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT in Nucleo-F446RE - Rising Embedded Mx</title>
 
-<meta name="description" content="Migration of the project.">
+<meta name="description" content="Before StartAs we notice in last post only Modbus is available in the demo. To activate RS232 and CAN bus as flash sources in OpenBLT, you need to enable the...">
 <link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/en/open-blt"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
@@ -265,7 +265,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -290,11 +290,39 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT migration</h1></header></div><meta itemprop="headline" content="OpenBLT migration"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-11T05:47:50+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-23T13:12:11+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>Migration of the project.</p>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-11T05:47:50+00:00"><!-- start custom article footer snippet -->
+<div class="article__content" itemprop="articleBody"><h1 id="before-start">Before Start</h1>
+<p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/openblt-start">post</a> only Modbus is available in the demo. <br />
+<img class="image image--md" src="../../../assets/images/openblt/01bltdoc.png" /></p>
+
+<p>To <strong>activate</strong> RS232 and CAN bus as flash sources in <strong>OpenBLT</strong>, you need to enable the necessary resources such as <strong>GPIOs</strong>, <strong>clock sources</strong>, and their respective <strong>drivers</strong>. The following steps document the process of performing this task using the OpenBLT demo as a base and modifying it to enable the mentioned resources.</p>
+
+<h1 id="enabling-usartx-and-can-gpios">Enabling USARTx and CAN GPIOs</h1>
+<p>MBRTU and RS232 use the USART1 and USART2 resources to work. To enable the use of RS232 and CAN ports, the following changes were made to the code:</p>
+
+<p>First of all the Macros to manage RS232 and CAN were added to <strong>blt_conf.h</strong> file.</p>
+<ul>
+  <li>RS232 macros.  <br />
+<img class="image image--md" src="../../../assets/images/openblt/01blt-conf.png" /></li>
+  <li>CAN macros. <br />
+<img class="image image--md" src="../../../assets/images/openblt/02blt-conf.png" /><br />
+These lines were taken from another project that has support for both CAN and RS232.</li>
+</ul>
+
+<p>Studing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
+
+<p>The <strong>main.c</strong> file has been updated to improve this implementation. Since a function to enable <strong>GPIOs</strong> was previously declared, the code to enable port communication has been moved there. This utilizes macros from <strong>blt_conf.h</strong> to optimize resources using conditionals to enable code sections. <br />
+<img class="image image--md" src="../../../assets/images/openblt/main01.png" /> <br />
+<img class="image image--md" src="../../../assets/images/openblt/main02.png" /></p>
+
+<p>After enable the GPIOs and clocks you should check if the initialization is corrected. In a first momment the system didn’t work, with a debugging session I notice that function <strong>HAL_GetTick()</strong>. <br />
+<img class="image image--md" src="../../../assets/images/openblt/01timer.png" />    <br />
+The function was declared in two files <strong>timer.c</strong> and <strong>stm32f4xx_hal.c</strong> the solution was renamed the function in timer.c to <strong>HAL_GetTick_openblt()</strong>. <br />
+<img class="image image--md" src="../../../assets/images/openblt/02timer.png" /></p>
+
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-23T13:12:11+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
