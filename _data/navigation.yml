@@ -24,8 +24,8 @@ projects-en:
         url:    /projects/en/openblt-start
       - title:  OpenBLT in Nucleo-F446RE
         url:    /projects/en/open-blt
-  #    - title:  Results and possible applications
-  #      url:    /projects/en/openblt-results
+      - title:  Usage of the custom OpenBLT on the Nucleo-F446RE board
+        url:    /projects/en/openblt-results
 layouts:
   - title: Layouts
     children:
