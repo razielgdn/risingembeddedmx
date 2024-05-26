@@ -3,7 +3,7 @@
 ## => Site Settings
 ##############################
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 text_color_theme: dark
 url     : "https://razielgdn.github.io" # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : "/risingembeddedmx" # does not include hostname
@@ -32,7 +32,7 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : razielgdn/risingembeddedmx 
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 ## => GitHub Repository (if the site is hosted by GitHub)
@@ -45,7 +45,7 @@ paths:
   root    : # title link url, "/" (default)
   home    : # home layout url, "/" (default)
   archive : /archive # "/archive.html" (default)
-  blog : /blog # "/blog.html" (default)
+  blog : /blog # "/blog.html" (default)    
   rss     : # "/feed.xml" (default)
   ## => Post
 ##############################
@@ -65,7 +65,7 @@ mathjax: # false (default), true
 mathjax_autoNumber: # false (default), true
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid:   # false (default), true
 
 ## Chart
 chart: # false (default), true
@@ -74,6 +74,7 @@ chart: # false (default), true
 ##############################
 paginate: 8
 paginate_path: /page:num # don't change this unless for special need
+
 # => Build
 ##############################
 markdown    : kramdown
@@ -81,13 +82,13 @@ highlighter : rouge
 permalink   : date
 ## => Sources
 ##############################
-sources: # bootcdn (default), unpkg
+sources: bootcdn # bootcdn (default), unpkg
 
 
 ## => Sharing
 ##############################
 sharing:
-  provider:  # false (default), "addtoany", "addthis", "custom"
+  provider: false # false (default), "addtoany", "addthis", "custom"
 
   ## AddThis
   addthis:
@@ -97,21 +98,22 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
-    shortname: # the Disqus shortname for the site
+    shortname:  # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+    clientID    : Ov23lipFD5UocF4AE7KP
+    clientSecret: e9eb31f4c63996bf83a0f28a727db30c412b4ff4 # GitHub Application Client Secret
+    repository  : github-talk-repo  # GitHub repo
+    owner       : razielgdn # GitHub repo owner
+    admin:  # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+       - razielgdn #your GitHub Id
+
 ## => Pageview
 ##############################
 pageview:
@@ -164,11 +166,18 @@ exclude:
   - /test
   - /vendor
   - blog.md
-  
+#init projects page  
 collections_dir: projects
 collections:
   projects:
     output: true
+#end projects page    
+
+#init 3dprinter zone      
+  3dprinting:
+    output: true  
+#end 3dprinterzone
+
 #  sample_page:
 #    output: true
 #  sample_articles:
@@ -202,6 +211,18 @@ defaults:
         toc: true
       show_edit_on_github: false
       show_date: false
+## 3d printing zone
+  - scope:
+      path: ""  # "_3dprinting" 
+      type: 3dprinting
+    values:      
+      nav_key: 3dprintingZone
+      show_date: true  
+      sidebar:
+        nav: 3dprinting   
+      aside:
+        toc: true   
+## end 3dprinting zone     
 
 ## => Plugins
 ##############################
