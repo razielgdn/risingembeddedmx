@@ -267,6 +267,275 @@ pre.lineno {
   color: #de935f;
 }
 
+figure.highlight::before {
+  color: #969896 !important;
+  background-color: #1d1f21 !important;
+}
+
+pre.lineno {
+  color: #969896 !important;
+}
+
+.highlight > pre {
+  color: #c5c8c6;
+  background-color: #1d1f21 !important;
+  /* Comment */
+  /* Error */
+  /* Keyword */
+  /* Literal */
+  /* Name */
+  /* Operator */
+  /* Punctuation */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Deleted */
+  /* Generic.Emph */
+  /* Generic.Heading */
+  /* Generic.Inserted */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Date */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Label */
+  /* Name.Namespace */
+  /* Name.Other */
+  /* Name.Property */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Literal.Number.Integer.Long */
+}
+.highlight > pre .c {
+  color: #969896;
+}
+.highlight > pre .err {
+  color: #c66;
+}
+.highlight > pre .k {
+  color: #b294bb;
+}
+.highlight > pre .l {
+  color: #de935f;
+}
+.highlight > pre .n {
+  color: #c5c8c6;
+}
+.highlight > pre .o {
+  color: #8abeb7;
+}
+.highlight > pre .p {
+  color: #c5c8c6;
+}
+.highlight > pre .cm {
+  color: #969896;
+}
+.highlight > pre .cp {
+  color: #969896;
+}
+.highlight > pre .c1 {
+  color: #969896;
+}
+.highlight > pre .cs {
+  color: #969896;
+}
+.highlight > pre .gd {
+  color: #c66;
+}
+.highlight > pre .ge {
+  font-style: italic;
+}
+.highlight > pre .gh {
+  font-weight: bold;
+  color: #c5c8c6;
+}
+.highlight > pre .gi {
+  color: #b5bd68;
+}
+.highlight > pre .gp {
+  font-weight: bold;
+  color: #969896;
+}
+.highlight > pre .gs {
+  font-weight: bold;
+}
+.highlight > pre .gu {
+  font-weight: bold;
+  color: #8abeb7;
+}
+.highlight > pre .kc {
+  color: #b294bb;
+}
+.highlight > pre .kd {
+  color: #b294bb;
+}
+.highlight > pre .kn {
+  color: #8abeb7;
+}
+.highlight > pre .kp {
+  color: #b294bb;
+}
+.highlight > pre .kr {
+  color: #b294bb;
+}
+.highlight > pre .kt {
+  color: #f0c674;
+}
+.highlight > pre .ld {
+  color: #b5bd68;
+}
+.highlight > pre .m {
+  color: #de935f;
+}
+.highlight > pre .s {
+  color: #b5bd68;
+}
+.highlight > pre .na {
+  color: #81a2be;
+}
+.highlight > pre .nb {
+  color: #c5c8c6;
+}
+.highlight > pre .nc {
+  color: #f0c674;
+}
+.highlight > pre .no {
+  color: #c66;
+}
+.highlight > pre .nd {
+  color: #8abeb7;
+}
+.highlight > pre .ni {
+  color: #c5c8c6;
+}
+.highlight > pre .ne {
+  color: #c66;
+}
+.highlight > pre .nf {
+  color: #81a2be;
+}
+.highlight > pre .nl {
+  color: #c5c8c6;
+}
+.highlight > pre .nn {
+  color: #f0c674;
+}
+.highlight > pre .nx {
+  color: #81a2be;
+}
+.highlight > pre .py {
+  color: #c5c8c6;
+}
+.highlight > pre .nt {
+  color: #8abeb7;
+}
+.highlight > pre .nv {
+  color: #c66;
+}
+.highlight > pre .ow {
+  color: #8abeb7;
+}
+.highlight > pre .w {
+  color: #c5c8c6;
+}
+.highlight > pre .mf {
+  color: #de935f;
+}
+.highlight > pre .mh {
+  color: #de935f;
+}
+.highlight > pre .mi {
+  color: #de935f;
+}
+.highlight > pre .mo {
+  color: #de935f;
+}
+.highlight > pre .sb {
+  color: #b5bd68;
+}
+.highlight > pre .sc {
+  color: #c5c8c6;
+}
+.highlight > pre .sd {
+  color: #969896;
+}
+.highlight > pre .s2 {
+  color: #b5bd68;
+}
+.highlight > pre .se {
+  color: #de935f;
+}
+.highlight > pre .sh {
+  color: #b5bd68;
+}
+.highlight > pre .si {
+  color: #de935f;
+}
+.highlight > pre .sx {
+  color: #b5bd68;
+}
+.highlight > pre .sr {
+  color: #b5bd68;
+}
+.highlight > pre .s1 {
+  color: #b5bd68;
+}
+.highlight > pre .ss {
+  color: #b5bd68;
+}
+.highlight > pre .bp {
+  color: #c5c8c6;
+}
+.highlight > pre .vc {
+  color: #c66;
+}
+.highlight > pre .vg {
+  color: #c66;
+}
+.highlight > pre .vi {
+  color: #c66;
+}
+.highlight > pre .il {
+  color: #de935f;
+}
+
 /* stylelint-disable at-rule-name-space-after, at-rule-semicolon-space-before  */
 .clearfix::after {
   display: table;

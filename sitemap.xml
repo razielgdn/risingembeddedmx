@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/risingembeddedmx/3dprinting/first-steps</loc>
+<lastmod>2024-05-26T04:47:50+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/risingembeddedmx/3dprinting/runingCura</loc>
+<lastmod>2024-05-26T04:47:50+00:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/risingembeddedmx/post/2024/03/16/first-post.html</loc>
 <lastmod>2024-03-16T00:00:00+00:00</lastmod>
 </url>
@@ -14,19 +22,26 @@
 </url>
 <url>
 <loc>http://localhost:4000/risingembeddedmx/projects/en/menu</loc>
-<lastmod>2024-05-23T23:15:40+00:00</lastmod>
+<lastmod>2024-05-26T04:47:50+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/risingembeddedmx/projects/en/openblt-start</loc>
-<lastmod>2024-05-23T23:15:40+00:00</lastmod>
+<lastmod>2024-05-26T04:47:50+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/risingembeddedmx/projects/en/open-blt</loc>
-<lastmod>2024-05-23T23:15:40+00:00</lastmod>
+<lastmod>2024-05-26T04:47:50+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/risingembeddedmx/projects/en/openblt-results</loc>
-<lastmod>2024-05-23T23:15:40+00:00</lastmod>
+<lastmod>2024-05-26T04:47:50+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/risingembeddedmx/projects/en/STM32-CANnetwork/can-objectives</loc>
+<lastmod>2024-05-26T04:47:50+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/risingembeddedmx/3DprintingZone.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/risingembeddedmx/about</loc>
