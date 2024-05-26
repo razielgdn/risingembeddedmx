@@ -1,10 +1,13 @@
+#Header begins
 header:
   - title:      Home
     url:        
     key:        home
   - title:      Projects
     url:        /projects/en/menu
-    key:        projects      
+    key:        projects  
+  - title:      3D printing zone
+    url:        /3DprintingZone
   - title:      Archive
     url:        /archive
   - title:      About
@@ -13,9 +16,10 @@ header:
   #  url:        /blog    
   - title:      GitHub
     url:        https://github.com/razielgdn
+#Header ends    
 projects-en:  
   - title:
-    childern: 
+    children: 
       - title: Index
         url: /projects/en/menu
   - title:      OpenBlt project
@@ -26,12 +30,17 @@ projects-en:
         url:    /projects/en/open-blt
       - title:  Usage of the custom OpenBLT on the Nucleo-F446RE board
         url:    /projects/en/openblt-results
-layouts:
-  - title: Layouts
-    children:
-      - title:  Single
-        url:    /page/single.html
-      - title:  Aside
-        url:    /page/aside.html
-      - title:  Sidebar
-        url:    /page/sidebar.html        
+  # - title: Can Network Project
+  #   children: 
+  #     - title: CAN network objectives
+  #       url:  /projects/en/STM32-CANnetwork/can-objectives
+
+# navPrinting:
+#   - title: 3D printing Zone
+#     children: 
+#       - title: 3D printing
+#         url: /3dprinting/first-steps
+#       - title: Runing Cura on Ubuntu using Zonestar 3D definitions
+#         url: /3dprinting/runningCura  
+      
+
