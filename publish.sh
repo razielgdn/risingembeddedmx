@@ -1,3 +1,4 @@
+# create the site with JEKYLL_ENV=production bundle exec jekyll build
 mkdir ../siteToUpdate
 cd ../siteToUpdate/
 git clone -b site git@github.com:razielgdn/risingembeddedmx.git .
