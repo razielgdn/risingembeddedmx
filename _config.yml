@@ -47,16 +47,20 @@ paths:
   archive : /archive # "/archive.html" (default)
   blog : /blog # "/blog.html" (default)    
   rss     : # "/feed.xml" (default)
-  ## => Post
+
+
+## => Post
 ##############################
 ## excerpt
 excerpt_separator: <!--more-->
+
 ## license
-license: CC-BY-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
+license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 
 ## TOC
 toc:
   selectors: # "h1,h2,h3" (default)
+
 
 ## => Markdown Enhancements
 ##############################
@@ -65,24 +69,21 @@ mathjax: # false (default), true
 mathjax_autoNumber: # false (default), true
 
 ## Mermaid
-mermaid:   # false (default), true
+mermaid: # false (default), true
 
 ## Chart
 chart: # false (default), true
+
 
 ## => Paginate
 ##############################
 paginate: 8
 paginate_path: /page:num # don't change this unless for special need
 
-# => Build
-##############################
-markdown    : kramdown
-highlighter : rouge
-permalink   : date
+
 ## => Sources
 ##############################
-sources: bootcdn # bootcdn (default), unpkg
+sources: # bootcdn (default), unpkg
 
 
 ## => Sharing
@@ -97,22 +98,22 @@ sharing:
 
 ## => Comments
 ##############################
-comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+comments: 
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
-    shortname:  # the Disqus shortname for the site
+    shortname: # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : 
-    clientSecret:  # GitHub Application Client Secret
-    repository  :   # GitHub repo
-    owner       :  # GitHub repo owner
+    clientID    : Ov23li1ay2o5ruMov7EU
+    clientSecret: 9e8b305791c119712f86399008766dc3d7eb7b62 # GitHub Application Client Secret
+    repository  : custom-application-test  # GitHub repo
+    owner       : razielgdn # GitHub repo owner
     admin:  # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-       -  #your GitHub Id
+      - razielgdn #your GitHub Id
 
 ## => Pageview
 ##############################
@@ -129,7 +130,7 @@ pageview:
 ## => Search
 ##############################
 search:
-  provider: google # "default" (default), false, "google", "custom"
+  provider: default # "default" (default), false, "google", "custom"
 
   ## Google Custom Search Engine
   google:
@@ -146,6 +147,13 @@ analytics:
     tracking_id : G-P83G4T9J8J # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
+
+## => Build
+##############################
+markdown    : kramdown
+highlighter : rouge
+permalink   : date
+
 exclude:
   - CHANGELOG.md
   - HOW_TO_RELEASE.md
@@ -159,12 +167,10 @@ exclude:
   - package-lock.json
   - package.json
   - Dockerfile
-  - r*.sh  
-  - p*.sh
+  - /run-once.sh  
+  - /publish.sh
   - /node_modules
-  - /screenshots
-  - /test
-  - /vendor
+  - /screenshots 
   - blog.md
 #init projects page  
 collections_dir: projects
