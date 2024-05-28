@@ -98,7 +98,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -107,12 +107,12 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : Ov23lipFD5UocF4AE7KP
-    clientSecret: e9eb31f4c63996bf83a0f28a727db30c412b4ff4 # GitHub Application Client Secret
-    repository  : github-talk-repo  # GitHub repo
-    owner       : razielgdn # GitHub repo owner
+    clientID    : 
+    clientSecret:  # GitHub Application Client Secret
+    repository  :   # GitHub repo
+    owner       :  # GitHub repo owner
     admin:  # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-       - razielgdn #your GitHub Id
+       -  #your GitHub Id
 
 ## => Pageview
 ##############################
@@ -129,7 +129,7 @@ pageview:
 ## => Search
 ##############################
 search:
-  provider: default # "default" (default), false, "google", "custom"
+  provider: google # "default" (default), false, "google", "custom"
 
   ## Google Custom Search Engine
   google:
@@ -139,11 +139,11 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: google # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : G-P83G4T9J8J # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 exclude:
