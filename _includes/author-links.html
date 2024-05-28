@@ -37,8 +37,8 @@
     {%- endif -%}
 
     {%- if _author.twitter -%}
-      <li title="{{ _locale_string_follow | replace: '[NAME]', 'Twitter' }}">
-        <a class="button button--circle twitter-button" itemprop="sameAs" href="https://twitter.com/{{ _author.twitter }}" target="_blank">
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'X' }}">
+        <a class="button button--circle twitter-button" itemprop="sameAs" href="https://x.com/{{ _author.twitter }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/twitter.svg -%}</div>
         </a>
       </li>

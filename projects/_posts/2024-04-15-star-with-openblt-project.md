@@ -38,7 +38,7 @@ I spent a lot of time on this challenge because the STM HAL CAN driver needed to
 
 Upon investigating why this happened, I found that **HAL_GetTick()** was defined in **timer.h** and also in **stm32f4xx_hal.h**. I solved this issue by renaming the function to **HAL_GetTick_openblt** in all files of the OpenBLT layer. 
 
-> In Mexico, May 20 is the Psychologist Day, and my girlfriend is a psychologist. I forgot about it while dealing with the issue in the CAN bus. Sometimes I wish I weren't so obsessive. If someday you read these lines, Honey, forgive me. I swear that I love you. But an engineer lost his ground debugging.
+*In Mexico, May 20 is the **Psychologist Day**, and my girlfriend is a psychologist. I forgot about it while dealing with the issue in the CAN bus.* Sometimes I wish I weren't so obsessive. If someday you read these lines, Honey, forgive me. I swear that I love you. But an engineer lost his ground debugging.
 
 ### May-21-24
 While taking snapshots for the documentation, I noticed that if the **CAN interface is enable but not connected, the bootloader never starts**. This is because, in the initialization routine, it needs to be connected to a CAN bus. If you encounter this issue and don't want to connect a transceiver, **you can cross the pins CAN_Tx and CAN_Rx** to initialize the bootloader. This trick can help rule out software issues. I hope this saves you some time.
