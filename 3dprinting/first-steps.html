@@ -300,7 +300,7 @@
 
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>I get a 3D printer</h1></header></div><meta itemprop="headline" content="I get a 3D printer"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>May 28, 2024</span>
-            </li></ul></div><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-28T03:24:50+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            </li></ul></div><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-28T03:37:41+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><p>A few days ago, I acquired a 3D printer at a very good discount. After assembling it and running some tests, I learned several things about 3D printers and how to work with them.</p>
@@ -341,7 +341,7 @@ In my personal experience, if the values in the matrix are greater than 0.30, I 
 </ul>
 
 <p>I had no problems running PrusaSlicer on Ubuntu 22.04. However, Ultimaker Cura required four hours of research and trial-and-error sessions to get it working. I also documented the process in a <a href="https://razielgdn.github.io/risingembeddedmx/3dprinting/runingCura">post on 3D printing Zone</a>.</p>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-28T03:24:50+00:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-28T03:37:41+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
@@ -374,7 +374,25 @@ In my personal experience, if the values in the matrix are greater than 0.30, I 
   });
 })();
 </script>
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.css');
+		window.Lazyload.js('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: 'Ov23li1ay2o5ruMov7EU',
+				clientSecret: '9e8b305791c119712f86399008766dc3d7eb7b62',
+				repo: 'custom-application-test',
+				owner: 'razielgdn',
+				admin: ['razielgdn'],
+				id: '3D-Printing'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>

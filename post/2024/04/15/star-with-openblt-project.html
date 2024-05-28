@@ -379,7 +379,25 @@ You can see the process here: <a href="https://razielgdn.github.io/risingembedde
   });
 })();
 </script>
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.css');
+		window.Lazyload.js('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: 'Ov23li1ay2o5ruMov7EU',
+				clientSecret: '9e8b305791c119712f86399008766dc3d7eb7b62',
+				repo: 'custom-application-test',
+				owner: 'razielgdn',
+				admin: ['razielgdn'],
+				id: 'blog-01'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
