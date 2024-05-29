@@ -299,7 +299,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Usage of the custom OpenBLT on the Nucleo-F446RE board</h1></header></div><meta itemprop="headline" content="Usage of the custom OpenBLT on the Nucleo-F446RE board"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-28T20:46:41+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Usage of the custom OpenBLT on the Nucleo-F446RE board</h1></header></div><meta itemprop="headline" content="Usage of the custom OpenBLT on the Nucleo-F446RE board"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-05-29T17:54:44+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h1 id="compiling-bootcommander-tool">Compiling BootCommander tool</h1>
@@ -319,7 +319,7 @@ In my case, I compiled it on a Raspberry Pi running Raspbian, as well as on a PC
 <h1 id="tool-usage">Tool usage</h1>
 <p>You can execute the command without arguments to see the help of the tool. Its usage is simple:</p>
 <ul>
-  <li>Usage: <code class="language-plaintext highlighter-rouge">$ ./BootCommander  [options]  [firmware file]</code></li>
+  <li>Usage: <code class="language-plaintext highlighter-rouge">./BootCommander  [options]  [firmware file]</code></li>
   <li>The available options depend on the specified communication session protocol and communication transport layer. The <strong>Nucleo-F446RE</strong> supports xcp_rs232, xcp_can, and xcp_mbrtu.
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-s=[name]        Name of the communication session protocol:
                    xcp (default) -&gt; XCP version 1.0.
@@ -352,9 +352,8 @@ In my case, I compiled it on a Raspberry Pi running Raspbian, as well as on a PC
       </li>
     </ul>
   </li>
-  <li>XCP on CAN settings (xcp_can):<br />
-```
--d=[name]        Name of the CAN device (Mandatory). On Linux this is
+  <li>XCP on CAN settings (xcp_can):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-d=[name]        Name of the CAN device (Mandatory). On Linux this is
                  the name of the SocketCAN network interface, such as
                  can0, slcan0. On Windows it specifies the CAN adapter.
                  Currently supported CAN adapters:
@@ -376,10 +375,11 @@ In my case, I compiled it on a Raspberry Pi running Raspbian, as well as on a PC
 -rid=[value]     CAN identifier for receiving XCP response messages
                  from the target to the host, as a 32-bit hexadecimal
                  value (Default = 7E1h).
--xid=[value]     Configures the ‘tid’ and ‘rid’ CAN identifier values
+-xid=[value]     Configures the 'tid' and 'rid' CAN identifier values
                  as 29-bit CAN identifiers, if this 8-bit value is &gt; 0
                  (Default = 0).
-``</li>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h1 id="examples-of-use">Examples of use</h1>
@@ -406,7 +406,7 @@ In my case, I compiled it on a Raspberry Pi running Raspbian, as well as on a PC
 <h1 id="conclusion">Conclusion</h1>
 <p>OpenBLT is a lightweight and useful bootloader that is easy to understand and customize. In this case, it has produced successful results, and I plan to use it in future projects.</p>
 
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-28T20:46:41+00:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-05-29T17:54:44+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
