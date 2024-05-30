@@ -4,10 +4,12 @@ title: About me
 permalink: /about
 aside:
    toc: true
-modify_date: 2024-05-27    
+modify_date: 2024-05-29    
 ---
 {% comment %}
 <!--
+    05-29-2024 -> Update style and add TI part. 
+    05-28-2024 -> Update About.md fixing error and changing html tables to lists
     05-27-2024 -> First update of this document 
 -->
 {% endcomment %}
@@ -22,10 +24,10 @@ modify_date: 2024-05-27
  Octavio was involved in two projects: 
   - **Cloud-based Device to Flash Microcontrollers (ECUs or Others)**  
    Setup and migration of a bootloader to flash a STM32H5 platform,enhancing system reliability and performance.
-      - **Brake Control ECU Project**
-      - Developed software for an automotive customer, focusing on optimizing functionality and ensuring compliance with industry standards.
-      - Main activities included the implementation and maintenance of automotive software using C and other specific tools like Geny, CANoe, Candela, and Tresos.
-      - Collaborated with cross-functional teams to address technical challenges and meet project deadlines effectively.   
+  - **Brake Control ECU Project**
+    - Developed software for an automotive customer, focusing on optimizing functionality and ensuring compliance with industry standards.
+    - Main activities included the implementation and maintenance of automotive software using C and other specific tools like Geny, CANoe, Candela, and Tresos.
+    - Collaborated with cross-functional teams to address technical challenges and meet project deadlines effectively.   
 
 ## Dextra Technologies 
  *Dec 2020 to Jan 2024*, **Embedded Developer Jr**
@@ -34,7 +36,7 @@ modify_date: 2024-05-27
       - Worked with CAN and LIN protocols and tools to manage their databases.  
 
 ## CODE Ingeniería
- *May 2019 to May 2020*, **Programador Embebido**
+ *May 2019 to May 2020*, **Programador Embebido**.
  **Research and development of embedded systems**, focused on Linux and Android environments. In these projects, Octavio worked with NXP devices such as i.MX8 and i.MX6 SoCs. 
  The main tools used were Yocto Project and Android sources to set up and configure embedded systems for diverse applications and customers. Specific tasks included:
   - Configured and adapted display and touchpad drivers for Sabre SD board-based hardware.
@@ -43,9 +45,17 @@ modify_date: 2024-05-27
   - Researched and supported customers in using the **SCFW (System Controller Firmware)** on NXP **i.MX8QM** and **i.MX8QX** based development boards.
 
 # Professional experience in IT support and maintance.
+## Comercializadora de equipos de energía Renovables
+*Dec 2018 to Apr 2019*, **Photovoltaic Systems Installer**.   
+His main functions were: 
+- Conducting technical field studies.
+- Calculating and balancing electric loads.
+- Designing solar panel arrangements.
+- Performing electrical installations (piping, wiring, connections).
+- Installing photovoltaic panels.
 
 ## Autopista Mitla - Tehuantepec
- *May 2018 to Dec 2018*, **Electromechanical Technician**
+ *May 2018 to Dec 2018*, **Electromechanical Technician**.   
  As a technician, the main functions included:   
  - Conducting preventive and corrective maintenance on Traffic Control Equipment, utilizing ATMEGA microcontrollers.
  - Performing maintenance on emergency power systems.
@@ -55,14 +65,17 @@ modify_date: 2024-05-27
  - Monitoring data servers, video surveillance, and user software systems.   
 
 ## Industrias OLIN
- *May 2017 - April 2018*, **Systems Engineer**
-  - Edited and digitized academic documents focused on mathematics education using open-source software tools such as LaTeX, Geogebra, and Inkscape.
+ *May 2017 - April 2018*, **Systems Engineer**.   
   - Conducted repairs and maintenance on computer equipment and various electronic devices.
   - Authored and edited a course for programming ATMEL microcontrollers using assembly language and C.
   - Provided sales and technical consultation on electronic components, primarily modules for Arduino boards.
 
+## LaTeX Editor
+*Sep 2017 to Mar 2018*, **Freelancer in upwork**.   
+- Edited and digitized academic documents focused on mathematics education using open-source software tools such as LaTeX, Geogebra, and Inkscape.
+
 ## Universidad Del Mar, Campus Puerto Escondido 
-*Aug 2015 to Mar 2017*, **Computer Network Technician**
+*Aug 2015 to Mar 2017*, **Computer Network Technician**.   
 During this time, the work involved providing technical support in the area of Networks at the University of the Sea, Puerto Escondido campus, performing activities such as:
 - Installation of operating systems and software.
 - Installation and maintenance of hardware.
@@ -74,150 +87,92 @@ During this time, the work involved providing technical support in the area of N
 # Education
 ## [Universidad Tecnológica de la Mixteca](https://www.utm.mx/)
   Huajuapan de León, Oaxaca -
-  Electronic Engineer [Bachelor's degree](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/titulo.png) AUGUST 2010 - JULY 2015
+  Electronic Engineer [Bachelor's degree](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/titulo.png). AUGUST 2010 - JULY 2015
   - CENEVAL high performance results:[20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/ceneval.png).
   - Cedula profesional:[11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/cedula.png)
 
 # Skills 
 ## Programmin Languages 
-  Hello  
-<div class="hero hero--dark" style="background-color: #123; text-align: left;" >  
-    <table  >
-        <tr>
-            <th> <h5> Language </h5> </th>
-            <th> <h5> Experience </h5> </th>            
-            <th> <h5> Language </h5> </th>
-            <th> <h5> Experience </h5> </th> 
-        </tr>
-        <tr>
-            <td> <h5>· C/C++ </h5></td>
-            <td> 4+ years </td>                        
-            <td> <h5> · Bash </h5></td>
-            <td> 3+ years </td> 
-        </tr>
-        <tr>
-            <td> <h5>· Python </h5></td>
-            <td> 1 year </td> 
-            <td> <h5>· Java </h5></td>
-            <td> 1 year </td>
-        </tr>
-        <tr>
-            <td> <h5> · LaTeX </h5></td>
-            <td> 3 year </td> 
-            <td> <h5> · Markdown </h5></td>
-            <td> 6 months </td>
-        </tr>
-    </table>
-    </div>
+Since 2009, when Octavio started coding in C, he has worked with various languages:
++ **C/C++**: 4 years as a professional. 
++ **Python**: 1 year with personal projects and modification of scripts in some projects like python-can.
++ **Bash**: 3 years automating routines in Linux in his technician jobs and configuring Linux running on embedded systems.
++ **Java**: 2 years as a student, creating simple applications for personal projects.
++ **LaTeX**: 5 years for student and personal documentation, and 1 year professionally as a part-time freelancer.
++ **Markdown**: 8 months, used for writing this site and documenting GitHub projects.
 
 ## Automotive tools
-<div class="hero hero--dark" style="background-color: #123; text-align: left;"  >  
-    <table  >
-        <tr>
-            <th> <h5> Software/tool </h5> </th>
-            <th> <h5> Experience </h5> </th>            
-            <th> <h5> Software/tool </h5> </th>
-            <th> <h5> Experience </h5> </th> 
-        </tr>
-        <tr>
-            <td> <h5>· Autosar </h5></td>
-            <td> 2 years </td>                        
-            <td> <h5> · Geny </h5></td>
-            <td> 2 years </td> 
-        </tr>
-        <tr>
-            <td> <h5>· CANoe </h5></td>
-            <td> 2 years </td> 
-            <td> <h5>· CANdela </h5></td>
-            <td> 2 year </td>
-        </tr>
-        <tr>
-            <td> <h5> · Tresos </h5></td>
-            <td> 1 year </td> 
-            <td> <h5> · MISRA </h5></td>
-            <td> 3 years </td>
-        </tr>
-        <tr>
-            <td> <h5> · Unit testing (SWATT) </h5></td>
-            <td> 1 year </td> 
-            <td> <h5> · CAN-DB and LDF </h5></td>
-            <td> 3 years </td>
-        </tr>
-        <tr>
-            <td> <h5> · UDS Diagnostic Services </h5></td>
-            <td> 2 years </td>             
-        </tr>
-    </table>
-</div>    
+
++ **Autosar**: 1 year adding ports and  managing can databases (messages and signals), Diagnostic trouble codes (DTC), and gateways.   
++ **Vector tools**
+   + **CAN-DB** and **LDF** management: 3 years.  
+   + **Geny**: 2 years.
+   + **CANoe**: 3 years.
+   + **CANdela**: 2 years.
++ **Tresos**: 1 years.   
++ **Unit testing** (using SWATT), 2 years.
++ **MISRA**, 2 years.
++ **UDS** Diagnostic Services, 2 years.
 
 ## Linux, distros and tools
-<div class="hero hero--dark" style="background-color: #123; text-align: left;"  >  
-    <table  >
-        <tr>
-            <th> <h5> Software/tool </h5> </th>
-            <th> <h5> Experience </h5> </th>            
-            <th> <h5> Software/tool </h5> </th>
-            <th> <h5> Experience </h5> </th> 
-        </tr>
-        <tr>
-            <td> <h5>· Ubuntu </h5></td>
-            <td> 10 years </td>                        
-            <td> <h5> · Fedora </h5></td>
-            <td> 16 years </td> 
-        </tr>
-        <tr>
-            <td> <h5>· Debian </h5></td>
-            <td> 5 years </td> 
-            <td> <h5>· Mint </h5></td>
-            <td> 2 years </td>
-        </tr>
-        <tr>
-            <td> <h5> · Raspberry Pi OS/ Raspbian </h5></td>
-            <td> 1 year </td> 
-            <td> <h5> ·Yocto Project  </h5></td>
-            <td> 2 years </td>
-        </tr>
-        <tr> 
-            <td> <h5>· Docker </h5> </td>
-            <td> 6 Months  </td> 
-        </tr>
-    </table>
-</div>  
+
+- **Linux** distrubutions
+   - **Ubuntu**: 10 years as user. 
+   - **Fedora**: 12 years as user.
+   - **Mint**: 3 years.
+   - **Debian**: 3 years.
+   - **Raspberry Pi OS/ Raspbian**: 1 year.
+- Linux related software
+   - **Docker**: 6 monts
+   - Linux terminal: 10+ years
+   - **Vi**: 5 years  
+   - **Meld**     
+   - **FileZilla**
+- **Yocto Project**
+   - Construct systems for NXP, TI, and Rapberry Pi 4 devices. 
+
 
 ## Debugging tools
-* Jlink.
-* GDB.  rinning in Eclipe environments with STM, TI and Atmel/microchips IDEs
-* JTAG.
-* WinIdea.
+* **J-link**: 1 year. Used with NXP devices
+* **GDB, GNU Debugger**: 3 years. Running in Eclipe environments with STM, TI and Atmel/microchips IDEs
+* **WinIdea**: 3 years. To debug ECU devices. 
 
 ## Control version and administrative tools
-* Git, 3 years
-* Jira, 3 years
-* SVN, 1 year 
-* IBM IMS tool, 3 years
+* **Git**, 3 years
+* **Jira**, 3 years
+* **SVN**, 1 year 
+* **IBM IMS tool**, 3 years
 
 ## Integradet Development Environment (IDE)
-* Eclipse (IDEAS, STMCubeIDE, Code Composer Studio, Microchip Studio)
-* VS Code
-* Vim
-* KDevelop
-* TEXMaker, TeXstudio
+* **Eclipse** (IDEAS, STMCubeIDE, Code Composer Studio, Microchip Studio)
+* **VS Code**
+* **KDevelop**
+* **TEXMaker**, **TeXstudio**
 
-## Network 
+## Network & IT services
 * Hardware
-    * Network architecure Wiring.
-     * Roters, Switches configuration. 
+    * Network architecure Wiring, RJ45 & RJ11.
+    * Routers and witches configuration. 
+    * Building and maintaining PCs and laptops
+      * Checking requirements to buils a PC.
+        * Motherboard
+        * RAM 
+        * Hard disks
+        * Graphics cards
+      * Laptop hardware maintenance and repair.   
+    * Printers installation and maintenance.    
 * Software
     * **Wireshark** software.
-    * Secure shell protocol (**SSH**).
-    * Mount servers and clientes of **SFTP**.
-    * Mount Servers and clients of Web sites. 
+    * Mount **Asterisk** servers.  
+    * Secure Shell Protocol (**SSH**).
+    * Mount **SFTP** servers and clientes.
+    * Mount HTTP servers with **Apache** . 
     * **Jekyll** (this blog is developed with it).
 
 ## Mechanical and electrical tools 
-- Electronic/Lab tools: Soldering iron, moto tool (Dremel), microscopes, oscilloscopes, logic analyzers, power source, electronic load.
-- Electric tools: Hammer drill, Jigsaw, vacuum cleaner, grinder. 
-- Mechanical tools: Hammer, Screwdrivers, pliers, wrenches, crowbars, machetes, axes and anothers. 
+- **Electronic/Lab tools**: Soldering iron, moto tool (Dremel), microscopes, oscilloscopes, logic analyzers, power source, electronic load.
+- **Electric tools**: Hammer drill, Jigsaw, vacuum cleaner, grinder. 
+- **Mechanical tools**: Hammer, Screwdrivers, pliers, wrenches, crowbars, machetes, axes and anothers. 
 
 # Courses
 ## From [edX.org](https://courses.edx.org/)
