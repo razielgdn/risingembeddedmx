@@ -36,7 +36,7 @@ modify_date: 2024-05-29
       - Worked with CAN and LIN protocols and tools to manage their databases.  
 
 ## CODE Ingeniería
- *May 2019 to May 2020*, **Programador Embebido**
+ *May 2019 to May 2020*, **Programador Embebido**.
  **Research and development of embedded systems**, focused on Linux and Android environments. In these projects, Octavio worked with NXP devices such as i.MX8 and i.MX6 SoCs. 
  The main tools used were Yocto Project and Android sources to set up and configure embedded systems for diverse applications and customers. Specific tasks included:
   - Configured and adapted display and touchpad drivers for Sabre SD board-based hardware.
@@ -45,9 +45,17 @@ modify_date: 2024-05-29
   - Researched and supported customers in using the **SCFW (System Controller Firmware)** on NXP **i.MX8QM** and **i.MX8QX** based development boards.
 
 # Professional experience in IT support and maintance.
+## Comercializadora de equipos de energía Renovables
+*Dec 2018 to Apr 2019*, **Photovoltaic Systems Installer**.   
+His main functions were: 
+- Conducting technical field studies.
+- Calculating and balancing electric loads.
+- Designing solar panel arrangements.
+- Performing electrical installations (piping, wiring, connections).
+- Installing photovoltaic panels.
 
 ## Autopista Mitla - Tehuantepec
- *May 2018 to Dec 2018*, **Electromechanical Technician**
+ *May 2018 to Dec 2018*, **Electromechanical Technician**.   
  As a technician, the main functions included:   
  - Conducting preventive and corrective maintenance on Traffic Control Equipment, utilizing ATMEGA microcontrollers.
  - Performing maintenance on emergency power systems.
@@ -57,17 +65,17 @@ modify_date: 2024-05-29
  - Monitoring data servers, video surveillance, and user software systems.   
 
 ## Industrias OLIN
- *May 2017 - April 2018*, **Systems Engineer**  
+ *May 2017 - April 2018*, **Systems Engineer**.   
   - Conducted repairs and maintenance on computer equipment and various electronic devices.
   - Authored and edited a course for programming ATMEL microcontrollers using assembly language and C.
   - Provided sales and technical consultation on electronic components, primarily modules for Arduino boards.
 
 ## LaTeX Editor
-*Sep 2017 to Mar 2018*, **Freelancer in upwork**
+*Sep 2017 to Mar 2018*, **Freelancer in upwork**.   
 - Edited and digitized academic documents focused on mathematics education using open-source software tools such as LaTeX, Geogebra, and Inkscape.
 
 ## Universidad Del Mar, Campus Puerto Escondido 
-*Aug 2015 to Mar 2017*, **Computer Network Technician**
+*Aug 2015 to Mar 2017*, **Computer Network Technician**.   
 During this time, the work involved providing technical support in the area of Networks at the University of the Sea, Puerto Escondido campus, performing activities such as:
 - Installation of operating systems and software.
 - Installation and maintenance of hardware.
