@@ -23,7 +23,7 @@ author:
   avatar    : # path or url of avatar image (square)
   bio       : Embedded Developer 
   email     : octavioraziel.gdn@gmail.com
-  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  facebook  : profile.php?id=61560642972696 # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : L31zarGdn  # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
@@ -171,6 +171,7 @@ exclude:
   - /publish.sh
   - /node_modules
   - /screenshots 
+  - /tools
   - blog.md
 #init projects page  
 collections_dir: projects
@@ -223,7 +224,7 @@ defaults:
       type: 3dprinting
     values:      
       nav_key: 3dprintingZone
-      show_date: true  
+      show_date: false  
       sidebar:
         nav: 3dprinting   
       aside:
