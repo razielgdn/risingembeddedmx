@@ -178,19 +178,15 @@ collections_dir: projects
 collections:
   projects:
     output: true
-#end projects page    
-
+#end projects page
 #init 3dprinter zone      
   3dprinting:
     output: true  
-#end 3dprinterzone
+  spanish:
+    output: true  
+#init 3dprinter zone
 
-#  sample_page:
-#    output: true
-#  sample_articles:
-#    output: true
-#  sample_languages:
-#    output: true
+
 defaults:
   - scope:
       path: ""
@@ -205,7 +201,7 @@ defaults:
       show_edit_on_github: false
       show_subscribe: true
       pageview: true
-## projects
+## projects English
   - scope:
       path: "_projects/en"
     values:
@@ -218,15 +214,30 @@ defaults:
         toc: true
       show_edit_on_github: false
       show_date: false
+## Spanish Section.
+  - scope:
+      path: "_spanish"
+    values:
+      layout: article
+      nav_key: spanish
+      sidebar:
+        nav: spanishZone
+      license: true
+      aside:
+        toc: true
+      lang: es-MX  
+      show_edit_on_github: false
+      show_date: false
+
 ## 3d printing zone
   - scope:
-      path: ""  # "_3dprinting" 
-      type: 3dprinting
+      path: "_3dprinting"  
+      #type: 3dprinting
     values:      
       nav_key: 3dprintingZone
       show_date: false  
       sidebar:
-        nav: 3dprinting   
+        nav: navPrinting   
       aside:
         toc: true   
 ## end 3dprinting zone     

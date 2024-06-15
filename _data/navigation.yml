@@ -1,22 +1,23 @@
 #Header begins
 header:
-  - title:      Home
+  - title:      Blog
     url:        
-    key:        home
+    key:        blog
   - title:      Projects
-    url:        /projects/en/menu
-    key:        projects  
+    url:        /projects/en/openblt-start
+    key:        projects      
   - title:      3D printing zone
     url:        /3DprintingZone
   - title:      Archive
     url:        /archive
   - title:      About
     url:        /about
-  #- title:      Blog
-  #  url:        /blog    
+  - title:      En Español
+    url:        /spanish/quien-soy    
   - title:      GitHub
     url:        https://github.com/razielgdn
 #Header ends    
+
 projects-en:  
   - title:
     children: 
@@ -33,14 +34,30 @@ projects-en:
   # - title: Can Network Project
   #   children: 
   #     - title: CAN network objectives
-  #       url:  /projects/en/STM32-CANnetwork/can-objectives
+  #       url:  /projects/en/STM32-CANnetwork/can-objectives  
 
-# navPrinting:
-#   - title: 3D printing Zone
-#     children: 
-#       - title: 3D printing
-#         url: /3dprinting/first-steps
-#       - title: Runing Cura on Ubuntu using Zonestar 3D definitions
-#         url: /3dprinting/runningCura  
+spanishZone:
+  - title: En español
+    children:
+    - title: Acerca del Autor
+      url : /spanish/quien-soy    
+    - title: ¿Que es un Embedded Dev?
+      url: /spanish/embedded-devDef  
+    - title: ¿Que debo saber?
+      url: /spanish/embedded-knowledges  
+    - title: Preguntas de entrevista
+      url: /spanish/embedded-questions 
+  - title: Yocto Project
+    children: 
+    - title: Introducción
+      url: /spanish/yocto/intro   
+
+navPrinting:
+  - title: 3D printing Zone
+    children: 
+     - title: I get a 3D printer
+       url: /3dprinting/first-steps
+     - title: Runing Cura on Ubuntu 
+       url: /3dprinting/runningCura  
       
 
