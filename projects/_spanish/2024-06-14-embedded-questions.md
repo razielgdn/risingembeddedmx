@@ -7,7 +7,7 @@ key: embedded
 
 No se darán respuesta aquí a estas preguntas del todo, por experiencia propia se que esto es mejor investigarlo y comprenderlo que memorizarlo y no saber de que va. Pero más adelante se irán contestando en la etapa de teoría y projectos. No desesperen amigos, la senda del gran viaje es larga. 
 
-# Preguntas Relacionadas al Lenguale C
+# Preguntas relacionadas al Lenguaje C
 - ¿Qué es el keyword **volatile** y donde/ para qué se utiliza?
 - ¿Para que se usa la palabra reservada **static**? ¿que pasa si se le pone a una variable? ¿qué pasa si la lleva una función?
 - ¿Cuál es el tamaño del dato **int**? (spoiler depende de la **arquitectura**)
@@ -38,11 +38,11 @@ No se darán respuesta aquí a estas preguntas del todo, por experiencia propia 
 - ¿Qué hace el **ensamblador**?
 - ¿Qué hace el **linker**?
 - ¿Qué es una **macro**?
-- ¿Qué es una funcion **in-line**?
+- ¿Qué es una función **in-line**?
 - ¿Cuál es la diferencia entre hacer una rutina por **función** y por **macro**?
 - ¿Qué es un **API**?
 
-Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoque orientado a  objetos, podria describirse como apegado a la programación estructurada clásica, sin embargo. La definición que en lo personal puedo definir es el control de Hardware por medio de estructuras y algoritmos de Software. El mundo en binario (códificado en hexadecimal) es el pan de cada día para el embedded SW Developer.  
+Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoque orientado a  objetos, podría describirse como apegado a la programación estructurada clásica, sin embargo. La definición que en lo personal puedo definir es el control de Hardware por medio de estructuras y algoritmos de Software. El mundo en binario (códificado en hexadecimal) es el pan de cada día para el embedded SW Developer.  
 
 # Preguntas sobre arquitecturas de procesador y memoria
 - ¿Qué arquitecturas conoces?
@@ -52,10 +52,10 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 - ¿Cuál es la diferencia entre un **ciclo de reloj** y un **ciclo máquina**?
 - ¿Que significa que un microcontrolador sea **big endian**?
 - ¿Que significa que un procesador sea **little endian**?
-- ¿Qué es un procesador?
-- ¿Qué es un microcontrolador?
+- ¿Qué es un **procesador**?
+- ¿Qué es un **microcontrolador**?
 - ¿Todos los microcontroladores contienen un procesador?
-- ¿Qué modulos puede tener un microcontrolador?
+- ¿Qué **módulos** puede tener un microcontrolador?
 - ¿Qué es un **DAC**?
 - ¿Qué es un **ADC**?
 - ¿Qué es la **ALU**?
@@ -74,19 +74,19 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 - ¿Qué tipos de memoria existen (de acuerdo con su fabricacion)? Flash, eeprom, ram, nand, etc, intenta saber un poco de todas.
 - ¿Cuales son las partes de la memoria de un sistema y que se hace en cada una de ellas? Se los dejo en english pero creo que es la forma en que se puede comprender (y muy seguramente su entrevista será en inglés como dijimos más arriba):
 - Text segment  (i.e. instructions)
-    - Initialized data segment 
-    - Uninitialized data segment  (bss)
+    - **Initialized data segment** 
+    - **Uninitialized data segment**  (bss)
     - **Heap** 
     - **Stack**
 - ¿Como puedo saber el tamaño de una estructura sin utilizar el operador sizeof? pista, se usan apuntadores y una operacion sencilla. En su momento falle al responder.
 - ¿Qué es un puerto de entrada- salida/ ¿Qué es el **GPIO**?
-- ¿Como se mapea un GPIO dentro del microcontrolador (en referencia a lenguaje C)?
+- ¿Como se mapea un **GPIO** dentro del microcontrolador (en referencia a lenguaje C)?
 
 # Preguntas relacionadas con Sistema Operativo
 - ¿Qué es un **sistema operativo**?
 - ¿Qué es un **sistema operativo de tiempo real**?
 - ¿Cuál es la diferencia entre sistema monolítico y uno microkernel?
-- ¿Qué es un semáforo?
+- ¿Qué es un **semáforo**?
 - ¿Qué es **mutex**? 
 - ¿Qué es **RTOS**?
 - ¿Qué es **Embedded Linux**?
@@ -97,19 +97,19 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
     - Describir algún algoritmo para hacer respaldos. 
 
 # Preguntas acerca de protocolos de comunicación:
-- ¿Qué es un protocolo de comunicación síncrono?
-- ¿Qué es un protocolo de comunicación asíncrono?
+- ¿Qué es un protocolo de comunicación **síncrono**?
+- ¿Qué es un protocolo de comunicación **asíncrono**?
 - ¿Cómo se realiza una **comunicación serial**?
 - Explica brevemente como funciona el protocolo **I2C**
 - Explica brevemente como funciona el protocolo **SPI**
 - ¿Conoces el protocolo **CAN**?
 - ¿Conoces el protocolo **LIN**?
-- ¿Qué significa que unprotocolo sea Full-Duplex ó Half-Duplex?
+- ¿Qué significa que unprotocolo sea **Full-Duplex** ó **Half-Duplex**?
 - ¿En qué aplicaciones se recomienda utilizar SPI y en cuales I2C?
 - ¿Cómo se manejan los errores de comunicación en un protocolo?
 - ¿Qué es el bit de inicio?
-- ¿Qué es un checksum?
-- ¿Qué es un frame?
+- ¿Qué es un **checksum**?
+- ¿Qué es un **frame**?
 - Explica como has usado protocolos de comunicación en los proyectos
 
 # Soft Skills
@@ -126,7 +126,7 @@ Espero que esta información sea de utilidad para alguien, aquí si se necesita 
 Por el momento me despido, intentaré actualizar este post cada que pueda. 
 
 # Fuentes
-Les dejo una lista de lugares donde pudran encontrar solución a algunas de estas preguntas, y muchas más para prepararse. 
+Les dejo una lista de lugares donde podrán encontrar solución a algunas de estas preguntas, y muchas más para prepararse. 
 
 - [Top 18 Embedded Systems Interview Questions and Answers](https://www.guru99.com/embedded-systems-interview-questions.html)
 - [Embedded C Interview Questions](https://www.interviewbit.com/embedded-c-interview-questions/)
