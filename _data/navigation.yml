@@ -50,7 +50,9 @@ spanishZone:
   - title: Yocto Project
     children: 
     - title: Introducción
-      url: /spanish/yocto/intro   
+      url: /spanish/yocto/intro 
+    - title: Crear un sistema mínimo
+      url: /spanish/yocto/yoctoi    
 
 navPrinting:
   - title: 3D printing Zone
