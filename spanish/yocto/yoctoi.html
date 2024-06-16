@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Introduccion a Yocto - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Yocto para Raspberry Pi 4 - Rising Embedded Mx</title>
 
-<meta name="description" content="Este es un tema muy avanzado para sistemas embebidos pero por razones de mercado de valores y estratégia de negocios de la empresa donde trabajaba ahora teng...">
-<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/spanish/yocto/intro"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="Se dice que la mejor manera de aprender a programar es programando, el mismo principio se sigue respetando para cuestiones de sistemas operativos. Así que en...">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/spanish/yocto/yoctoi"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">En español</li><li class="toc-h2"><a href="/risingembeddedmx/spanish/quien-soy">Acerca del Autor</a></li><li class="toc-h2"><a href="/risingembeddedmx/spanish/embedded-devDef">¿Que es un Embedded Dev?</a></li><li class="toc-h2"><a href="/risingembeddedmx/spanish/embedded-knowledges">¿Que debo saber?</a></li><li class="toc-h2"><a href="/risingembeddedmx/spanish/embedded-questions">Preguntas de entrevista</a></li><li class="toc-h1">Yocto Project</li><li class="toc-h2 active"><a href="/risingembeddedmx/spanish/yocto/intro">Introducción</a></li><li class="toc-h2"><a href="/risingembeddedmx/spanish/yocto/yoctoi">Crear un sistema mínimo</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">En español</li><li class="toc-h2"><a href="/risingembeddedmx/spanish/quien-soy">Acerca del Autor</a></li><li class="toc-h2"><a href="/risingembeddedmx/spanish/embedded-devDef">¿Que es un Embedded Dev?</a></li><li class="toc-h2"><a href="/risingembeddedmx/spanish/embedded-knowledges">¿Que debo saber?</a></li><li class="toc-h2"><a href="/risingembeddedmx/spanish/embedded-questions">Preguntas de entrevista</a></li><li class="toc-h1">Yocto Project</li><li class="toc-h2"><a href="/risingembeddedmx/spanish/yocto/intro">Introducción</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/spanish/yocto/yoctoi">Crear un sistema mínimo</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4596,139 +4596,98 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Introduccion a Yocto</h1></header></div><meta itemprop="headline" content="Introduccion a Yocto"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-06-15T00:00:00+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Yocto para Raspberry Pi 4</h1></header></div><meta itemprop="headline" content="Yocto para Raspberry Pi 4"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-06-16T00:00:00+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>Este es un tema muy avanzado para sistemas embebidos pero por razones de mercado de valores y estratégia de negocios de la empresa donde trabajaba ahora tengo vacaciones indefinidas.</p>
+<div class="article__content" itemprop="articleBody"><p>Se dice que la mejor manera de aprender a programar es programando, el mismo principio se sigue respetando para cuestiones de sistemas operativos. Así que en
+estos capítulos estaremos trabajando con una nueva imagen de Embedded Linux para <strong>Raspberry Pi 4</strong>. La documentación que estoy siguiendo es la correspondiente a la versión 4.0.16 (<strong>kirkstone</strong>) que he elegido arbitrariamente.</p>
 
-<p>Ya que en las mentes de los desarrolladores son binarias tienden a tener opciones de dos en dos entonces o me quedo a lamentarme y culparme preguntando ¿por que a mi?, o me pongo a pulir habilidades para y mientras consigo un nuevo empleo.</p>
+<p>Lo primero que se debe realizar es configurar nuestro sistema operativo como host para compilar y trabajar con Yocto Project.  <br />
+Para comenzar debemos trabajar en Linux, ya sea en una máquina virtual o en una PC con una distribución de linux instalada “nativamente”. Lo de la máquina virtual no lo recomiendo para nada,  dado que necesitaremos exigir procesador y memoria RAM hasta los límites de nuestros equipos.</p>
 
-<h1 id="yocto-project">Yocto Project</h1>
-
-<p>Yocto es el prefijo del Sistema internacional de unidades para definir la escala más pequeña (hasta 2022 cuando se añadieron un par de ordenes más), un multiplicador por 10^-24^ o sea 0.000….1 con 24 ceros antes del 1.</p>
-
-<p>En el ámbito que nos incumbe significa que es una unidad muy pequeña, entonces Yocto project es un conjunto de herramientas para crear sistemas operativos basados en Linux de forma totalmente personalizada y que permite manipular cada componente en el proceso.</p>
-
-<p>El proyecto yocto combina y mantiene varios elementos clave:</p>
+<p>Dice la documentación de Yocto project que recomienda una  distro probada con ellos así que según la lista que mientras esto se escribe (Marzo 2024) debería ser una de las siguientes:</p>
 <ul>
-  <li>El sistema de compilación OpenEmbedded se compone del core de <strong>OpenEmbedded</strong> y <strong>Bitbake</strong>.</li>
-  <li>Una configuración de <strong>Linux embedded</strong> es usada para pruebas (Llamada <strong>Poky</strong>).</li>
-  <li>Una amplia infraestructura de pruebas esta disponible a través del constructor automático basado en Builbot.</li>
-  <li>Se dispone de herramientas para trabajar con embedded Linux de forma eficiente:</li>
-  <li>Herramientas para automatizar la compilación y las pruebas.</li>
-  <li>Procesos y estándares para las definiciones e intercambios de apoyo a la junta directiva.</li>
-  <li>Herramientas de análisis de seguridad y cumplimiento de licencias, soporte para manifiestos de software (SBoM) en SPDX.</li>
+  <li>Ubuntu 20.04 (LTS)</li>
+  <li>Ubuntu 22.04 (LTS)</li>
+  <li>Fedora 38</li>
+  <li>Debian GNU/Linux 11.x (Bullseye)</li>
+  <li>AlmaLinux 8</li>
 </ul>
 
-<p>Existen muchos componentes de código abierto bajo Yocto Project.</p>
+<p>En mi caso utilicé <strong>Ubuntu 22.04</strong>, aunque también utilicé <strong>Fedora 39</strong> y funcionó. Primero debemos actualizar nuestro sistema e instalar diversos paquetes de software y herramientas para que podamos trabajar. Entonces en nuestra terminal ejecutamos la instalación con el siguiente comando: <br />
+<code class="language-plaintext highlighter-rouge">sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev python3-subunit mesa-common-dev zstd liblz4-tool file locales libacl1</code></p>
 
-<p>Poky el “embedded OS” (sistema embebido empotrado) de referencia es en un BUILD EXAMPLE que construirá un pequeño sistema operativo con el sistema de compilación (bitbake, el motor de compilación, OpenEmbedded-Core, y los metadatos del sistema de compilación principal).</p>
-
-<p>El sistema de compilacion se descarga con “archivos” de instrucciones de compilación de Poky llamados “recipes” y “layers”. Tu puedes modificar, copiar o utilizar las especificaciones de Poky de la forma que necesites para crear un Sistema Embedded Linux personalizado.</p>
-
-<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/YoctoLayers.png" alt="" /></p>
-
-<h2 id="construir-un-sistema-operativo-a-la-medida">Construir un sistema operativo a la medida</h2>
-<p>La <a href="https://docs.yoctoproject.org/overview-manual/yp-intro.html#introducing-the-yocto-project">documentacion oficial</a> de yocto refiere al por que es una muy buena alternativa para la creacion de productos basados en sistemas embebidos.</p>
-
-<ul>
-  <li>Se ha adoptado muy bien en la industria muchos fabricantes de semiconductores, sistemas operativos, software y vendedores de servicio han adoptado y dan soporte para <strong>Yocto Project</strong>.</li>
-  <li>Es compatible con varios tipos de arquitectura, por ejemplo Intel, AMD, MIPS, ARM y varias otras.</li>
-  <li>Es compatible con una gama amplia de dispositivos emulados por <strong>QEMU</strong> (Quick emulator).</li>
-  <li>Es relativamente fácil portar las imágenes y el código sin tener que pasar a nuevos entornos de desarrollo.</li>
-  <li>Tiene mucha flexibilidad, por ejemplo una corporación puede crear una distribución a la medida y después de eso crear varios productos a la medida.</li>
-  <li>Es ideal para dispositivos del internet de las cosas (IoT por sus siglas en inglés) utilizando justamente lo que se necesita en un nuevo dispositivo.</li>
-  <li>Se pueden utilizar toolchains de terceros y es compatible con la mayoría de las arquitecturas más comunes.</li>
-  <li>Utiliza un sistema de modelo de capas, se pueden agregar paquetes de forma separada y de manera incremental, lo que reduce la redundancia y la complejidad.</li>
-  <li>Soporta compilaciones parciales por lo tanto es posible crear y reconstruir paquetes individuales según se necesiten.</li>
-  <li>Yocto project permite ser muy específico con las dependencias y logra porcentajes muy altos de reproducibilidad binaria,  cuando las distribuciones no son específicas otros paquetes se pueden incluir arbitrariamente.</li>
-  <li>Existe un gran ecosistema de individuos y organizaciones con una comunidad muy valiosa, también foros de soporte y desarrolladores activos.</li>
-  <li>Manifiesto de licencia, el proyecto proporciona un manifiesto de licencia para que lo revisen las personas que necesitan realizar un seguimiento del uso de licencias de código.</li>
-</ul>
-
-<h2 id="dificultades-de-uso">Dificultades de uso</h2>
-<p>Algunas dificultades que se pueden encontrar al usar Yocto project son los siguientes:</p>
-<ul>
-  <li>Las curvas de aprendizaje son muy grandes además de que una tarea puede tener varias formas de realizar una sola tarea.</li>
-  <li>Comprender que cambios necesitan realizarse para un nuevo diseño implica una gran cantidad de investigación.</li>
-  <li>El flujo de trabajo puede ser confuso si eres un usuario de escritorios tradicionales o servidores, En un entorno de desarrollo existen mecanismos para extraer e instalar nuevos paquetes que generalmente estan pre-compilados desde servidores en internet, al utilizar Yocto project se debe modificar la configuración y reconstruir para agregar paquetes adicionales.</li>
-  <li>El trabajar en un entorno de compilación cruzada (<strong>Cross-Build</strong>) puede resultar desconocido. Cuando se desarrolla un código para determinada tarjeta la compilación, ejecución y pruebas todos los procesos podrían ser mas rápidos si se ejecutaran en la la tarjeta que con bitbake dado que se tendrían que cargar después en la tarjeta para realizar pruebas. Yocto soporta un enfoque donde los cambios se pueden realizar con bitbake y luego solo implementar los paquetes actualizados en la tarjeta destino.</li>
-  <li>El sistema de compilación de Open embedded produce paquetes en formato estándar (por ejemplo rpm, deb o ipk).  Tu puedes implementar estos paquetes en un sistema que ya se encuentre corriendo mediante paquetes como rpm.</li>
-  <li>Los tiempos de compilación iniciales pueden ser muy grandes, esto debido a que son muchos los paquetes que se deben crear desde cero para tener un sistema Linux. La ventaja es que se tiene un cache  para que en sucesivas compilaciones solamente cambien los paquetes que han sido modificados.</li>
-</ul>
-
-<h2 id="cosas-que-desearía-haber-sabido">Cosas que desearía haber sabido</h2>
-
-<p>La documentación oficial tiene una sección con <a href="https://docs.yoctoproject.org/what-i-wish-id-known.html#what-i-wish-i-d-known-about-yocto-project">“Cosas que desearía haber sabido de Yocto”</a>, su traducción más o menos quedaría así.</p>
-
-<p>Usar yocto es fácil hasta que algo sale mal. Sin un buen entendimiento de como funciona el proceso de compilación puede suceder que se vuelva una caja negra. Algunos elementos que se deben saber antes de empezar a usar yocto son los siguientes:</p>
-
+<p>Para este tutorial supongo que podría llamarse, se realizará para empezar la compilación de un sistema mínimo para Rasperry pi, así que siguiendo los pasos del manual. Y adecuándose a nuestros propósitos:</p>
 <ol>
-  <li>Se debe utilizar <strong>Git</strong> y no archivos de paquetes, con esto nos aseguramos que el software se actualizará cuando exista algún error. Si algún archivo “tarball”es utilizado, el usuario debe hacerse responsable de sus propias actualizaciones.</li>
-  <li>Debe conocer el “layer index” (índice de capas) todas la capas pueden ser encontradas en el índice de capas. Aquellas que han solicitado el estado compatible con el Yocto project se pueden encontrar en la pagina <a href="https://www.yoctoproject.org/development/yocto-project-compatible-layers/">“Project compatible layers”</a>.</li>
-  <li>Cuando sea posible se deben utilizar “BSP layers”  de fabricantes como Intel, NxP, raspberry-pi y demás, debemos tratar de no crear layers desde cero, incluso con algún componente “custom” se debe usar una layer preexistente como plantilla.</li>
-  <li>No pongas todo en un solo “layer”, se deben usar diferentes capas separando lógicamente la información de una compilación. Por ejemplo podría tener una capa BSP, una de GUI, otra de configuración de distro, otra de aplicación, etc. A su vez aislar la información ayuda a simplificar futuras personalizaciones y reutilizado de código.</li>
-  <li>Nunca, nunca, nunca jamás modificar la “poky layer” cuando se actualice el siguiente “release” se perderán todos los cambios. Absolutamente todo.</li>
-  <li>La documentación oficial se encuentra en <a href="https://docs.yoctoproject.org/singleindex.html#document-kernel-dev/4.0.16/4.3.999/index">“All in one Mega Manual”</a> las búsquedas en google aunque son buenas, probablemente arrojarán resultados desactualizados.</li>
-  <li>Entender los conceptos básicos de como el sistema se construye: “the workflow”: es muy importante debido a que puede ayudar en caso de que ocurran errores en una etapa diferente de compilación.
-    <ol>
-      <li><strong>Fetch</strong> – (busca) obtiene el código fuente.</li>
-      <li><strong>Extract</strong> –(extraer) descomprime el código fuente.</li>
-      <li><strong>Patch</strong> – (parchar) Aplica parches para soluciona de errores y nuevas prestaciones.</li>
-      <li><strong>Configure</strong> (configura)– configura los parámetros del ambiente.</li>
-      <li><strong>Build</strong> (compila)– compila y realiza el mapeo/vinculado.</li>
-      <li><strong>Install</strong> (instala) – copia los archivos a los lugares indicados.</li>
-      <li><strong>Package</strong> (empaqueta) – agrupa los archivos para la instalación.  <br />
- Durante el proceso <strong>fetch</strong> probablemente no encontremos código, cuando sucede “extract” es posible que exista un archivo .zip no valido o algún problema similar. En otras palabras, la función de un punto particular del proceso te dan una idea de que es lo que podría estar fallando. <br />
-  <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yp-hiw.png" alt="" /></li>
-    </ol>
+  <li>Crear un directorio donde tengamos los recursos que vamos a trabajar en mi caso escogí tener un directorio para tener yocto y dentro de ese uno donde se tenga el proyecto.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> ~/yocto   
+<span class="nv">$ </span><span class="nb">cd</span> ~/yocto     
+<span class="nv">$ </span><span class="nb">mkdir </span>poky-kirkstone    
+<span class="nv">$ </span><span class="nb">cd </span>poky-kirkstone   
+</code></pre></div>    </div>
   </li>
-  <li>Es posible generar un gráfico de dependencias que muestra las relaciones entre recipes, tasks and targets. Se puede utilizar la opción ‘-g’ para generar el gráfico. Esto es muy útil cuando una compilación no se efectúa correctamente, dado que permite visualizar que paquetes causan problemas. Para mejor información ver la sección del Manual de bitbake.</li>
-  <li>Para decodificar los nombres “magic” de las carpetas en tmp/work: El proceso de compilación hace la búsqueda de paquetes, descomprime, preprocesa y
-compila. Si algo sale mal el sistema reporta directamente en donde se encuentran los archivos y paquetes temporales (build/tmp) que resultan de la compilación. 
-Cuando se realiza una compilación se puede usar “-u”  en la instucción bitbake para especificar un visor de interfaces de usuario en la gráfica de dependencias (por ejemplo knotty, ncurses, o taskexp).</li>
-  <li>Se puede compilar mas que solo imágenes: Es posible correr tareas específicas para un paquete o incluso un solo “recipe”. También se pueden utilizar un “Development Shell”.</li>
-  <li>Una definición ambigua: Package vs Recipe: una receta “Recipe” contiene instrucciones para la construcción de un “Package” paquete.</li>
-  <li>Se deben conocer que esta empaquetado en el sistema de archivos raiz (root filesystem).</li>
-  <li>Crear una receta con imágenes propias:  Es recomendable crear recetas personalizadas.</li>
-  <li>A continuación hay una lista de las habilidades necesarias en un desarrollador de embedded systems el cual debería poder:
+  <li>Procedemos a clonar Yocto project, como se comentó anteriormente usaremos la versión kirkstone. Así que utilizando Git:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone <span class="nt">-b</span> kirkstone git://git.yoctoproject.org/poky
+</code></pre></div>    </div>
+    <p>Este comando descarga los metadatos y herramientas para utilizar la distro poky, esperamos a que termine.</p>
+  </li>
+  <li>Ahora descargamos el layer de raspberry pi en su versión kirkstone.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone <span class="nt">-b</span> kirkstone git://git.yoctoproject.org/meta-raspberrypi
+</code></pre></div>    </div>
+  </li>
+  <li>Las herramientas de OpenEmbedded que se encuentran en su propia layer.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone <span class="nt">-b</span> kirkstone git://git.openembedded.org/meta-openembedded
+</code></pre></div>    </div>
+  </li>
+  <li>Para realizar una primera compilación podemos hacer el set del entorno de trabajo, que descarga las herramientas y lo necesario para construir  con Yocto Project.   <br />
+<code class="language-plaintext highlighter-rouge">source oe-init-build-env &lt;build&gt;</code>
     <ul>
-      <li>Saber negociar con proxies empresariales.</li>
-      <li>Añadir un paquete a una imagen.</li>
-      <li>Comprender la diferencia entre una receta y un paquete.</li>
-      <li>Compilar un paquete por si mismo y saber por que es útil.</li>
-      <li>Descubrir que paquetes son creados por una receta.</li>
-      <li>Descubrir que archivos hay en un paquete.</li>
-      <li>Descubrir que archivos hay en una imagen.</li>
-      <li>Añadir un servidor ssh a una imagen habilitando la transferencia de archivos.</li>
-      <li>Conocer la anatomía de una receta.</li>
-      <li>Saber como crear y usar “layers”.</li>
-      <li>Encontrar recetas (en el OpenEmbedded index).</li>
-      <li>Comprender las diferencias de configuración entre la máquina y la distribución</li>
-      <li>Encontrar y utilizar la BSP(de la máquina) para tu hardware.</li>
-      <li>Encuentra ejemplos de funciones  de distribución y saber donde Configurarlas.</li>
-      <li>Comprender el proceso de tareas y ejecutarlas individualmente.</li>
-      <li>Comprander el devtool (herramientas de desarrollo) y como simplifica el trabajo.</li>
-      <li>Mejorar las velocidades de compilación con descargas compartidas y caché de estado de trabajo.</li>
-      <li>Generar y comprender una gráfica de dependencia.</li>
-      <li>Generar y comprender el entorno Bitbake.</li>
-      <li>Compilar una extensión SDK para el desarrollo de aplicaciones.</li>
+      <li><strong>oe-init-build-env</strong> es un script que inicializa el entorno de trabajo.</li>
+      <li><strong><em>&lt;build&gt;</em></strong> es el nombre de la carpeta donde estarán todos los elementos códigos fuente, paquetes, makefiles, bibliotecas, etc y la imagen creada, para el caso de este tutorial:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">source </span>oe-init-build-env build-RPI 
+</code></pre></div>        </div>
+      </li>
     </ul>
   </li>
-  <li>Dependiendo de cuales son los intereses del usuario con Yocto Project, se podría considerar cualquiera de las siguientes:
+  <li>Ahora viene la parte donde nos ensuciamos las manos un poco, añadir el layer de raspberrypi4 y configurar los parámetros de compilación.
     <ul>
-      <li>Consulte el manual de tareas de desarrollo de Yocto project.</li>
-      <li>Consulte el manual de desarrollo de aplicaciones y el quit de desarrollo de software extensible (eSDK).</li>
-      <li>Obtenga información sobre el desarrollo del Kernel: puede consultal el manual de desarrollo de kernel.</li>
-      <li>Obtenga información sobre los Board Support Pages (BSPs): hay una guia disponible.</li>
-      <li>Aprender acerca del “Toaster”: Es una interfaz web para el sistema de compilación de Yocto también tiene un manual.</li>
-      <li>Obtenga información sobre los plugins para Visual Studio Code o Eclipse.</li>
-      <li>Ten a la mano el Yocto Project Reference Manual. A diferencia del resto del conjunto de manuales del Proyecto Yocto, este manual se compone de material adecuado para referencia en lugar de procedimientos.</li>
+      <li>Agregar el layer de raspberry-pi. Abrir el archivo <strong>conf/bblayers.conf</strong> y añadir la linea: <strong>/home/razielgdn/yocto/poky-kirkstone/meta-raspberrypi \</strong>
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto01.png" alt="" /></li>
     </ul>
   </li>
 </ol>
 
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-06-15T00:00:00+00:00"><!-- start custom article footer snippet -->
+<ul>
+  <li>
+    <p>Se configuran los parámetros en conf/local.conf, se busca la arquitectura (machine) sobre la que correra la imagen y se actualiza por: “raspberrypi4-64”. <br />
+ <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto02.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Al final del archivo es posible agregar el número de threads que vamos a utilizar y el número de tareas que se pueden compilar en paralelo.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  BB_NUMBER_THREADS ?= "8"
+  PARALLEL_MAKE ?= "-j 8"
+</code></pre></div>    </div>
+    <p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto03.png" alt="" /></p>
+  </li>
+</ul>
+
+<ol>
+  <li>En mi caso prefiero primero descargar los paquetes y después iniciar la compilación, para hacer las tareas de fetch se ejecuta el siguiente comando.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bitbake <span class="nt">--runall</span> fetch core-image-minimal   
+</code></pre></div>    </div>
+  </li>
+  <li>Para finalizar damos paso a la compilación, para un primer ejemplo:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bitbake  core-image-minimal
+</code></pre></div>    </div>
+  </li>
+  <li>Toca esperar el tiempo que necesite el sistema para hacer la compilación. <br />
+La parte siguiente es flashear el software en una tarjeta SD para correrla en nuestra Raspberrypi, que se encuentra en <strong>~/yocto/poky-kirkstone/build-RPI/tmp/deploy/images/raspberrypi4-64</strong>
+ puedes utilizar cualquier flasher como <strong>balenaEtcher</strong> o con el comando <strong>dd</strong>.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>risingembeddedmx-image-raspberrypi4-64.rpi-sdimg <span class="nv">of</span><span class="o">=</span>/dev/sdc <span class="nv">status</span><span class="o">=</span>progress <span class="nv">bs</span><span class="o">=</span>1M
+</code></pre></div>    </div>
+  </li>
+</ol>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-06-16T00:00:00+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
@@ -4738,7 +4697,7 @@ Cuando se realiza una compilación se puede usar “-u”  en la instucción bit
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>ANTERIOR</span><a href="/risingembeddedmx/spanish/embedded-questions">Preguntas de entrevista</a></div><div class="next"><span>SIGUIENTE</span><a href="/risingembeddedmx/spanish/yocto/yoctoi">Crear un sistema mínimo</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>ANTERIOR</span><a href="/risingembeddedmx/spanish/yocto/intro">Introducción</a></div></div></div>
 
 </div>
 
