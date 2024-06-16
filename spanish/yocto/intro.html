@@ -10,7 +10,7 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Introduccion a Yocto - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Introducción a Yocto - Rising Embedded Mx</title>
 
 <meta name="description" content="Este es un tema muy avanzado para sistemas embebidos pero por razones de mercado de valores y estratégia de negocios de la empresa donde trabajaba ahora teng...">
 <link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/spanish/yocto/intro"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
@@ -4596,7 +4596,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Introduccion a Yocto</h1></header></div><meta itemprop="headline" content="Introduccion a Yocto"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-06-15T00:00:00+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Introducción a Yocto</h1></header></div><meta itemprop="headline" content="Introducción a Yocto"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-06-15T00:00:00+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><p>Este es un tema muy avanzado para sistemas embebidos pero por razones de mercado de valores y estratégia de negocios de la empresa donde trabajaba ahora tengo vacaciones indefinidas.</p>
@@ -4665,7 +4665,7 @@
 
 <ol>
   <li>Se debe utilizar <strong>Git</strong> y no archivos de paquetes, con esto nos aseguramos que el software se actualizará cuando exista algún error. Si algún archivo “tarball”es utilizado, el usuario debe hacerse responsable de sus propias actualizaciones.</li>
-  <li>Debe conocer el “layer index” (índice de capas) todas la capas pueden ser encontradas en el índice de capas. Aquellas que han solicitado el estado compatible con el Yocto project se pueden encontrar en la pagina <a href="https://www.yoctoproject.org/development/yocto-project-compatible-layers/">“Project compatible layers”</a>.</li>
+  <li>Debe conocer el “layer index” (índice de capas) todas la capas pueden ser encontradas en el índice de capas. Aquellas que han solicitado el estado compatible con el Yocto project se pueden encontrar en la página <a href="https://www.yoctoproject.org/development/yocto-project-compatible-layers/">“Project compatible layers”</a>.</li>
   <li>Cuando sea posible se deben utilizar “BSP layers”  de fabricantes como Intel, NxP, raspberry-pi y demás, debemos tratar de no crear layers desde cero, incluso con algún componente “custom” se debe usar una layer preexistente como plantilla.</li>
   <li>No pongas todo en un solo “layer”, se deben usar diferentes capas separando lógicamente la información de una compilación. Por ejemplo podría tener una capa BSP, una de GUI, otra de configuración de distro, otra de aplicación, etc. A su vez aislar la información ayuda a simplificar futuras personalizaciones y reutilizado de código.</li>
   <li>Nunca, nunca, nunca jamás modificar la “poky layer” cuando se actualice el siguiente “release” se perderán todos los cambios. Absolutamente todo.</li>
