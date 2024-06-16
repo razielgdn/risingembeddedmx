@@ -45,13 +45,14 @@ es: &ES
   STATISTICS              : "[POST_COUNT] Articulos posteados, [PAGE_COUNT] paginas."
   LICENSE_ANNOUNCE        : "Acuerdo de  [LICENSE] licencia."
   POST_ON_GITHUB          : "Editar en Github"
-  FOLLOW_ME               : "Follow me on [NAME]."
-  FOLLOW_US               : "Follow us on [NAME]."
-  EMAIL_ME                : "Send me an Email."
-  EMAIL_US                : "Send us an Email."
+  FOLLOW_ME               : "Sigueme en [NAME]."
+  FOLLOW_US               : "Siguenos en[NAME]."
+  EMAIL_ME                : "Enviame un  Email."
+  EMAIL_US                : "Envianos un Email."
   COPYRIGHT_DATES         : "2024"
 
-en-MX:
-en-CL:
- <<: *EN
+es-MX:
+  <<: *ES
+es-CL:
+  <<: *ES
 # @end locale config
