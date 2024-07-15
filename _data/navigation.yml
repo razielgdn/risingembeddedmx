@@ -4,7 +4,7 @@ header:
     url:        
     key:        blog
   - title:      Projects
-    url:        /projects/en/openblt-start
+    url:        /projects/en/1-openblt/openblt-start
     key:        projects      
   - title:      3D printing zone
     url:        /3DprintingZone
@@ -26,11 +26,15 @@ projects-en:
   - title:      OpenBlt project
     children:
       - title:  First steps with openblt
-        url:    /projects/en/openblt-start
+        url:    /projects/en/1-openblt/openblt-start
       - title:  OpenBLT in Nucleo-F446RE
-        url:    /projects/en/open-blt
+        url:    /projects/en/1-openblt/open-blt
       - title:  Usage of the custom OpenBLT on the Nucleo-F446RE board
-        url:    /projects/en/openblt-results
+        url:    /projects/en/1-openblt/openblt-results
+  - title: 8 bit AVR MCUs Section
+    children:
+      - title: Bluild and Flash AVR projects in Linux
+        url: /projects/en/2-avr-section/build-and-flash      
   # - title: Can Network Project
   #   children: 
   #     - title: CAN network objectives
