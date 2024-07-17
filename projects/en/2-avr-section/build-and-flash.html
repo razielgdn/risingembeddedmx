@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Running Cura on Ubuntu - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Build and Flash AVR projects in Linux - Rising Embedded Mx</title>
 
-<meta name="description" content="IntroductionWhen I checked the documentation from Zonestar for slicing objects to print, I noticed that Prusa Slicer and Ultimaker Cura 5.7.1 are available f...">
-<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/3dprinting/runningCura"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="The purpose of this article is to guide you through preparing a Linux system to build and flash ATMEGA AVR microcontrollers. Using Ubuntu 22.04 and Fedora 39...">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/2-avr-section/build-and-flash"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">3D printing Zone</li><li class="toc-h2"><a href="/risingembeddedmx/3dprinting/first-steps">I get a 3D printer</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/3dprinting/runningCura">Runing Cura on Ubuntu</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/menu">Index</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4585,7 +4585,7 @@
 </svg>
 <a title="This is my world, where I can do what I think
 " href="/risingembeddedmx/">Rising Embedded Mx</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about">About</a></li><li class="navigation__item"><a href="/risingembeddedmx/spanish/quien-soy">En Español</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item navigation__item--active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about">About</a></li><li class="navigation__item"><a href="/risingembeddedmx/spanish/quien-soy">En Español</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -4596,71 +4596,221 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Running Cura on Ubuntu</h1></header></div><meta itemprop="headline" content="Running Cura on Ubuntu"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-07-17T16:55:25+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Build and Flash AVR projects in Linux</h1></header></div><meta itemprop="headline" content="Build and Flash AVR projects in Linux"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-07-17T16:55:25+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
-<p>When I checked the documentation from Zonestar for slicing objects to print, I noticed that <strong>Prusa Slicer</strong> and <strong>Ultimaker Cura 5.7.1</strong> are available for use with Ubuntu. However, when trying to add the printer definitions, I encountered an issue where I couldn’t slice. This issue persisted even when testing with other printers until I deleted the definition folder. In this article, I will demonstrate how to solve this issue.</p>
+<div class="article__content" itemprop="articleBody"><p>The purpose of this article is to guide you through preparing a Linux system to build and flash ATMEGA AVR microcontrollers. Using <strong>Ubuntu 22.04</strong> and <strong>Fedora 39</strong>, I will demonstrate how to perform the compilation and flash an <strong>AVR MCU</strong>.</p>
 
-<h1 id="download-and-installation">Download and installation</h1>
-<p>The official version of Ultimaker Cura 5.7.1 can be downloaded from <a href="https://ultimaker.com/es/software/ultimaker-cura/#downloads">Offical page</a>.</p>
-<ul>
-  <li>Download the <strong>Linux.AppImage</strong> file.</li>
-  <li>Allow execution permission for the file.
-    <ul>
-      <li>Graphically:
-        <ol>
-          <li>Right click in <strong>UltiMaker-Cura-5.7.1-linux-X64.AppImage</strong></li>
-          <li>In the Permissions tab, check the Execute option.</li>
-        </ol>
-      </li>
-      <li>In the terminal execute <code class="language-plaintext highlighter-rouge">chmod 755 UltiMaker-Cura-5.7.1-linux-X64.AppImage</code></li>
-    </ul>
-  </li>
-  <li>Double-click the file and wait for the program to run.</li>
-</ul>
+<h1 id="installing-the-required-packages">Installing the required packages</h1>
 
-<h1 id="add--definitions-for-zonestar-printers">Add  definitions for Zonestar printers</h1>
-<p>I found that Ultimaker Cura is available for use with Zonestar printers after copying the configuration files to the installation directory. A tutorial on how to do this from Zonestar is located on <a href="https://www.youtube.com/watch?v=h2GynyUo7wQ">YouTube</a>.</p>
+<p>Support for 8-bit AVR MCUs has been available in free software for many years, and these tools are accessible in Linux repositories. We can install the necessary packages using the package manager.    <br />
+Install packages related to C development and the AVR compiler:<br />
+<code class="language-plaintext highlighter-rouge">sudo apt-get install -y gcc build-essential</code><br />
+<code class="language-plaintext highlighter-rouge">sudo apt install -y avr-libc binutils-avr gcc-avr  gdb-avr</code></p>
+
 <ol>
-  <li>Download <strong>Zonestar_Cura_resources.zip</strong> for cura from  <a href="https://github.com/ZONESTAR3D/Slicing-Guide/tree/master/cura">Zonestar Slicing-Guide</a>.</li>
-  <li>Decompress the files.</li>
-  <li>Copy the folders “materials”, “extruders”, and “definitions” on the installation path. On Ubuntu 22.04, the installation files are located at: <br />
-<code class="language-plaintext highlighter-rouge">~/.local/share/cura/5.7</code></li>
-  <li>Go to <a href="https://github.com/razielgdn/Zonestar3DNotesAndTricks/tree/main/Resources/definitions">razielgdn/Zonestar3DNotesAndTriks</a> and download the files.</li>
-  <li><strong>Copy and replace</strong> the files <em>fdmextruder.def.json</em> and <em>fdmprinter.def.json</em> in <strong>definitions</strong> folder.<br />
- The software is ready to be used with Zonestars printers.
-    <ul>
-      <li>Cura is running.  <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/3dPrinting/Slice01.gif" /></li>
-      <li>The printer can be used. <br />
-<img class="image image--xl" src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/3dPrinting/printerpiece.jpg" /></li>
-    </ul>
-  </li>
+  <li>Install avrdude, the flasher software.<br />
+<code class="language-plaintext highlighter-rouge">sudo apt install -y libusb-dev avrdude</code></li>
 </ol>
 
-<h1 id="explanation">Explanation</h1>
-<p>Cura is configured with JSON files. The Zonestar file was developed for an old version of Cura. When I checked the logfile, I noticed that <strong>prime_tower_mode</strong> was not defined. After searching Google for a solution, I didn’t find much. However, I found a solution in the <a href="https://github.com/Ultimaker/Cura">Ultimaker/Cura repository</a>, where the definition files are located in <em>resources/definitions</em>. The solution was to merge the missing definitions.</p>
+<h2 id="configuring-hardware">Configuring hardware</h2>
+<p>If you do not have enough experience with microcontrollers and hardware, this step may be a bit difficult. For this example, I used some transistors and resistors as switches. The following image shows the schematic of the circuit, and the connector corresponds to a <a href="https://www.fischl.de/usbasp/">USBAsp programmer</a>. 
+I bought the programmer on <a href="https://www.aliexpress.com/item/1005007097793441.html">Aliexpress</a>.</p>
+
+<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/protoLED_schem.png" /></p>
+
+<p>The view on the breadboard looks like this: <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/protoLED_bb.png" /></p>
+
+<p>Finally the constructed circuit including the programmer in the real life:</p>
+
+<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/protoLED_real.jpg" /></p>
+
+<p>As you can see, PB0, PB1, and PB2 are used to control the RGB LED. The SPI port is connected directly to PB2 (MOSI), PB3 (MISO), PB4 (SCK), and PC6 (RESET). The power source comes from the USB, with the respective GND and VCC (5V).</p>
+
+<h2 id="create-your-first-program">Create your first program</h2>
+
+<p>I did a test code to control a RGB led, this was implemented with a state machine using an struct array.  <br />
+<strong>main.c</strong>:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//#define F_CPU 1000000 // Uncomment if you  define F_CPU when you compile with avr-gcc</span>
+<span class="cp">#include</span> <span class="cpf">&lt;avr/io.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;util/delay.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">configureGPIO</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="cm">/*RGBState ENUM:
+This values represents the pines in a RGB led with its respective colors R: Red, G: Green, B: Blue and its basic possible combinations:
+*/</span>
+<span class="k">enum</span> <span class="n">RGBState</span> 
+<span class="p">{</span>   <span class="n">ALL_OFF</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 000 All LEDs off</span>
+    <span class="n">RED</span><span class="p">,</span>         <span class="c1">// 001 Red LED on</span>
+    <span class="n">GREEN</span><span class="p">,</span>       <span class="c1">// 010 Green LED on</span>
+    <span class="n">RED_GREEN</span><span class="p">,</span>   <span class="c1">// 011 Red and Green LEDs on</span>
+    <span class="n">BLUE</span><span class="p">,</span>        <span class="c1">// 100 Blue LED on</span>
+    <span class="n">BLUE_RED</span><span class="p">,</span>    <span class="c1">// 101 Blue and Red LEDs on</span>
+    <span class="n">BLUE_GREEN</span><span class="p">,</span>  <span class="c1">// 110 Blue and Green LEDs on</span>
+    <span class="n">ALL_ON</span>       <span class="c1">// 111 All LEDs on</span>
+<span class="p">};</span>
+<span class="cm">/*
+LED_states struct contains two unsigned integers with to represents the RGB LED color in an actual state and the next state in a state machine. 
+*/</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">States</span><span class="p">{</span>    
+   <span class="kt">uint8_t</span> <span class="n">RGB_color</span> <span class="p">;</span>
+   <span class="kt">uint8_t</span> <span class="n">next_state</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">LED_states</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*State machine is the representation of the RGB LED states with its actual state and next state to be set. */</span>
+    <span class="n">LED_states</span> <span class="n">states_machine</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> 
+    <span class="p">{</span>
+        <span class="p">{</span> <span class="n">ALL_OFF</span><span class="p">,</span> <span class="n">RED</span><span class="p">},</span>         
+        <span class="p">{</span> <span class="n">RED</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">},</span>           
+        <span class="p">{</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">},</span>          
+        <span class="p">{</span> <span class="n">RED_GREEN</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">},</span>      
+        <span class="p">{</span> <span class="n">BLUE</span><span class="p">,</span> <span class="n">RED</span><span class="p">},</span>       	 
+        <span class="p">{</span> <span class="n">BLUE_RED</span><span class="p">,</span> <span class="n">BLUE_GREEN</span><span class="p">},</span> 
+        <span class="p">{</span> <span class="n">BLUE_GREEN</span><span class="p">,</span> <span class="n">ALL_ON</span><span class="p">},</span>   
+        <span class="p">{</span> <span class="n">ALL_ON</span><span class="p">,</span> <span class="n">ALL_OFF</span><span class="p">}</span>       
+    <span class="p">};</span> 
+    <span class="kt">int</span> <span class="n">state</span><span class="o">=</span><span class="n">ALL_OFF</span><span class="p">;</span>
+    <span class="n">configureGPIO</span><span class="p">();</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>        
+        <span class="n">PORTB</span> <span class="o">=</span>  <span class="n">states_machine</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">RGB_color</span><span class="p">;</span>           
+        <span class="n">state</span> <span class="o">=</span> <span class="n">states_machine</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">next_state</span><span class="p">;</span>
+        <span class="n">_delay_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> 
+        
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">configureGPIO</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//PORTB configured has output</span>
+    <span class="n">DDRB</span> <span class="o">=</span> <span class="mh">0x0F</span><span class="p">;</span>
+    <span class="c1">// PORTB with all pins in OFF status</span>
+    <span class="n">PORTB</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>    
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Compile the system, in this example only one file was used to this project in this case the build process can be realized with a couple of instructions to create the binaries .elf and .hex:
+    <ul>
+      <li>Create the <strong>.elf</strong> file. (F_CPU is a parameter here, Defaulf value is 1MHz)
+  <code class="language-plaintext highlighter-rouge">avr-gcc -mmcu=atmega328p -Wall -Os -DF_CPU=1000000 -o bin/RGB_control.elf main.c</code></li>
+      <li>Create the <strong>.hex</strong> file.
+  <code class="language-plaintext highlighter-rouge">avr-objcopy -j .text -j .data -O ihex bin/RGB_control.elf bin/RGB_control.hex -v </code></li>
+    </ul>
+  </li>
+  <li>To Flash to the MCU using avr dude
+<code class="language-plaintext highlighter-rouge">avrdude -p m328p -c usbasp -P usb -U flash:w:bin/RGB_control.hex</code></li>
+</ol>
+
+<h2 id="create-a-basic-makefile">Create a basic Makefile</h2>
+<p>To automate the process, a Makefile can be created. The following Makefile can be used to implement the last steps:</p>
+<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Makefile for building and flashing ATMEGA328p
+</span>
+<span class="c"># Variables
+</span><span class="nv">MCU</span><span class="o">=</span>atmega328p
+<span class="nv">F_CPU</span><span class="o">=</span>1000000
+<span class="nv">SRC</span><span class="o">=</span>main.c
+<span class="nv">BUILD_DIR</span><span class="o">=</span>bin
+<span class="nv">BINARY_NAME</span><span class="o">=</span>RGB_control
+<span class="nv">PROGRAMMER</span><span class="o">=</span>usbasp
+<span class="nv">PORT</span><span class="o">=</span>usb
+
+<span class="c"># Compiler and linker flags
+</span><span class="nv">CFLAGS</span><span class="o">=</span><span class="nt">-mmcu</span><span class="o">=</span><span class="p">$(</span>MCU<span class="p">)</span> <span class="nt">-Wall</span> <span class="nt">-Os</span> <span class="nt">-DF_CPU</span><span class="o">=</span><span class="p">$(</span>F_CPU<span class="p">)</span>
+<span class="nv">LDFLAGS</span><span class="o">=</span>
+
+<span class="c"># Rules
+</span><span class="nl">all</span><span class="o">:</span> <span class="nf">$(BUILD_DIR)/$(BINARY_NAME).hex</span>
+
+<span class="nl">$(BUILD_DIR)/$(BINARY_NAME).elf</span><span class="o">:</span> <span class="nf">$(SRC)</span>
+	<span class="p">@</span><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="p">$(</span>BUILD_DIR<span class="p">)</span>
+	avr-gcc <span class="p">$(</span>CFLAGS<span class="p">)</span> <span class="nt">-o</span> <span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.elf <span class="p">$(</span>SRC<span class="p">)</span>
+
+<span class="nl">$(BUILD_DIR)/$(BINARY_NAME).hex</span><span class="o">:</span> <span class="nf">$(BUILD_DIR)/$(BINARY_NAME).elf</span>
+	avr-objcopy <span class="nt">-j</span> .text <span class="nt">-j</span> .data <span class="nt">-O</span> ihex <span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.elf <span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.hex <span class="nt">-v</span>
+
+<span class="nl">flash</span><span class="o">:</span> <span class="nf">$(BUILD_DIR)/$(BINARY_NAME).hex</span>
+	avrdude <span class="nt">-p</span> <span class="p">$(</span>MCU<span class="p">)</span> <span class="nt">-c</span> <span class="p">$(</span>PROGRAMMER<span class="p">)</span> <span class="nt">-P</span> <span class="p">$(</span>PORT<span class="p">)</span> <span class="nt">-U</span> flash:w:<span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.hex:i <span class="nt">-v</span>
+
+<span class="nl">clean</span><span class="o">:</span>
+	<span class="nb">rm</span> <span class="nt">-rf</span> <span class="p">$(</span>BUILD_DIR<span class="p">)</span>
+
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">all flash clean</span>
+</code></pre></div></div>
+<h2 id="using-visual-studio-code">Using visual studio code</h2>
+
+<p>A couple of extensions for Visual Studio Code are available:
+-<strong>AVR Utils</strong> is a simple extension that provides a way to compile AVR projects.</p>
+<ol>
+  <li>
+    <p>You can find it in the extensions tab in VS Code. <br />
+  <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/AVRUtils01.png" /></p>
+  </li>
+  <li>To create a project, press <strong>Ctrl+Shift+P</strong> and select <strong>AVR Utils: Make Project</strong>. Select/create the directory to work in.</li>
+  <li>Enter a name for your project, for example, “avrUtilsTest”. This step will create a new directory, and AVR Utils will create: a <strong>main.c</strong> file, a <strong>.vscode</strong> folder with <strong>JSON</strong> files, and a <strong>Debug</strong> folder.</li>
+  <li>Click in the bottom right part on “Select AVR Device” and select  atmega328p.</li>
+  <li>Select AVR C Language mode.</li>
+  <li>Click on the build icon. If a message saying “No toolchain found” is displayed, it is recommended to select the toolchain provided by <a href="https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers">Microchip (ATMEL)</a>.
+  <a href="https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/avr8-gnu-toolchain-3.7.0.1796-linux.any.x86_64.tar.gz">Download</a> the toolchain, decompress it in your preferred directory, and reference the directory in the extension.</li>
+  <li>VS Code can now build AVR projects.</li>
+  <li>Use avrdude to flash the binaries to the microcontroller.</li>
+</ol>
+
+<p>Personally, I do not prefer this extension because the compilers are natively integrated into Linux systems, and you can’t flash directly.</p>
+
 <ul>
-  <li>
-    <p>Example of definition to merge in <em>fdmextruder.def.json</em>
- <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/3dPrinting/cura01.png" /></p>
-  </li>
-  <li>
-    <p>Example of definition to merge in <em>fdmprinter.def.json</em>
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/3dPrinting/cura02.png" /></p>
-  </li>
-  <li>
-    <p>Thanks for reading!</p>
+  <li><strong>AVR Helper</strong>  is a more complete extension. Follow these steps to install and configure the extension:
+    <ol>
+      <li>You can find it in the extensions tab in VS Code.
+ <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/AVRHelper01.png" /></li>
+      <li>Press <strong>Ctrl+Shift+P</strong> and select <strong>AVR Helper: Perform initial setup</strong>, and press Enter to complete the 4 steps of the extension.
+        <ul>
+          <li>Write the full path to the compiler executable, usually: <strong>/usr/bin/avr-gcc</strong> and press enter.</li>
+          <li>Write the  full path to the programmer executable: <strong>/usr/bin/avrdude</strong> and press enter.</li>
+          <li>Write the full path to the programmer definitions: <strong>/etc/avrdude.conf</strong> and press enter.</li>
+          <li>Leave the source libraries path empty and press enter.</li>
+        </ul>
+      </li>
+      <li>The next  step is configure the programer,  press <strong>Ctrl+Shift+P</strong> and select <strong>AVR Helper: Select programmer</strong>.
+        <ul>
+          <li>Select <strong>USBasp</strong> or your device and press enter.</li>
+          <li>Write <strong>usb</strong> to configure the port and press enter.</li>
+          <li>Leave the speed parameter empty and press enter.</li>
+        </ul>
+      </li>
+      <li>Finally configure the device,  press <strong>Ctrl+Shift+P</strong> and select <strong>AVR Helper: Select select device</strong>.
+        <ul>
+          <li>Select atmega328p (or your device) and press enter.</li>
+          <li>Write the device frequency in this case 1000000 (1MHz: default value in atmega328p from the factory) and press enter.</li>
+        </ul>
+      </li>
+      <li>VS Code is now ready to compile and flash a device. The plugin includes three buttons to build and flash:
+        <ul>
+          <li>Quick: Build and flash with default options.</li>
+          <li>Build: Build source code.</li>
+          <li>Flash: Flash binary to device.</li>
+        </ul>
+      </li>
+    </ol>
   </li>
 </ul>
-</div><div class="d-print-none"><footer class="article__footer"><span>Last updated
-      <time itemprop="dateModified" datetime="2024-06-05T00:00:00+00:00">Jun 05, 2024</time>
-    </span><!-- start custom article footer snippet -->
+
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-07-17T16:55:25+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
-</footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/3dprinting/first-steps">I get a 3D printer</a></div></div></div>
+<div class="article__license"><div class="license">
+    <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> license.
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></div></div></div>
 
 </div>
 
@@ -4703,7 +4853,7 @@
 				repo: 'custom-application-test',
 				owner: 'razielgdn',
 				admin: ['razielgdn'],
-				id: '3D-Printing'
+				id: 'AVR'
 			});
 			gitalk.render('js-gitalk-container');
 		});

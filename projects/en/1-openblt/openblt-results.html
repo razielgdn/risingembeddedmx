@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>First steps with OpenBLT - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Usage of the custom OpenBLT on the Nucleo-F446RE board - Rising Embedded Mx</title>
 
-<meta name="description" content="IntroductionOpenBLT is an open-source project. It can be used with multiple microcontrollers and protocols. This project can be ported to 8-bit, 16-bit, and ...">
-<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/openblt-start"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="Compiling BootCommander toolBootCommander is a tool available in the OpenBLT project. It is recommended to build it on the host system where it will be used ...">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/menu">Index</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/menu">Index</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4585,7 +4585,7 @@
 </svg>
 <a title="This is my world, where I can do what I think
 " href="/risingembeddedmx/">Rising Embedded Mx</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item navigation__item--active"><a href="/risingembeddedmx/projects/en/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about">About</a></li><li class="navigation__item"><a href="/risingembeddedmx/spanish/quien-soy">En Español</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item navigation__item--active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about">About</a></li><li class="navigation__item"><a href="/risingembeddedmx/spanish/quien-soy">En Español</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -4596,52 +4596,114 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>First steps with OpenBLT</h1></header></div><meta itemprop="headline" content="First steps with OpenBLT"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-06-19T20:05:20+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Usage of the custom OpenBLT on the Nucleo-F446RE board</h1></header></div><meta itemprop="headline" content="Usage of the custom OpenBLT on the Nucleo-F446RE board"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-07-17T16:55:25+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h3 id="introduction">Introduction</h3>
-<p>OpenBLT is an open-source project. It can be used with multiple microcontrollers and protocols. This project can be ported to 8-bit, 16-bit, and 32-bit architectures and brands (such as NxP, Texas Instruments, and ST Microsystems). It supports communication interfaces such as RS-232, CAN, USB, TCP/IP, and Modbus RTU with PC software for initiating and monitoring firmware updates. Additionally, add-on modules can be used for features like firmware encryption, improved checksum mechanisms, and master/slave gateways. Finally, it is open source, and you can choose between a GNU GPL license or a commercial license if needed.</p>
-
-<h3 id="first-steps">First steps</h3>
-<p>The documentation states that for the OpenBLT project on the <strong>Nucleo-F446RE</strong> board, only Modbus is available for use. To begin working on this project, I tested the demo and used it to flash an example provided by STMicroelectronics.</p>
-
+<div class="article__content" itemprop="articleBody"><h1 id="compiling-bootcommander-tool">Compiling BootCommander tool</h1>
+<p>BootCommander is a tool available in the OpenBLT project. It is recommended to build it on the host system where it will be used to flash the microcontroller. The process is documented in the <a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">OpenBLT wiki</a>. <br />
+In my case, I compiled it on a Raspberry Pi running Raspbian, as well as on a PC with Ubuntu and Fedora. Follow the steps below to compile the tool. In this example, the process will be done on an Ubuntu PC.</p>
 <ol>
-  <li>
-    <p>Download the sources from <a href="https://github.com/feaser/openblt">GitHub</a> or <a href="https://www.feaser.com/openblt/doku.php?id=download">tarball</a> from SourceForge, I used GitHub sources (commit ba955f2c3b46bae54b6c08637792426be34d29c6) and taked only the resourses related to <strong>Nucleo-F446RE</strong> board,</p>
-  </li>
-  <li>Configure sources in STM32Cube IDE
-    <ul>
-      <li>Open the <strong>File</strong> menu and select <strong>Import</strong> option. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01ImportProject.png" alt="" /></li>
-      <li>Import the boot folder. You can also import Prog demo. In this example, we will import both folders.<br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02ImportProject.png" alt="" /></li>
-      <li>Compile the Boot folder to create the bootloader binaries.<br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/03ImportProject.png" alt="" /></li>
-      <li>After compiling, flash it to the board. When it is working, the green LED blinks.</li>
-    </ul>
-  </li>
-  <li>Test the software with a demo, I used the GPIO_IOToggle example from STM resources. A little tutorial to get it is stored in mi Github <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT/blob/Nucleo-F446RE/doc/exampleimport.md">Repository</a>.
-    <ul>
-      <li>You need to make a couple of changes in the source to run the system without issues. The bootloader will be stored in the first part of flash memory. Following OpenBLT documentation, an offset should be defined for our application. In this example, we will change  <strong>VECT_TAB_OFFSET</strong> macro inside file <em>system_stm32f4xx.c</em> with the corresponding offset of “0x4000”.  <br />
-   <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/04ImportProject.png" alt="" /></li>
-    </ul>
-  </li>
+  <li>Go to Host path of the openblt project sources. You can copy it in another location such my own case. You need the OpenBLT  Host library (LibOpenBLT) and sources of BootCommander.</li>
+  <li>Next step is build the library from build path to do it, execute following commands:<br />
+ <code class="language-plaintext highlighter-rouge">~/Host/Source/LibOpenBLT/build$ cmake ..</code> <br />
+ <code class="language-plaintext highlighter-rouge">~/Host/Source/LibOpenBLT/build$ make </code><br />
+ <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01results.png" /></li>
+  <li>After do it repeate the process with BootCommander. <br />
+  <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02results.png" /></li>
+  <li>The BootCommander tool is ready to be used Host path.</li>
 </ol>
 
+<h1 id="tool-usage">Tool usage</h1>
+<p>You can execute the command without arguments to see the help of the tool. Its usage is simple:</p>
 <ul>
-  <li>
-    <p>Once the srec file is done, you can flash the system with one of the tools provided by Feaser. I prefer Bootcommander because it runs on Linux. You can check Feaser documentation about their tools: <a href="https://www.feaser.com/openblt/doku.php?id=manual:microboot">MicroBoot</a> or <a href="https://www.feaser.com/openblt/doku.php?id=manual:bootcommander">BootCommander</a>.</p>
+  <li>Usage: <code class="language-plaintext highlighter-rouge">./BootCommander  [options]  [firmware file]</code></li>
+  <li>The available options depend on the specified communication session protocol and communication transport layer. The <strong>Nucleo-F446RE</strong> supports xcp_rs232, xcp_can, and xcp_mbrtu.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-s=[name]        Name of the communication session protocol:
+                   xcp (default) -&gt; XCP version 1.0.
+-t=[name]        Name of the communication transport layer:
+                   xcp_rs232 (default) -&gt; XCP on RS232.
+                   xcp_mbrtu           -&gt; XCP on Modbus RTU.
+                   xcp_can             -&gt; XCP on CAN.
+                   xcp_usb             -&gt; XCP on USB.
+                   xcp_net             -&gt; XCP on TCP/IP.
+</code></pre></div>    </div>
   </li>
-  <li>
-    <p>The last part of this article explains the procedure to build and use BootCommander tool.</p>
+  <li>Each of the transport layer had options as baudrate, ID or stop bit depending of the interface.
+    <ul>
+      <li>XCP on RS232 settings (xcp_rs232):
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   -d=[name]      Name of the communication device. For example COM1 or /dev/ttyUSB0 (Mandatory).   
+   -b=[value]     The communication speed, a.k.a baudrate in bits per second, as a 32-bit value (Default = 57600).   
+                  Supported values: 9600, 19200, 38400, 57600, 115200.
+</code></pre></div>        </div>
+      </li>
+      <li>XCP on Modbus RTU settings (xcp_mbrtu):
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-d=[name]        Name of the communication device. For example COM1 or /dev/ttyUSB0 (Mandatory).  
+-b=[value]       The communication speed, a.k.a baudrate in bits per second, as a 32-bit value (Default = 57600).  
+                 Supported values: 9600, 19200, 38400, 57600, 115200.   
+-pa=[value]      The UART parity bit configuration as a 8-bit value. (Default = 2). 
+                 Supported values: 0 (none), 1 (odd), 2 (even).  
+-sb=[value]      The number of UART stopbits as a 8-bit value. (Default = 1). Supported values: 1, 2.   
+-da=[value]      Destination address, i.e. the node ID of the receiver, as a 8-bit value (Default = 1). 
+                 Supported values: between 1 and 247.
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>XCP on CAN settings (xcp_can):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-d=[name]        Name of the CAN device (Mandatory). On Linux this is
+                 the name of the SocketCAN network interface, such as
+                 can0, slcan0. On Windows it specifies the CAN adapter.
+                 Currently supported CAN adapters:
+                   peak_pcanusb     -&gt; Peak System PCAN-USB.
+                   kvaser_leaflight -&gt; Kvaser Leaf Light V2.
+                   lawicel_canusb   -&gt; Lawicel CANUSB.
+                   vector_xldriver  -&gt; Vector XL Driver.
+                   ixxat_vcidriver  -&gt; Ixxat VCI Driver.
+-c=[value]       Zero based index of the CAN channel if multiple CAN
+                 channels are supported for the CAN adapter, as a 32-
+                 bit value (Default = 0).
+-b=[value]       The communication speed, a.k.a baudrate in bits per
+                 second, as a 32-bit value (Default = 500000).
+                 Supported values: 1000000, 800000, 500000, 250000,
+                 125000, 100000, 50000, 20000, 10000.
+-tid=[value]     CAN identifier for transmitting XCP command messages
+                 from the host to the target, as a 32-bit hexadecimal
+                 value (Default = 667h).
+-rid=[value]     CAN identifier for receiving XCP response messages
+                 from the target to the host, as a 32-bit hexadecimal
+                 value (Default = 7E1h).
+-xid=[value]     Configures the 'tid' and 'rid' CAN identifier values
+                 as 29-bit CAN identifiers, if this 8-bit value is &gt; 0
+                 (Default = 0).
+</code></pre></div>    </div>
   </li>
 </ul>
 
-<p>Note: The default usart port to use the bootloader is a “virtual port” mounted with the STlink usb port. In linux this port is /dev/ttyACM0. 
-   The command to use bootcommander is:    <br />
-   <code class="language-plaintext highlighter-rouge">./BootCommander -s=xcp -t=xcp_mbrtu -d=/dev/ttyACM0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec</code></p>
+<h1 id="examples-of-use">Examples of use</h1>
+<p>In linux systems (using a rapberrypi or another distro) You can useBootCommander to flash the software.</p>
+<ul>
+  <li>Flash with <strong>MBRTU</strong> using <strong>USART2</strong> with BootCommander using linux: <br />
+` sudo ./BootCommander -s=xcp -t=xcp_mbrtu -d=/dev/ttyACM0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec `</li>
+  <li>Flash with <strong>RS232</strong> using a USB - TTL converter in linux: <br />
+<code class="language-plaintext highlighter-rouge">sudo ./BootCommander -s=xcp -t=xcp_rs232 -d=/dev/ttyUSB0 -b=57600 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec </code></li>
+  <li>Fash with <strong>CAN</strong> using <strong>CANable</strong> in a linux system:
+    <ol>
+      <li>Configure the Baudrate as <strong>blt_conf.h</strong> in the system. <br />
+<code class="language-plaintext highlighter-rouge">sudo ip link set can0 type can bitrate 125000</code>    <br />
+<code class="language-plaintext highlighter-rouge">sudo ip link set up can0 </code></li>
+      <li>Flash with BootCommander. <br />
+<code class="language-plaintext highlighter-rouge">sudo ./BootCommander -s=xcp -t=xcp_can -d=can0 -b=125000 ~/STM32CubeIDE/workspace_1.13.2/GPIO_IOToggle/STM32CubeIDE/Debug/GPIO_IOToggle.srec</code></li>
+      <li>You can se the output to check if it was successful:<br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/flashing.png" /></li>
+      <li>To see how to connect the system physically, check the <strong>README</strong> file in the custom <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT">OpenBLT repository</a>.</li>
+    </ol>
+  </li>
+</ul>
 
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-06-19T20:05:20+00:00"><!-- start custom article footer snippet -->
+<h1 id="conclusion">Conclusion</h1>
+<p>OpenBLT is a lightweight and useful bootloader that is easy to understand and customize. In this case, it has produced successful results, and I plan to use it in future projects.</p>
+
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-07-17T16:55:25+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
@@ -4651,7 +4713,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/menu">Index</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/open-blt">OpenBLT in Nucleo-F446RE</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></div></div></div>
 
 </div>
 
@@ -4694,7 +4756,7 @@
 				repo: 'custom-application-test',
 				owner: 'razielgdn',
 				admin: ['razielgdn'],
-				id: 'openblt-st'
+				id: 'openblt-res'
 			});
 			gitalk.render('js-gitalk-container');
 		});
