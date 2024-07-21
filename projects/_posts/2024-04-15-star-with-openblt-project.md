@@ -23,7 +23,7 @@ Once I learned that Modbus RTU is a serial or Ethernet communication protocol ba
 Recently, I have been studying the architecture of the **OpenBLT** project, and I noticed that it is simple to understand, although it has a good structure and is very complete in resource administration, such as **CAN** and **RS232**. The first steps to add features will be to enable the functions of USART to use a TTL converter to flash an application.
 
 ### May-10-24
-I publish in this blog [how to import](https://razielgdn.github.io/risingembeddedmx/projects/en/openblt-start) the project to STM32Cube IDE software, This is a tool provided by STM to use the protocol 
+I publish in this blog [how to import](https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-start) the project to STM32Cube IDE software, This is a tool provided by STM to use the protocol 
 
 ### May-14-24
 The project is taking longer than I expected. I understand how the resources work, I configured the system, GPIOs, timers, and it still doesn't work. Nevertheless, I am still trying. I am sure that the problem is a minor issue related to my own lack of knowledge.
@@ -47,4 +47,4 @@ While taking snapshots for the documentation, I noticed that if the **CAN interf
 # Challenge complete!
 Finally the system is working and the documentation is done. 
 If you come here loking for a solution, Enjoy it!
-You can see the process here: [OpenBLT in Nucleo-F446RE](https://razielgdn.github.io/risingembeddedmx/projects/en/open-blt).
+You can see the process here: [OpenBLT in Nucleo-F446RE](https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/open-blt).
