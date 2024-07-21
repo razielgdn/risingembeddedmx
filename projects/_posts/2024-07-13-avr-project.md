@@ -1,10 +1,10 @@
 ---
 title: AVR project
 tags: 
-  - blog
   - thinking   
   - AVR
-  - 3D printing
+  - blog
+  
 ---
 
 ## July 10

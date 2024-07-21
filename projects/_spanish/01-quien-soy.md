@@ -13,9 +13,7 @@ lector, ciclista cuando no le da flojera, extrañador de vivir en lugares rurale
 ## Primeras experiencias
 Para no ser repetitivo dado que mi CV lo puedes ver en la [pestaña de al lado](/about.md). Empecé a trabajar a los 10 años o antes ayudando al abuelo en la siembra y la cosecha de sus tierras, acomodando la milpa, echándole fertilizante, dando de beber a las vacas, chivos y borregos, cosechando maíz, frijol, calabaza garbanzo y cortando huizaches, maleza y milpa.
 
-Dado que mi padre tiene como segunda forma de ganarse la vida el oficio de electricista yo aprendí aquello a temprana edad, entre los 10 y 14 años fui el chalán
-que se necesita para hacer instalación eléctrica residencial experiencia que también me fue forjando para decidir que estudiar en el futuro. Estando ya en segundo de secundaria
-pude hacer mi primera instalación eléctrica sin supervisión directa y solo una inspección al término que que hizo graduarme en el oficio que me ha dado más de una vez ingresos cuando un trabajo formal no está disponible.
+Dado que mi padre tiene como segunda forma de ganarse la vida el oficio de electricista yo aprendí aquello a temprana edad, entre los 10 y 14 años fui el chalán que se necesita para hacer instalación eléctrica residencial experiencia que también me fue forjando para decidir que estudiar en el futuro. Estando ya en segundo de secundaria pude hacer mi primera instalación eléctrica sin supervisión directa y solo una inspección al término que que hizo graduarme en el oficio que me ha dado más de una vez ingresos cuando un trabajo formal no está disponible.
 
 ## El zángano show
 Desde los 16 casi a la par de agarrar una computadora y desperdiciar mi vida con aprender linux me tocó ser staff técnico en un grupo musical, es decir subía y bajaba
@@ -43,9 +41,8 @@ eléctrico y de telecomunicaciones. Además de ciertas actividades fuera del man
 
 ## Ingeniero de embebidos 
 ### Code Ingeniería
-A mediados del 2019 inicie mi carrera formal como desarrollador de sistemas embebidos, mi primer trabajo del estilo fue en CODE ingenieria en Ciudad de México, haciendo configuraciones y soluciones para microprocesadores i.MX6, i.MX7, i.MX8, los cuales son sistemas completos en un Chip (SoC, System on Chip) que son microprocesadores y microcontroladores,   
-todo esto utilizando Linux (construido con Yocto project) y un poco de RTOS para los cores cortex M4 complementarios. También trabajé un poco con el SCFW de nxp y ecockpit.   
-El problema fue que la pandemia llegó y la empresa donde trabajaba tuvo que realizar recortes...
+A mediados del 2019 inicie mi carrera formal como desarrollador de sistemas embebidos, mi primer trabajo del estilo fue en CODE ingenieria en Ciudad de México, haciendo configuraciones y soluciones para microprocesadores i.MX6, i.MX7, i.MX8, los cuales son sistemas completos en un Chip (SoC, System on Chip) que son microprocesadores y microcontroladores, todo esto utilizando Linux (construido con Yocto project) y un poco de RTOS para los cores cortex M4 complementarios. También trabajé un poco con el SCFW de nxp y ecockpit.      
+El problema fue que la pandemia llegó y la empresa donde trabajaba tuvo que realizar recortes...   
 
 ### Dextra Technologies
 A finales de 2020 conseguí un trabajo como programador de embebidos en Dextra Technologies en Monterrey, donde trabajé con ECUs automotrices, utilizando lenguaje C, esto en plataformas como un BCM (Body controller module) la computadora central de los automóviles que controla las luces, los sensores y administra las señales de los buses CAN de todo el vehículo. 
