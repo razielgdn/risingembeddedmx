@@ -25,7 +25,7 @@ Entre las empresas que conozco que solicitan el perfil de  ingeniero de sistemas
 - **Bosch**: otro de los gigantes alemanes, por lo general se dedica a hacer sensores y sistemas automotrices.
 - **Hella**: se dedica sobre todo a la iluminación y sistemas automotrices.
 - **Texas Instruments**: gran fabricante de componentes electrónicos.
-- **NxP**: otro gran desarrollador de componentes electronicos. 
+- **NxP**: otro gran desarrollador de componentes electrónicos. 
 - **Honeywell**: un monstruo gringo que se dedica a la electrónica de consumo y muchas otras industrias.
 - **Schneider Electric**: empresa dedicada al ramo de la automatización y la transmisión de energía
 - **Ford**
@@ -34,13 +34,13 @@ Entre las empresas que conozco que solicitan el perfil de  ingeniero de sistemas
 - **Capgemini**: consultora enorme que tiene diversos clientes.
 - Una gran candidad de **StartUps** que ojalá tengan futuro.
 
-Solo  busca en  OCC, glassdor o LinkedIn embedded Developer y listo, encontrarás  tanto las empresas  listadas aquí, como muchas más que estan interesadas en conseguir personal 
+Solo  busca en  OCC, Glassdor o LinkedIn embedded Developer y listo, encontrarás  tanto las empresas  listadas aquí, como muchas más que están interesadas en conseguir personal 
 
 # Sueldos
 
 Hay **11** motivos por los que una persona decide ser desarrollador de sistemas embebidos:
 
-**01)** Es un(a) nerd/ñoño(a)/teto(a) sin remedio que sufrió bullying cuando era niño(a)/adolescente (sobre todo antes del 2008, algún día discutiremos porque este año fue un punto de inflexión), te apasiona la ciencia y la tecnología y soñabas con llegar a la nasa, destruías tus juguetes con tal de saber que tenían dentro y  al final solo quedabas con un monton de motores a los cuales les terminabas rompiendo los engranes y tus papás no querian comprarte uno más.  Si es el caso llegó la hora de triunfar.
+**01)** Es un(a) nerd/ñoño(a)/teto(a) sin remedio que sufrió bullying cuando era niño(a)/adolescente (sobre todo antes del 2008, algún día discutiremos porque este año fue un punto de inflexión), te apasiona la ciencia y la tecnología y soñabas con llegar a la nasa, destruías tus juguetes con tal de saber que tenían dentro y  al final solo quedabas con un monton de motores a los cuales les terminabas rompiendo los engranes y tus papás no querían comprarte uno más.  Si es el caso llegó la hora de triunfar.
 
 **10)** Ya vio los sueldos que se pueden alcanzar y si no, aquí va un pequeño aproximado (sueldos mensuales, calculados por mi mismo en abril de 2022, échenle coco ajustando inflación y condiciones futuras):
 
@@ -55,6 +55,6 @@ Si por casualidad es usted RH en alguna empresa y el azar de la vida lo trajo a 
 
 # Conocimientos para ser desarrollador
 
-En un post anterior, dejé una lista de los temas más importantes para poder desempeñarse como ingeniero de sistemas embebidos. Pero una cosa es saber todo eso y otra muy distinta es expresar los conocimientos. Por tanto, básicamente cualquier camarada con un título de ingeniería (o formación porque he conocido algunos que no fueron mas de un par de años a la universidad y se rifan bien macizo, aunque no son la norma he de aclarar.) pero, sobre todo: Lic en Informatica, Ing. en Electrónica, Ing. Mecatrónico, Ing. en Computacion, Ing. en Sistemas, incluso Ing. Industrial (suena a chiste pero en lo personal quien me ayudó a pulir mis conocimientos en **FPGAs** pertenece a esta estirpe, y yo mismo he sido coach de algún industrial por la senda de los sistemas embebidos).
+En un post anterior, dejé una lista de los temas más importantes para poder desempeñarse como ingeniero de sistemas embebidos. Pero una cosa es saber todo eso y otra muy distinta es expresar los conocimientos. Por tanto, básicamente cualquier camarada con un título de ingeniería (o formación porque he conocido algunos que no fueron mas de un par de años a la universidad y se rifan bien macizo, aunque no son la norma he de aclarar.) pero, sobre todo: Lic en Informática, Ing. en Electrónica, Ing. Mecatrónico, Ing. en Computación, Ing. en Sistemas, incluso Ing. Industrial (suena a chiste pero en lo personal quien me ayudó a pulir mis conocimientos en **FPGAs** pertenece a esta estirpe, y yo mismo he sido coach de algún industrial por la senda de los sistemas embebidos).
 
 

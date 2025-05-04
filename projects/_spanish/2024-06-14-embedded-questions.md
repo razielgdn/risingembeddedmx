@@ -5,7 +5,7 @@ key: embedded
 ---
 
 
-No se darán respuesta aquí a estas preguntas del todo, por experiencia propia se que esto es mejor investigarlo y comprenderlo que memorizarlo y no saber de que va. Pero más adelante se irán contestando en la etapa de teoría y projectos. No desesperen amigos, la senda del gran viaje es larga. 
+No se darán respuesta aquí a estas preguntas del todo, por experiencia propia se que esto es mejor investigarlo y comprenderlo que memorizarlo y no saber de que va. Pero más adelante se irán contestando en la etapa de teoría y proyectos. No desesperen amigos, la senda del gran viaje es larga. 
 
 # Preguntas relacionadas al Lenguaje C
 - ¿Qué es el keyword **volatile** y donde/ para qué se utiliza?
@@ -32,7 +32,7 @@ No se darán respuesta aquí a estas preguntas del todo, por experiencia propia 
 - ¿Cuáles son las principales estructuras de datos? (pilas, colas, listas...)
 - Conoces las funciones para reservar memoria. ¿Cuáles son?
 - Si tengo definido un struct y un union con los mismos componentes, ¿qué me regresará  sizeof en cada una de ellas?
-- ¿Cules son las fases de un **compilador**?
+- ¿Cuales son las fases de un **compilador**?
 - ¿Qué hace el preprocesador?
 - ¿Qué se hace durante el **compilador**/traductor?
 - ¿Qué hace el **ensamblador**?
@@ -46,7 +46,7 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 
 # Preguntas sobre arquitecturas de procesador y memoria
 - ¿Qué arquitecturas conoces?
-- ¿Cuál es la diferenia entre arquitectura **Hardvard** y **Von Newmann**?
+- ¿Cuál es la diferencia entre arquitectura **Hardvard** y **Von Newmann**?
 - ¿Qué arquitecturas de procesador has utilizado?
 - ¿Qué significa que tengo un microcontrolador/procesador de 32 bits? (referido como maneja la memoria)
 - ¿Cuál es la diferencia entre un **ciclo de reloj** y un **ciclo máquina**?
@@ -63,7 +63,7 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 - ¿Qué hace un modulo **PWM**?
 - ¿Qué es una **UART**?
 - ¿Qué es una fuente de reloj?
-- ¿Qué es  un **PLL**, para que se puede usarn en un microcontrolador?
+- ¿Qué es  un **PLL**, para que se puede usar en un microcontrolador?
 - ¿Cómo puedes generar señales de reloj/ osciladores?
 - ¿Qué es una **interrupción**?
 - ¿Qué es el **pulling**?
@@ -71,14 +71,14 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 - ¿Que es un watchdog timer? ¿Qué funciones tiene?
 - Si yo tengo que hacer un delay, ¿por qué me conviene más implementarlo por medio de una cuenta descendente que por una ascendente?
 - ¿Cómo se organiza la memoria de un microcontrolador?
-- ¿Qué tipos de memoria existen (de acuerdo con su fabricacion)? Flash, eeprom, ram, nand, etc, intenta saber un poco de todas.
+- ¿Qué tipos de memoria existen (de acuerdo con su fabricación)? Flash, eeprom, ram, nand, etc, intenta saber un poco de todas.
 - ¿Cuales son las partes de la memoria de un sistema y que se hace en cada una de ellas? Se los dejo en english pero creo que es la forma en que se puede comprender (y muy seguramente su entrevista será en inglés como dijimos más arriba):
 - Text segment  (i.e. instructions)
     - **Initialized data segment** 
     - **Uninitialized data segment**  (bss)
     - **Heap** 
     - **Stack**
-- ¿Como puedo saber el tamaño de una estructura sin utilizar el operador sizeof? pista, se usan apuntadores y una operacion sencilla. En su momento falle al responder.
+- ¿Como puedo saber el tamaño de una estructura sin utilizar el operador sizeof? pista, se usan apuntadores y una operación sencilla. En su momento falle al responder.
 - ¿Qué es un puerto de entrada- salida/ ¿Qué es el **GPIO**?
 - ¿Como se mapea un **GPIO** dentro del microcontrolador (en referencia a lenguaje C)?
 
@@ -104,7 +104,7 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 - Explica brevemente como funciona el protocolo **SPI**
 - ¿Conoces el protocolo **CAN**?
 - ¿Conoces el protocolo **LIN**?
-- ¿Qué significa que unprotocolo sea **Full-Duplex** ó **Half-Duplex**?
+- ¿Qué significa que un protocolo sea **Full-Duplex** ó **Half-Duplex**?
 - ¿En qué aplicaciones se recomienda utilizar SPI y en cuales I2C?
 - ¿Cómo se manejan los errores de comunicación en un protocolo?
 - ¿Qué es el bit de inicio?
@@ -118,7 +118,7 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 - ¿Cuáles son los problemas que has tenido para organizar un equipo de trabajo?
 - ¿Cuál ha sido tu mayor reto al trabajar en un equipo?
 - ¿En que proyectos has trabajado? ¿A grandes rasgos que se hace en ellos?
-En esta parte **pudes describir proyectos personales, y académicos en el caso que no tengas una experiencia previa de trabajo**. Y si ya has tenido un trabajo anteriormente se vale decir con qué tecnología trabajaste, y mas o menos de que va para no violar las clausulas de exclusividad y temas de esa índole.
+En esta parte **puedes describir proyectos personales, y académicos en el caso que no tengas una experiencia previa de trabajo**. Y si ya has tenido un trabajo anteriormente se vale decir con qué tecnología trabajaste, y mas o menos de que va para no violar las clausulas de exclusividad y temas de esa índole.
 - Si te toca hacer un ejercicio técnico en conjunto, intenta explicar tu lógica para resolverlo de la mejor manera, nosotros sabemos que no es muy fácil escribir código y que funcione a la primera, pero si tienes el panorama general bien claro desde el principio y planteas la solución de la mejor manera, la codificación será lo  de menos importancia.
 
 Espero que esta información sea de utilidad para alguien, aquí si se necesita un poco de esfuerzo y mucha suerte, sobre todo para conseguir un primer empleo. Un consejo para mover la estadística a favor es tener un buen perfil en linkedIn y agregar a los headhunters/RRHH de empresas de tecnología así como ingenieros que  ya estén desarrollando. Sin temor, y sin vergüenza. 
