@@ -1,6 +1,6 @@
 ---
 layout: article
-title: About me
+title: 
 permalink: /about
 aside:
    toc: true
@@ -32,9 +32,11 @@ modify_date: 2024-05-29
 ## Dextra Technologies 
  *Dec 2020 to Jan 2024*, **Embedded Developer Jr**
  - **BCM (Body Control Module) Project for Lights and Communications ECU**   
-      - Implemented model layers and solutions for new requirements.  
-      - Worked with CAN and LIN protocols and tools to manage their databases.  
-
+      - Customer support: requirements and issues analysis and find the best way to implements new features or solutions. 
+      - Worked with CAN and LIN protocols and tools to manage their databases.
+      - Implementation of new Universal Diagnostic Services (UDS) or/and Data  Identifiers (DIDs).
+      - Test the functionality of the system with unit testing (SWATT), white box test and hardware tests in special  hardware (test Boxes provided by customer that simulates all light systems and communications inside a vehicle).   
+      
 ## CODE Ingeniería
  *May 2019 to May 2020*, **Programador Embebido**.
  **Research and development of embedded systems**, focused on Linux and Android environments. In these projects, Octavio worked with NXP devices such as i.MX8 and i.MX6 SoCs. 
@@ -44,7 +46,7 @@ modify_date: 2024-05-29
   - Supported a customer in using and configuring the **NXP** **eCockpit** system.
   - Researched and supported customers in using the **SCFW (System Controller Firmware)** on NXP **i.MX8QM** and **i.MX8QX** based development boards.
 
-# Professional experience in IT support and maintance.
+# Professional experience in IT support and maintenance.
 ## Comercializadora de equipos de energía Renovables
 *Dec 2018 to Apr 2019*, **Photovoltaic Systems Installer**.   
 His main functions were: 
@@ -71,7 +73,7 @@ His main functions were:
   - Provided sales and technical consultation on electronic components, primarily modules for Arduino boards.
 
 ## LaTeX Editor
-*Sep 2017 to Mar 2018*, **Freelancer in upwork**.   
+*Sep 2017 to Mar 2018*, **Freelancer in Upwork**.   
 - Edited and digitized academic documents focused on mathematics education using open-source software tools such as LaTeX, Geogebra, and Inkscape.
 
 ## Universidad Del Mar, Campus Puerto Escondido 
@@ -88,8 +90,8 @@ During this time, the work involved providing technical support in the area of N
 ## [Universidad Tecnológica de la Mixteca](https://www.utm.mx/)
   Huajuapan de León, Oaxaca -
   Electronic Engineer [Bachelor's degree](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/titulo.png). AUGUST 2010 - JULY 2015
-  - CENEVAL high performance results:[20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/ceneval.png).
-  - Cedula profesional:[11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/cedula.png)
+  - CENEVAL high performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/ceneval.png).
+  - Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/cedula.png)
 
 # Skills 
 ## Programmin Languages 
@@ -109,27 +111,29 @@ Since 2009, when Octavio started coding in C, he has worked with various languag
    + **Geny**: 2 years.
    + **CANoe**: 3 years.
    + **CANdela**: 2 years.
-+ **Tresos**: 1 years.   
++ **Tresos**: 1 year.   
 + **Unit testing** (using SWATT), 2 years.
 + **MISRA**, 2 years.
 + **UDS** Diagnostic Services, 2 years.
 
 ## Linux, distros and tools
 
-- **Linux** distrubutions
+- **Linux** distributions
    - **Ubuntu**: 10 years as user. 
    - **Fedora**: 12 years as user.
    - **Mint**: 3 years.
    - **Debian**: 3 years.
    - **Raspberry Pi OS/ Raspbian**: 1 year.
 - Linux related software
-   - **Docker**: 6 monts
+   - **Docker**: 9 months
    - Linux terminal: 10+ years
    - **Vi**: 5 years  
    - **Meld**     
    - **FileZilla**
+   - **Nano**
+   - **TEXMaker**, **TeXstudio**
 - **Yocto Project**
-   - Construct systems for NXP, TI, and Rapberry Pi 4 devices. 
+   - Construct systems for NXP, Texas Instruments, and Raspberry Pi devices. 
 
 
 ## Debugging tools
@@ -138,23 +142,22 @@ Since 2009, when Octavio started coding in C, he has worked with various languag
 * **WinIdea**: 3 years. To debug ECU devices. 
 
 ## Control version and administrative tools
-* **Git**, 3 years
+* **Git**, 4 years
 * **Jira**, 3 years
 * **SVN**, 1 year 
 * **IBM IMS tool**, 3 years
 
-## Integradet Development Environment (IDE)
+## Integrated Development Environments (IDEs)
 * **Eclipse** (IDEAS, STMCubeIDE, Code Composer Studio, Microchip Studio)
-* **VS Code**
+* **Visual Studio Code**
 * **KDevelop**
-* **TEXMaker**, **TeXstudio**
-
+    
 ## Network & IT services
 * Hardware
-    * Network architecure Wiring, RJ45 & RJ11.
+    * Network architecture Wiring, RJ45 & RJ11.
     * Routers and witches configuration. 
     * Building and maintaining PCs and laptops
-      * Checking requirements to buils a PC.
+      * Checking requirements to builds a PC.
         * Motherboard
         * RAM 
         * Hard disks
@@ -165,14 +168,14 @@ Since 2009, when Octavio started coding in C, he has worked with various languag
     * **Wireshark** software.
     * Mount **Asterisk** servers.  
     * Secure Shell Protocol (**SSH**).
-    * Mount **SFTP** servers and clientes.
+    * Mount **SFTP** servers and clients.
     * Mount HTTP servers with **Apache** . 
     * **Jekyll** (this blog is developed with it).
 
 ## Mechanical and electrical tools 
 - **Electronic/Lab tools**: Soldering iron, moto tool (Dremel), microscopes, oscilloscopes, logic analyzers, power source, electronic load.
 - **Electric tools**: Hammer drill, Jigsaw, vacuum cleaner, grinder. 
-- **Mechanical tools**: Hammer, Screwdrivers, pliers, wrenches, crowbars, machetes, axes and anothers. 
+- **Mechanical tools**: Hammer, Screwdrivers, pliers, wrenches, crowbars, machetes, axes, chainsaw and others. 
 
 # Courses
 ## From [edX.org](https://courses.edx.org/)
