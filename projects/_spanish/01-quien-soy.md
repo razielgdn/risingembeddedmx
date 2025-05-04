@@ -1,6 +1,6 @@
 ---
 title: Acerca de mi
-permalink: /Spanish/quien-soy
+permalink: /spanish/quien-soy
 key: quien-soy
 ---
 
