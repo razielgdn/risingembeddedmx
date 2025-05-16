@@ -46,10 +46,10 @@ RUN sudo apt-get -y install git \
 RUN sudo apt-get -y upgrade    
 # "#################################################"
 # "GitHub Pages/Jekyll is based on Ruby. Set the version and path"
-# "As of this writing, use Ruby 3.1.2
+# "As of this writing, use Ruby 3.4.4
 # "Based on: https://talk.jekyllrb.com/t/liquid-4-0-3-tainted/7946/12"
 ENV RBENV_ROOT /home/remoteUser/.rbenv
-ENV RUBY_VERSION 3.1.2
+ENV RUBY_VERSION 3.4.4
 ENV PATH ${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH
 
 # "#################################################"
@@ -69,4 +69,4 @@ RUN  rbenv install ${RUBY_VERSION} \
 # "Note: If you always want the latest 3.9.x version,"
 # "       use this line instead:"
 # "       RUN gem install jekyll -v '~>3.9'"
-RUN  gem install jekyll -v '3.9.3'
+RUN  gem install jekyll 
