@@ -35,10 +35,6 @@ projects-en:
     children:
       - title: Bluild and Flash AVR projects in Linux
         url: /projects/en/2-avr-section/build-and-flash      
-  - title: The Farm
-    children:    
-      - title: Seeding  
-        url:  /projects/en/3-the-farm/seeding 
   # - title: Can Network Project
   #   children: 
   #     - title: CAN network objectives
