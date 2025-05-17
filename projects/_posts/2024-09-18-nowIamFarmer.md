@@ -3,8 +3,7 @@ title: I am farmer now!
 tags: 
   - Farming
   - Blog
-  - 
-  
+  -   
 ---
 ## I have been disconnected last month
 
