@@ -31,6 +31,8 @@ projects-en:
         url:    /projects/en/1-openblt/open-blt
       - title:  Usage of the custom OpenBLT on the Nucleo-F446RE board
         url:    /projects/en/1-openblt/openblt-results
+      - title:  Running OpenBLT in a STM32F103C8TX Bluepill Plus device
+        url:    /projects/en/1-openblt/openblt-bluepill  
   - title: 8 bit AVR MCUs Section
     children:
       - title: Bluild and Flash AVR projects in Linux

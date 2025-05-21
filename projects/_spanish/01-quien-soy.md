@@ -1,5 +1,5 @@
 ---
-title: Acerca de mi
+title: ¿Quién soy yo?
 permalink: /spanish/quien-soy
 key: quien-soy
 ---
@@ -50,7 +50,7 @@ freno por medios eléctricos o hidráulicos.
 Mi ultimo trabajo fue con una tarjeta raspberry pi 4 y un microcontrolador STM34H53, donde apoye con el desarrollo de un sistema para *flashear* el microcontrolador desde un sistema Linux corriendo en la RPI-4.
 Debido a cuestiones de reestructuración/finanzas me toco recorte junto con alrededor de otros 50 compañeros desarrolladores y testers (¿Deja Vu?).
 
-# Acerca de mi:
+# Miselanea
 Bueno, nací y crecí en el estado de Oaxaca, México. Lugar de paisajes hermosos en las montañas, ciudades pintorescas, playas paradisíacas, estepas montañas y desiertos,
 selva seca, selva húmeda, un gran número de pueblos originarios, deliciosa gastronomía, mucha cultura y desafortunadamente: falta de infraestructura, trabajos precarizados y muchos problemas sociales que pareciera que no dejan que el "progreso" sea rápido.   
 
