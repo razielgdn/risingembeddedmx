@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/menu">Index</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1"></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/menu">Index</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT in a STM32F103C8TX Bluepill Plus device</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4596,11 +4596,11 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-07-18T11:17:39+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-05-22T20:52:26+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h1 id="before-start">Before Start</h1>
-<p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/openblt-start">post</a> only Modbus is available in the demo.</p>
+<p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-start">post</a> only Modbus is available in the demo.</p>
 
 <p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01bltdoc.png" /></p>
 
@@ -4621,24 +4621,16 @@
 
 <p>These lines were taken from another project that has support for both CAN and RS232.</p>
 
-<p>Studing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
+<p>Analyzing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
 
 <p>The <strong>main.c</strong> file has been updated to improve this implementation. Since a function to enable <strong>GPIOs</strong> was previously declared, the code to enable port communication has been moved there. This utilizes macros from <strong>blt_conf.h</strong> to optimize resources using conditionals to enable code sections. <br />
 <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main01.png" /> <br />
 <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main02.png" /></p>
 
-<p>An important step to work with can is add hald driver for can on <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h</strong> and <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</strong> it can be obtained from a generic STMCubeIDE project.</p>
+<p>An important step to work with can is add <strong>hal</strong> driver for can on <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h</strong> and <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</strong> it can be obtained from a generic STMCubeIDE project.</p>
 
-<p>After enable the GPIOs and clocks you should check if the initialization is corrected. In a first momment the system didn’t work, with a debugging session I notice the function <strong>HAL_GetTick()</strong> do not return a correct value.</p>
-
-<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01timer.png" /></p>
-
-<p>The function was declared in two files <strong>timer.c</strong> and <strong>stm32f4xx_hal.c</strong> the solution was renamed the function in timer.<strong>HAL_GetTick_openblt()</strong>.</p>
-
-<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02timer.png" /></p>
-
-<p>Finally the system works. See <a href="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/openblt-results">next post</a> with results.</p>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-07-18T11:17:39+00:00"><!-- start custom article footer snippet -->
+<p>Finally the system works. See <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results">next post</a> with results.</p>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-05-22T20:52:26+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">

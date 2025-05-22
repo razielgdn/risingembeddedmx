@@ -4596,7 +4596,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Running OpenBLT in a STM32F103C8TX Bluepill Plus device</h1></header></div><meta itemprop="headline" content="Running OpenBLT in a STM32F103C8TX Bluepill Plus device"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-05-21T17:26:53+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Running OpenBLT in a STM32F103C8TX Bluepill Plus device</h1></header></div><meta itemprop="headline" content="Running OpenBLT in a STM32F103C8TX Bluepill Plus device"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-05-22T20:59:05+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
@@ -5312,13 +5312,13 @@ Navigate to the Prog/ directory and run:
   </li>
 </ol>
 
-<p>Note: The next steps—including detailed instructions for using the bootloader, performing firmware updates, and working with MicroBoot—are thoroughly explained in the project documentation available in the <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">razielgdn GitHub repository</a></p>
+<p><strong>Note:</strong> The next steps—including detailed instructions for using the bootloader, performing firmware updates, and working with MicroBoot—are thoroughly explained in the project documentation available in the <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">razielgdn GitHub repository</a>.</p>
 
 <h1 id="flash-the-bootloader-and-application">Flash the Bootloader and Application</h1>
 <p>Once both the bootloader and the application are successfully built, you can flash them to the Bluepill Plus board using your preferred programmer (e.g., ST-Link, J-Link, or USB-to-serial adapter with a DFU tool). Follow these steps:</p>
 <ul>
   <li>
-    <p>Step 1: Flash the Bootloader
+    <p>Step 1: Flash the Bootloader.
     Use your programmer tool to flash the generated bootloader binary(<code class="language-plaintext highlighter-rouge">Boot/Bin/openblt_stm32f103.elf</code> or <strong>openblt_stm32f103.srec</strong>) to the device. Make sure it is written starting at address 0x08000000.</p>
   </li>
   <li>
@@ -5367,7 +5367,18 @@ Ensure the interface and baud rate settings in MicroBoot match those of the boar
   <li>A distributed system (e.g., aquaponics controller or home automation nodes) where multiple boards communicate over a shared CAN bus.  <br />
 Leveraging CAN enables robust, real-time communication between devices in embedded and industrial environments. With OpenBLT handling firmware updates, you can safely and remotely deploy new features or patches.</li>
 </ul>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-05-21T17:26:53+00:00"><!-- start custom article footer snippet -->
+
+<h1 id="source-repository">Source Repository</h1>
+
+<p>The full source code for the bootloader and demo applications is available in the GitHub repository: <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">https://github.com/razielgdn</a>.</p>
+
+<p>A video tutorial showing how to use the bootloader and flash the demos is also available on YouTube:</p>
+
+<div><div class="extensions extensions--video">
+  <iframe src="https://www.youtube.com/embed/3xEar9Rzbeg?rel=0&amp;showinfo=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+</div>
+</div>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-05-22T20:59:05+00:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__license"><div class="license">
