@@ -4,7 +4,8 @@ tags:
   - STM32F103   
   - ARM Cortex M3
   - blog
-  
+  - free software
+  - free hardware
 ---
 
 I’m back at it—programming, writing code, and, well… negotiating time with my girlfriend (she’s not a huge fan of how many hours I spend on this stuff 😅). Anyway, over the past few weeks, I’ve been working on adapting OpenBLT to a Bluepill Plus board.
