@@ -242,6 +242,38 @@ defaults:
         toc: true   
 ## end 3dprinting zone     
 
+## Init notes
+  - scope:
+      path: "_projects/en/notes"
+    values:
+      layout: article
+      nav_key: notes
+      sidebar:
+        nav: notes-en
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: false
+      show_date: false
+      # lightbox: true
+  - scope:
+      path: "_projects/es/notes"
+    values:
+      layout: article
+      nav_key: notas
+      sidebar:
+        nav: notes-es
+      license: true
+      aside:
+        toc: true
+      lang: es_MX
+      show_edit_on_github: false
+      show_date: false
+      # lightbox: true
+
+## End notes
+
+
 ## => Plugins
 ##############################
 plugins:

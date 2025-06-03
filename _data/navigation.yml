@@ -14,6 +14,8 @@ header:
     url:        /about
   - title:      En Español
     url:        /spanish/quien-soy    
+  - title:       notes
+    url:        /projects/en/notes/stm-configs_en
   - title:      GitHub
     url:        https://github.com/razielgdn
 #Header ends    
@@ -68,4 +70,22 @@ navPrinting:
      - title: Runing Cura on Ubuntu 
        url: /3dprinting/runningCura  
       
-
+notes-en:
+  - title: Notes
+    children:
+    - title: STM Tools configuration
+      url: /projects/en/notes/stm-configs_en
+  - title: Languajes
+    children:
+    - title:  Español
+      url:    /projects/es/notes/stm-configs_es
+    
+notes-es: 
+  - title: Notas
+    children:
+    - title: Herreamientas de STM 
+      url: /projects/es/notes/stm-configs_es
+  - title: Lenguajes  
+    children:   
+      - title:  Inglés
+        url: /projects/en/notes/stm-configs_en
