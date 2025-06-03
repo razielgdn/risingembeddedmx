@@ -14,9 +14,6 @@ RUN groupadd --gid $USER_GID $USERNAME \
      && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
      && chmod 0440 /etc/sudoers.d/$USERNAME
 
-# ********************************************************
-# * Anything else you want to do like clean up goes here *
-# ********************************************************
 
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
@@ -24,6 +21,8 @@ USER $USERNAME
 # "#################################################"
 # "Get the latest APT packages"
 RUN sudo apt-get update
+ENV TZ="America/Monterrey"
+RUN sudo apt-get install -y tzdata
 
 # "#################################################"
 # "Install Ubuntu prerequisites for Ruby and GitHub Pages (Jekyll)"
@@ -42,9 +41,9 @@ RUN sudo apt-get -y install git \
     libgdbm6 \
     libgdbm-dev \
     libdb-dev \
-    apt-utils
+    apt-utils 
+    
 RUN sudo apt-get -y upgrade    
-RUN sudo apt install -y tzdata
 # "#################################################"
 # "GitHub Pages/Jekyll is based on Ruby. Set the version and path"
 # "As of this writing, use Ruby 3.4.4

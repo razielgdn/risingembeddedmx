@@ -1,6 +1,6 @@
 ---
 title: Introducción a Yocto
-permalink: /spanish/yocto/intro
+permalink: /projects/es/yocto/intro
 key: yocto
 ---
 

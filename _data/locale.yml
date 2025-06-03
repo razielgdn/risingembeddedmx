@@ -19,7 +19,7 @@ en: &EN
   FOLLOW_US               : "Follow us on [NAME]."
   EMAIL_ME                : "Send me an Email."
   EMAIL_US                : "Send us an Email."
-  COPYRIGHT_DATES         : "2024"
+  COPYRIGHT_DATES         : "2025"
 
 en-GB:
   <<: *EN
@@ -34,7 +34,7 @@ en-AU:
 es: &ES
   SUBSCRIBE               : "Suscríbete"
   READMORE                : "Saber más"
-  SEARCH                  : "Busqueda"
+  SEARCH                  : "Búsqueda"
   CANCEL                  : "Cancelar"
   VIEWS                   : "Vistas"
   LAST_UPDATED            : "Más reciente"
@@ -42,14 +42,14 @@ es: &ES
   NEXT                    : "SIGUIENTE"
   ARTICLE_DATE_FORMAT     : "%b %d, %Y"
   ARTICLE_LIST_DATE_FORMAT: "%b %d"
-  STATISTICS              : "[POST_COUNT] Articulos posteados, [PAGE_COUNT] paginas."
+  STATISTICS              : "[POST_COUNT] Artículos publicados, [PAGE_COUNT] páginas."
   LICENSE_ANNOUNCE        : "Acuerdo de  [LICENSE] licencia."
   POST_ON_GITHUB          : "Editar en Github"
-  FOLLOW_ME               : "Sigueme en [NAME]."
-  FOLLOW_US               : "Siguenos en[NAME]."
-  EMAIL_ME                : "Enviame un  Email."
-  EMAIL_US                : "Envianos un Email."
-  COPYRIGHT_DATES         : "2024"
+  FOLLOW_ME               : "Sígueme en [NAME]."
+  FOLLOW_US               : "Síguenos en[NAME]."
+  EMAIL_ME                : "Envíame un  Email."
+  EMAIL_US                : "Envíanos un Email."
+  COPYRIGHT_DATES         : "2025"
 
 es-MX:
   <<: *ES

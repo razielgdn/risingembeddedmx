@@ -1,10 +1,11 @@
 ---
 layout: article
-title: 
-permalink: /about
+title: Octavio Raziel Güendulain Pérez
+permalink: /about/en/about
 aside:
    toc: true
 modify_date: 2024-05-29    
+lang: en
 ---
 {% comment %}
 <!--
@@ -13,8 +14,8 @@ modify_date: 2024-05-29
     05-27-2024 -> First update of this document 
 -->
 {% endcomment %}
-# Octavio Raziel Güendulain Pérez
- Electronic engineer with 4+ years of experience in embedded systems development. 
+
+ Electronic engineer with 5+ years of experience in embedded systems development. 
  Linux user since 2008 and a general technology enthusiast. In his free time, he enjoys reading and cycling.
 
 # Embedded systems experience

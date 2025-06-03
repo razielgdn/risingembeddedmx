@@ -3,28 +3,55 @@ header:
   - title:      Blog
     url:        
     key:        blog
-  - title:      Projects
+  - titles:      
+      en      : &EN        Projects
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      es      : &ES     Projectos
+      es-MX   : *ES
+ 
     url:        /projects/en/1-openblt/openblt-start
     key:        projects      
-  - title:      3D printing zone
+  - titles:      
+      en      : &EN     3D printing Zone
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      es      : &ES     Zona de impresión 3D
+      es-MX   : *ES
     url:        /3DprintingZone
-  - title:      Archive
+  - titles:      
+   # @start locale config
+      en      : &EN       Archive
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      es      : &ES      Archivo 
+      es-MX   : *ES
+    # @end locale config
     url:        /archive
-  - title:      About
-    url:        /about
-  - title:      En Español
-    url:        /spanish/quien-soy    
-  - title:       notes
-    url:        /projects/en/notes/stm-configs_en
+  - titles:
+       # @start locale config
+      en      : &EN       About
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      es      : &ES      Acerca de mi
+      es-MX   : *ES
+    # @end locale config      
+    url:        /about/en/about
+  #- title:       Notes
+  #  url:        /projects/en/notes/stm-configs_en
   - title:      GitHub
     url:        https://github.com/razielgdn
 #Header ends    
 
-projects-en:  
-  - title:
-    children: 
-      - title: Index
-        url: /projects/en/menu
+projects-en:   
   - title:      OpenBlt project
     children:
       - title:  First steps with openblt
@@ -43,24 +70,30 @@ projects-en:
   #   children: 
   #     - title: CAN network objectives
   #       url:  /projects/en/STM32-CANnetwork/can-objectives  
-
-spanishZone:
-  - title: En español
+  - title: "Languages"
     children:
-    - title: Acerca del Autor
-      url : /spanish/quien-soy    
+    - title: "Español" 
+      url: /projects/es/embedded-topics/embedded-devDef 
+    
+projects-es:
+  - title: Topicos de sistemas Embebidos  
+    children:    
     - title: ¿Que es un Embedded Dev?
-      url: /spanish/embedded-devDef  
+      url: /projects/es/embedded-topics/embedded-devDef 
     - title: ¿Que debo saber?
-      url: /spanish/embedded-knowledges  
+      url: /projects/es/embedded-topics/embedded-knowledges 
     - title: Preguntas de entrevista
-      url: /spanish/embedded-questions 
+      url: /projects/es/embedded-topics/embedded-questions
   - title: Yocto Project
     children: 
     - title: Introducción
-      url: /spanish/yocto/intro 
+      url: /projects/es/yocto/intro 
     - title: Crear un sistema mínimo
-      url: /spanish/yocto/yoctoi    
+      url: /projects/es/yocto/yoctoi    
+  - title: "Idiomas"
+    children:
+    - title: "English" 
+      url: /projects/en/1-openblt/openblt-start   
 
 navPrinting:
   - title: 3D printing Zone
@@ -70,22 +103,36 @@ navPrinting:
      - title: Runing Cura on Ubuntu 
        url: /3dprinting/runningCura  
       
-notes-en:
-  - title: Notes
-    children:
-    - title: STM Tools configuration
-      url: /projects/en/notes/stm-configs_en
-  - title: Languajes
-    children:
-    - title:  Español
-      url:    /projects/es/notes/stm-configs_es
+# notes-en:
+#   - title: Notes
+#     children:
+#     - title: STM Tools configuration
+#       url: /projects/en/notes/stm-configs_en
+#   - title: Languages
+#     children:
+#     - title:  Español
+#       url:    /projects/es/notes/stm-configs_es
     
-notes-es: 
-  - title: Notas
-    children:
-    - title: Herreamientas de STM 
-      url: /projects/es/notes/stm-configs_es
-  - title: Lenguajes  
-    children:   
-      - title:  Inglés
-        url: /projects/en/notes/stm-configs_en
+# notes-es: 
+#   - title: Notas
+#     children:
+#     - title: Herreamientas de STM 
+#       url: /projects/es/notes/stm-configs_es
+#   - title: Idiomas
+#     children:   
+#       - title:  English
+#         url: /projects/en/notes/stm-configs_en
+
+about-en:
+ - title: About the author
+ - title: Languages 
+   children: 
+   - title: Español 
+     url: /about/es/quien-soy
+
+about-es:
+- title: Acerca del Autor
+- title: Idiomas 
+  children: 
+  - title: Inglés 
+    url: /about/en/about     

@@ -173,19 +173,23 @@ exclude:
   - /screenshots 
   - /tools
   - blog.md
+
+collections_dir: about
+collections:
+  about:
+  output: true
+
 #init projects page  
 collections_dir: projects
 collections:
   projects:
     output: true
 #end projects page
+
 #init 3dprinter zone      
   3dprinting:
-    output: true  
-  spanish:
-    output: true  
-#init 3dprinter zone
-
+    output: true    
+#end 3dprinter zone 
 
 defaults:
   - scope:
@@ -201,6 +205,7 @@ defaults:
       show_edit_on_github: false
       show_subscribe: true
       pageview: true
+
 ## projects English
   - scope:
       path: "_projects/en"
@@ -209,20 +214,20 @@ defaults:
       nav_key: projects
       sidebar:
         nav: projects-en
-      license: true
+      license: false
       aside:
         toc: true
       show_edit_on_github: false
       show_date: false
 ## Spanish Section.
   - scope:
-      path: "_spanish"
+      path: "_projects/es"
     values:
       layout: article
-      nav_key: spanish
+      nav_key: projects-spanish
       sidebar:
-        nav: spanishZone
-      license: true
+        nav: projects-es
+      license: false
       aside:
         toc: true
       lang: es-MX  
@@ -243,36 +248,65 @@ defaults:
 ## end 3dprinting zone     
 
 ## Init notes
-  - scope:
-      path: "_projects/en/notes"
-    values:
-      layout: article
-      nav_key: notes
-      sidebar:
-        nav: notes-en
-      license: true
-      aside:
-        toc: true
-      show_edit_on_github: false
-      show_date: false
-      # lightbox: true
-  - scope:
-      path: "_projects/es/notes"
-    values:
-      layout: article
-      nav_key: notas
-      sidebar:
-        nav: notes-es
-      license: true
-      aside:
-        toc: true
-      lang: es_MX
-      show_edit_on_github: false
-      show_date: false
+#   - scope:
+#       path: "_projects/en/notes"
+#     values:
+#       layout: article
+#       nav_key: notes
+#       sidebar:
+#         nav: notes-en
+#       license: true
+#       aside:
+#         toc: true
+#       show_edit_on_github: false
+#       show_date: false
+#       # lightbox: true
+#   - scope:
+#       path: "_projects/es/notes"
+#     values:
+#       layout: article
+#       nav_key: notas
+#       sidebar:
+#         nav: notes-es
+#       license: true
+#       aside:
+#         toc: true
+#       lang: es_MX
+#       show_edit_on_github: false
+# #      show_date: false
       # lightbox: true
 
 ## End notes
 
+## init about
+  - scope:
+      path: "about/en"
+    values:
+      layout: article
+      nav_key: about-en
+      sidebar:
+        nav: about-en
+      license: false
+      aside:
+        toc: true
+      lang: en
+      show_edit_on_github: false
+      show_date: false
+
+  - scope:
+      path: "about/es"
+    values:
+      layout: article
+      nav_key: about-es
+      sidebar:
+        nav: about-es
+      license: false
+      aside:
+        toc: true
+      lang: es_MX
+      show_edit_on_github: false
+      show_date: false    
+## end about
 
 ## => Plugins
 ##############################

@@ -1,6 +1,6 @@
 ---
 title: Yocto para Raspberry Pi 4
-permalink: /spanish/yocto/yoctoi
+permalink: /projects/es/yocto/yoctoi
 key: yocto
 ---
 
