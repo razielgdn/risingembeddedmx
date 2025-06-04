@@ -65,14 +65,21 @@ projects-en:
         url:   /projects/en/1-openblt/open-blt
       - title: "Usage of the custom OpenBLT on the Nucleo-F446RE board"
         url:   /projects/en/1-openblt/openblt-results
+
   - title: "STM32F103C8TX Bluepill Plus "      
     children:
       - title:  "Running OpenBLT"
         url:    /projects/en/1-openblt/openblt-bluepill  
+
   - title: 8 bit AVR MCUs Section
     children:
       - title: Bluild and Flash AVR projects in Linux
-        url: /projects/en/2-avr-section/build-and-flash      
+        url: /projects/en/2-avr-section/build-and-flash   
+
+  - title: Yocto project
+    children:
+      - title: Introduction to yocto
+        url: /projects/en/yocto/intro         
   # - title: Can Network Project
   #   children: 
   #     - title: CAN network objectives
@@ -84,6 +91,7 @@ projects-es:
     children:
     - title: "English" 
       url: /projects/en/1-openblt/openblt-start   
+
   - title: Topicos de sistemas Embebidos  
     children:    
     - title: ¿Que es un Embedded Dev?
@@ -92,6 +100,7 @@ projects-es:
       url: /projects/es/embedded-topics/embedded-knowledges 
     - title: Preguntas de entrevista
       url: /projects/es/embedded-topics/embedded-questions
+      
   - title: Yocto Project
     children: 
     - title: Introducción
