@@ -87,11 +87,14 @@ projects-en:
 
     
 projects-es:
-  - title: "Idiomas"
+  - title:     "Idiomas"
     children:
-    - title: "English" 
-      url: /projects/en/1-openblt/openblt-start   
-
+    - title:   "English" 
+      url:     /projects/en/1-openblt/openblt-start   
+  - title:     "STM32F103C8TX Bluepill Plus "      
+    children:
+      - title: "Usando OpenBLT"
+        url:   /projects/es/1-openblt/openblt-bluepill   
   - title: Topicos de sistemas Embebidos  
     children:    
     - title: ¿Que es un Embedded Dev?

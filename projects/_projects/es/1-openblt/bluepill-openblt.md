@@ -93,7 +93,7 @@ El paquete completo de OpenBLT está disponible en la [página de descargas de F
       2. Conecta o configura:
         - **PLL Source Mux** a **HSE**
         - **PLLMUL** a **×9**
-        - **System Clock Mux **a **PLLCLK**
+        - **System Clock Mux** a **PLLCLK**
         - **APB1** Prescaler a **/2**    
       <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject04.png"/>      
 
@@ -181,7 +181,9 @@ El paquete completo de OpenBLT está disponible en la [página de descargas de F
 Para habilitar la comunicación a través de las interfaces **UART** y **CAN** con **OpenBLT** en la tarjeta **Bluepill (STM32F103C8T6)**, necesitarás modificar varios archivos fuente en el directorio `Boot/`. Estos cambios configuran cómo el *bootloader* interactúa con el hardware del microcontrolador.
 
 ### Consideraciones de hardware
-La tarjeta original **NUCLEO-STM32F103RB** usa **USART2** para la comunicación serial, con **USART2 RX** en **Port A3** y **USART2 TX** en **Port A2**. También usa **CAN1** para la comunicación **CAN**, típicamente remapeada a **CAN_RX** en **Port B8** y **CAN_TX** en **Port B9** mediante la función de remapeo alternativo. Además, el **LED** de usuario en la tarjeta **NUCLEO** está conectado a **Port A5**.    
+La tarjeta original **NUCLEO-STM32F103RB** usa **USART2** para la comunicación serial, con **USART2 RX** en **Port A3** y **USART2 TX** en **Port A2**. También usa **CAN1** para la comunicación **CAN**, típicamente remapeada a **CAN_RX** en **Port B8** y **CAN_TX** en **Port B9** mediante la función de remapeo alternativo. Además, el **LED** de usuario en la tarjeta **NUCLEO** está conectado a **Port A5**.     
+ <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/schematic-f103c8t6.jpg"/>   
+ 
 #### UART
 Para este proyecto, la comunicación UART usará **USART1**, que está mapeada a:
   - **USART1 TX**: Port A9
@@ -453,7 +455,7 @@ Al igual que el proyecto del *bootloader* en la carpeta **Boot/**, varios archiv
 
 ## Archivos a Modificar
 ### **Makefile**     
-Actualiza la ruta de la cadena de herramientas y las banderas de optimización en el Makefile para que coincidan con las usadas en el *bootloader*. Esto asegura la compatibilidad y el uso correcto de la cadena de herramientas ARM instalada.    
+Actualiza la ruta de la cadena de herramientas y las banderas de optimización en el Makefile para que coincidan con las usadas en el *bootloader*. Esto asegura la compatibilidad y el uso correcto del Toolchain de ARM instalado.    
 
 ```diff
 -TOOL_PATH =
@@ -463,14 +465,14 @@ Actualiza la ruta de la cadena de herramientas y las banderas de optimización e
 +OPTFLAGS = -Os -flto
 ```
 
-Además, actualiza el script de enlace para usar uno alineado con la reserva de memoria del *bootloader* (por ejemplo, omitiendo los primeros 16 KB de flash para OpenBLT):
+Además, actualiza el script del linker para usar uno alineado con la reserva de memoria del *bootloader* (por ejemplo, omitiendo los primeros 16 KB de flash para OpenBLT):
 ```diff
 -LFLAGS     += -T"STM32F103RB_FLASH.ld" -Wl,-Map=$(BIN_PATH)/$(PROJ_NAME).map
 +LFLAGS     += -T"STM32F103C8TX_FLASH.ld" -Wl,-Map=$(BIN_PATH)/$(PROJ_NAME).map
 ```
 
 ### Linker File    
-Debes usar un script de enlace personalizado para la aplicación, para asegurar que el firmware comience después del *bootloader*. Por ejemplo, si el *bootloader* ocupa los primeros 0x2000 (8KB) de flash:
+Debes usar un script del linker  para la aplicación, para asegurar que el firmware comience después del *bootloader*. Por ejemplo, si el *bootloader* ocupa los primeros 0x2000 (8KB) de flash:
 ```diff
 /* Memories definition */
 MEMORY
@@ -482,7 +484,7 @@ MEMORY
 ```
 
 ### Startup File    
-Para el proyecto de la aplicación en `Prog/`, necesitas reservar espacio para la suma de verificación en el archivo de inicio. OpenBLT usa esta suma de verificación de 32 bits para verificar la integridad del firmware de la aplicación durante el proceso de arranque.    
+Para el proyecto de la aplicación en `Prog/`, necesitas reservar espacio para la checksumen el archivo de inicio. OpenBLT usa esta checksum de 32 bits para verificar la integridad del firmware de la aplicación durante el proceso de arranque.    
 
 ```diff
 .word RTC_Alarm_IRQHandler
@@ -586,9 +588,9 @@ Modifica el GPIO al Port B2.
 }
 ```  
 
-# Construir el *bootloader* y la Aplicación
-Ahora que se han realizado las modificaciones necesarias, puedes proceder a construir tanto el *bootloader* como la aplicación de demostración.   
-1. Construir el *bootloader*    
+# Compilar el *bootloader* y la Aplicación
+Ahora que se han realizado las modificaciones necesarias, puedes proceder a construir tanto el *bootloader* como el Demo.   
+1. Compilar el *bootloader*    
 Navega al directorio Boot/ y ejecuta: 
     ```bash 
     cd ~/openBLT_bluepill/Boot/
@@ -597,15 +599,15 @@ Navega al directorio Boot/ y ejecuta:
    Esto debería compilar el código del *bootloader* y generar el archivo binario o .srec necesario (por ejemplo, BootDemo.srec) para flashear.    
    **Si la compilación se completa con éxito**, encontrarás el binario del *bootloader* dentro del directorio Bin/.
 
-2. Construir la Aplicación de Demostración    
+1. Compilar el demo   
 Navega al directorio Prog/ y ejecuta:
     ```bash
     cd ~/openBLT_bluepill/Prog/
     make clean all
     ```
-¡Ahora estás completamente configurado para desarrollar y desplegar firmware usando OpenBLT en la tarjeta Bluepill Plus!
+¡Todo listo con el firmware para flashear la  tarjeta Bluepill Plus!
 
-**Nota:** Los pasos siguientes, incluyendo instrucciones detalladas para usar el *bootloader*, realizar actualizaciones de firmware y trabajar con MicroBoot, están completamente explicados en la documentación del proyecto disponible en el [razielgdn GitHub repository](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT).
+**Nota:** Los pasos siguientes, incluyendo instrucciones detalladas para usar el *bootloader*, realizar actualizaciones de firmware y trabajar con MicroBoot, están completamente explicados en la documentación del proyecto disponible en mi respositorio: [razielgdn GitHub ](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT).
 
 # Flashear el *bootloader* y la Aplicación       
 Una vez que tanto el *bootloader* como la aplicación se hayan construido con éxito, puedes flashearlos en la tarjeta Bluepill Plus usando tu programador preferido (por ejemplo, ST-Link, J-Link o un adaptador USB-to-serial con una herramienta DFU). Sigue estos pasos:    
@@ -642,7 +644,7 @@ sudo ip link set up can0
 
 # Próximos Pasos 
 ## Desarrollar una Aplicación Basada en CAN    
-Con el *bootloader* OpenBLT y la demostración ejecutándose con éxito en la tarjeta Bluepill Plus, el próximo paso es desarrollar una aplicación significativa que aproveche la interfaz CAN.
+Con el *bootloader* OpenBLT y los demos  ejecutándose con éxito en la tarjeta Bluepill Plus, el próximo paso es desarrollar una aplicación significativa que aproveche la interfaz CAN.
 
 Esto podría incluir:
 - Un nodo de sensor que capture ̣̣señales y datos (por ejemplo, temperatura, voltaje o nivel de agua) a través de CAN.
@@ -653,7 +655,7 @@ Aprovechar CAN permite una comunicación robusta y en tiempo real entre disposit
 
 # Repositorio de Código Fuente
 
-El código fuente completo para el *bootloader* y las aplicaciones de demostración está disponible en el repositorio de GitHub: [https://github.com/razielgdn](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT).    
+El código fuente completo para el *bootloader* y los demos está disponible en el repositorio de GitHub: [https://github.com/razielgdn](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT).    
 
 También está disponible un tutorial en video que muestra cómo usar el *bootloader* y flashear las demostraciones en YouTube:    
 
