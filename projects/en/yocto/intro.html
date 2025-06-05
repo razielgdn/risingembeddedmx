@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>After vacations! - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Introduction to Yocto - Rising Embedded Mx</title>
 
-<meta name="description" content="After vacationsAfter a busy work season, a break is necessary.“Last week of February, I wanted to take a couple of days off, and I managed to get it for an i...">
-<link rel="canonical" href="http://localhost:4000/risingembeddedmx/post/2024/04/14/after-vacations.html"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="This is a very advanced topic for embedded systems, but due to stock market reasons and business strategy decisions at the company I worked for, I’m currentl...">
+<link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/en/yocto/intro"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -254,7 +254,18 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
+      <div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__mask d-print-none js-page-mask js-sidebar-hide"></div>
+  <div class="page__viewport">
+    <div class="page__actions d-print-none">
+      <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
+        <i class="fas fa-bars icon--show"></i>
+      </div>
+    </div>
+
+    <div class="grid page__grid">
+
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">STM32F103C8TX Bluepill Plus </li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4565,7 +4576,7 @@
 </svg>
 <a title="This is my world, where I can do what I think
 " href="/risingembeddedmx/">Rising Embedded Mx</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing Zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">About</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item navigation__item--active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing Zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">About</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -4576,37 +4587,180 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>After vacations!</h1></header></div><meta itemprop="headline" content="After vacations!"><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/risingembeddedmx/archive?tag=blog">blog</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Apr 14, 2024</span>
-            </li></ul></div><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-04-14T00:00:00-06:00">
-    <meta itemprop="keywords" content="blog"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Introduction to Yocto</h1></header></div><meta itemprop="headline" content="Introduction to Yocto"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-04T22:22:05-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h2 id="after-vacations">After vacations</h2>
-<p>After a busy work season, a break is necessary.
-“Last week of February, I wanted to take a couple of days off, and I managed to get it for an indefinite period.” - Abner, my brother.
-We worked as embedded software developers in the same company for a while, and unfortunately, the layoffs in high technology companies affected us.</p>
+<div class="article__content" itemprop="articleBody"><p>This is a very advanced topic for embedded systems, but due to stock market reasons and business strategy decisions at the company I worked for, I’m currently on an indefinite vacation.</p>
 
-<p>I was exhausted from programming because last month at work, I had to work more than 10 hours a day just to learn how to do my tasks. However, I was laid off from my job. After these canon events I decide do some Udemy curses, pick up ciclysm again to  prepare myself phisically and mentally for a new season.</p>
+<p>Since developers tend to think in binary terms, I had two choices: either sit around regretting things and asking myself <em>“why me?”</em>, or take the opportunity to sharpen my skills while looking for a new job.</p>
 
-<p>I took a Scrum course focused on Jira to improve these skills.
-During the last week of March and the first week of April, I took a break to disconnect from computers and work.
-Yesterday, I finished a course to enhance my knowledge of the Yocto Project.</p>
+<h1 id="yocto-project">Yocto Project</h1>
 
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-04-14T00:00:00-06:00"><!-- start custom article footer snippet -->
+<p>“Yocto” is the SI prefix for one of the smallest measurement scales (until 2022 when even smaller prefixes were added), meaning a multiplier of 10^-24 — that is, 0.000…1 with 24 zeros before the 1.</p>
+
+<p>In our context, it means something very small. The <strong>Yocto Project</strong> is a set of tools used to create fully customized Linux-based operating systems, allowing you to manipulate each component in the build process.</p>
+
+<p>The Yocto Project combines and maintains several key elements:</p>
+
+<ul>
+  <li>The OpenEmbedded build system, made up of <strong>OpenEmbedded Core</strong> and <strong>BitBake</strong>.</li>
+  <li>A Linux embedded configuration used for testing (called <strong>Poky</strong>).</li>
+  <li>A broad testing infrastructure via an automated builder based on Buildbot.</li>
+  <li>
+    <p>Tools for efficiently working with embedded Linux:</p>
+
+    <ul>
+      <li>Automation tools for building and testing.</li>
+      <li>Processes and standards for board-level support definitions and sharing.</li>
+      <li>Tools for security analysis, license compliance, and SPDX-based Software Bill of Materials (SBoM) support.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>There are many open source components under the Yocto Project umbrella.</p>
+
+<p><strong>Poky</strong>, the reference embedded OS, is a <strong>build example</strong> that compiles a small operating system using BitBake (the build engine), OpenEmbedded-Core, and Poky’s metadata.</p>
+
+<p>The build system downloads Poky’s build instructions called “recipes” and “layers”. You can modify, copy, or reuse Poky’s specifications to create your own customized Embedded Linux system.</p>
+
+<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/YoctoLayers.png" alt="" /></p>
+
+<h2 id="building-a-custom-operating-system">Building a Custom Operating System</h2>
+
+<p>The <a href="https://docs.yoctoproject.org/overview-manual/yp-intro.html#introducing-the-yocto-project">official documentation</a> explains why Yocto is an excellent choice for creating embedded system products:</p>
+
+<ul>
+  <li>Widely adopted in the industry; many chipmakers, OS vendors, and service providers support Yocto.</li>
+  <li>Compatible with multiple architectures (Intel, AMD, MIPS, ARM, and more).</li>
+  <li>Supports a wide range of emulated devices through <strong>QEMU</strong>.</li>
+  <li>Easy to port images and code without changing development environments.</li>
+  <li>Highly flexible — a company can create a custom distribution and several tailored products from it.</li>
+  <li>Great for IoT devices, allowing inclusion of only necessary components.</li>
+  <li>Supports third-party toolchains and common architectures.</li>
+  <li>Uses a <strong>layered model</strong>, letting you add packages incrementally, reducing redundancy.</li>
+  <li>Supports partial builds, allowing you to build/rebuild individual packages.</li>
+  <li>Offers precise dependency control, ensuring high binary reproducibility.</li>
+  <li>Backed by an active community, helpful forums, and a strong ecosystem.</li>
+  <li>Provides license manifests to help track open-source license usage.</li>
+</ul>
+
+<h2 id="challenges-in-using-yocto">Challenges in Using Yocto</h2>
+
+<p>Despite its power, Yocto comes with some challenges:</p>
+
+<ul>
+  <li>Steep learning curve; many ways to accomplish the same task.</li>
+  <li>Understanding changes needed for a new design requires research.</li>
+  <li>Workflow can confuse desktop/server users used to precompiled packages; here, everything must be configured and rebuilt.</li>
+  <li><strong>Cross-building</strong> environments can be unfamiliar; testing code directly on the target board may feel faster than building and transferring it.</li>
+  <li>OpenEmbedded creates packages in standard formats (rpm, deb, ipk) — you can install these on a running system.</li>
+  <li>Initial build times are long due to compiling everything from scratch. But Yocto caches results for future builds.</li>
+</ul>
+
+<h2 id="things-i-wish-id-known">Things I Wish I’d Known</h2>
+
+<p>The official docs have a <a href="https://docs.yoctoproject.org/what-i-wish-id-known.html#what-i-wish-i-d-known-about-yocto-project">“What I Wish I’d Known”</a> section — here’s a summary:</p>
+
+<p>Using Yocto is easy — until something breaks. Without understanding how the build process works, it can feel like a black box. Here are things to know before diving in:</p>
+
+<ol>
+  <li>
+    <p>Use <strong>Git</strong> instead of tarballs to ensure updates and bug fixes.</p>
+  </li>
+  <li>
+    <p>Know the <strong>Layer Index</strong>. All official layers are listed there, including those marked as Yocto-compatible.</p>
+  </li>
+  <li>
+    <p>Use BSP layers from vendors (Intel, NXP, Raspberry Pi, etc.) as a base; don’t reinvent the wheel.</p>
+  </li>
+  <li>
+    <p>Avoid putting everything in one layer. Use logical separation (BSP, GUI, distro config, apps, etc.) for maintainability.</p>
+  </li>
+  <li>
+    <p>Never ever modify the <strong>Poky</strong> layer — changes will be lost in the next release.</p>
+  </li>
+  <li>
+    <p>Use the <a href="https://docs.yoctoproject.org/singleindex.html#document-kernel-dev/4.0.16/4.3.999/index">All-in-One Mega Manual</a> instead of outdated Google results.</p>
+  </li>
+  <li>
+    <p>Learn the build process stages:</p>
+
+    <ol>
+      <li><strong>Fetch</strong> – download source code.</li>
+      <li><strong>Extract</strong> – unpack it.</li>
+      <li><strong>Patch</strong> – apply fixes and features.</li>
+      <li><strong>Configure</strong> – set environment params.</li>
+      <li><strong>Build</strong> – compile and link.</li>
+      <li><strong>Install</strong> – place files in expected locations.</li>
+      <li><strong>Package</strong> – prepare files for deployment.</li>
+    </ol>
+
+    <p>Each step helps debug issues when something goes wrong.</p>
+
+    <p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yp-hiw.png" alt="" /></p>
+  </li>
+  <li>
+    <p>You can generate dependency graphs (<code class="language-plaintext highlighter-rouge">-g</code> option) to troubleshoot build problems.</p>
+  </li>
+  <li>
+    <p>Understand the “magic” folder names in <code class="language-plaintext highlighter-rouge">tmp/work</code>. Use <code class="language-plaintext highlighter-rouge">-u</code> to get UI feedback in graphical or text mode.</p>
+  </li>
+  <li>
+    <p>You can build more than just images — individual recipes or packages too. Use the dev shell.</p>
+  </li>
+  <li>
+    <p>Clarify the difference: <strong>Recipes</strong> contain build instructions; <strong>Packages</strong> are the output.</p>
+  </li>
+  <li>
+    <p>Know what’s included in your root filesystem.</p>
+  </li>
+  <li>
+    <p>Learn to write custom recipes.</p>
+  </li>
+  <li>
+    <p>An embedded developer using Yocto should be able to:</p>
+  </li>
+</ol>
+
+<ul>
+  <li>Navigate corporate proxies.</li>
+  <li>Add packages to an image.</li>
+  <li>Distinguish recipes from packages.</li>
+  <li>Build a package and understand why.</li>
+  <li>Identify which files/packages belong to what.</li>
+  <li>Add SSH support to images.</li>
+  <li>Understand recipe anatomy.</li>
+  <li>Create and manage layers.</li>
+  <li>Find recipes in OpenEmbedded.</li>
+  <li>Know the difference between machine and distro configurations.</li>
+  <li>Use BSPs for your hardware.</li>
+  <li>Configure distro features.</li>
+  <li>Run and troubleshoot tasks individually.</li>
+  <li>Use devtools to simplify work.</li>
+  <li>Speed up builds using shared downloads and caches.</li>
+  <li>Generate and read dependency graphs.</li>
+  <li>Understand the BitBake environment.</li>
+  <li>Build SDK extensions.</li>
+</ul>
+
+<ol>
+  <li>Depending on your interests, you may want to:</li>
+</ol>
+
+<ul>
+  <li>Read the <strong>Yocto Development Tasks Manual</strong>.</li>
+  <li>Explore the <strong>Application Development Manual</strong> and <strong>eSDK</strong>.</li>
+  <li>Learn <strong>Kernel Development</strong> via its dedicated manual.</li>
+  <li>Learn about <strong>Board Support Packages</strong> (BSPs).</li>
+  <li>Use <strong>Toaster</strong>, a web interface for the Yocto build system.</li>
+  <li>Explore <strong>VS Code or Eclipse</strong> plugins.</li>
+  <li>Keep the <strong>Yocto Project Reference Manual</strong> handy.</li>
+</ul>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-04T22:22:05-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
-<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/risingembeddedmx/feed.xml">Subscribe</a></div>
-</div><div class="article__license"><div class="license">
-    <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> license.
-      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
-        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
-      </a>
-    </p>
-  </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/post/2024/03/16/first-post.html">Welcome to the jungle!</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/post/2024/04/15/star-with-openblt-project.html">Openblt to STM Nucleo-64</a></div></div></div>
+</footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></div></div></div>
 
 </div>
 
@@ -4686,7 +4840,7 @@ Yesterday, I finished a course to enhance my knowledge of the Yocto Project.</p>
   </div>
 </footer>
 </div></div>
-    </div><script>(function() {
+    </div></div></div><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $body = $('body'), $window = $(window);
@@ -5203,6 +5357,36 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 /*(function () {
 
 })();*/
+</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageMask = $('.js-page-mask');
+    var $pageRoot = $('.js-page-root');
+    var $sidebarShow = $('.js-sidebar-show');
+    var $sidebarHide = $('.js-sidebar-hide');
+
+    function freeze(e) {
+      if (e.target === $pageMask[0]) {
+        e.preventDefault();
+      }
+    }
+    function stopBodyScrolling(bool) {
+      if (bool === true) {
+        window.addEventListener('touchmove', freeze, { passive: false });
+      } else {
+        window.removeEventListener('touchmove', freeze, { passive: false });
+      }
+    }
+
+    $sidebarShow.on('click', function() {
+      stopBodyScrolling(true); $pageRoot.addClass('show-sidebar');
+    });
+    $sidebarHide.on('click', function() {
+      stopBodyScrolling(false); $pageRoot.removeClass('show-sidebar');
+    });
+  });
+})();
 </script><script>
   /* toc must before affix, since affix need to konw toc' height. */(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;

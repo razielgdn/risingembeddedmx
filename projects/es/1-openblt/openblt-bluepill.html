@@ -1,10 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="es-MX">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>After vacations! - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx - Rising Embedded Mx</title>
 
-<meta name="description" content="After vacationsAfter a busy work season, a break is necessary.“Last week of February, I wanted to take a couple of days off, and I managed to get it for an i...">
-<link rel="canonical" href="http://localhost:4000/risingembeddedmx/post/2024/04/14/after-vacations.html"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="IntroducciónEste proyecto permite el uso del bootloader de arranque OpenBLT en las tarjetas de desarrollo Bluepill Plus y Blackpill, proporcionando una soluc...">
+<link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/es/1-openblt/openblt-bluepill"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -254,7 +254,18 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
+      <div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__mask d-print-none js-page-mask js-sidebar-hide"></div>
+  <div class="page__viewport">
+    <div class="page__actions d-print-none">
+      <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
+        <i class="fas fa-bars icon--show"></i>
+      </div>
+    </div>
+
+    <div class="grid page__grid">
+
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Idiomas</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">English</a></li><li class="toc-h1">STM32F103C8TX Bluepill Plus </li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/es/1-openblt/openblt-bluepill">Usando OpenBLT</a></li><li class="toc-h1">Topicos de sistemas Embebidos</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">¿Que es un Embedded Dev?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-knowledges">¿Que debo saber?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-questions">Preguntas de entrevista</a></li><li class="toc-h1">Yocto Project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/intro">Introducción</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/yoctoi">Crear un sistema mínimo</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4565,7 +4576,7 @@
 </svg>
 <a title="This is my world, where I can do what I think
 " href="/risingembeddedmx/">Rising Embedded Mx</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing Zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">About</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projectos</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">Zona de impresión 3D</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archivo</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">Acerca de mi</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -4576,37 +4587,803 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>After vacations!</h1></header></div><meta itemprop="headline" content="After vacations!"><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/risingembeddedmx/archive?tag=blog">blog</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Apr 14, 2024</span>
-            </li></ul></div><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2024-04-14T00:00:00-06:00">
-    <meta itemprop="keywords" content="blog"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx</h1></header></div><meta itemprop="headline" content="OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-04T22:22:05-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h2 id="after-vacations">After vacations</h2>
-<p>After a busy work season, a break is necessary.
-“Last week of February, I wanted to take a couple of days off, and I managed to get it for an indefinite period.” - Abner, my brother.
-We worked as embedded software developers in the same company for a while, and unfortunately, the layoffs in high technology companies affected us.</p>
+<div class="article__content" itemprop="articleBody"><h1 id="introducción">Introducción</h1>
+<p>Este proyecto permite el uso del <em>bootloader</em> de arranque OpenBLT en las tarjetas de desarrollo Bluepill Plus y Blackpill, proporcionando una solución ligera y flexible para actualizaciones de firmware en sistemas basados en STM32.</p>
 
-<p>I was exhausted from programming because last month at work, I had to work more than 10 hours a day just to learn how to do my tasks. However, I was laid off from my job. After these canon events I decide do some Udemy curses, pick up ciclysm again to  prepare myself phisically and mentally for a new season.</p>
+<h2 id="motivación">Motivación</h2>
+<p>Este proyecto se desarrolló con el objetivo de habilitar la actualización de firmware a través del protocolo CAN para una red de microcontroladores. En aplicaciones futuras, como un sistema acuapónico automatizado para la cría de peces, crustáceos y plantas, estos microcontroladores gestionarán subsistemas como riego, iluminación y humedad. Las actualizaciones de firmware confiables y escalables son esenciales para mantener un sistema de control distribuido.</p>
 
-<p>I took a Scrum course focused on Jira to improve these skills.
-During the last week of March and the first week of April, I took a break to disconnect from computers and work.
-Yesterday, I finished a course to enhance my knowledge of the Yocto Project.</p>
+<h2 id="tarjeta-bluepill-plus-stm32f103c8t6">Tarjeta Bluepill Plus STM32F103C8T6</h2>
+<p>En esta etapa, el <em>bootloader</em> OpenBLT es completamente funcional a través de las interfaces RS232 y CAN en la tarjeta <strong>Bluepill Plus</strong>.</p>
 
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2024-04-14T00:00:00-06:00"><!-- start custom article footer snippet -->
+<p>La documentación para el dispositivo está disponible en su <a href="https://github.com/WeActStudio/BluePill-Plus">repositorio de GitHub</a>, y también se puede encontrar un buen resumen en <a href="https://stm32-base.org/boards/STM32F103C8T6-WeAct-Blue-Pill-Plus-Clone">stm32-base.org</a>.</p>
+
+<h2 id="tarjeta-blackpill-v30-stm32f411ceu6">Tarjeta Blackpill V3.0 STM32F411CEU6</h2>
+<p>También estoy evaluando la board Blackpill V3.0 para uso futuro. Aunque carece de soporte integrado para CAN y tiene menor prioridad para el proyecto con OpenBLT, planeo portar el <em>bootloader</em> una vez que la implementación basada en Bluepill esté completa.<br />
+La documentación está disponible en el <a href="https://github.com/WeActStudio/WeActStudio.BlackPill">repositorio de GitHub de la tarjeta</a>. Según el esquema y los detalles del hardware, el Microcontrolador STM32F411 parece ser compatible con el STM32F403, requiriendo solo adaptaciones menores para el desarrollo.<br />
+Un resumen útil también se proporciona en <a href="https://stm32-base.org/boards/STM32F401CEU6-WeAct-Black-Pill-V3.0">stm32-base.org</a>.</p>
+
+<h2 id="openblt">OpenBLT</h2>
+<p><strong>OpenBLT</strong> es de código abierto y está licenciado bajo la Licencia Pública General de GNU v3 (GPLv3). Fue creado y es mantenido por <strong>Feaser</strong>. Puedes visitar su <a href="https://www.feaser.com/openblt/doku.php?id=homepage">sitio web oficial</a> para obtener más información y documentación.</p>
+
+<h2 id="aplicaciones-de-prueba">Aplicaciones de Prueba</h2>
+<p>Las aplicaciones de prueba fueron obtenidas del <a href="https://github.com/miniwinwm/BluePillDemo">repositorio de GitHub</a> de <strong>John Blaiklock</strong>, y el código fuente original fue adaptado para este proyecto.</p>
+
+<h1 id="portando-openblt-a-stm32f103c8tx">Portando OpenBLT a STM32F103C8Tx</h1>
+<p>El código fue portado del demo del proyecto openblt STM32F103RB (con la tarjeta STM32 Nucleo-64) a una bluepill con el micro STM32F103C8Tx.</p>
+
+<h2 id="descargar-openblt">Descargar OpenBLT</h2>
+<p>El paquete completo de OpenBLT está disponible en la <a href="https://www.feaser.com/openblt/doku.php?id=download">página de descargas de Feaser</a>.</p>
+
+<h2 id="preparar-un-entorno-de-trabajo">Preparar un entorno de trabajo</h2>
+<ol>
+  <li>Crea un directorio de trabajo para el proyecto Bluepill:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">mkdir</span> ~/openBLT_bluepill
+ <span class="nb">cd</span> ~/openBLT_bluepill 
+</code></pre></div>    </div>
+  </li>
+  <li>Copia las carpetas desde <code class="language-plaintext highlighter-rouge">openblt_v011901/Target/Demo/ARMCM3_STM32F1_Nucleo_F103RB_GCC/</code> a <code class="language-plaintext highlighter-rouge">~/openBLT_bluepill/</code>:
+    <ul>
+      <li><strong>Boot/</strong></li>
+      <li><strong>Prog/</strong></li>
+    </ul>
+  </li>
+  <li>
+    <p>Copia la carpeta <code class="language-plaintext highlighter-rouge">openblt_v011901/Target/Source/ARMCM3_STM32F1/</code> a <code class="language-plaintext highlighter-rouge">~/openBLT_bluepill/Source</code>.</p>
+  </li>
+  <li>Copia los siguientes archivos <code class="language-plaintext highlighter-rouge">.c</code> y <code class="language-plaintext highlighter-rouge">.h</code> desde <code class="language-plaintext highlighter-rouge">openblt_v011901/Target/Source/</code> al directorio <code class="language-plaintext highlighter-rouge">~/openBLT_bluepill/Source/</code>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  openblt_v011901/Target/Source/asserts.c 
+  openblt_v011901/Target/Source/asserts.h 
+  openblt_v011901/Target/Source/backdoor.c 
+  openblt_v011901/Target/Source/backdoor.h 
+  openblt_v011901/Target/Source/boot.c 
+  openblt_v011901/Target/Source/boot.h
+  openblt_v011901/Target/Source/can.h 
+  openblt_v011901/Target/Source/com.c
+  openblt_v011901/Target/Source/com.h
+  openblt_v011901/Target/Source/cop.c
+  openblt_v011901/Target/Source/cop.h
+  openblt_v011901/Target/Source/cpu.h  
+  openblt_v011901/Target/Source/file.c  
+  openblt_v011901/Target/Source/file.h  
+  openblt_v011901/Target/Source/mb.c  
+  openblt_v011901/Target/Source/mb.h  
+  openblt_v011901/Target/Source/net.c  
+  openblt_v011901/Target/Source/net.h  
+  openblt_v011901/Target/Source/nvm.h  
+  openblt_v011901/Target/Source/plausibility.h 
+  openblt_v011901/Target/Source/rs232.h  
+  openblt_v011901/Target/Source/timer.h  
+  openblt_v011901/Target/Source/usb.h  
+  openblt_v011901/Target/Source/xcp.c  
+  openblt_v011901/Target/Source/xcp.h
+</code></pre></div>    </div>
+  </li>
+  <li>Actualiza las definiciones del microcontrolador: 
+Usa un proyecto existente de STM32CubeIDE dirigido al Micro <strong>STM32F103C8Tx</strong>. Reemplaza su script del linker y el startup con los correspondientes del micro en el proyecto.
+    <ol>
+      <li>Crea un nuevo proyecto en STM32CubeIDE, ve a <strong>File &gt; New &gt; STM32 Project</strong> 
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject01.png" /></li>
+      <li>Selecciona el MCU.
+        <ul>
+          <li>En la pestaña de selección de MCU/MPU, busca y selecciona STM32F103C8T6.</li>
+          <li>Nombra tu proyecto y haz clic en Finalizar.  <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject02.png" /></li>
+        </ul>
+      </li>
+      <li>Configura los ajustes de periféricos
+        <ul>
+          <li>Abre el archivo .ioc de tu proyecto.</li>
+          <li>Habilita los siguientes periféricos:
+            <ul>
+              <li>Bus CAN</li>
+              <li>USART1</li>
+              <li>RCC: Configura para usar HSE (Fuente de Reloj Externa)   <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject03.png" /></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Configura el reloj del sistema.
+        <ol>
+          <li>Abre la pestaña de Configuración de Reloj.</li>
+          <li>Conecta o configura:
+            <ul>
+              <li><strong>PLL Source Mux</strong> a <strong>HSE</strong></li>
+              <li><strong>PLLMUL</strong> a <strong>×9</strong></li>
+              <li><strong>System Clock Mux</strong> a <strong>PLLCLK</strong></li>
+              <li><strong>APB1</strong> Prescaler a <strong>/2</strong>  <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject04.png" /></li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+      <li>Reemplaza los archivos de inicio en el proyecto OpenBLT
+        <ul>
+          <li>Elimina los archivos predeterminados del demo de  OpenBLT:
+            <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">cd</span> ~/openBLT_bluepill/Boot
+  <span class="nb">rm </span>STM32F103RB_FLASH.ld startup_stm32f103xb.s
+</code></pre></div>            </div>
+          </li>
+          <li>Copia los archivos de <strong>STM32CubeIDE</strong>:
+            <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">cp</span> ~/STM32CubeIDE/workspace_1.18.1/<span class="sb">`</span>YourProjectName<span class="sb">`</span>/STM32F103C8TX_FLASH.ld <span class="nb">.</span>
+  <span class="nb">cp</span> ~/STM32CubeIDE/workspace_1.18.1/<span class="sb">`</span>YourProjectName<span class="sb">`</span>/Core/Startup/startup_stm32f103c8tx.s <span class="nb">.</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>Cambia el tamaño de la sección de memoria FLASH en las difiniciones del linker.
+        <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Memories definition */
+<span class="p">MEMORY 
+</span> {
+  RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 20K
+<span class="gd">-  FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 64K   
+</span><span class="gi">+  FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 8K 
+</span> }
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>Compila el proyecto.
+    <ul>
+      <li>Modifica el archivo Makefile  <br />
+Actualiza el Makefile para usar tu ARM toolchain instalada y para referenciar los archivos de enlace y de inicio correctos:
+        <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#TOOL_PATH=C:/PROGRA~2/GNUTOO~1/82018-~1/bin/
+<span class="gd">-TOOL_PATH=
+</span><span class="gi">+TOOL_PATH=~/arm-tools/gcc-arm-none-eabi-10.3-2021.10/bin/      
+</span><span class="p">STDFLAGS    = -mcpu=cortex-m3 -mthumb -std=gnu11 -fstack-usage -Wall -specs=nano.specs
+STDFLAGS   += -fdata-sections -ffunction-sections -Wall -g -Wno-strict-aliasing  
+</span><span class="gd">-OPTFLAGS    = -Os
+</span><span class="gi">+OPTFLAGS    = -Os -flto 
+</span><span class="p">DEPFLAGS  = -MT $@ -MMD -MP -MF $(OBJ_PATH)/$*.d
+CFLAGS      = $(STDFLAGS) $(OPTFLAGS)
+CFLAGS     += -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32F103xB
+CFLAGS     += -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))"
+CFLAGS     += $(INC_PATH)
+AFLAGS      = $(CFLAGS)
+LFLAGS      = $(STDFLAGS) $(OPTFLAGS)
+</span><span class="gd">-LFLAGS     += -T"STM32F103RB_FLASH.ld" -Wl,-Map=$(BIN_PATH)/$(PROJ_NAME).map
+</span><span class="gi">+LFLAGS     += -T"STM32F103C8TX_FLASH.ld" -Wl,-Map=$(BIN_PATH)/$(PROJ_NAME).map
+</span><span class="p">LFLAGS     += -Wl,--gc-sections $(LIB_PATH)
+OFLAGS      = -O srec
+ODFLAGS     = -x
+SZFLAGS     = -B -d
+RMFLAGS     = -f
+</span>...
+#| Make ALL                                                                             |
+#|--------------------------------------------------------------------------------------|
+<span class="gi">+.PHONY: prepare_dirs
++prepare_dirs: 
++mkdir -p $(OBJ_PATH)
++mkdir -p $(BIN_PATH)
+</span>      
+.PHONY: all
+<span class="gd">-all: $(BIN_PATH)/$(PROJ_NAME).srec
+</span><span class="gi">+all: prepare_dirs $(BIN_PATH)/$(PROJ_NAME).srec 
+</span>     
+$(BIN_PATH)/$(PROJ_NAME).srec : $(BIN_PATH)/$(PROJ_NAME).elf
+...
+        @echo +++ Linking [$(notdir $@)]
+        @$(LN) $(LFLAGS) -o $@ $(patsubst %.o,$(OBJ_PATH)/%.o,$(^F)) $(LIBS)
+<span class="gi">+.PHONY: $(BIN_PATH)/$(PROJ_NAME).bin
++$(BIN_PATH)/$(PROJ_NAME).bin:
++      @$(OC)  -O binary $(BIN_PATH)/$(PROJ_NAME).elf $@
++
+</span>#|--------------------------------------------------------------------------------------|
+#| Compile and assemble                                                                 |     
+</code></pre></div>        </div>
+      </li>
+      <li>Prueba la compilación.  <br />
+Navega a la carpeta del proyecto y compila:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/openBLT_bluepill/Boot/
+make clean all
+</code></pre></div>        </div>
+        <p>Si todo está configurado correctamente, el proceso de compilación debería completarse sin errores y generar los binarios del firmware.</p>
+      </li>
+    </ul>
+  </li>
+  <li>Ahora estás listo para portar el código fuente.</li>
+</ol>
+
+<h2 id="configurar-y-desplegar-openblt-en-la-tarjeta-bluepill">Configurar y desplegar OpenBLT en la tarjeta Bluepill</h2>
+
+<p>Para habilitar la comunicación a través de las interfaces <strong>UART</strong> y <strong>CAN</strong> con <strong>OpenBLT</strong> en la tarjeta <strong>Bluepill (STM32F103C8T6)</strong>, necesitarás modificar varios archivos fuente en el directorio <code class="language-plaintext highlighter-rouge">Boot/</code>. Estos cambios configuran cómo el <em>bootloader</em> interactúa con el hardware del microcontrolador.</p>
+
+<h3 id="consideraciones-de-hardware">Consideraciones de hardware</h3>
+<p>La tarjeta original <strong>NUCLEO-STM32F103RB</strong> usa <strong>USART2</strong> para la comunicación serial, con <strong>USART2 RX</strong> en <strong>Port A3</strong> y <strong>USART2 TX</strong> en <strong>Port A2</strong>. También usa <strong>CAN1</strong> para la comunicación <strong>CAN</strong>, típicamente remapeada a <strong>CAN_RX</strong> en <strong>Port B8</strong> y <strong>CAN_TX</strong> en <strong>Port B9</strong> mediante la función de remapeo alternativo. Además, el <strong>LED</strong> de usuario en la tarjeta <strong>NUCLEO</strong> está conectado a <strong>Port A5</strong>.   <br />
+ <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/schematic-f103c8t6.jpg" /></p>
+
+<h4 id="uart">UART</h4>
+<p>Para este proyecto, la comunicación UART usará <strong>USART1</strong>, que está mapeada a:</p>
+<ul>
+  <li><strong>USART1 TX</strong>: Port A9</li>
+  <li><strong>USART1 RX</strong>: Port A10</li>
+</ul>
+
+<p>Estos pines son estándar en la tarjeta Bluepill para USART1 y son compatibles con el hardware.</p>
+
+<h4 id="can">CAN</h4>
+<p>Para la comunicación <strong>CAN</strong> en la tarjeta Bluepill Plus, se usa <strong>CAN1</strong>. El mapeo de pines sigue siendo el mismo que en la tarjeta NUCLEO debido al uso de remapeo de funciones alternativas:</p>
+<ul>
+  <li><strong>CAN1_RX</strong>: Port B8</li>
+  <li><strong>CAN1_TX</strong>: Port B9</li>
+</ul>
+
+<h4 id="gpios">GPIOs</h4>
+<ul>
+  <li>
+    <p>El mecanismo de entrada de puerta trasera no se considera en este proyecto, ya que es poco probable que las aplicaciones futuras lo requieran. Por esta razón, el Port C13, que típicamente se usa para la entrada de puerta trasera en OpenBLT, se desactivará en esta configuración.</p>
+  </li>
+  <li>
+    <p>El <strong>LED</strong> de usuario en la tarjeta <strong>Bluepill Plus</strong> está conectado a <strong>Port B2</strong>. Esto difiere de la tarjeta Nucleo original (que usa Port A5), por lo que la configuración del LED en el proyecto OpenBLT debe actualizarse para reflejar este cambio de hardware.</p>
+  </li>
+</ul>
+
+<h3 id="conexiones-de-hardware">Conexiones de hardware</h3>
+<p>La imagen presenta el sistema.  <br />
+  <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/system01.png" />  <br />
+El sistema está compuesto por los siguientes componentes:</p>
+<ul>
+  <li>Tarjeta Bluepill Plus <br />
+Una versión modificada de la clásica tarjeta Bluepill STM32F103C8T6, equipada con un sitema  de energía más estable.</li>
+  <li>
+    <p>Adaptador USB a TTL  <br />
+Basado en el chip PL2303 USB-to-serial, este adaptador proporciona una interfaz UART entre la PC y la tarjeta Bluepill Plus, utilizada para actualizaciones de firmware a través de UART.  <br />
+Conecta los pines GPIO como se especifica en la tabla a continuación:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>GPIO</th>
+          <th>Board Connector</th>
+          <th>Device</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>USART1_TX</td>
+          <td>PA9</td>
+          <td>A9</td>
+          <td>USB to TTL - Rx</td>
+        </tr>
+        <tr>
+          <td>USART1_RX</td>
+          <td>PA10</td>
+          <td>A10</td>
+          <td>USB to TTL - Tx</td>
+        </tr>
+        <tr>
+          <td>5V</td>
+          <td>–</td>
+          <td>5V</td>
+          <td>USB to TTL - 5V</td>
+        </tr>
+        <tr>
+          <td>GND</td>
+          <td>–</td>
+          <td>GND</td>
+          <td>USB to TTL - GND</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Transceptor CTJA1051 CAN <br />
+Un transceptor CAN de alta velocidad que conecta el periférico CAN del STM32 con el bus CAN físico. Maneja la conversión de niveles de señal y la protección del bus.</li>
+  <li>
+    <p>CANable v1.0 Nano <br />
+Un adaptador USB-to-CAN que conecta el sistema a una PC a través de USB. Permite la carga de firmware y la comunicación a través del bus CAN utilizando protocolos como slcan o candlelight firmware.  <br />
+El dispositivo CANable debe conectarse directamente al transceptor TJA1051, que sirve como interfaz entre el microcontrolador y el bus CAN. Esta configuración asegura que los niveles de voltaje y la integridad de la señal sea adecuada para una comunicación CAN confiable.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>CTJA1051</th>
+          <th>CANable V1.0 Nano</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CAN-L</td>
+          <td>CAN-L</td>
+        </tr>
+        <tr>
+          <td>CAN-H</td>
+          <td>CAN-H</td>
+        </tr>
+        <tr>
+          <td>5V</td>
+          <td>5V</td>
+        </tr>
+        <tr>
+          <td>GND</td>
+          <td>GND</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p>El transceptor TJA1051 debe conectarse a los pines GPIO del microcontrolador como se especifica en la tabla a continuación:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <th>GPIO</th>
+      <th>Board Connector</th>
+      <th>Device</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CAN1_RX</td>
+      <td>PB8</td>
+      <td>B8</td>
+      <td>CTJA1051 - CRx</td>
+    </tr>
+    <tr>
+      <td>CAN1_TX</td>
+      <td>PB9</td>
+      <td>B9</td>
+      <td>CTJA1051 - CTx</td>
+    </tr>
+    <tr>
+      <td>5V</td>
+      <td>–</td>
+      <td>5V</td>
+      <td>CTJA1051 - 5V</td>
+    </tr>
+    <tr>
+      <td>GND</td>
+      <td>–</td>
+      <td>GND</td>
+      <td>CTJA1051 - GND</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cambios-de-software">Cambios de software</h3>
+
+<h4 id="blt_confh--header-de-configuración-del-bootloader"><strong>blt_conf.h</strong> — Header de Configuración del <em>bootloader</em></h4>
+<p>Este archivo contiene opciones de compilación que definen el comportamiento de OpenBLT. Debes habilitar las interfaces de comunicación. Para activar UART y CAN, verifica que los puertos estén habilitados en el canal correcto para el caso de Bluepill:</p>
+<ul>
+  <li>UART: Solo cambia el canal a 0 porque el puerto usado será UART1.
+    <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** \brief Enable/disable UART transport layer. */
+#define BOOT_COM_RS232_ENABLE            (1) 
+/** \brief Configure the desired communication speed. */
+#define BOOT_COM_RS232_BAUDRATE          (57600) 
+/** \brief Configure number of bytes in the target-&gt;host data packet. */ 
+#define BOOT_COM_RS232_TX_MAX_DATA       (129) 
+/** \brief Configure number of bytes in the host-&gt;target data packet. */
+#define BOOT_COM_RS232_RX_MAX_DATA       (129) 
+/** \brief Select the desired UART peripheral as a zero based index. */
+<span class="gd">-#define BOOT_COM_RS232_CHANNEL_INDEX     (1)
+</span><span class="gi">+#define BOOT_COM_RS232_CHANNEL_INDEX     (0)
+</span></code></pre></div>    </div>
+  </li>
+  <li>CAN: Para este ejemplo, CAN no necesita cambios.
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define BOOT_COM_CAN_ENABLE             (1)
+</span><span class="cm">/** \brief Configure the desired CAN baudrate. */</span>
+<span class="cp">#define BOOT_COM_CAN_BAUDRATE           (500000)
+</span><span class="cm">/** \brief Configure CAN message ID target-&gt;host. */</span>
+<span class="cp">#define BOOT_COM_CAN_TX_MSG_ID          (0x7E1 </span><span class="cm">/*| 0x80000000*/</span><span class="cp">)
+</span><span class="cm">/** \brief Configure number of bytes in the target-&gt;host CAN message. */</span>
+<span class="cp">#define BOOT_COM_CAN_TX_MAX_DATA        (8)
+</span><span class="cm">/** \brief Configure CAN message ID host-&gt;target. */</span>
+<span class="cp">#define BOOT_COM_CAN_RX_MSG_ID          (0x667 </span><span class="cm">/*| 0x80000000*/</span><span class="cp">)
+</span><span class="cm">/** \brief Configure number of bytes in the host-&gt;target CAN message. */</span>
+<span class="cp">#define BOOT_COM_CAN_RX_MAX_DATA        (8)
+</span><span class="cm">/** \brief Select the desired CAN peripheral as a zero based index. */</span>
+<span class="cp">#define BOOT_COM_CAN_CHANNEL_INDEX      (0)
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="mainc"><strong>main.c</strong></h4>
+
+<p>Este archivo debe actualizarse para configurar el reloj del sistema, los GPIOs y los periféricos requeridos por OpenBLT. Esto incluye:</p>
+<ol>
+  <li>Inicialización del reloj del sistema (coincidiendo con las configuraciones de PLL de STM32CubeIDE).</li>
+  <li>Configuración de GPIO para el LED (Port B2).</li>
+  <li>Inicialización de USART1 para la comunicación UART (TX: PA9, RX: PA10).</li>
+  <li>Inicialización de CAN1 (RX: PB8, TX: PB9 con remapeo necesario).</li>
+  <li>
+    <p>Deshabilitar o eliminar la configuración de GPIO de entrada de puerta trasera (por ejemplo, PC13).<br />
+<strong>Nota</strong>: La función de puerta trasera en la arquitectura de este proyecto requiere mayor analisis para un futuro uso. Por ahora, se deshabilitará la configuración del pin GPIO correspondiente. Con esto nos ahorramos el tener que deshabilitar la caracteristica por completo.</p>
+  </li>
+  <li>Desinicialización de GPIO.</li>
+</ol>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">static void SystemClock_Config(void)
+</span>{
+<span class="gd">-  /* Set flash latency. */
+-  LL_FLASH_SetLatency(LL_FLASH_LATENCY_2);
+-  if (LL_FLASH_GetLatency() != LL_FLASH_LATENCY_2)
+-  {
+-    /* Error setting flash latency. */
+-    ASSERT_RT(BLT_FALSE);
+-  }
+-
+-  /* Enable the HSE clock. */
+-  LL_RCC_HSE_EnableBypass();
+-  LL_RCC_HSE_Enable();
+-  /* Wait till HSE is ready. */
+-  while (LL_RCC_HSE_IsReady() != 1)
+-  {
+-    ;
+-  }
+-
+-  /* Configure and enable the PLL. */
+-  LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSE_DIV_1, LL_RCC_PLL_MUL_9);
+-  LL_RCC_PLL_Enable();
+- 
+-  /* Wait till PLL is ready. */
+-  while (LL_RCC_PLL_IsReady() != 1)
+-  {
+-    ;
+-  }
+-  LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
+-  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
+-  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);
+-  LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL);
+-  /* Wait till System clock is ready. */
+</span><span class="err">
+</span><span class="gd">-  while (LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_PLL)
+- {
+-    ;
+-  }
+-  /* Update the system clock speed setting. */
+-  LL_SetSystemCoreClock(BOOT_CPU_SYSTEM_SPEED_KHZ * 1000u);
+</span><span class="gi">+   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
++   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
++
++  /** Initializes the CPU, AHB and APB busses clocks 
++  */
++  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
++  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
++  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
++  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
++  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
++  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
++  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
++  if (HAL_RCC_OscConfig(&amp;RCC_OscInitStruct) != HAL_OK)
++  {
++    ;
++  }
++  /** Initializes the CPU, AHB and APB busses clocks 
++  */
++  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
++                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
++  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
++  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
++  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
++  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
++
++  if (HAL_RCC_ClockConfig(&amp;RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
++  {
++    ;
++  }
+</span>} /*** end of SystemClock_Config ***/
+... 
+#if (BOOT_COM_RS232_ENABLE &gt; 0)
+   /* UART clock enable. */
+<span class="gd">-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_USART2);
+</span><span class="gi">+  LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_USART1);
+</span>#endif 
+#if (BOOT_COM_CAN_ENABLE &gt; 0)
+/* CAN clock enable. */
+   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_CAN1);
+#endif
+/* Configure GPIO pin for the LED. */
+<span class="gd">-  GPIO_InitStruct.Pin = LL_GPIO_PIN_5;
+</span><span class="gi">+  GPIO_InitStruct.Pin = LL_GPIO_PIN_2;   //LED conectado a PB2 
+</span>   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+<span class="gd">-  LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+-  LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_5);
+</span><span class="gi">+  LL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
++  LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_2);
+</span>   /* Configure GPIO pin for (optional) backdoor entry input. */
+#if (BOOT_BACKDOOR_HOOKS_ENABLE &gt; 0)
+    GPIO_InitStruct.Pin = LL_GPIO_PIN_13;
+    GPIO_InitStruct.Mode = LL_GPIO_MODE_FLOATING;
+    LL_GPIO_Init(GPIOC, &amp;GPIO_InitStruct);
+<span class="gi">+#endif  
+</span>#if (BOOT_COM_RS232_ENABLE &gt; 0)
+   /* UART TX and RX GPIO pin configuration. */
+<span class="gd">- GPIO_InitStruct.Pin = LL_GPIO_PIN_2;
+</span><span class="gi">+ GPIO_InitStruct.Pin = LL_GPIO_PIN_9;   //TX: Serial1 PA9
+</span>  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+  LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+<span class="gd">- GPIO_InitStruct.Pin = LL_GPIO_PIN_3;
+</span><span class="gi">+ GPIO_InitStruct.Pin = LL_GPIO_PIN_10; //RX: Serial1 PA10-
+</span>  GPIO_InitStruct.Mode = LL_GPIO_MODE_FLOATING;
+  LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+#endif
+...
+<span class="p">if (BOOT_COM_CAN_ENABLE &gt; 0)
+</span>  /* CAN clock disable. */
+  LL_APB1_GRP1_DisableClock(LL_APB1_GRP1_PERIPH_CAN1);
+#endif
+#if (BOOT_COM_RS232_ENABLE &gt; 0)
+   /* UART clock disable. */
+<span class="gd">-  LL_APB1_GRP1_DisableClock(LL_APB1_GRP1_PERIPH_USART2);
+</span><span class="gi">+  LL_APB2_GRP1_DisableClock(LL_APB2_GRP1_PERIPH_USART1);
+</span>#endif
+</code></pre></div></div>
+
+<h4 id="ledc">led.c</h4>
+<p>Este archivo gestiona la funcionalidad del LED de usuario para indicar la actividad del <em>bootloader</em>. Localiza el código de configuración de GPIO y cámbialo para utilizar el pin adecuado:</p>
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">void LedBlinkTask(void)
+</span>{
+  static blt_bool ledOn = BLT_FALSE;
+  static blt_int32u nextBlinkEvent = 0;
+<span class="err">
+</span>  /* check for blink event */
+  if (TimerGet() &gt;= nextBlurEvent)
+  {
+    /* toggle the LED state */
+    if (ledOn == BLT_FALSE)
+    {
+      ledOn = BLT_TRUE;
+<span class="gd">-      LL_GPIO_SetOutputPin(GPIOA, LL_GPIO_PIN_5);
+</span><span class="gi">+      LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_2);
+</span>    }
+    else
+    {
+      ledOn = BLT_FALSE;
+<span class="gd">-      LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_5);
+</span><span class="gi">+      LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_2);
+</span>    }
+    /* schedule the next blink event */
+    nextBlinkEvent = TimerGet() + ledBlinkIntervalMs;
+  }
+} /*** end of LedBlinkTask ***/
+...
+<span class="p">void LedBlinkExit(void)
+</span>{
+  /* turn the LED off */
+<span class="gd">-  LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_5);
+</span><span class="gi">+  LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_2);
+</span>} end of LedBlinkExit ***/
+</code></pre></div></div>
+
+<h1 id="preparando-los-demos-para-la-bluepill-plus">Preparando los Demos para la Bluepill Plus</h1>
+<p>La carpeta <code class="language-plaintext highlighter-rouge">Prog/</code> contiene un demo que presenta un LED parpadeante. Esta aplicación tiene dos propósitos principales:</p>
+<ul>
+  <li>Verificar que el firmware se carga a través de OpenBLT y funciona correctamente.</li>
+  <li>Proporcionar un ejemplo funcional que usa el diseño de memoria correcto para la compatibilidad con el <em>bootloader</em>.</li>
+</ul>
+
+<p>Al igual que el proyecto del <em>bootloader</em> en la carpeta <strong>Boot/</strong>, varios archivos en la aplicación <strong>Prog/</strong> deben modificarse para coincidir con el hardware de Bluepill Plus y la configuración de memoria utilizada por OpenBLT.</p>
+
+<h2 id="archivos-a-modificar">Archivos a Modificar</h2>
+<h3 id="makefile"><strong>Makefile</strong></h3>
+<p>Actualiza la ruta de la cadena de herramientas y las banderas de optimización en el Makefile para que coincidan con las usadas en el <em>bootloader</em>. Esto asegura la compatibilidad y el uso correcto del Toolchain de ARM instalado.</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">-TOOL_PATH =
+</span><span class="gi">+TOOL_PATH = ~/arm-tools/gcc-arm-none-eabi-10.3-2021.10/bin/
+</span><span class="err">
+</span><span class="gd">-OPTFLAGS = -Os
+</span><span class="gi">+OPTFLAGS = -Os -flto
+</span></code></pre></div></div>
+
+<p>Además, actualiza el script del linker para usar uno alineado con la reserva de memoria del <em>bootloader</em> (por ejemplo, omitiendo los primeros 16 KB de flash para OpenBLT):</p>
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">-LFLAGS     += -T"STM32F103RB_FLASH.ld" -Wl,-Map=$(BIN_PATH)/$(PROJ_NAME).map
+</span><span class="gi">+LFLAGS     += -T"STM32F103C8TX_FLASH.ld" -Wl,-Map=$(BIN_PATH)/$(PROJ_NAME).map
+</span></code></pre></div></div>
+
+<h3 id="linker-file">Linker File</h3>
+<p>Debes usar un script del linker  para la aplicación, para asegurar que el firmware comience después del <em>bootloader</em>. Por ejemplo, si el <em>bootloader</em> ocupa los primeros 0x2000 (8KB) de flash:</p>
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Memories definition */
+<span class="p">MEMORY
+</span>{
+  RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 20K
+<span class="gd">-  FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 64K  
+</span><span class="gi">+  FLASH    (rx)    : ORIGIN = 0x8002000,   LENGTH = 64K-8K
+</span>} 
+</code></pre></div></div>
+
+<h3 id="startup-file">Startup File</h3>
+<p>Para el proyecto de la aplicación en <code class="language-plaintext highlighter-rouge">Prog/</code>, necesitas reservar espacio para la checksumen el archivo de inicio. OpenBLT usa esta checksum de 32 bits para verificar la integridad del firmware de la aplicación durante el proceso de arranque.</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.word RTC_Alarm_IRQHandler
+.word USBWakeUp_IRQHandler
+.word 0
+.word 0
+.word 0
+.word 0
+.word 0
+.word 0
+.word 0
+.word BootRAM          /* @0x108. This is for boot in RAM mode for
+                            STM32F10x Medium Density devices. */
+<span class="gi">+ .word     0x55AA11EE   /* Reserved for OpenBLT checksum*/                             
+</span><span class="err">
+</span>/******************************************************************************
+</code></pre></div></div>
+
+<h3 id="mainc-1"><strong>main.c</strong></h3>
+<p>Modifica la configuración de GPIO y periféricos en main.c para que coincida con el diseño de hardware de Bluepill Plus.</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* initializes the CPU, AHB and APB busses clocks */
+<span class="p">RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+</span>...
+#if (BOOT_COM_RS232_ENABLE &gt; 0)
+/* Peripheral clock enable. */
+<span class="gd">-__HAL_RCC_USART2_CLK_ENABLE();
+</span><span class="gi">+__HAL_RCC_USART1_CLK_ENABLE();
+</span>#endif /* BOOT_COM_RS232_ENABLE &gt; 0 */   
+...
+/* Configure the LED GPIO pin. */
+<span class="gd">-GPIO_InitStruct.Pin = GPIO_PIN_5;
+</span><span class="gi">+GPIO_InitStruct.Pin = GPIO_PIN_2;
+</span><span class="p">GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+</span><span class="gd">-HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+</span><span class="gi">+HAL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
+</span><span class="gd">-HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);     
+</span><span class="gi">+HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);  
+</span><span class="err">
+</span>#if (BOOT_COM_RS232_ENABLE &gt; 0)
+/* UART TX and RX GPIO pin configuration. */
+<span class="gd">-GPIO_InitStruct.Pin = GPIO_PIN_2;
+</span><span class="gi">+GPIO_InitStruct.Pin = GPIO_PIN_9;
+</span><span class="p">GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+</span><span class="gd">-GPIO_InitStruct.Pin = GPIO_PIN_3;
+</span><span class="gi">+GPIO_InitStruct.Pin = GPIO_PIN_10;
+</span><span class="p">GPIO_InitStruct.Mode = GPIO_MODE_INPUT; 
+</span>...
+#if (BOOT_COM_RS232_ENABLE &gt; 0)
+  /* Reset UART GPIO pin configuration. */
+<span class="gd">-  HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2|GPIO_PIN_3);
+</span><span class="gi">+  HAL_GPIO_DeInit(GPIOA, GPIO_PIN_9|GPIO_PIN_10);
+</span>#endif /* BOOT_COM_RS232_ENABLE &gt; 0 */
+  /* Deconfigure GPIO pin for the LED. */
+<span class="gd">-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+</span><span class="gi">+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+</span><span class="gd">-  HAL_GPIO_DeInit(GPIOA, GPIO_PIN_5);
+</span><span class="gi">+  HAL_GPIO_DeInit(GPIOB, GPIO_PIN_2);
+</span><span class="err">
+</span>#if (BOOT_COM_CAN_ENABLE &gt; 0)
+  /* Peripheral clock enable. */
+  __HAL_RCC_CAN1_CLK_DISABLE();
+#endif /* BOOT_COM_CAN_ENABLE &gt; 0 */
+#if (BOOT_COM_RS232_ENABLE &gt; 0)
+  /* Peripheral clock disable. */
+<span class="gd">-  __HAL_RCC_USART2_CLK_DISABLE();
+</span><span class="gi">+  __HAL_RCC_USART1_CLK_DISABLE();
+</span>#endif /* BOOT_COM_RS232_ENABLE &gt; 0 */
+</code></pre></div></div>
+
+<h3 id="ledc-1"><strong>led.c</strong></h3>
+<p>Modifica el GPIO al Port B2.</p>
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  /* Note that the initialization of the LED GPIO pin is done in HAL_MspInit(). All that
+  * is left to do here is to make sure the LED is turned off after initialization.
+  */
+  -  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+  +  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+  } /*** end of LedInit ***/
+  ...
+    {
+      led_toggle_state = 1;
+      /* turn the LED on */
+<span class="gd">-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+</span><span class="gi">+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+</span>  }
+  else
+  {
+    led_toggle_state = 0;
+    /* turn the LED off */
+<span class="gd">-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+</span><span class="gi">+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+</span>}
+</code></pre></div></div>
+
+<h1 id="compilar-el-bootloader-y-la-aplicación">Compilar el <em>bootloader</em> y la Aplicación</h1>
+<p>Ahora que se han realizado las modificaciones necesarias, puedes proceder a construir tanto el <em>bootloader</em> como el Demo.</p>
+<ol>
+  <li>Compilar el <em>bootloader</em>  <br />
+Navega al directorio Boot/ y ejecuta:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> ~/openBLT_bluepill/Boot/
+ make clean all    
+</code></pre></div>    </div>
+    <p>Esto debería compilar el código del <em>bootloader</em> y generar el archivo binario o .srec necesario (por ejemplo, BootDemo.srec) para flashear.  <br />
+<strong>Si la compilación se completa con éxito</strong>, encontrarás el binario del <em>bootloader</em> dentro del directorio Bin/.</p>
+  </li>
+  <li>Compilar el demo <br />
+Navega al directorio Prog/ y ejecuta:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> ~/openBLT_bluepill/Prog/
+ make clean all
+</code></pre></div>    </div>
+    <p>¡Todo listo con el firmware para flashear la  tarjeta Bluepill Plus!</p>
+  </li>
+</ol>
+
+<p><strong>Nota:</strong> Los pasos siguientes, incluyendo instrucciones detalladas para usar el <em>bootloader</em>, realizar actualizaciones de firmware y trabajar con MicroBoot, están completamente explicados en la documentación del proyecto disponible en mi respositorio: <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">razielgdn GitHub </a>.</p>
+
+<h1 id="flashear-el-bootloader-y-la-aplicación">Flashear el <em>bootloader</em> y la Aplicación</h1>
+<p>Una vez que tanto el <em>bootloader</em> como la aplicación se hayan construido con éxito, puedes flashearlos en la tarjeta Bluepill Plus usando tu programador preferido (por ejemplo, ST-Link, J-Link o un adaptador USB-to-serial con una herramienta DFU). Sigue estos pasos:</p>
+<ul>
+  <li>
+    <p>Paso 1: Flashear el <em>bootloader</em>.
+    Usa tu herramienta de programador para flashear el binario del <em>bootloader</em> generado (<code class="language-plaintext highlighter-rouge">Boot/Bin/openblt_stm32f103.elf</code> o <strong>openblt_stm32f103.srec</strong>) en el dispositivo. Asegúrate de que se escriba comenzando en la dirección 0x08000000.</p>
+  </li>
+  <li>
+    <p>Paso 2: Reiniciar la tarjeta  <br />
+    Después de flashear, reinicia o apaga y enciende la tarjeta. El <em>bootloader</em> se ejecutará primero y esperará una imagen de firmware válida a través de UART o CAN (dependiendo de tu configuración).</p>
+  </li>
+</ul>
+
+<h2 id="cargar-la-aplicación-a-través-de-openblt">Cargar la Aplicación a través de OpenBLT</h2>
+<p>Para cargar la aplicación compilada (Prog/bin/demoprog_stm32f103.srec) en la tarjeta Bluepill Plus, usa la utilidad de línea de comandos BootCommander.  <br />
+Asegúrate de que la interfaz y la configuración de velocidad de baudios en MicroBoot coincidan con las de la tarjeta y la configuración del <em>bootloader</em>. Puedes seguir el ejemplo de OpenBLT con <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results">STM32F4 Nucleo Board</a>. O la documentación en <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">openBLT to bluepill</a>.</p>
+
+<h3 id="uart-1">UART</h3>
+<p>Ejecuta BootCommander con parámetros RS232:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BootCommander/BootCommander <span class="nt">-s</span><span class="o">=</span>xcp <span class="nt">-t</span><span class="o">=</span>xcp_rs232 <span class="nt">-d</span><span class="o">=</span>/dev/ttyUSB0 <span class="nt">-b</span><span class="o">=</span>57600  Prog/bin/demoprog_stm32f103.srec 
+</code></pre></div></div>
+
+<h3 id="can-1">CAN</h3>
+<p>Una vez que el hardware esté correctamente conectado, puedes usar <strong>BootCommander</strong> con <strong>SocketCAN</strong> para flashear la aplicación en el microcontrolador a través del <em>bootloader</em> OpenBLT.</p>
+<ol>
+  <li>Configura la velocidad de baudios como en <strong>blt_conf.h</strong> en el sistema.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ip <span class="nb">link set </span>can0 <span class="nb">type </span>can bitrate 500000
+</code></pre></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ip <span class="nb">link set </span>up can0 
+</code></pre></div>    </div>
+  </li>
+  <li>Flashea con BootCommander.
+    <ul>
+      <li>Para flashear la <strong>GPIO demo</strong>:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BootCommander/BootCommander <span class="nt">-s</span><span class="o">=</span>xcp <span class="nt">-t</span><span class="o">=</span>xcp_can <span class="nt">-d</span><span class="o">=</span>can0 <span class="nt">-b</span><span class="o">=</span>500000 Prog/bin/demoprog_stm32f103.srec 
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="próximos-pasos">Próximos Pasos</h1>
+<h2 id="desarrollar-una-aplicación-basada-en-can">Desarrollar una Aplicación Basada en CAN</h2>
+<p>Con el <em>bootloader</em> OpenBLT y los demos  ejecutándose con éxito en la tarjeta Bluepill Plus, el próximo paso es desarrollar una aplicación significativa que aproveche la interfaz CAN.</p>
+
+<p>Esto podría incluir:</p>
+<ul>
+  <li>Un nodo de sensor que capture ̣̣señales y datos (por ejemplo, temperatura, voltaje o nivel de agua) a través de CAN.</li>
+  <li>Un controlador de motor o nodo de actuador que reciba comandos de control a través de CAN y responda en consecuencia.</li>
+  <li>Una herramienta de diagnóstico basada en CAN que informe el estado del sistema o códigos de error.</li>
+  <li>Un sistema distribuido (por ejemplo, controlador de acuaponía o nodos de automatización del hogar) donde varias tarjetas se comuniquen a través de un bus CAN compartido.  <br />
+Aprovechar CAN permite una comunicación robusta y en tiempo real entre dispositivos en entornos embebidos e industriales. Con OpenBLT manejando las actualizaciones de firmware, puedes implementar de manera segura y remota nuevas funciones o parches.</li>
+</ul>
+
+<h1 id="repositorio-de-código-fuente">Repositorio de Código Fuente</h1>
+
+<p>El código fuente completo para el <em>bootloader</em> y los demos está disponible en el repositorio de GitHub: <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">https://github.com/razielgdn</a>.</p>
+
+<p>También está disponible un tutorial en video que muestra cómo usar el <em>bootloader</em> y flashear las demostraciones en YouTube:</p>
+
+<div><div class="extensions extensions--video">
+  <iframe src="https://www.youtube.com/embed/3xEar9Rzbeg?rel=0&amp;showinfo=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+</div>
+</div>
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-04T22:22:05-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
-<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/risingembeddedmx/feed.xml">Subscribe</a></div>
-</div><div class="article__license"><div class="license">
-    <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> license.
-      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
-        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
-      </a>
-    </p>
-  </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/post/2024/03/16/first-post.html">Welcome to the jungle!</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/post/2024/04/15/star-with-openblt-project.html">Openblt to STM Nucleo-64</a></div></div></div>
+</footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>ANTERIOR</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">English</a></div><div class="next"><span>SIGUIENTE</span><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">¿Que es un Embedded Dev?</a></div></div></div>
 
 </div>
 
@@ -4643,31 +5420,31 @@ Yesterday, I finished a course to enhance my knowledge of the Yocto Project.</p>
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Octavio Guendulain"><meta itemprop="url" content="/risingembeddedmx/"><meta itemprop="description" content="Embedded Developer"><div class="footer__author-links"><div class="author-links">
-  <ul class="menu menu--nowrap menu--inline"><li title="Send me an Email.">
+  <ul class="menu menu--nowrap menu--inline"><li title="Envíame un  Email.">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:octavioraziel.gdn@gmail.com" target="_blank">
         <i class="fas fa-envelope"></i>
-      </a><li title="Follow me on Facebook.">
+      </a><li title="Sígueme en Facebook.">
         <a class="button button--circle facebook-button" itemprop="sameAs" href="https://www.facebook.com/profile.php?id=61560642972696" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z" />
 </svg>
 </div>
         </a>
-      </li><li title="Follow me on X.">
+      </li><li title="Sígueme en X.">
         <a class="button button--circle twitter-button" itemprop="sameAs" href="https://x.com/L31zarGdn" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M1024.032 194.432c-37.664 16.704-78.176 28-120.672 33.088 43.36-26.016 76.672-67.168 92.384-116.224-40.608 24.064-85.568 41.568-133.408 50.976-38.336-40.832-92.928-66.336-153.344-66.336-116.032 0-210.08 94.048-210.08 210.08 0 16.48 1.856 32.512 5.44 47.872-174.592-8.768-329.408-92.416-433.024-219.52-18.08 31.04-28.448 67.104-28.448 105.632 0 72.896 37.088 137.184 93.472 174.88-34.432-1.088-66.816-10.528-95.168-26.272-0.032 0.864-0.032 1.76-0.032 2.656 0 101.792 72.416 186.688 168.512 205.984-17.632 4.8-36.192 7.36-55.36 7.36-13.536 0-26.688-1.312-39.52-3.776 26.72 83.456 104.32 144.192 196.256 145.888-71.904 56.352-162.496 89.92-260.928 89.92-16.96 0-33.664-0.992-50.112-2.944 92.96 59.616 203.392 94.4 322.048 94.4 386.432 0 597.728-320.128 597.728-597.76 0-9.12-0.192-18.176-0.608-27.168 41.056-29.632 76.672-66.624 104.832-108.736z" />
 </svg>
 </div>
         </a>
-      </li><li title="Follow me on Linkedin.">
+      </li><li title="Sígueme en Linkedin.">
         <a class="button button--circle linkedin-button" itemprop="sameAs" href="https://www.linkedin.com/in/octaviorazielgdn" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M260.096 155.648c0 27.307008-9.899008 50.516992-29.696 69.632-19.796992 19.115008-45.396992 28.672-76.8 28.672-30.036992 0-54.612992-9.556992-73.728-28.672-19.115008-19.115008-28.672-42.324992-28.672-69.632 0-28.672 9.556992-52.224 28.672-70.656 19.115008-18.432 44.372992-27.648 75.776-27.648 31.403008 0 56.32 9.216 74.752 27.648 18.432 18.432 28.331008 41.984 29.696 70.656 0 0 0 0 0 0m-202.752 808.96c0 0 0-632.832 0-632.832 0 0 196.608 0 196.608 0 0 0 0 632.832 0 632.832 0 0-196.608 0-196.608 0 0 0 0 0 0 0m313.344-430.08c0-58.708992-1.364992-126.292992-4.096-202.752 0 0 169.984 0 169.984 0 0 0 10.24 88.064 10.24 88.064 0 0 4.096 0 4.096 0 40.96-68.267008 105.812992-102.4 194.56-102.4 68.267008 0 123.220992 22.868992 164.864 68.608 41.643008 45.739008 62.464 113.664 62.464 203.776 0 0 0 374.784 0 374.784 0 0-196.608 0-196.608 0 0 0 0-350.208 0-350.208 0-91.476992-33.451008-137.216-100.352-137.216-47.787008 0-81.236992 24.576-100.352 73.728-4.096 8.192-6.144 24.576-6.144 49.152 0 0 0 364.544 0 364.544 0 0-198.656 0-198.656 0 0 0 0-430.08 0-430.08 0 0 0 0 0 0" />
 </svg>
 </div>
         </a>
-      </li><li title="Follow me on Github.">
+      </li><li title="Sígueme en Github.">
         <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/razielgdn/risingembeddedmx" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path class="svgpath" data-index="path_0" fill="#272636" d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
@@ -4686,7 +5463,7 @@ Yesterday, I finished a course to enhance my knowledge of the Yocto Project.</p>
   </div>
 </footer>
 </div></div>
-    </div><script>(function() {
+    </div></div></div><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $body = $('body'), $window = $(window);
@@ -4838,7 +5615,7 @@ Yesterday, I finished a course to enhance my knowledge of the Yocto Project.</p>
 })();
 </script><div class="search search--dark">
   <div class="main">
-    <div class="search__header">Search</div>
+    <div class="search__header">Búsqueda</div>
     <div class="search-bar">
       <div class="search-box js-search-box">
         <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
@@ -4848,7 +5625,7 @@ Yesterday, I finished a course to enhance my knowledge of the Yocto Project.</p>
         </div>
       </div>
       <button class="button button--theme-dark button--pill search__cancel js-search-toggle">
-        Cancel</button>
+        Cancelar</button>
     </div>
     <div class="search-result js-search-result"></div>
   </div>
@@ -5203,6 +5980,36 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 /*(function () {
 
 })();*/
+</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageMask = $('.js-page-mask');
+    var $pageRoot = $('.js-page-root');
+    var $sidebarShow = $('.js-sidebar-show');
+    var $sidebarHide = $('.js-sidebar-hide');
+
+    function freeze(e) {
+      if (e.target === $pageMask[0]) {
+        e.preventDefault();
+      }
+    }
+    function stopBodyScrolling(bool) {
+      if (bool === true) {
+        window.addEventListener('touchmove', freeze, { passive: false });
+      } else {
+        window.removeEventListener('touchmove', freeze, { passive: false });
+      }
+    }
+
+    $sidebarShow.on('click', function() {
+      stopBodyScrolling(true); $pageRoot.addClass('show-sidebar');
+    });
+    $sidebarHide.on('click', function() {
+      stopBodyScrolling(false); $pageRoot.removeClass('show-sidebar');
+    });
+  });
+})();
 </script><script>
   /* toc must before affix, since affix need to konw toc' height. */(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
