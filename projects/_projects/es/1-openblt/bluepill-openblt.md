@@ -241,7 +241,7 @@ El transceptor TJA1051 debe conectarse a los pines GPIO del microcontrolador com
 ### Cambios de software
 
 #### **blt_conf.h** — Header de Configuración del *bootloader*    
-Este archivo contiene opciones de compilación que definen el comportamiento de OpenBLT. Debes habilitar las interfaces de comunicación adecuadas (UART y CAN). Para activar UART y CAN, verifica que los puertos estén habilitados en el canal correcto para el caso de Bluepill:    
+Este archivo contiene opciones de compilación que definen el comportamiento de OpenBLT. Debes habilitar las interfaces de comunicación. Para activar UART y CAN, verifica que los puertos estén habilitados en el canal correcto para el caso de Bluepill:    
 - UART: Solo cambia el canal a 0 porque el puerto usado será UART1.   
   ```diff
   /** \brief Enable/disable UART transport layer. */
@@ -281,7 +281,8 @@ Este archivo debe actualizarse para configurar el reloj del sistema, los GPIOs y
 3. Inicialización de USART1 para la comunicación UART (TX: PA9, RX: PA10).
 4. Inicialización de CAN1 (RX: PB8, TX: PB9 con remapeo necesario).
 5. Deshabilitar o eliminar la configuración de GPIO de entrada de puerta trasera (por ejemplo, PC13).  
-   **Nota**: La función de puerta trasera en la arquitectura de este proyecto requiere mayor consideración para uso futuro. Por ahora, simplemente deshabilitar la configuración del pin GPIO correspondiente es suficiente. Este enfoque evita una complejidad innecesaria mientras mantiene la compatibilidad con OpenBLT.  
+   **Nota**: La función de puerta trasera en la arquitectura de este proyecto requiere mayor analisis para un futuro uso. Por ahora, se deshabilitará la configuración del pin GPIO correspondiente. Con esto nos ahorramos el tener que deshabilitar la caracteristica por completo.  
+    
 6. Desinicialización de GPIO.  
 
 ```diff
@@ -407,7 +408,7 @@ if (BOOT_COM_CAN_ENABLE > 0)
 ```
 
 #### led.c
-Este archivo gestiona la funcionalidad del LED de usuario para indicar la actividad del *bootloader*. Localiza el código de configuración de GPIO y cámbialo para reflejar el nuevo pin:    
+Este archivo gestiona la funcionalidad del LED de usuario para indicar la actividad del *bootloader*. Localiza el código de configuración de GPIO y cámbialo para utilizar el pin adecuado:    
 ```diff
 void LedBlinkTask(void)
 {
@@ -443,9 +444,9 @@ void LedBlinkExit(void)
 } end of LedBlinkExit ***/
 ```
 
-# Preparando la Aplicación de Demostración para la Bluepill Plus
-La carpeta `Prog/` contiene una aplicación de demostración que presenta un LED parpadeante. Esta aplicación tiene dos propósitos principales:
-- Verificar que la carga de firmware a través de OpenBLT funciona correctamente.
+# Preparando los Demos para la Bluepill Plus
+La carpeta `Prog/` contiene un demo que presenta un LED parpadeante. Esta aplicación tiene dos propósitos principales:
+- Verificar que el firmware se carga a través de OpenBLT y funciona correctamente.
 - Proporcionar un ejemplo funcional que usa el diseño de memoria correcto para la compatibilidad con el *bootloader*.    
 
 Al igual que el proyecto del *bootloader* en la carpeta **Boot/**, varios archivos en la aplicación **Prog/** deben modificarse para coincidir con el hardware de Bluepill Plus y la configuración de memoria utilizada por OpenBLT.
