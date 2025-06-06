@@ -48,7 +48,8 @@ header:
   #- title:       Notes
   #  url:        /projects/en/notes/stm-configs_en
   - title:      GitHub
-    url:        https://github.com/razielgdn
+    url:        "https://github.com/razielgdn"   
+    blank: true 
 #Header ends    
 
 projects-en:   
@@ -68,16 +69,18 @@ projects-en:
   - title: "Bluepill Plus: STM32F103C8TX"      
     children:
       - title:  "Running OpenBLT"
-        url:    /projects/en/1-openblt/openblt-bluepill
-  - title: 8 bit AVR MCUs Section
+        url:    "/projects/en/1-openblt/openblt-bluepill"
+  - title: "8 bit AVR MCUs Section"
     children:
-      - title: Bluild and Flash AVR projects in Linux
-        url: /projects/en/2-avr-section/build-and-flash   
+      - title: "Bluild and Flash AVR projects in Linux"
+        url: "/projects/en/2-avr-section/build-and-flash"   
 
-  - title: Yocto project
+  - title: "Yocto project"
     children:
-      - title: Introduction to yocto
-        url: /projects/en/yocto/intro         
+      - title: "Introduction to yocto"
+        url: "/projects/en/yocto/intro" 
+      - title: "Minimal image for a Rasperrypi"
+        url: "/projects/en/yocto/intro/build-raspberrypi"          
   # - title: Can Network Project
   #   children: 
   #     - title: CAN network objectives
@@ -112,14 +115,6 @@ projects-es:
       url: /projects/es/yocto/intro 
     - title: Crear un sistema mínimo
       url: /projects/es/yocto/yoctoi    
-
-navPrinting:
-  - title: 3D printing Zone
-    children: 
-     - title: I get a 3D printer
-       url: /3dprinting/first-steps
-     - title: Runing Cura on Ubuntu 
-       url: /3dprinting/runningCura  
       
 # notes-en:
 #   - title: Languages

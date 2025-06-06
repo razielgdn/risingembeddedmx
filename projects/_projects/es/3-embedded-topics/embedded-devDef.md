@@ -40,21 +40,36 @@ Solo  busca en  OCC, Glassdor o LinkedIn embedded Developer y listo, encontrará
 
 Hay **11** motivos por los que una persona decide ser desarrollador de sistemas embebidos:
 
-**01)** Es un(a) nerd/ñoño(a)/teto(a) sin remedio que sufrió bullying cuando era niño(a)/adolescente (sobre todo antes del 2008, algún día discutiremos porque este año fue un punto de inflexión), te apasiona la ciencia y la tecnología y soñabas con llegar a la nasa, destruías tus juguetes con tal de saber que tenían dentro y  al final solo quedabas con un monton de motores a los cuales les terminabas rompiendo los engranes y tus papás no querían comprarte uno más.  Si es el caso llegó la hora de triunfar.
+**01)** Es un(a) nerd/ñoño(a)/teto(a) sin remedio que sufrió bullying cuando era niño(a)/adolescente (sobre todo antes del 2008, algún día discutiremos porque este año fue un punto de inflexión), te apasiona la ciencia y la tecnología y soñabas con llegar a la NASA, destruías tus juguetes con tal de saber que tenían dentro y  al final solo quedabas con un monton de motores a los cuales les terminabas rompiendo los engranes y tus papás no querían comprarte uno más.  Si es el caso llegó la hora de triunfar.
 
 **10)** Ya vio los sueldos que se pueden alcanzar y si no, aquí va un pequeño aproximado (sueldos mensuales, calculados por mi mismo en abril de 2022, échenle coco ajustando inflación y condiciones futuras):
 
-- Trainee: de gratis a 10000 pesos, espero que a medio tiempo y por unos cuantos meses.
-- Jr (de 0 a 3 años de experiencia): el sueldo oscila entre los 15000 pesos hasta los 30000 pesos en promedio, dependiendo de la empresa y la experiencia que se tenga.
-- Middle(no hay un consenso real de la experiencia, pero va de los 2 a los 5+ años dependiendo de lo que diga el empleador): desde los 25000 hasta los 45000 pesos mexicanos. Como que se va poniendo interesante el asunto.
-- Senior (un chingón con más de 5 años de experiencia): Arriba de los 50k ya mejor ni contamos.
+- **Trainee**: de gratis a 10000 pesos, espero que a medio tiempo y por unos cuantos meses.
+- **Jr** (de 0 a 3 años de experiencia): el sueldo oscila entre los 15000 pesos hasta los 30000 pesos en promedio, dependiendo de la empresa y la experiencia que se tenga.
+- **Middle**(no hay un consenso real de la experiencia, pero va de los 2 a los 5+ años dependiendo de lo que diga el empleador): desde los 25000 hasta los 45000 pesos mexicanos. Como que se va poniendo interesante el asunto.
+- **Senior** (un chingón con más de 5 años de experiencia): Arriba de los 50k ya mejor ni contamos.
 
-**11)** Eres un caso raro que tiene el éxito garantizado desde la cuna, una persona agraciada físicamente y ademas con un IQ muy alto. Extrovertido y con mucho carisma, no se que haces como developer, esta no es tu familia.
+**11)** Eres un caso raro que tiene el éxito garantizado desde la cuna, una persona agraciada físicamente y ademas con un IQ muy alto. Extrovertido y con mucho carisma, no se que haces como developer, esta no es tu familia (broma), que bien que estes de este lado del espectro de la genialidad. Toma tu cerveza camarada. 
 
 Si por casualidad es usted RH en alguna empresa y el azar de la vida lo trajo a este post, considere ajustar sus sueldos a lo que aquí se sugiere, tal vez por eso no encuentra a la persona ideal. 
 
 # Conocimientos para ser desarrollador
 
-En un post anterior, dejé una lista de los temas más importantes para poder desempeñarse como ingeniero de sistemas embebidos. Pero una cosa es saber todo eso y otra muy distinta es expresar los conocimientos. Por tanto, básicamente cualquier camarada con un título de ingeniería (o formación porque he conocido algunos que no fueron mas de un par de años a la universidad y se rifan bien macizo, aunque no son la norma he de aclarar.) pero, sobre todo: Lic en Informática, Ing. en Electrónica, Ing. Mecatrónico, Ing. en Computación, Ing. en Sistemas, incluso Ing. Industrial (suena a chiste pero en lo personal quien me ayudó a pulir mis conocimientos en **FPGAs** pertenece a esta estirpe, y yo mismo he sido coach de algún industrial por la senda de los sistemas embebidos).
+En un post anterior, dejé una lista de los temas más importantes para poder desempeñarse como ingeniero de sistemas embebidos. Pero una cosa es saber todo eso y otra muy distinta es expresar los conocimientos que tenemos. Qué a grandes rasgos para el negocio son:
+- Saber un par de lenguajes de progrmación, indispensable: lenguaje C, opcional C++, algo de python y tal vez bash. 
+- Conocimientos de electrónica (ley de ohm, transistores, compuertas lógicas, microcontroladores etc.).
+- Un poco de protocolos de comunicacion y redes. 
+- Tener buena comprension de la lógica y la matemática, no es que vayamos a hacer calculos todo el tiempo pero esas habilidades son herramientas universales.
+- Tener una paciencia y un temple de acero. 
+
+Básicamente cualquier camarada con un título de ingeniería (o formación porque he conocido algunos que no fueron mas de un par de años a la universidad y se rifan bien macizo, aunque no son la norma he de aclarar.) pero, sobre todo: 
+- Lic en Informática 
+- Ing. en Electrónica
+- Ing. Mecatrónico 
+- Ing. en Computación
+- Ing. en Sistemas 
+- incluso Ing. Industrial (suena a chiste pero en lo personal quien me ayudó a pulir mis conocimientos en **FPGAs** pertenece a esta estirpe, y yo mismo he sido coach de algún industrial por la senda de los sistemas embebidos).
+
+
 
 

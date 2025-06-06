@@ -3,7 +3,7 @@
 ## => Site Settings
 ##############################
 text_skin: remcustom #  remcustom,"default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: "tomorrow-night-eighties" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+highlight_theme: "tomorrow-night-bright" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 text_color_theme: 
 url     : "https://razielgdn.github.io" # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : "/risingembeddedmx" # does not include hostname
@@ -237,7 +237,7 @@ defaults:
 ## 3d printing zone
   - scope:
       path: "_3dprinting"  
-      #type: 3dprinting
+      #type: posts
     values:      
       nav_key: 3dprintingZone
       show_date: false  

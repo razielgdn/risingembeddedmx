@@ -1,5 +1,4 @@
 ---
-
 title: Introduction to Yocto
 permalink: /projects/en/yocto/intro
 key: yocto
