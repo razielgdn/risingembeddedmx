@@ -66,22 +66,15 @@ Despite its power, Yocto comes with some challenges:
 
 The official docs have a ["What I Wish I'd Known"](https://docs.yoctoproject.org/what-i-wish-id-known.html#what-i-wish-i-d-known-about-yocto-project) section — here’s a summary:
 
-Using Yocto is easy — until something breaks. Without understanding how the build process works, it can feel like a black box. Here are things to know before diving in:
+Using Yocto is easy — until something breaks. Without understanding how the build process works, it can feel like a black box. Here are things to know before diving in:   
+1. Use **Git** instead of tarballs to ensure updates and bug fixes.   
+2. Know the **Layer Index**. All official layers are listed there, including those marked as Yocto-compatible.   
+3. Use BSP layers from vendors (Intel, NXP, Raspberry Pi, etc.) as a base; don't reinvent the wheel.  
+4. Avoid putting everything in one layer. Use logical separation (BSP, GUI, distro config, apps, etc.) for maintainability.  
+5. Never ever modify the **Poky** layer — changes will be lost in the next release. 
+6. Use the [All-in-One Mega Manual](https://docs.yoctoproject.org/singleindex.html#document-kernel-dev/4.0.16/4.3.999/index) instead of outdated Google results. 
 
-1. Use **Git** instead of tarballs to ensure updates and bug fixes.
-
-2. Know the **Layer Index**. All official layers are listed there, including those marked as Yocto-compatible.
-
-3. Use BSP layers from vendors (Intel, NXP, Raspberry Pi, etc.) as a base; don't reinvent the wheel.
-
-4. Avoid putting everything in one layer. Use logical separation (BSP, GUI, distro config, apps, etc.) for maintainability.
-
-5. Never ever modify the **Poky** layer — changes will be lost in the next release.
-
-6. Use the [All-in-One Mega Manual](https://docs.yoctoproject.org/singleindex.html#document-kernel-dev/4.0.16/4.3.999/index) instead of outdated Google results.
-
-7. Learn the build process stages:
-
+7. Learn the build process stages:   
    1. **Fetch** – download source code.
    2. **Extract** – unpack it.
    3. **Patch** – apply fixes and features.
@@ -89,50 +82,40 @@ Using Yocto is easy — until something breaks. Without understanding how the bu
    5. **Build** – compile and link.
    6. **Install** – place files in expected locations.
    7. **Package** – prepare files for deployment.
-
    Each step helps debug issues when something goes wrong.
 
-   ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yp-hiw.png)
-
+   ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yp-hiw.png)    w
 8. You can generate dependency graphs (`-g` option) to troubleshoot build problems.
-
 9. Understand the "magic" folder names in `tmp/work`. Use `-u` to get UI feedback in graphical or text mode.
-
 10. You can build more than just images — individual recipes or packages too. Use the dev shell.
-
 11. Clarify the difference: **Recipes** contain build instructions; **Packages** are the output.
-
 12. Know what’s included in your root filesystem.
-
 13. Learn to write custom recipes.
-
 14. An embedded developer using Yocto should be able to:
-
-* Navigate corporate proxies.
-* Add packages to an image.
-* Distinguish recipes from packages.
-* Build a package and understand why.
-* Identify which files/packages belong to what.
-* Add SSH support to images.
-* Understand recipe anatomy.
-* Create and manage layers.
-* Find recipes in OpenEmbedded.
-* Know the difference between machine and distro configurations.
-* Use BSPs for your hardware.
-* Configure distro features.
-* Run and troubleshoot tasks individually.
-* Use devtools to simplify work.
-* Speed up builds using shared downloads and caches.
-* Generate and read dependency graphs.
-* Understand the BitBake environment.
-* Build SDK extensions.
+  * Navigate corporate proxies.
+  * Add packages to an image.
+  * Distinguish recipes from packages.
+  * Build a package and understand why.
+  * Identify which files/packages belong to what.
+  * Add SSH support to images.
+  * Understand recipe anatomy.
+  * Create and manage layers.
+  * Find recipes in OpenEmbedded.
+  * Know the difference between machine and distro configurations.
+  * Use BSPs for your hardware.
+  * Configure distro features.
+  * Run and troubleshoot tasks individually.
+  * Use devtools to simplify work.
+  * Speed up builds using shared downloads and caches.
+  * Generate and read dependency graphs.
+  * Understand the BitBake environment.
+  * Build SDK extensions.
 
 15. Depending on your interests, you may want to:
-
-* Read the **Yocto Development Tasks Manual**.
-* Explore the **Application Development Manual** and **eSDK**.
-* Learn **Kernel Development** via its dedicated manual.
-* Learn about **Board Support Packages** (BSPs).
-* Use **Toaster**, a web interface for the Yocto build system.
-* Explore **VS Code or Eclipse** plugins.
-* Keep the **Yocto Project Reference Manual** handy.
+  * Read the **Yocto Development Tasks Manual**.
+  * Explore the **Application Development Manual** and **eSDK**.
+  * Learn **Kernel Development** via its dedicated manual.
+  * Learn about **Board Support Packages** (BSPs).
+  * Use **Toaster**, a web interface for the Yocto build system.
+  * Explore **VS Code or Eclipse** plugins.
+  * Keep the **Yocto Project Reference Manual** handy.
