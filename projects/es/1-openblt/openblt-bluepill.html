@@ -1,10 +1,19 @@
 <!DOCTYPE html><html lang="es-MX">
-  <head><meta charset="utf-8">
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P83G4T9J8J"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-P83G4T9J8J');
+		
+	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx - Rising Embedded Mx</title>
 
 <meta name="description" content="IntroducciónEste proyecto permite el uso del bootloader de arranque OpenBLT en las tarjetas de desarrollo Bluepill Plus y Blackpill, proporcionando una soluc...">
-<link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/es/1-openblt/openblt-bluepill"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/es/1-openblt/openblt-bluepill"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -265,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Idiomas</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">English</a></li><li class="toc-h1">STM32F103C8TX Bluepill Plus </li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/es/1-openblt/openblt-bluepill">Usando OpenBLT</a></li><li class="toc-h1">Topicos de sistemas Embebidos</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">¿Que es un Embedded Dev?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-knowledges">¿Que debo saber?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-questions">Preguntas de entrevista</a></li><li class="toc-h1">Yocto Project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/intro">Introducción</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/yoctoi">Crear un sistema mínimo</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Idiomas</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">English</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/es/1-openblt/openblt-bluepill">Usando OpenBLT</a></li><li class="toc-h1">Sección de Microcontroladores AVR</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/2-avr-section/avr-vscode">Compilar y flashear en linux</a></li><li class="toc-h1">Topicos de sistemas Embebidos</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">¿Que es un Embedded Dev?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-knowledges">¿Que debo saber?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-questions">Preguntas de entrevista</a></li><li class="toc-h1">Yocto Project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/intro">Introducción</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/yoctoi">Crear un sistema mínimo</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4576,7 +4585,7 @@
 </svg>
 <a title="This is my world, where I can do what I think
 " href="/risingembeddedmx/">Rising Embedded Mx</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projectos</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">Zona de impresión 3D</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archivo</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">Acerca de mi</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projectos</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">Zona de impresión 3D</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archivo</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">Acerca de mi</a></li><li class="navigation__item"><a href="https://github.com/razielgdn"target="_blank" rel="noopener noreferrer nofollow">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -4587,7 +4596,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx</h1></header></div><meta itemprop="headline" content="OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-04T22:22:05-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx</h1></header></div><meta itemprop="headline" content="OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h1 id="introducción">Introducción</h1>
@@ -5356,8 +5365,8 @@ Asegúrate de que la interfaz y la configuración de velocidad de baudios en Mic
   </li>
 </ol>
 
-<h1 id="próximos-pasos">Próximos Pasos</h1>
-<h2 id="desarrollar-una-aplicación-basada-en-can">Desarrollar una Aplicación Basada en CAN</h2>
+<h1 id="desarrollar-una-aplicación-basada-en-canel-próximo-paso">Desarrollar una Aplicación Basada en CAN,el próximo Paso</h1>
+
 <p>Con el <em>bootloader</em> OpenBLT y los demos  ejecutándose con éxito en la tarjeta Bluepill Plus, el próximo paso es desarrollar una aplicación significativa que aproveche la interfaz CAN.</p>
 
 <p>Esto podría incluir:</p>
@@ -5369,7 +5378,7 @@ Asegúrate de que la interfaz y la configuración de velocidad de baudios en Mic
 Aprovechar CAN permite una comunicación robusta y en tiempo real entre dispositivos en entornos embebidos e industriales. Con OpenBLT manejando las actualizaciones de firmware, puedes implementar de manera segura y remota nuevas funciones o parches.</li>
 </ul>
 
-<h1 id="repositorio-de-código-fuente">Repositorio de Código Fuente</h1>
+<h1 id="repositorio-de-código-fuente-y-video-tutorial">Repositorio de Código Fuente y video tutorial</h1>
 
 <p>El código fuente completo para el <em>bootloader</em> y los demos está disponible en el repositorio de GitHub: <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">https://github.com/razielgdn</a>.</p>
 
@@ -5379,11 +5388,11 @@ Aprovechar CAN permite una comunicación robusta y en tiempo real entre disposit
   <iframe src="https://www.youtube.com/embed/3xEar9Rzbeg?rel=0&amp;showinfo=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
 </div>
 </div>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-04T22:22:05-06:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-06T09:32:47-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>ANTERIOR</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">English</a></div><div class="next"><span>SIGUIENTE</span><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">¿Que es un Embedded Dev?</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>ANTERIOR</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">English</a></div><div class="next"><span>SIGUIENTE</span><a href="/risingembeddedmx/projects/es/2-avr-section/avr-vscode">Compilar y flashear en linux</a></div></div></div>
 
 </div>
 
@@ -5412,7 +5421,25 @@ Aprovechar CAN permite una comunicación robusta y en tiempo real entre disposit
   });
 })();
 </script>
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.css');
+		window.Lazyload.js('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: 'Ov23li1ay2o5ruMov7EU',
+				clientSecret: '9e8b305791c119712f86399008766dc3d7eb7b62',
+				repo: 'custom-application-test',
+				owner: 'razielgdn',
+				admin: ['razielgdn'],
+				id: 'openblt-es'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
