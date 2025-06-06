@@ -1,10 +1,11 @@
 ---
 layout: article
-title: 
-permalink: /about
+title: Octavio Raziel Güendulain Pérez
+permalink: /about/en/about
 aside:
    toc: true
 modify_date: 2024-05-29    
+lang: en
 ---
 {% comment %}
 <!--
@@ -13,8 +14,8 @@ modify_date: 2024-05-29
     05-27-2024 -> First update of this document 
 -->
 {% endcomment %}
-# Octavio Raziel Güendulain Pérez
- Electronic engineer with 4+ years of experience in embedded systems development. 
+
+ Electronic engineer with 5+ years of experience in embedded systems development. 
  Linux user since 2008 and a general technology enthusiast. In his free time, he enjoys reading and cycling.
 
 # Embedded systems experience
@@ -46,7 +47,7 @@ modify_date: 2024-05-29
   - Supported a customer in using and configuring the **NXP** **eCockpit** system.
   - Researched and supported customers in using the **SCFW (System Controller Firmware)** on NXP **i.MX8QM** and **i.MX8QX** based development boards.
 
-# Professional experience in IT support and maintenance.
+# Experience in IT support and maintenance.
 ## Comercializadora de equipos de energía Renovables
 *Dec 2018 to Apr 2019*, **Photovoltaic Systems Installer**.   
 His main functions were: 
@@ -88,10 +89,25 @@ During this time, the work involved providing technical support in the area of N
 
 # Education
 ## [Universidad Tecnológica de la Mixteca](https://www.utm.mx/)
-  Huajuapan de León, Oaxaca -
-  Electronic Engineer [Bachelor's degree](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/titulo.png). AUGUST 2010 - JULY 2015
-  - CENEVAL high performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/ceneval.png).
-  - Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/cedula.png)
+Huajuapan de León, Oaxaca - Electronic Engineer [Bachelor's degree](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/titulo.png).    
+AUGUST 2010 - JULY 2015   
+  - CENEVAL high performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/ceneval.png).   
+  - Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/cedula.png)    
+
+## Courses
+
+### From [edX.org](https://courses.edx.org/)
+
+UT.6.10x: **Embedded Systems - Shape The World: Microcontroller Input/Output**, THE UNIVERSITY of TEXAS SYSTEM.    
+Certificate of Achievement: [2cd21b17d58e454baa5489e40c4d088f](https://courses.edx.org/certificates/2cd21b17d58e454baa5489e40c4d088f)  
+
+### From [Udemy](https://www.udemy.com/)  
+
+-  **Autosar Architecture (Learn from Scratch with Demo):** [UC-abbb789a-ccd3-450d-8dcd-1593e0b17670](https://www.udemy.com/certificate/UC-abbb789a-ccd3-450d-8dcd-1593e0b17670/)   
+-  **The Complete Git Guide: Understand and master Git and GitHub:** [UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf](https://www.udemy.com/certificate/UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf/)  
+-  **Domina SCRUM con JIRA Agile - Metodologías Ágiles:** [UC-f61ab121-7c1e-437f-88dc-adce85728be5](https://www.udemy.com/certificate/UC-f61ab121-7c1e-437f-88dc-adce85728be5/)
+-  **Yocto Zero to Hero - Building embedded Linux:** [UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa](https://www.udemy.com/certificate/UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa/)
+
 
 # Skills 
 ## Programmin Languages 
@@ -166,7 +182,7 @@ Since 2009, when Octavio started coding in C, he has worked with various languag
     * Printers installation and maintenance.    
 * Software
     * **Wireshark** software.
-    * Mount **Asterisk** servers.  
+    * Mount **Asterisk** servers.    
     * Secure Shell Protocol (**SSH**).
     * Mount **SFTP** servers and clients.
     * Mount HTTP servers with **Apache** . 
@@ -176,15 +192,4 @@ Since 2009, when Octavio started coding in C, he has worked with various languag
 - **Electronic/Lab tools**: Soldering iron, moto tool (Dremel), microscopes, oscilloscopes, logic analyzers, power source, electronic load.
 - **Electric tools**: Hammer drill, Jigsaw, vacuum cleaner, grinder. 
 - **Mechanical tools**: Hammer, Screwdrivers, pliers, wrenches, crowbars, machetes, axes, chainsaw and others. 
-
-# Courses
-## From [edX.org](https://courses.edx.org/)
-- UT.6.10x: **Embedded Systems - Shape The World: Microcontroller Input/Output**, THE UNIVERSITY of TEXAS SYSTEM.    
-  Certificate of Achievement: [2cd21b17d58e454baa5489e40c4d088f](https://courses.edx.org/certificates/2cd21b17d58e454baa5489e40c4d088f)  
-
-## From [Udemy](https://www.udemy.com/)  
--  **Autosar Architecture (Learn from Scratch with Demo):** [UC-abbb789a-ccd3-450d-8dcd-1593e0b17670](https://www.udemy.com/certificate/UC-abbb789a-ccd3-450d-8dcd-1593e0b17670/)   
--  **The Complete Git Guide: Understand and master Git and GitHub:** [UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf](https://www.udemy.com/certificate/UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf/)  
--  **Domina SCRUM con JIRA Agile - Metodologías Ágiles:** [UC-f61ab121-7c1e-437f-88dc-adce85728be5](https://www.udemy.com/certificate/UC-f61ab121-7c1e-437f-88dc-adce85728be5/)
--  **Yocto Zero to Hero - Building embedded Linux:** [UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa](https://www.udemy.com/certificate/UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa/)
 

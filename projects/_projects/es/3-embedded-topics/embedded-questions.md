@@ -1,6 +1,6 @@
 ---
 title: Preguntas de entrevistas a puestos de sistemas embebidos
-permalink: /spanish/embedded-questions
+permalink: /projects/es/embedded-topics/embedded-questions
 key: embedded
 ---
 

@@ -7,14 +7,15 @@ tags:
 #- stm32F
 #- Nucleo-64
 ---
-### April-15-24
-# Starting the Implementation of OpenBlt Project   
+
+# Starting the Implementation of OpenBlt Project  
+### April-15-24 
 I am beginning work on implementing the OpenBLT project on a Nucleo 64 platform with an **STM32-F446RE** microcontroller. 
 
 In my previous job, I implemented this project for a **STM34H53** platform. At that time, I didn't have enough time to fully understand how the software works. I modified the sources to work with CAN bus for a demo, and then another task was assigned to me. However, I believe that OpenBLT has more potential, and I will need to use it for my projects in the future.
-
-### April-17-24  
+  
 ## Read Documentation   
+### April-17-24
 I was reading  the [OpenBLT](https://www.feaser.com/en) site and checking the [download](https://www.feaser.com/openblt/doku.php?id=download),  [Developer Blog](https://www.feaser.com/en/blog/), and [wiki](https://www.feaser.com/openblt/doku.php) sections. I noticed that **Nucleo-F446RE** board have a demo with Modbus RTU, I didn’t know what it was, so I researched some information.
 Once I learned that Modbus RTU is a serial or Ethernet communication protocol based on master/slave architecture, I will try to set it up or modify it to flash applications with at least CAN. If I have time enough I'll try to run another interface for example RS232 or USB.
 

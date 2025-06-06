@@ -1,6 +1,6 @@
 ---
 title: ¿Qué debo saber?
-permalink: /spanish/embedded-knowledges
+permalink: /projects/es/embedded-topics/embedded-knowledges
 key: embedded
 ---
 Conocimientos básicos.
