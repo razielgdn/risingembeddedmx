@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="es-MX">
   <head><!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P83G4T9J8J"></script>
 	<script>
@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT in Nucleo-F446RE - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Usar AVR en Linux - Rising Embedded Mx</title>
 
-<meta name="description" content="Before StartAs we notice in last post only Modbus is available in the demo.To activate RS232 and CAN bus as flash sources in OpenBLT, you need to enable the ...">
-<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/open-blt"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="El propósito de este artículo es enseñar como configurar un sistema Linux para compilar y flashear microcontroladores AVR de ATMEL. En mi caso he podido hace...">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/es/2-avr-section/avr-vscode"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Idiomas</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">English</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/1-openblt/openblt-bluepill">Usando OpenBLT</a></li><li class="toc-h1">Sección de Microcontroladores AVR</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/es/2-avr-section/avr-vscode">Compilar y flashear en linux</a></li><li class="toc-h1">Topicos de sistemas Embebidos</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">¿Que es un Embedded Dev?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-knowledges">¿Que debo saber?</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-questions">Preguntas de entrevista</a></li><li class="toc-h1">Yocto Project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/intro">Introducción</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/yocto/yoctoi">Crear un sistema mínimo</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4585,7 +4585,7 @@
 </svg>
 <a title="This is my world, where I can do what I think
 " href="/risingembeddedmx/">Rising Embedded Mx</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item navigation__item--active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing Zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">About</a></li><li class="navigation__item"><a href="https://github.com/razielgdn"target="_blank" rel="noopener noreferrer nofollow">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projectos</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">Zona de impresión 3D</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archivo</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">Acerca de mi</a></li><li class="navigation__item"><a href="https://github.com/razielgdn"target="_blank" rel="noopener noreferrer nofollow">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -4596,45 +4596,231 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Usar AVR en Linux</h1></header></div><meta itemprop="headline" content="Usar AVR en Linux"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="before-start">Before Start</h1>
-<p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-start">post</a> only Modbus is available in the demo.</p>
+<div class="article__content" itemprop="articleBody"><p>El propósito de este artículo es enseñar como configurar un sistema Linux para compilar y flashear microcontroladores AVR de ATMEL. En mi caso he podido hacer el prioceso usando <strong>Ubuntu 22.04</strong> y <strong>Fedora 39</strong>, en este articulo se explicara como realizar el prioceso para un Micocontrolador  <strong>AVR</strong>.</p>
 
-<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01bltdoc.png" /></p>
+<h1 id="instalación-de-los-paquetes-requeridos">Instalación de los paquetes requeridos</h1>
 
-<p>To <strong>activate</strong> RS232 and CAN bus as flash sources in <strong>OpenBLT</strong>, you need to enable the necessary resources such as <strong>GPIOs</strong>, <strong>clock sources</strong>, and their respective <strong>drivers</strong>. The following steps document the process of performing this task using the OpenBLT demo as a base and modifying it to enable the mentioned resources.</p>
+<p>El soporte para microcontroladores AVR de 8 bits ha estado disponible como software libre durante muchos años, y estas herramientas están accesibles en los repositorios de GNU Linux. Podemos instalar los paquetes necesarios usando el administrador de paquetes.
+En el caso de ubuntu:</p>
 
-<p>The custom openBLT project is stored in a Github repository: <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT">customNucleoF4-OpenBLT</a>.</p>
+<ol>
+  <li>Instala paquetes relacionados con el desarrollo de software en C y el compilador AVR:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> gcc build-essential 
+ <span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> avr-libc binutils-avr gcc-avr  gdb-avr 
+</code></pre></div>    </div>
+  </li>
+  <li>Instala avrdude, el software para flashear.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> libusb-dev avrdude 
+</code></pre></div>    </div>
+  </li>
+</ol>
 
-<h1 id="enabling-usartx-and-can-gpios">Enabling USARTx and CAN GPIOs</h1>
-<p>MBRTU and RS232 use the USART1 and USART2 resources to work. To enable the use of RS232 and CAN ports, the following changes were made to the code:</p>
+<h1 id="configuración-del-hardware">Configuración del hardware</h1>
+<p>Si no tienes mucha experiencia con microcontroladores y hardware, este paso puede ser un poco complicado. Para este ejemplo, utilicé algunos transistores y resistencias como interruptores. La siguiente imagen muestra el esquemático del circuito, y el conector corresponde a un <a href="https://www.fischl.de/usbasp/">USBAsp programmer</a>. 
+Compré el programador en <a href="https://www.aliexpress.com/item/1005007097793441.html">Aliexpress</a>.</p>
 
-<p>First of all the Macros to manage RS232 and CAN were added to <strong>blt_conf.h</strong> file.</p>
-<ul>
-  <li>RS232 macros.  <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01blt-conf.png" /></li>
-  <li>CAN macros. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02blt-conf.png" /></li>
-</ul>
+<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/protoLED_schem.png" /></p>
 
-<p>These lines were taken from another project that has support for both CAN and RS232.</p>
+<p>La vista en la protoboard se ve así: <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/protoLED_bb.png" /></p>
 
-<p>Analyzing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
+<p>Finalmente, el circuito construido incluyendo el programador en la vida real:</p>
 
-<p>The <strong>main.c</strong> file has been updated to improve this implementation. Since a function to enable <strong>GPIOs</strong> was previously declared, the code to enable port communication has been moved there. This utilizes macros from <strong>blt_conf.h</strong> to optimize resources using conditionals to enable code sections. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main01.png" /> <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main02.png" /></p>
+<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/protoLED_real.jpg" /></p>
 
-<p>An important step to work with can is add <strong>hal</strong> driver for can on <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h</strong> and <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</strong> it can be obtained from a generic STMCubeIDE project.</p>
+<p>Como puedes ver, <strong>PB0</strong>, <strong>PB1</strong> y <strong>PB2</strong> se usan para controlar el <strong>LED RGB</strong>. El puerto <strong>SPI</strong> está conectado directamente a <strong>PB2 (MOSI)</strong>, <strong>PB3 (MISO)</strong>, <strong>PB4 (SCK)</strong> y <strong>PC6 (RESET)</strong>. La fuente de alimentación proviene del USB, con los respectivos <strong>GND</strong> y <strong>VCC (5V)</strong>.</p>
 
-<p>Finally the system works. See <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results">next post</a> with results.</p>
+<h1 id="crea-tu-primer-programa">Crea tu primer programa</h1>
+
+<p>Se realizó un código de prueba para controlar un LED RGB, implementado con una máquina de estados usando un arreglo de estructuras.  <br />
+<strong>main.c</strong>:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//#define F_CPU 1000000 // Uncomment if you  define F_CPU when you compile with avr-gcc</span>
+<span class="cp">#include</span> <span class="cpf">&lt;avr/io.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;util/delay.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">configureGPIO</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="cm">/*RGBState ENUM:
+This values represents the pines in a RGB led with its respective colors R: Red, G: Green, B: Blue and its basic possible combinations:
+*/</span>
+<span class="k">enum</span> <span class="n">RGBState</span> 
+<span class="p">{</span>   <span class="n">ALL_OFF</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 000 All LEDs off</span>
+    <span class="n">RED</span><span class="p">,</span>         <span class="c1">// 001 Red LED on</span>
+    <span class="n">GREEN</span><span class="p">,</span>       <span class="c1">// 010 Green LED on</span>
+    <span class="n">RED_GREEN</span><span class="p">,</span>   <span class="c1">// 011 Red and Green LEDs on</span>
+    <span class="n">BLUE</span><span class="p">,</span>        <span class="c1">// 100 Blue LED on</span>
+    <span class="n">BLUE_RED</span><span class="p">,</span>    <span class="c1">// 101 Blue and Red LEDs on</span>
+    <span class="n">BLUE_GREEN</span><span class="p">,</span>  <span class="c1">// 110 Blue and Green LEDs on</span>
+    <span class="n">ALL_ON</span>       <span class="c1">// 111 All LEDs on</span>
+<span class="p">};</span>
+<span class="cm">/*
+LED_states struct contains two unsigned integers with to represents the RGB LED color in an actual state and the next state in a state machine. 
+*/</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">States</span><span class="p">{</span>    
+   <span class="kt">uint8_t</span> <span class="n">RGB_color</span> <span class="p">;</span>
+   <span class="kt">uint8_t</span> <span class="n">next_state</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">LED_states</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*State machine is the representation of the RGB LED states with its actual state and next state to be set. */</span>
+    <span class="n">LED_states</span> <span class="n">states_machine</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> 
+    <span class="p">{</span>
+        <span class="p">{</span> <span class="n">ALL_OFF</span><span class="p">,</span> <span class="n">RED</span><span class="p">},</span>         
+        <span class="p">{</span> <span class="n">RED</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">},</span>           
+        <span class="p">{</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">},</span>          
+        <span class="p">{</span> <span class="n">RED_GREEN</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">},</span>      
+        <span class="p">{</span> <span class="n">BLUE</span><span class="p">,</span> <span class="n">RED</span><span class="p">},</span>       	 
+        <span class="p">{</span> <span class="n">BLUE_RED</span><span class="p">,</span> <span class="n">BLUE_GREEN</span><span class="p">},</span> 
+        <span class="p">{</span> <span class="n">BLUE_GREEN</span><span class="p">,</span> <span class="n">ALL_ON</span><span class="p">},</span>   
+        <span class="p">{</span> <span class="n">ALL_ON</span><span class="p">,</span> <span class="n">ALL_OFF</span><span class="p">}</span>       
+    <span class="p">};</span> 
+    <span class="kt">int</span> <span class="n">state</span><span class="o">=</span><span class="n">ALL_OFF</span><span class="p">;</span>
+    <span class="n">configureGPIO</span><span class="p">();</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>        
+        <span class="n">PORTB</span> <span class="o">=</span>  <span class="n">states_machine</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">RGB_color</span><span class="p">;</span>           
+        <span class="n">state</span> <span class="o">=</span> <span class="n">states_machine</span><span class="p">[</span><span class="n">state</span><span class="p">].</span><span class="n">next_state</span><span class="p">;</span>
+        <span class="n">_delay_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> 
+        
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">configureGPIO</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//PORTB configured has output</span>
+    <span class="n">DDRB</span> <span class="o">=</span> <span class="mh">0x0F</span><span class="p">;</span>
+    <span class="c1">// PORTB with all pins in OFF status</span>
+    <span class="n">PORTB</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>    
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Compila el sistema, en este ejemplo solo se usó un archivo para este proyecto, en este caso el proceso de compilación puede realizarse con un par de instrucciones para crear los binarios .elf y .hex:
+    <ul>
+      <li>Crea el archivo <strong>.elf</strong>. (F_CPU es un parámetro aquí, el valor por defecto es 1MHz)
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  avr-gcc <span class="nt">-mmcu</span><span class="o">=</span>atmega328p <span class="nt">-Wall</span> <span class="nt">-Os</span> <span class="nt">-DF_CPU</span><span class="o">=</span>1000000 <span class="nt">-o</span> bin/RGB_control.elf main.c 
+</code></pre></div>        </div>
+      </li>
+      <li>Crea el archivo <strong>.hex</strong>.
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  avr-objcopy <span class="nt">-j</span> .text <span class="nt">-j</span> .data <span class="nt">-O</span> ihex bin/RGB_control.elf bin/RGB_control.hex <span class="nt">-v</span>  
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Para flashear al MCU usando avrdude
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>avrdude <span class="nt">-p</span> su p m328p <span class="nt">-c</span> usbasp <span class="nt">-P</span> usb <span class="nt">-U</span> flash:w:bin/RGB_control.hex 
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h1 id="crea-un-makefile-básico">Crea un Makefile básico</h1>
+<p>Para automatizar el proceso, se puede crear un Makefile. El siguiente Makefile puede usarse para implementar los últimos pasos:</p>
+<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Makefile for building and flashing ATMEGA328p
+</span>
+<span class="c"># Variables
+</span><span class="nv">MCU</span><span class="o">=</span>atmega328p
+<span class="nv">F_CPU</span><span class="o">=</span>1000000
+<span class="nv">SRC</span><span class="o">=</span>main.c
+<span class="nv">BUILD_DIR</span><span class="o">=</span>bin
+<span class="nv">BINARY_NAME</span><span class="o">=</span>RGB_control
+<span class="nv">PROGRAMMER</span><span class="o">=</span>usbasp
+<span class="nv">PORT</span><span class="o">=</span>usb
+
+<span class="c"># Compiler and linker flags
+</span><span class="nv">CFLAGS</span><span class="o">=</span><span class="nt">-mmcu</span><span class="o">=</span><span class="p">$(</span>MCU<span class="p">)</span> <span class="nt">-Wall</span> <span class="nt">-Os</span> <span class="nt">-DF_CPU</span><span class="o">=</span><span class="p">$(</span>F_CPU<span class="p">)</span>
+<span class="nv">LDFLAGS</span><span class="o">=</span>
+
+<span class="c"># Rules
+</span><span class="nl">all</span><span class="o">:</span> <span class="nf">$(BUILD_DIR)/$(BINARY_NAME).hex</span>
+
+<span class="nl">$(BUILD_DIR)/$(BINARY_NAME).elf</span><span class="o">:</span> <span class="nf">$(SRC)</span>
+	<span class="p">@</span><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="p">$(</span>BUILD_DIR<span class="p">)</span>
+	avr-gcc <span class="p">$(</span>CFLAGS<span class="p">)</span> <span class="nt">-o</span> <span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.elf <span class="p">$(</span>SRC<span class="p">)</span>
+
+<span class="nl">$(BUILD_DIR)/$(BINARY_NAME).hex</span><span class="o">:</span> <span class="nf">$(BUILD_DIR)/$(BINARY_NAME).elf</span>
+	avr-objcopy <span class="nt">-j</span> .text <span class="nt">-j</span> .data <span class="nt">-O</span> ihex <span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.elf <span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.hex <span class="nt">-v</span>
+
+<span class="nl">flash</span><span class="o">:</span> <span class="nf">$(BUILD_DIR)/$(BINARY_NAME).hex</span>
+	avrdude <span class="nt">-p</span> <span class="p">$(</span>MCU<span class="p">)</span> <span class="nt">-c</span> <span class="p">$(</span>PROGRAMMER<span class="p">)</span> <span class="nt">-P</span> <span class="p">$(</span>PORT<span class="p">)</span> <span class="nt">-U</span> flash:w:<span class="p">$(</span>BUILD_DIR<span class="p">)</span>/<span class="p">$(</span>BINARY_NAME<span class="p">)</span>.hex:i <span class="nt">-v</span>
+
+<span class="nl">clean</span><span class="o">:</span>
+	<span class="nb">rm</span> <span class="nt">-rf</span> <span class="p">$(</span>BUILD_DIR<span class="p">)</span>
+
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">all flash clean</span>
+</code></pre></div></div>
+<h1 id="usando-visual-studio-code">Usando Visual Studio Code</h1>
+
+<p>Hay un par de extensiones disponibles para Visual Studio Code:</p>
+<h2 id="avr-utils"><strong>AVR Utils</strong></h2>
+<p>Es una extensión simple que proporciona una forma de compilar proyectos AVR.</p>
+<ol>
+  <li>
+    <p>Puedes encontrarla en la pestaña de extensiones en VS Code. <br />
+  <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/AVRUtils01.png" /></p>
+  </li>
+  <li>Para crear un proyecto, presiona <strong>Ctrl+Shift+P</strong> y selecciona <strong>AVR Utils: Make Project</strong>. Selecciona/crea el directorio en el que trabajarás.</li>
+  <li>Ingresa un nombre para tu proyecto, por ejemplo, “avrUtilsTest”. Este paso creará un nuevo directorio, y AVR Utils creará: un archivo <strong>main.c</strong>, una carpeta <strong>.vscode</strong> con archivos <strong>JSON</strong>, y una carpeta <strong>Debug</strong>.</li>
+  <li>Haz clic en la parte inferior derecha en “Select AVR Device” y selecciona atmega328p.</li>
+  <li>Selecciona el modo de lenguaje AVR C.</li>
+  <li>Haz clic en el ícono de compilación. Si aparece un mensaje que dice “No toolchain found”, se recomienda seleccionar el toolchain proporcionada por <a href="https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers">Microchip (ATMEL)</a>.<a href="https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/avr8-gnu-toolchain-3.7.0.1796-linux.any.x86_64.tar.gz">Descarga</a> el toolchain, descomprímela en tu directorio preferido y haz referencia al directorio en la extensión.</li>
+  <li>VS Code ahora puede compilar proyectos AVR.</li>
+  <li>Usa avrdude para flashear los binarios al microcontrolador.</li>
+</ol>
+
+<p><strong>Nota</strong>: Personalmente, no prefiero esta extensión porque los compiladores están integrados de forma nativa en los sistemas Linux, y no puedes flashear directamente.</p>
+
+<h2 id="avr-helper"><strong>AVR Helper</strong></h2>
+<p>Es una extensión más completa. Sigue estos pasos para instalar y configurar la extensión:</p>
+<ol>
+  <li>Puedes encontrarla en la pestaña de extensiones en VS Code.  <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/avr/AVRHelper01.png" /></li>
+  <li>Presiona <strong>Ctrl+Shift+P</strong> y selecciona <strong>AVR Helper: Perform initial setup</strong>, y presiona Enter para completar los 4 pasos de la extensión.
+    <ul>
+      <li>Escribe la ruta completa al ejecutable del compilador, usualmente: <strong>/usr/bin/avr-gcc</strong> y presiona Enter.</li>
+      <li>Escribe la ruta completa al ejecutable del programador: <strong>/usr/bin/avrdude</strong> y presiona Enter.</li>
+      <li>Escribe la ruta completa a las definiciones del programador: <strong>/etc/avrdude.conf</strong> y presiona Enter.</li>
+      <li>Deja la ruta de las bibliotecas de origen vacía y presiona Enter.</li>
+    </ul>
+  </li>
+  <li>El siguiente paso es configurar el programador, presiona <strong>Ctrl+Shift+P</strong> y selecciona <strong>AVR Helper: Select programmer</strong>.
+    <ul>
+      <li>Selecciona <strong>USBasp</strong> o tu dispositivo y presiona Enter.</li>
+      <li>Escribe <strong>usb</strong> para configurar el puerto y presiona Enter.</li>
+      <li>Deja el parámetro de velocidad vacío y presiona Enter.</li>
+    </ul>
+  </li>
+  <li>Finalmente configura el dispositivo, presiona <strong>Ctrl+Shift+P</strong> y selecciona <strong>AVR Helper: Select select device</strong>.
+    <ul>
+      <li>Selecciona <strong>atmega328p</strong> (o tu dispositivo) y presiona Enter.</li>
+      <li>Escribe la frecuencia del dispositivo, en este caso <strong>1000000</strong> (1MHz: valor por defecto en atmega328p de fábrica) y presiona Enter.</li>
+    </ul>
+  </li>
+  <li>VS Code ahora está listo para compilar y flashear un dispositivo. El plugin incluye tres botones para compilar y flashear:
+    <ul>
+      <li><strong>Quick</strong>: Compila y flashea con opciones predeterminadas.</li>
+      <li><strong>Build</strong>: Compila el código fuente.</li>
+      <li><strong>Flash</strong>: Flashea el binario al dispositivo.</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="conclusión">Conclusión</h1>
+<p>Es muy posible desarrollar software para microcontroladores AVR usando un entorno Linux. ¡No pagues por una licencia de Windows a menos que sea absolutamente necesario! Todo el proceso se resume en el siguiente video para explicar mejor los pasos.</p>
+
+<div><div class="extensions extensions--video">
+  <iframe src="https://www.youtube.com/embed/pRuHfKpjL3A?rel=0&amp;showinfo=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+</div>
+</div>
 </div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-06T09:32:47-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>ANTERIOR</span><a href="/risingembeddedmx/projects/es/1-openblt/openblt-bluepill">Usando OpenBLT</a></div><div class="next"><span>SIGUIENTE</span><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">¿Que es un Embedded Dev?</a></div></div></div>
 
 </div>
 
@@ -4677,7 +4863,7 @@
 				repo: 'custom-application-test',
 				owner: 'razielgdn',
 				admin: ['razielgdn'],
-				id: 'openblt-mig'
+				id: 'AVR'
 			});
 			gitalk.render('js-gitalk-container');
 		});
@@ -4689,31 +4875,31 @@
 <footer class="footer py-4 js-page-footer">
   <div class="main"><div itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Octavio Guendulain"><meta itemprop="url" content="/risingembeddedmx/"><meta itemprop="description" content="Embedded Developer"><div class="footer__author-links"><div class="author-links">
-  <ul class="menu menu--nowrap menu--inline"><li title="Send me an Email.">
+  <ul class="menu menu--nowrap menu--inline"><li title="Envíame un  Email.">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:octavioraziel.gdn@gmail.com" target="_blank">
         <i class="fas fa-envelope"></i>
-      </a><li title="Follow me on Facebook.">
+      </a><li title="Sígueme en Facebook.">
         <a class="button button--circle facebook-button" itemprop="sameAs" href="https://www.facebook.com/profile.php?id=61560642972696" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M767.428571 6.857143l0 150.857143-89.714286 0q-49.142857 0-66.285714 20.571429t-17.142857 61.714286l0 108 167.428571 0-22.285714 169.142857-145.142857 0 0 433.714286-174.857143 0 0-433.714286-145.714286 0 0-169.142857 145.714286 0 0-124.571429q0-106.285714 59.428571-164.857143t158.285714-58.571429q84 0 130.285714 6.857143z" />
 </svg>
 </div>
         </a>
-      </li><li title="Follow me on X.">
+      </li><li title="Sígueme en X.">
         <a class="button button--circle twitter-button" itemprop="sameAs" href="https://x.com/L31zarGdn" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M1024.032 194.432c-37.664 16.704-78.176 28-120.672 33.088 43.36-26.016 76.672-67.168 92.384-116.224-40.608 24.064-85.568 41.568-133.408 50.976-38.336-40.832-92.928-66.336-153.344-66.336-116.032 0-210.08 94.048-210.08 210.08 0 16.48 1.856 32.512 5.44 47.872-174.592-8.768-329.408-92.416-433.024-219.52-18.08 31.04-28.448 67.104-28.448 105.632 0 72.896 37.088 137.184 93.472 174.88-34.432-1.088-66.816-10.528-95.168-26.272-0.032 0.864-0.032 1.76-0.032 2.656 0 101.792 72.416 186.688 168.512 205.984-17.632 4.8-36.192 7.36-55.36 7.36-13.536 0-26.688-1.312-39.52-3.776 26.72 83.456 104.32 144.192 196.256 145.888-71.904 56.352-162.496 89.92-260.928 89.92-16.96 0-33.664-0.992-50.112-2.944 92.96 59.616 203.392 94.4 322.048 94.4 386.432 0 597.728-320.128 597.728-597.76 0-9.12-0.192-18.176-0.608-27.168 41.056-29.632 76.672-66.624 104.832-108.736z" />
 </svg>
 </div>
         </a>
-      </li><li title="Follow me on Linkedin.">
+      </li><li title="Sígueme en Linkedin.">
         <a class="button button--circle linkedin-button" itemprop="sameAs" href="https://www.linkedin.com/in/octaviorazielgdn" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M260.096 155.648c0 27.307008-9.899008 50.516992-29.696 69.632-19.796992 19.115008-45.396992 28.672-76.8 28.672-30.036992 0-54.612992-9.556992-73.728-28.672-19.115008-19.115008-28.672-42.324992-28.672-69.632 0-28.672 9.556992-52.224 28.672-70.656 19.115008-18.432 44.372992-27.648 75.776-27.648 31.403008 0 56.32 9.216 74.752 27.648 18.432 18.432 28.331008 41.984 29.696 70.656 0 0 0 0 0 0m-202.752 808.96c0 0 0-632.832 0-632.832 0 0 196.608 0 196.608 0 0 0 0 632.832 0 632.832 0 0-196.608 0-196.608 0 0 0 0 0 0 0m313.344-430.08c0-58.708992-1.364992-126.292992-4.096-202.752 0 0 169.984 0 169.984 0 0 0 10.24 88.064 10.24 88.064 0 0 4.096 0 4.096 0 40.96-68.267008 105.812992-102.4 194.56-102.4 68.267008 0 123.220992 22.868992 164.864 68.608 41.643008 45.739008 62.464 113.664 62.464 203.776 0 0 0 374.784 0 374.784 0 0-196.608 0-196.608 0 0 0 0-350.208 0-350.208 0-91.476992-33.451008-137.216-100.352-137.216-47.787008 0-81.236992 24.576-100.352 73.728-4.096 8.192-6.144 24.576-6.144 49.152 0 0 0 364.544 0 364.544 0 0-198.656 0-198.656 0 0 0 0-430.08 0-430.08 0 0 0 0 0 0" />
 </svg>
 </div>
         </a>
-      </li><li title="Follow me on Github.">
+      </li><li title="Sígueme en Github.">
         <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/razielgdn/risingembeddedmx" target="_blank">
           <div class="icon"><svg fill="#000000" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path class="svgpath" data-index="path_0" fill="#272636" d="M0 525.2c0 223.6 143.3 413.7 343 483.5 26.9 6.8 22.8-12.4 22.8-25.4l0-88.7c-155.3 18.2-161.5-84.6-172-101.7-21.1-36-70.8-45.2-56-62.3 35.4-18.2 71.4 4.6 113.1 66.3 30.2 44.7 89.1 37.2 119 29.7 6.5-26.9 20.5-50.9 39.7-69.6C248.8 728.2 181.7 630 181.7 513.2c0-56.6 18.7-108.7 55.3-150.7-23.3-69.3 2.2-128.5 5.6-137.3 66.5-6 135.5 47.6 140.9 51.8 37.8-10.2 80.9-15.6 129.1-15.6 48.5 0 91.8 5.6 129.8 15.9 12.9-9.8 77-55.8 138.8-50.2 3.3 8.8 28.2 66.7 6.3 135 37.1 42.1 56 94.6 56 151.4 0 117-67.5 215.3-228.8 243.7 26.9 26.6 43.6 63.4 43.6 104.2l0 128.8c0.9 10.3 0 20.5 17.2 20.5C878.1 942.4 1024 750.9 1024 525.3c0-282.9-229.3-512-512-512C229.1 13.2 0 242.3 0 525.2L0 525.2z" />
@@ -4884,7 +5070,7 @@
 })();
 </script><div class="search search--dark">
   <div class="main">
-    <div class="search__header">Search</div>
+    <div class="search__header">Búsqueda</div>
     <div class="search-bar">
       <div class="search-box js-search-box">
         <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
@@ -4894,7 +5080,7 @@
         </div>
       </div>
       <button class="button button--theme-dark button--pill search__cancel js-search-toggle">
-        Cancel</button>
+        Cancelar</button>
     </div>
     <div class="search-result js-search-result"></div>
   </div>

@@ -1,10 +1,19 @@
 <!DOCTYPE html><html lang="en">
-  <head><meta charset="utf-8">
+  <head><!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P83G4T9J8J"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-P83G4T9J8J');
+		
+	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Running OpenBLT in a STM32F103C8TX Bluepill Plus device - Rising Embedded Mx</title>
 
 <meta name="description" content="IntroductionThis project enables the use of the OpenBLT bootloader on Bluepill Plus and Blackpill development boards, providing a lightweight and flexible so...">
-<link rel="canonical" href="http://localhost:4000/risingembeddedmx/projects/en/1-openblt/openblt-bluepill"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-bluepill"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -265,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">STM32F103C8TX Bluepill Plus </li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4576,7 +4585,7 @@
 </svg>
 <a title="This is my world, where I can do what I think
 " href="/risingembeddedmx/">Rising Embedded Mx</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item navigation__item--active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing Zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">About</a></li><li class="navigation__item"><a href="https://github.com/razielgdn">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/risingembeddedmx/">Blog</a></li><li class="navigation__item navigation__item--active"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">Projects</a></li><li class="navigation__item"><a href="/risingembeddedmx/3DprintingZone">3D printing Zone</a></li><li class="navigation__item"><a href="/risingembeddedmx/archive">Archive</a></li><li class="navigation__item"><a href="/risingembeddedmx/about/en/about">About</a></li><li class="navigation__item"><a href="https://github.com/razielgdn"target="_blank" rel="noopener noreferrer nofollow">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -4587,7 +4596,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Running OpenBLT in a STM32F103C8TX Bluepill Plus device</h1></header></div><meta itemprop="headline" content="Running OpenBLT in a STM32F103C8TX Bluepill Plus device"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-04T22:22:05-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Running OpenBLT in a STM32F103C8TX Bluepill Plus device</h1></header></div><meta itemprop="headline" content="Running OpenBLT in a STM32F103C8TX Bluepill Plus device"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h1 id="introduction">Introduction</h1>
@@ -4994,154 +5003,129 @@ The CANable device should be connected directly to the TJA1051 transceiver, whic
     <p>Disabling or removing the backdoor entry GPIO setup (e.g., PC13).<br />
 <strong>Note</strong>: The backdoor feature in this project’s architecture requires further consideration for future use. For now, simply disabling the corresponding GPIO pin configuration is sufficient. This approach avoids unnecessary complexity while maintaining compatibility with OpenBLT.</p>
   </li>
-  <li>GPIO Deinitialization.<br />
-~~~diff
-static void SystemClock_Config(void)
-{
-    <ul>
-      <li>/* Set flash latency. */</li>
-      <li>LL_FLASH_SetLatency(LL_FLASH_LATENCY_2);</li>
-      <li>if (LL_FLASH_GetLatency() != LL_FLASH_LATENCY_2)</li>
-      <li>{</li>
-      <li>/* Error setting flash latency. */</li>
-      <li>ASSERT_RT(BLT_FALSE);</li>
-      <li>
-        <h2>}</h2>
-      </li>
-      <li>/* Enable the HSE clock. */</li>
-      <li>LL_RCC_HSE_EnableBypass();</li>
-      <li>LL_RCC_HSE_Enable();</li>
-      <li>/* Wait till HSE is ready. */</li>
-      <li>while (LL_RCC_HSE_IsReady() != 1)</li>
-      <li>{</li>
-      <li>;</li>
-      <li>
-        <h2 id="-1">}</h2>
-      </li>
-      <li>/* Configure and enable the PLL. */</li>
-      <li>LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSE_DIV_1, LL_RCC_PLL_MUL_9);</li>
-      <li>LL_RCC_PLL_Enable();</li>
-      <li></li>
-      <li>/* Wait till PLL is ready. */</li>
-      <li>while (LL_RCC_PLL_IsReady() != 1)</li>
-      <li>{</li>
-      <li>;</li>
-      <li>}</li>
-      <li>LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);</li>
-      <li>LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);</li>
-      <li>LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);</li>
-      <li>LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL);</li>
-      <li>/* Wait till System clock is ready. */</li>
-    </ul>
-  </li>
+  <li>GPIO Deinitialization.</li>
 </ol>
 
-<ul>
-  <li>while (LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_PLL)</li>
-  <li>{</li>
-  <li>;</li>
-  <li>}</li>
-  <li>/* Update the system clock speed setting. */</li>
-  <li>LL_SetSystemCoreClock(BOOT_CPU_SYSTEM_SPEED_KHZ * 1000u);</li>
-  <li>RCC_OscInitTypeDef RCC_OscInitStruct = {0};</li>
-  <li>RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-+</li>
-  <li>/** Initializes the CPU, AHB and APB busses clocks</li>
-  <li>*/</li>
-  <li>RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;</li>
-  <li>RCC_OscInitStruct.HSEState = RCC_HSE_ON;</li>
-  <li>RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;</li>
-  <li>RCC_OscInitStruct.HSIState = RCC_HSI_ON;</li>
-  <li>RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;</li>
-  <li>RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;</li>
-  <li>RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;</li>
-  <li>if (HAL_RCC_OscConfig(&amp;RCC_OscInitStruct) != HAL_OK)</li>
-  <li>{</li>
-  <li>;</li>
-  <li>}</li>
-  <li>/** Initializes the CPU, AHB and APB busses clocks</li>
-  <li>*/</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK</td>
-          <td>RCC_CLOCKTYPE_SYSCLK</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>RCC_CLOCKTYPE_PCLK1</td>
-          <td>RCC_CLOCKTYPE_PCLK2;</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;</li>
-  <li>RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;</li>
-  <li>RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;</li>
-  <li>RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-+</li>
-  <li>if (HAL_RCC_ClockConfig(&amp;RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)</li>
-  <li>{</li>
-  <li>;</li>
-  <li>}
-} /<em>** end of SystemClock_Config **</em>/
-… 
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">static void SystemClock_Config(void)
+</span>{
+<span class="gd">-  /* Set flash latency. */
+-  LL_FLASH_SetLatency(LL_FLASH_LATENCY_2);
+-  if (LL_FLASH_GetLatency() != LL_FLASH_LATENCY_2)
+-  {
+-    /* Error setting flash latency. */
+-    ASSERT_RT(BLT_FALSE);
+-  }
+-
+-  /* Enable the HSE clock. */
+-  LL_RCC_HSE_EnableBypass();
+-  LL_RCC_HSE_Enable();
+-  /* Wait till HSE is ready. */
+-  while (LL_RCC_HSE_IsReady() != 1)
+-  {
+-    ;
+-  }
+-
+-  /* Configure and enable the PLL. */
+-  LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSE_DIV_1, LL_RCC_PLL_MUL_9);
+-  LL_RCC_PLL_Enable();
+- 
+-  /* Wait till PLL is ready. */
+-  while (LL_RCC_PLL_IsReady() != 1)
+-  {
+-    ;
+-  }
+-  LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
+-  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
+-  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);
+-  LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL);
+-  /* Wait till System clock is ready. */
+</span><span class="err">
+</span><span class="gd">-  while (LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_PLL)
+- {
+-    ;
+-  }
+-  /* Update the system clock speed setting. */
+-  LL_SetSystemCoreClock(BOOT_CPU_SYSTEM_SPEED_KHZ * 1000u);
+</span><span class="gi">+   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
++   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
++
++  /** Initializes the CPU, AHB and APB busses clocks 
++  */
++  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
++  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
++  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
++  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
++  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
++  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
++  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
++  if (HAL_RCC_OscConfig(&amp;RCC_OscInitStruct) != HAL_OK)
++  {
++    ;
++  }
++  /** Initializes the CPU, AHB and APB busses clocks 
++  */
++  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
++                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
++  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
++  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
++  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
++  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
++
++  if (HAL_RCC_ClockConfig(&amp;RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
++  {
++    ;
++  }
+</span>} /*** end of SystemClock_Config ***/
+... 
 #if (BOOT_COM_RS232_ENABLE &gt; 0)
-/* UART clock enable. */</li>
-  <li>LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_USART2);</li>
-  <li>LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_USART1);
-#endif 
+   /* UART clock enable. */
+<span class="gd">-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_USART2);
+</span><span class="gi">+  LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_USART1);
+</span>#endif 
 #if (BOOT_COM_CAN_ENABLE &gt; 0)
-/* CAN clock enable. <em>/
-LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_CAN1);
+/* CAN clock enable. */
+   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_CAN1);
 #endif
-/</em> Configure GPIO pin for the LED. */</li>
-  <li>GPIO_InitStruct.Pin = LL_GPIO_PIN_5;</li>
-  <li>GPIO_InitStruct.Pin = LL_GPIO_PIN_2;   //LED connected to PB2 
-GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
-GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
-GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;</li>
-  <li>LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);</li>
-  <li>LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_5);</li>
-  <li>LL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);</li>
-  <li>LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_2);
-/* Configure GPIO pin for (optional) backdoor entry input. <em>/
+/* Configure GPIO pin for the LED. */
+<span class="gd">-  GPIO_InitStruct.Pin = LL_GPIO_PIN_5;
+</span><span class="gi">+  GPIO_InitStruct.Pin = LL_GPIO_PIN_2;   //LED connected to PB2 
+</span>   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+<span class="gd">-  LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+-  LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_5);
+</span><span class="gi">+  LL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
++  LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_2);
+</span>   /* Configure GPIO pin for (optional) backdoor entry input. */
 #if (BOOT_BACKDOOR_HOOKS_ENABLE &gt; 0)
- GPIO_InitStruct.Pin = LL_GPIO_PIN_13;
- GPIO_InitStruct.Mode = LL_GPIO_MODE_FLOATING;
- LL_GPIO_Init(GPIOC, &amp;GPIO_InitStruct);
-+#endif<br />
+    GPIO_InitStruct.Pin = LL_GPIO_PIN_13;
+    GPIO_InitStruct.Mode = LL_GPIO_MODE_FLOATING;
+    LL_GPIO_Init(GPIOC, &amp;GPIO_InitStruct);
+<span class="gi">+#endif  
+</span>#if (BOOT_COM_RS232_ENABLE &gt; 0)
+   /* UART TX and RX GPIO pin configuration. */
+<span class="gd">- GPIO_InitStruct.Pin = LL_GPIO_PIN_2;
+</span><span class="gi">+ GPIO_InitStruct.Pin = LL_GPIO_PIN_9;   //TX: Serial1 PA9
+</span>  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+  LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+<span class="gd">- GPIO_InitStruct.Pin = LL_GPIO_PIN_3;
+</span><span class="gi">+ GPIO_InitStruct.Pin = LL_GPIO_PIN_10; //RX: Serial1 PA10-
+</span>  GPIO_InitStruct.Mode = LL_GPIO_MODE_FLOATING;
+  LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+#endif
+...
+<span class="p">if (BOOT_COM_CAN_ENABLE &gt; 0)
+</span>  /* CAN clock disable. */
+  LL_APB1_GRP1_DisableClock(LL_APB1_GRP1_PERIPH_CAN1);
+#endif
 #if (BOOT_COM_RS232_ENABLE &gt; 0)
-/</em> UART TX and RX GPIO pin configuration. */</li>
-  <li>GPIO_InitStruct.Pin = LL_GPIO_PIN_2;</li>
-  <li>GPIO_InitStruct.Pin = LL_GPIO_PIN_9;   //TX: Serial1 PA9
-GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
-GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
-GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);</li>
-  <li>GPIO_InitStruct.Pin = LL_GPIO_PIN_3;</li>
-  <li>GPIO_InitStruct.Pin = LL_GPIO_PIN_10; //RX: Serial1 PA10-
-GPIO_InitStruct.Mode = LL_GPIO_MODE_FLOATING;
-LL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
-#endif
-…
-if (BOOT_COM_CAN_ENABLE &gt; 0)
-/* CAN clock disable. <em>/
-LL_APB1_GRP1_DisableClock(LL_APB1_GRP1_PERIPH_CAN1);
-#endif
-#if (BOOT_COM_RS232_ENABLE &gt; 0)
- /</em> UART clock disable. */</li>
-  <li>LL_APB1_GRP1_DisableClock(LL_APB1_GRP1_PERIPH_USART2);</li>
-  <li>LL_APB2_GRP1_DisableClock(LL_APB2_GRP1_PERIPH_USART1);
-#endif
-~~~</li>
-</ul>
+   /* UART clock disable. */
+<span class="gd">-  LL_APB1_GRP1_DisableClock(LL_APB1_GRP1_PERIPH_USART2);
+</span><span class="gi">+  LL_APB2_GRP1_DisableClock(LL_APB2_GRP1_PERIPH_USART1);
+</span>#endif
+</code></pre></div></div>
 
 <h4 id="ledc">led.c</h4>
 <p>This file manages the user LED functionality to indicate the bootloader’s activity. Locate the GPIO configuration code and change it to reflect the new pin:</p>
@@ -5355,7 +5339,6 @@ Ensure the interface and baud rate settings in MicroBoot match those of the boar
 <p>Run BootCommander with RS232 parameters:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BootCommander/BootCommander <span class="nt">-s</span><span class="o">=</span>xcp <span class="nt">-t</span><span class="o">=</span>xcp_rs232 <span class="nt">-d</span><span class="o">=</span>/dev/ttyUSB0 <span class="nt">-b</span><span class="o">=</span>57600  Prog/bin/demoprog_stm32f103.srec 
 </code></pre></div></div>
-
 <h3 id="can-1">CAN</h3>
 <p>Once the hardware is properly connected, you can use <strong>BootCommander</strong> with <strong>SocketCAN</strong> to flash the application to the microcontroller via the OpenBLT bootloader.</p>
 <ol>
@@ -5375,8 +5358,8 @@ Ensure the interface and baud rate settings in MicroBoot match those of the boar
   </li>
 </ol>
 
-<h1 id="next-steps">Next Steps</h1>
-<h2 id="developing-a-can-based-application">Developing a CAN-Based Application</h2>
+<h1 id="the-next-step-developing-a-can-based-application">The next step. Developing a CAN-Based Application</h1>
+
 <p>With the OpenBLT bootloader and demo successfully running on the Bluepill Plus board, the next step is to develop a meaningful application that takes advantage of the CAN interface.</p>
 
 <p>This could include:</p>
@@ -5388,7 +5371,7 @@ Ensure the interface and baud rate settings in MicroBoot match those of the boar
 Leveraging CAN enables robust, real-time communication between devices in embedded and industrial environments. With OpenBLT handling firmware updates, you can safely and remotely deploy new features or patches.</li>
 </ul>
 
-<h1 id="source-repository">Source Repository</h1>
+<h1 id="source-repository--video-tutorial">Source Repository &amp; Video tutorial</h1>
 
 <p>The full source code for the bootloader and demo applications is available in the GitHub repository: <a href="https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT">https://github.com/razielgdn</a>.</p>
 
@@ -5398,7 +5381,7 @@ Leveraging CAN enables robust, real-time communication between devices in embedd
   <iframe src="https://www.youtube.com/embed/3xEar9Rzbeg?rel=0&amp;showinfo=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
 </div>
 </div>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-04T22:22:05-06:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-06T09:32:47-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
@@ -5431,7 +5414,25 @@ Leveraging CAN enables robust, real-time communication between devices in embedd
   });
 })();
 </script>
-</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.css');
+		window.Lazyload.js('https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: 'Ov23li1ay2o5ruMov7EU',
+				clientSecret: '9e8b305791c119712f86399008766dc3d7eb7b62',
+				repo: 'custom-application-test',
+				owner: 'razielgdn',
+				admin: ['razielgdn'],
+				id: 'openblt-bp'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
