@@ -642,8 +642,8 @@ sudo ip link set up can0
   BootCommander/BootCommander -s=xcp -t=xcp_can -d=can0 -b=500000 Prog/bin/demoprog_stm32f103.srec 
 ```    
 
-# Próximos Pasos 
-## Desarrollar una Aplicación Basada en CAN    
+# Desarrollar una Aplicación Basada en CAN,el próximo Paso
+     
 Con el *bootloader* OpenBLT y los demos  ejecutándose con éxito en la tarjeta Bluepill Plus, el próximo paso es desarrollar una aplicación significativa que aproveche la interfaz CAN.
 
 Esto podría incluir:
@@ -653,7 +653,7 @@ Esto podría incluir:
 - Un sistema distribuido (por ejemplo, controlador de acuaponía o nodos de automatización del hogar) donde varias tarjetas se comuniquen a través de un bus CAN compartido.    
 Aprovechar CAN permite una comunicación robusta y en tiempo real entre dispositivos en entornos embebidos e industriales. Con OpenBLT manejando las actualizaciones de firmware, puedes implementar de manera segura y remota nuevas funciones o parches.
 
-# Repositorio de Código Fuente
+# Repositorio de Código Fuente y video tutorial
 
 El código fuente completo para el *bootloader* y los demos está disponible en el repositorio de GitHub: [https://github.com/razielgdn](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT).    
 
