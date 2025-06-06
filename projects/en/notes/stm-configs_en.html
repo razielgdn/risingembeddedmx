@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT in Nucleo-F446RE - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>STM tools - Rising Embedded Mx</title>
 
-<meta name="description" content="Before StartAs we notice in last post only Modbus is available in the demo.To activate RS232 and CAN bus as flash sources in OpenBLT, you need to enable the ...">
-<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/open-blt"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="Instalation of STM Tools:">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/notes/stm-configs_en"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4596,45 +4596,15 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>STM tools</h1></header></div><meta itemprop="headline" content="STM tools"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="before-start">Before Start</h1>
-<p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-start">post</a> only Modbus is available in the demo.</p>
-
-<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01bltdoc.png" /></p>
-
-<p>To <strong>activate</strong> RS232 and CAN bus as flash sources in <strong>OpenBLT</strong>, you need to enable the necessary resources such as <strong>GPIOs</strong>, <strong>clock sources</strong>, and their respective <strong>drivers</strong>. The following steps document the process of performing this task using the OpenBLT demo as a base and modifying it to enable the mentioned resources.</p>
-
-<p>The custom openBLT project is stored in a Github repository: <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT">customNucleoF4-OpenBLT</a>.</p>
-
-<h1 id="enabling-usartx-and-can-gpios">Enabling USARTx and CAN GPIOs</h1>
-<p>MBRTU and RS232 use the USART1 and USART2 resources to work. To enable the use of RS232 and CAN ports, the following changes were made to the code:</p>
-
-<p>First of all the Macros to manage RS232 and CAN were added to <strong>blt_conf.h</strong> file.</p>
-<ul>
-  <li>RS232 macros.  <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01blt-conf.png" /></li>
-  <li>CAN macros. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02blt-conf.png" /></li>
-</ul>
-
-<p>These lines were taken from another project that has support for both CAN and RS232.</p>
-
-<p>Analyzing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
-
-<p>The <strong>main.c</strong> file has been updated to improve this implementation. Since a function to enable <strong>GPIOs</strong> was previously declared, the code to enable port communication has been moved there. This utilizes macros from <strong>blt_conf.h</strong> to optimize resources using conditionals to enable code sections. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main01.png" /> <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main02.png" /></p>
-
-<p>An important step to work with can is add <strong>hal</strong> driver for can on <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h</strong> and <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</strong> it can be obtained from a generic STMCubeIDE project.</p>
-
-<p>Finally the system works. See <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results">next post</a> with results.</p>
+<div class="article__content" itemprop="articleBody"><p>Instalation of STM Tools:</p>
 </div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-06T09:32:47-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></div></div></div>
 
 </div>
 
@@ -4677,7 +4647,7 @@
 				repo: 'custom-application-test',
 				owner: 'razielgdn',
 				admin: ['razielgdn'],
-				id: 'openblt-mig'
+				id: 'configuration'
 			});
 			gitalk.render('js-gitalk-container');
 		});

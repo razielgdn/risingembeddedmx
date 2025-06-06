@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT in Nucleo-F446RE - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Introduction to Yocto - Rising Embedded Mx</title>
 
-<meta name="description" content="Before StartAs we notice in last post only Modbus is available in the demo.To activate RS232 and CAN bus as flash sources in OpenBLT, you need to enable the ...">
-<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/open-blt"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="This is a very advanced topic for embedded systems, but due to stock market reasons and business strategy decisions at the company I worked for, I’m currentl...">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/yocto/intro"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4596,45 +4596,149 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Introduction to Yocto</h1></header></div><meta itemprop="headline" content="Introduction to Yocto"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="before-start">Before Start</h1>
-<p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-start">post</a> only Modbus is available in the demo.</p>
+<div class="article__content" itemprop="articleBody"><p>This is a very advanced topic for embedded systems, but due to stock market reasons and business strategy decisions at the company I worked for, I’m currently on an indefinite vacation.</p>
 
-<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01bltdoc.png" /></p>
+<p>Since developers tend to think in binary terms, I had two choices: either sit around regretting things and asking myself <em>“why me?”</em>, or take the opportunity to sharpen my skills while looking for a new job.</p>
 
-<p>To <strong>activate</strong> RS232 and CAN bus as flash sources in <strong>OpenBLT</strong>, you need to enable the necessary resources such as <strong>GPIOs</strong>, <strong>clock sources</strong>, and their respective <strong>drivers</strong>. The following steps document the process of performing this task using the OpenBLT demo as a base and modifying it to enable the mentioned resources.</p>
+<h1 id="yocto-project">Yocto Project</h1>
 
-<p>The custom openBLT project is stored in a Github repository: <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT">customNucleoF4-OpenBLT</a>.</p>
+<p>“Yocto” is the SI prefix for one of the smallest measurement scales (until 2022 when even smaller prefixes were added), meaning a multiplier of 10^-24 — that is, 0.000…1 with 24 zeros before the 1.</p>
 
-<h1 id="enabling-usartx-and-can-gpios">Enabling USARTx and CAN GPIOs</h1>
-<p>MBRTU and RS232 use the USART1 and USART2 resources to work. To enable the use of RS232 and CAN ports, the following changes were made to the code:</p>
+<p>In our context, it means something very small. The <strong>Yocto Project</strong> is a set of tools used to create fully customized Linux-based operating systems, allowing you to manipulate each component in the build process.</p>
 
-<p>First of all the Macros to manage RS232 and CAN were added to <strong>blt_conf.h</strong> file.</p>
+<p>The Yocto Project combines and maintains several key elements:</p>
+
 <ul>
-  <li>RS232 macros.  <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01blt-conf.png" /></li>
-  <li>CAN macros. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02blt-conf.png" /></li>
+  <li>The OpenEmbedded build system, made up of <strong>OpenEmbedded Core</strong> and <strong>BitBake</strong>.</li>
+  <li>A Linux embedded configuration used for testing (called <strong>Poky</strong>).</li>
+  <li>A broad testing infrastructure via an automated builder based on Buildbot.</li>
+  <li>
+    <p>Tools for efficiently working with embedded Linux:</p>
+
+    <ul>
+      <li>Automation tools for building and testing.</li>
+      <li>Processes and standards for board-level support definitions and sharing.</li>
+      <li>Tools for security analysis, license compliance, and SPDX-based Software Bill of Materials (SBoM) support.</li>
+    </ul>
+  </li>
 </ul>
 
-<p>These lines were taken from another project that has support for both CAN and RS232.</p>
+<p>There are many open source components under the Yocto Project umbrella.</p>
 
-<p>Analyzing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
+<p><strong>Poky</strong>, the reference embedded OS, is a <strong>build example</strong> that compiles a small operating system using BitBake (the build engine), OpenEmbedded-Core, and Poky’s metadata.</p>
 
-<p>The <strong>main.c</strong> file has been updated to improve this implementation. Since a function to enable <strong>GPIOs</strong> was previously declared, the code to enable port communication has been moved there. This utilizes macros from <strong>blt_conf.h</strong> to optimize resources using conditionals to enable code sections. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main01.png" /> <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main02.png" /></p>
+<p>The build system downloads Poky’s build instructions called “recipes” and “layers”. You can modify, copy, or reuse Poky’s specifications to create your own customized Embedded Linux system.</p>
 
-<p>An important step to work with can is add <strong>hal</strong> driver for can on <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h</strong> and <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</strong> it can be obtained from a generic STMCubeIDE project.</p>
+<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/YoctoLayers.png" alt="" /></p>
 
-<p>Finally the system works. See <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results">next post</a> with results.</p>
+<h2 id="building-a-custom-operating-system">Building a Custom Operating System</h2>
+
+<p>The <a href="https://docs.yoctoproject.org/overview-manual/yp-intro.html#introducing-the-yocto-project">official documentation</a> explains why Yocto is an excellent choice for creating embedded system products:</p>
+
+<ul>
+  <li>Widely adopted in the industry; many chipmakers, OS vendors, and service providers support Yocto.</li>
+  <li>Compatible with multiple architectures (Intel, AMD, MIPS, ARM, and more).</li>
+  <li>Supports a wide range of emulated devices through <strong>QEMU</strong>.</li>
+  <li>Easy to port images and code without changing development environments.</li>
+  <li>Highly flexible — a company can create a custom distribution and several tailored products from it.</li>
+  <li>Great for IoT devices, allowing inclusion of only necessary components.</li>
+  <li>Supports third-party toolchains and common architectures.</li>
+  <li>Uses a <strong>layered model</strong>, letting you add packages incrementally, reducing redundancy.</li>
+  <li>Supports partial builds, allowing you to build/rebuild individual packages.</li>
+  <li>Offers precise dependency control, ensuring high binary reproducibility.</li>
+  <li>Backed by an active community, helpful forums, and a strong ecosystem.</li>
+  <li>Provides license manifests to help track open-source license usage.</li>
+</ul>
+
+<h2 id="challenges-in-using-yocto">Challenges in Using Yocto</h2>
+
+<p>Despite its power, Yocto comes with some challenges:</p>
+
+<ul>
+  <li>Steep learning curve; many ways to accomplish the same task.</li>
+  <li>Understanding changes needed for a new design requires research.</li>
+  <li>Workflow can confuse desktop/server users used to precompiled packages; here, everything must be configured and rebuilt.</li>
+  <li><strong>Cross-building</strong> environments can be unfamiliar; testing code directly on the target board may feel faster than building and transferring it.</li>
+  <li>OpenEmbedded creates packages in standard formats (rpm, deb, ipk) — you can install these on a running system.</li>
+  <li>Initial build times are long due to compiling everything from scratch. But Yocto caches results for future builds.</li>
+</ul>
+
+<h2 id="things-i-wish-id-known">Things I Wish I’d Known</h2>
+
+<p>The official docs have a <a href="https://docs.yoctoproject.org/what-i-wish-id-known.html#what-i-wish-i-d-known-about-yocto-project">“What I Wish I’d Known”</a> section — here’s a summary:</p>
+
+<p>Using Yocto is easy — until something breaks. Without understanding how the build process works, it can feel like a black box. Here are things to know before diving in:</p>
+<ol>
+  <li>Use <strong>Git</strong> instead of tarballs to ensure updates and bug fixes.</li>
+  <li>Know the <strong>Layer Index</strong>. All official layers are listed there, including those marked as Yocto-compatible.</li>
+  <li>Use BSP layers from vendors (Intel, NXP, Raspberry Pi, etc.) as a base; don’t reinvent the wheel.</li>
+  <li>Avoid putting everything in one layer. Use logical separation (BSP, GUI, distro config, apps, etc.) for maintainability.</li>
+  <li>Never ever modify the <strong>Poky</strong> layer — changes will be lost in the next release.</li>
+  <li>
+    <p>Use the <a href="https://docs.yoctoproject.org/singleindex.html#document-kernel-dev/4.0.16/4.3.999/index">All-in-One Mega Manual</a> instead of outdated Google results.</p>
+  </li>
+  <li>Learn the build process stages:
+    <ol>
+      <li><strong>Fetch</strong> – download source code.</li>
+      <li><strong>Extract</strong> – unpack it.</li>
+      <li><strong>Patch</strong> – apply fixes and features.</li>
+      <li><strong>Configure</strong> – set environment params.</li>
+      <li><strong>Build</strong> – compile and link.</li>
+      <li><strong>Install</strong> – place files in expected locations.</li>
+      <li><strong>Package</strong> – prepare files for deployment.
+Each step helps debug issues when something goes wrong.</li>
+    </ol>
+
+    <p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yp-hiw.png" alt="" />    w</p>
+  </li>
+  <li>You can generate dependency graphs (<code class="language-plaintext highlighter-rouge">-g</code> option) to troubleshoot build problems.</li>
+  <li>Understand the “magic” folder names in <code class="language-plaintext highlighter-rouge">tmp/work</code>. Use <code class="language-plaintext highlighter-rouge">-u</code> to get UI feedback in graphical or text mode.</li>
+  <li>You can build more than just images — individual recipes or packages too. Use the dev shell.</li>
+  <li>Clarify the difference: <strong>Recipes</strong> contain build instructions; <strong>Packages</strong> are the output.</li>
+  <li>Know what’s included in your root filesystem.</li>
+  <li>Learn to write custom recipes.</li>
+  <li>An embedded developer using Yocto should be able to:
+    <ul>
+      <li>Navigate corporate proxies.</li>
+      <li>Add packages to an image.</li>
+      <li>Distinguish recipes from packages.</li>
+      <li>Build a package and understand why.</li>
+      <li>Identify which files/packages belong to what.</li>
+      <li>Add SSH support to images.</li>
+      <li>Understand recipe anatomy.</li>
+      <li>Create and manage layers.</li>
+      <li>Find recipes in OpenEmbedded.</li>
+      <li>Know the difference between machine and distro configurations.</li>
+      <li>Use BSPs for your hardware.</li>
+      <li>Configure distro features.</li>
+      <li>Run and troubleshoot tasks individually.</li>
+      <li>Use devtools to simplify work.</li>
+      <li>Speed up builds using shared downloads and caches.</li>
+      <li>Generate and read dependency graphs.</li>
+      <li>Understand the BitBake environment.</li>
+      <li>Build SDK extensions.</li>
+    </ul>
+  </li>
+  <li>Depending on your interests, you may want to:
+    <ul>
+      <li>Read the <strong>Yocto Development Tasks Manual</strong>.</li>
+      <li>Explore the <strong>Application Development Manual</strong> and <strong>eSDK</strong>.</li>
+      <li>Learn <strong>Kernel Development</strong> via its dedicated manual.</li>
+      <li>Learn about <strong>Board Support Packages</strong> (BSPs).</li>
+      <li>Use <strong>Toaster</strong>, a web interface for the Yocto build system.</li>
+      <li>Explore <strong>VS Code or Eclipse</strong> plugins.</li>
+      <li>Keep the <strong>Yocto Project Reference Manual</strong> handy.</li>
+    </ul>
+  </li>
+</ol>
 </div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-06T09:32:47-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></div></div></div>
 
 </div>
 
@@ -4677,7 +4781,7 @@
 				repo: 'custom-application-test',
 				owner: 'razielgdn',
 				admin: ['razielgdn'],
-				id: 'openblt-mig'
+				id: 'yocto'
 			});
 			gitalk.render('js-gitalk-container');
 		});

@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>OpenBLT in Nucleo-F446RE - Rising Embedded Mx</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Build an Embedded Linux Image for Rasperry Pi 4 with Yocto Project - Rising Embedded Mx</title>
 
-<meta name="description" content="Before StartAs we notice in last post only Modbus is available in the demo.To activate RS232 and CAN bus as flash sources in OpenBLT, you need to enable the ...">
-<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/open-blt"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
+<meta name="description" content="It is said that the best way to learn to program is by programming, and the same principle holds true for operating systems. Therefore, in these chapters, we...">
+<link rel="canonical" href="https://razielgdn.github.io/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi"><link rel="alternate" type="application/rss+xml" title="Rising Embedded Mx" href="/risingembeddedmx/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/risingembeddedmx/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/risingembeddedmx/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/risingembeddedmx/assets/favicon-16x16.png"><link rel="manifest" href="/risingembeddedmx/assets/site.webmanifest"><link rel="mask-icon" href="/risingembeddedmx/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/risingembeddedmx/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/risingembeddedmx/assets/browserconfig.xml">
 
@@ -274,7 +274,7 @@
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
+      <div class="page__sidebar d-print-none"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/risingembeddedmx/projects/es/embedded-topics/embedded-devDef">Español</a></li><li class="toc-h1">OpenBlt project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/open-blt">OpenBLT in Nucleo-F446RE</a></li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></li><li class="toc-h1">Bluepill Plus: STM32F103C8TX</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/1-openblt/openblt-bluepill">Running OpenBLT</a></li><li class="toc-h1">8 bit AVR MCUs Section</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/2-avr-section/build-and-flash">Bluild and Flash AVR projects in Linux</a></li><li class="toc-h1">Yocto project</li><li class="toc-h2"><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></li><li class="toc-h2 active"><a href="/risingembeddedmx/projects/en/yocto/intro/build-raspberrypi">Minimal image for a Rasperrypi</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
@@ -4596,45 +4596,97 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>OpenBLT in Nucleo-F446RE</h1></header></div><meta itemprop="headline" content="OpenBLT in Nucleo-F446RE"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Build an Embedded Linux Image for Rasperry Pi 4 with Yocto Project</h1></header></div><meta itemprop="headline" content="Build an Embedded Linux Image for Rasperry Pi 4 with Yocto Project"><meta itemprop="author" content="Octavio Guendulain"/><meta itemprop="datePublished" content="2025-06-06T09:32:47-06:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h1 id="before-start">Before Start</h1>
-<p>As we notice in last <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-start">post</a> only Modbus is available in the demo.</p>
+<div class="article__content" itemprop="articleBody"><p>It is said that the best way to learn to program is by programming, and the same principle holds true for operating systems. Therefore, in these chapters, we will be working with a new Embedded Linux image for <strong>Raspberry Pi 4</strong>. The documentation I am following corresponds to version 4.0.16 (<strong>kirkstone</strong>), which I chose arbitrarily.</p>
 
-<p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01bltdoc.png" /></p>
+<p>The first step is to configure our operating system as a host to compile and work with Yocto Project.<br />
+To begin, we must work in Linux, either on a virtual machine or on a PC with a Linux distribution installed “natively.” I strongly discourage using a virtual machine, as we will need to push the processor and RAM to the limits of our machines.</p>
 
-<p>To <strong>activate</strong> RS232 and CAN bus as flash sources in <strong>OpenBLT</strong>, you need to enable the necessary resources such as <strong>GPIOs</strong>, <strong>clock sources</strong>, and their respective <strong>drivers</strong>. The following steps document the process of performing this task using the OpenBLT demo as a base and modifying it to enable the mentioned resources.</p>
-
-<p>The custom openBLT project is stored in a Github repository: <a href="https://github.com/razielgdn/customNucleoF4-OpenBLT">customNucleoF4-OpenBLT</a>.</p>
-
-<h1 id="enabling-usartx-and-can-gpios">Enabling USARTx and CAN GPIOs</h1>
-<p>MBRTU and RS232 use the USART1 and USART2 resources to work. To enable the use of RS232 and CAN ports, the following changes were made to the code:</p>
-
-<p>First of all the Macros to manage RS232 and CAN were added to <strong>blt_conf.h</strong> file.</p>
+<p>The Yocto Project documentation recommends using a tested distribution, so according to the list available as of this writing (March 2024), it should be one of the following:</p>
 <ul>
-  <li>RS232 macros.  <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/01blt-conf.png" /></li>
-  <li>CAN macros. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/02blt-conf.png" /></li>
+  <li>Ubuntu 20.04 (LTS)</li>
+  <li>Ubuntu 22.04 (LTS)</li>
+  <li>Fedora 38</li>
+  <li>Debian GNU/Linux 11.x (Bullseye)</li>
+  <li>AlmaLinux 8</li>
 </ul>
 
-<p>These lines were taken from another project that has support for both CAN and RS232.</p>
+<p>In my case, I used <strong>Ubuntu 22.04</strong>, although I also used <strong>Fedora 39</strong>, and it worked. First, we must update our system and install various software packages and tools to enable us to work. So, in our terminal, we execute the installation with the following command:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev python3-subunit mesa-common-dev zstd liblz4-tool file locales libacl1
+</code></pre></div></div>
 
-<p>Analyzing the code I noticed that the parameters for USART1 &amp; USART2 were initialized both in the main.c file and again in the rs232.c or mbrtu.c files. only the gpios and clock need to be enabled.</p>
-
-<p>The <strong>main.c</strong> file has been updated to improve this implementation. Since a function to enable <strong>GPIOs</strong> was previously declared, the code to enable port communication has been moved there. This utilizes macros from <strong>blt_conf.h</strong> to optimize resources using conditionals to enable code sections. <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main01.png" /> <br />
-<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/main02.png" /></p>
-
-<p>An important step to work with can is add <strong>hal</strong> driver for can on <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h</strong> and <strong>Boot/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</strong> it can be obtained from a generic STMCubeIDE project.</p>
-
-<p>Finally the system works. See <a href="https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results">next post</a> with results.</p>
+<p>For this tutorial, as it might be called, we will start by compiling a minimal system for Raspberry Pi, following the steps in the manual and adapting them to our purposes:</p>
+<ol>
+  <li>Create a directory where we will store the resources we’ll work with. In my case, I chose to have a directory for Yocto and, within it, one for the project.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> ~/yocto   
+<span class="nv">$ </span><span class="nb">cd</span> ~/yocto     
+<span class="nv">$ </span><span class="nb">mkdir </span>poky-kirkstone    
+<span class="nv">$ </span><span class="nb">cd </span>poky-kirkstone   
+</code></pre></div>    </div>
+  </li>
+  <li>We proceed to clone Yocto Project. As mentioned earlier, we will use the kirkstone version. So, using Git:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone <span class="nt">-b</span> kirkstone git://git.yoctoproject.org/poky
+</code></pre></div>    </div>
+    <p>This command downloads the metadata and tools to use the poky distribution. Wait for it to complete.</p>
+  </li>
+  <li>Now we download the Raspberry Pi layer in its kirkstone version.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone <span class="nt">-b</span> kirkstone git://git.yoctoproject.org/meta-raspberrypi
+</code></pre></div>    </div>
+  </li>
+  <li>The OpenEmbedded tools, which are found in their own layer.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone <span class="nt">-b</span> kirkstone git://git.openembedded.org/meta-openembedded
+</code></pre></div>    </div>
+  </li>
+  <li>To perform an initial compilation, we can set up the working environment, which downloads the tools and necessary components to build with Yocto Project.   <br />
+<code class="language-plaintext highlighter-rouge">source oe-init-build-env &lt;build&gt;</code>
+    <ul>
+      <li><strong>oe-init-build-env</strong> is a script that initializes the working environment.</li>
+      <li>**<build>** is the name of the folder where all elements—source code, packages, makefiles, libraries, etc.—and the created image will be stored. For this tutorial:
+</build>        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">source </span>oe-init-build-env build-RPI 
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Now comes the part where we get our hands a bit dirty: adding the Raspberry Pi layer and configuring the compilation parameters.
+    <ul>
+      <li>Add the Raspberry Pi layer. Open the file <strong>conf/bblayers.conf</strong> and add the line: <strong>/home/razielgdn/yocto/poky-kirkstone/meta-raspberrypi \</strong> <br />
+<img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto01.png" alt="" /></li>
+      <li>Configure the parameters in conf/local.conf. Find the architecture (machine) the image will run on and update it to: “raspberrypi4-64”. 
+ <img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto02.png" alt="" /></li>
+      <li>At the end of the file, you can add the number of threads to use and the number of tasks that can be compiled in parallel.
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  BB_NUMBER_THREADS ?= "8"
+  PARALLEL_MAKE ?= "-j 8"
+</code></pre></div>        </div>
+        <p><img src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto03.png" alt="" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>In my case, I prefer to download the packages first and then start the compilation. To perform the fetch tasks, run the following command:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bitbake <span class="nt">--runall</span> fetch core-image-minimal   
+</code></pre></div>    </div>
+  </li>
+  <li>To finalize, we proceed with the compilation. For a first example:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bitbake core-image-minimal
+</code></pre></div>    </div>
+  </li>
+  <li>Now we wait for the system to complete the compilation, which will take as long as necessary.</li>
+  <li>Flash the software onto an SD card to run it on our Raspberry Pi.
+    <ul>
+      <li>The image is located at <strong>~/yocto/poky-kirkstone/build-RPI/tmp/deploy/images/raspberrypi4-64</strong>.</li>
+      <li>You can use any flasher like <strong>balenaEtcher</strong> or the <strong>dd</strong> command:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>risingembeddedmx-image-raspberrypi4-64.rpi-sdimg <span class="nv">of</span><span class="o">=</span>/dev/sdc <span class="nv">status</span><span class="o">=</span>progress <span class="nv">bs</span><span class="o">=</span>1M
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
 </div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2025-06-06T09:32:47-06:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-start">First steps with openblt</a></div><div class="next"><span>NEXT</span><a href="/risingembeddedmx/projects/en/1-openblt/openblt-results">Usage of the custom OpenBLT on the Nucleo-F446RE board</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/risingembeddedmx/projects/en/yocto/intro">Introduction to yocto</a></div></div></div>
 
 </div>
 
@@ -4677,7 +4729,7 @@
 				repo: 'custom-application-test',
 				owner: 'razielgdn',
 				admin: ['razielgdn'],
-				id: 'openblt-mig'
+				id: 'Yocto-RPI-en'
 			});
 			gitalk.render('js-gitalk-container');
 		});
