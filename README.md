@@ -26,16 +26,6 @@ This blog follows a "learning in public" approach - you'll see the complete deve
 - Resource recommendations and lessons learned
 - Personal reflections on the engineering journey
 
-## About the Author
-
-I'm Octavio Raziel, an embedded software engineer from Mexico with experience in:
-- Microcontroller programming (STM32, AVR)
-- Bootloader development and implementation
-- C/C++ embedded programming
-- Hardware-software integration
-
-Currently based in Ocotlán de Morelos, Oaxaca, I'm passionate about embedded systems and sharing knowledge with the community.
-
 ## Technical Details
 
 - **Built with**: Jekyll static site generator
@@ -49,13 +39,42 @@ Currently based in Ocotlán de Morelos, Oaxaca, I'm passionate about embedded sy
 
 ## Repository Structure
 
+```
+risingembeddedmx/
+├── _data/            # Site configuration and data files
+├── _includes/        # Reusable template components
+├── _layouts/         # Page layout templates
+├── _sass/            # Custom SCSS/CSS styles
+├── about/            # About pages with multi-language support
+│   ├── en/           # English version
+│   └── es/           # Spanish version
+├── assets/           # Images, documents, and static files
+├── contents/         # Organized content collections
+│   ├── _3dprinting/  # 3D printing related content
+│   ├── _data/        # Content-specific data files
+│   ├── _posts/       # Blog posts in Markdown format
+│   └── _projects/    # Individual project pages and tutorials
+│       ├── en/       # English project pages
+│       └── es/       # Spanish project pages
+├── _config.yml       # Jekyll site configuration
+├── Dockerfile        # Docker container configuration
+├── Gemfile           # Ruby dependencies
+└── README.md         # This file
+```
 
 ### Key Directories
-- **`_posts/`**: Blog entries documenting project progress, technical insights, and learning experiences
-- **`projects/`**: Dedicated pages for major projects (OpenBLT implementations, STM32 tutorials, etc.)
+- **`contents/`**: Main content organization hub
+  - **`_posts/`**: Blog entries documenting project progress, technical insights, and learning experiences
+  - **`_projects/`**: Dedicated project pages with bilingual support (English/Spanish)
+  - **`_3dprinting/`**: 3D printing projects and tutorials
+  - **`_data/`**: Content-specific configuration and data
+- **`about/`**: Personal and professional information with bilingual support (English/Spanish)
 - **`assets/`**: All static content including circuit diagrams, code screenshots, and project photos
-- **`about/`**: Personal and professional information
-  
+
+### Development Environment
+- **`Dockerfile`**: Containerized development environment for consistent builds
+- **`Gemfile`**: Ruby gem dependencies for Jekyll and plugins
+
 ## Development
 
 ### Running Locally
@@ -73,7 +92,11 @@ JEKYLL_ENV=production bundle exec jekyll build
 ### Contributing
 This is a personal blog, but if you notice any issues or have suggestions, feel free to open an issue or reach out!
 
+## Connect
+
+- **GitHub**: [@razielgdn](https://github.com/razielgdn)
+- **LinkedIn**: [Professional Profile](https://https://www.linkedin.com/in/octaviorazielgdn/) 
 
 ---
 
-*"Documenting the journey through embedded systems, one project at a time."*
+*"Every line of embedded code I write brings me one step closer to my own piece of land."*
