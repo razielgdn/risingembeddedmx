@@ -52,15 +52,15 @@ $ git clone -b kirkstone git://git.openembedded.org/meta-openembedded
 ```
 6. Now comes the part where we get our hands a bit dirty: adding the Raspberry Pi layer and configuring the compilation parameters.  
   - Add the Raspberry Pi layer. Open the file **conf/bblayers.conf** and add the line: **/home/razielgdn/yocto/poky-kirkstone/meta-raspberrypi \\**   
-![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto01.png)     
+![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/yp/yocto01.png)     
   - Configure the parameters in conf/local.conf. Find the architecture (machine) the image will run on and update it to: "raspberrypi4-64". 
- ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto02.png)       
+ ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/yp/yocto02.png)       
   - At the end of the file, you can add the number of threads to use and the number of tasks that can be compiled in parallel.   
   ``` 
   BB_NUMBER_THREADS ?= "8"
   PARALLEL_MAKE ?= "-j 8"
   ```  
-![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yocto03.png)    
+![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/yp/yocto03.png)    
 7. In my case, I prefer to download the packages first and then start the compilation. To perform the fetch tasks, run the following command:
 ```bash
 $ bitbake --runall fetch core-image-minimal   

@@ -29,7 +29,7 @@ Poky el "embedded OS" (sistema embebido empotrado) de referencia es en un BUILD 
 
 El sistema de compilacion se descarga con "archivos" de instrucciones de compilación de Poky llamados "recipes" y "layers". Tu puedes modificar, copiar o utilizar las especificaciones de Poky de la forma que necesites para crear un Sistema Embedded Linux personalizado.   
 
-![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/YoctoLayers.png)
+![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/yp/YoctoLayers.png)
 
 ## Construir un sistema operativo a la medida
 La [documentacion oficial](https://docs.yoctoproject.org/overview-manual/yp-intro.html#introducing-the-yocto-project) de yocto refiere al por que es una muy buena alternativa para la creacion de productos basados en sistemas embebidos. 
@@ -77,7 +77,7 @@ Usar yocto es fácil hasta que algo sale mal. Sin un buen entendimiento de como 
    6. **Install** (instala) – copia los archivos a los lugares indicados.   
    7. **Package** (empaqueta) – agrupa los archivos para la instalación.    
  Durante el proceso **fetch** probablemente no encontremos código, cuando sucede "extract" es posible que exista un archivo .zip no valido o algún problema similar. En otras palabras, la función de un punto particular del proceso te dan una idea de que es lo que podría estar fallando.   
-  ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yp-hiw.png)
+  ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/yp/yp-hiw.png)
 
 8. Es posible generar un gráfico de dependencias que muestra las relaciones entre recipes, tasks and targets. Se puede utilizar la opción '-g' para generar el gráfico. Esto es muy útil cuando una compilación no se efectúa correctamente, dado que permite visualizar que paquetes causan problemas. Para mejor información ver la sección del Manual de bitbake. 
 9. Para decodificar los nombres "magic" de las carpetas en tmp/work: El proceso de compilación hace la búsqueda de paquetes, descomprime, preprocesa y

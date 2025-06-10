@@ -31,7 +31,7 @@ There are many open source components under the Yocto Project umbrella.
 
 The build system downloads Poky's build instructions called "recipes" and "layers". You can modify, copy, or reuse Poky’s specifications to create your own customized Embedded Linux system.
 
-![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/YoctoLayers.png)
+![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/yp/YoctoLayers.png)
 
 ## Building a Custom Operating System
 
@@ -83,7 +83,7 @@ Using Yocto is easy — until something breaks. Without understanding how the bu
    7. **Package** – prepare files for deployment.
    Each step helps debug issues when something goes wrong.
 
-   ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/yp/yp-hiw.png)    w
+   ![](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/yp/yp-hiw.png)    w
 8. You can generate dependency graphs (`-g` option) to troubleshoot build problems.
 9. Understand the "magic" folder names in `tmp/work`. Use `-u` to get UI feedback in graphical or text mode.
 10. You can build more than just images — individual recipes or packages too. Use the dev shell.

@@ -89,10 +89,10 @@ During this time, the work involved providing technical support in the area of N
 
 # Education
 ## [Universidad Tecnológica de la Mixteca](https://www.utm.mx/)
-Huajuapan de León, Oaxaca - Electronic Engineer [Bachelor's degree](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/titulo.png).    
+Huajuapan de León, Oaxaca - Electronic Engineer [Bachelor's degree](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/titulo.png).    
 AUGUST 2010 - JULY 2015   
-  - CENEVAL high performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/ceneval.png).   
-  - Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/personalDocuments/cedula.png)    
+  - CENEVAL high performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/ceneval.png).   
+  - Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/cedula.png)    
 
 ## Courses
 

@@ -75,18 +75,18 @@ El paquete completo de OpenBLT está disponible en la [página de descargas de F
 5. Actualiza las definiciones del microcontrolador: 
    Usa un proyecto existente de STM32CubeIDE dirigido al Micro **STM32F103C8Tx**. Reemplaza su script del linker y el startup con los correspondientes del micro en el proyecto.
    1. Crea un nuevo proyecto en STM32CubeIDE, ve a **File > New > STM32 Project** 
-      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject01.png"/>      
+      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/openblt/newProject01.png"/>      
    2. Selecciona el MCU.
       - En la pestaña de selección de MCU/MPU, busca y selecciona STM32F103C8T6.
       - Nombra tu proyecto y haz clic en Finalizar.    
-      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject02.png"/>    
+      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/openblt/newProject02.png"/>    
    3. Configura los ajustes de periféricos 
       - Abre el archivo .ioc de tu proyecto.
       - Habilita los siguientes periféricos:
           - Bus CAN
           - USART1
           - RCC: Configura para usar HSE (Fuente de Reloj Externa)     
-      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject03.png"/>    
+      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/openblt/newProject03.png"/>    
 
    4. Configura el reloj del sistema.
       1. Abre la pestaña de Configuración de Reloj.
@@ -95,7 +95,7 @@ El paquete completo de OpenBLT está disponible en la [página de descargas de F
         - **PLLMUL** a **×9**
         - **System Clock Mux** a **PLLCLK**
         - **APB1** Prescaler a **/2**    
-      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/newProject04.png"/>      
+      <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/openblt/newProject04.png"/>      
 
    5. Reemplaza los archivos de inicio en el proyecto OpenBLT
       - Elimina los archivos predeterminados del demo de  OpenBLT:
@@ -182,7 +182,7 @@ Para habilitar la comunicación a través de las interfaces **UART** y **CAN** c
 
 ### Consideraciones de hardware
 La tarjeta original **NUCLEO-STM32F103RB** usa **USART2** para la comunicación serial, con **USART2 RX** en **Port A3** y **USART2 TX** en **Port A2**. También usa **CAN1** para la comunicación **CAN**, típicamente remapeada a **CAN_RX** en **Port B8** y **CAN_TX** en **Port B9** mediante la función de remapeo alternativo. Además, el **LED** de usuario en la tarjeta **NUCLEO** está conectado a **Port A5**.     
- <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/schematic-f103c8t6.jpg"/>   
+ <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/openblt/schematic-f103c8t6.jpg"/>   
  
 #### UART
 Para este proyecto, la comunicación UART usará **USART1**, que está mapeada a:
@@ -203,7 +203,7 @@ Para la comunicación **CAN** en la tarjeta Bluepill Plus, se usa **CAN1**. El m
 
 ### Conexiones de hardware
 La imagen presenta el sistema.    
-  <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/site/assets/images/openblt/system01.png"/>    
+  <img  src="https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/openblt/system01.png"/>    
 El sistema está compuesto por los siguientes componentes:   
 - Tarjeta Bluepill Plus   
   Una versión modificada de la clásica tarjeta Bluepill STM32F103C8T6, equipada con un sitema  de energía más estable.
