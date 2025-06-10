@@ -155,8 +155,6 @@ highlighter : rouge
 permalink   : date
 
 exclude:
-  - CHANGELOG.md
-  - HOW_TO_RELEASE.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -168,10 +166,7 @@ exclude:
   - package.json
   - Dockerfile
   - /run-once.sh  
-  - /publish.sh
-  - /node_modules
-  - /screenshots 
-  - /tools
+    
   - blog.md
 
 collections_dir: about
@@ -236,8 +231,7 @@ defaults:
 
 ## 3d printing zone
   - scope:
-      path: "_3dprinting"  
-      #type: posts
+      path: "_3dprinting"       
     values:      
       nav_key: 3dprintingZone
       show_date: false  
