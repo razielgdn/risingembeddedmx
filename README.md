@@ -49,22 +49,6 @@ Currently based in Ocotlán de Morelos, Oaxaca, I'm passionate about embedded sy
 
 ## Repository Structure
 
-```
-risingembeddedmx/
-├── _posts/           # Blog posts in Markdown format
-├── _data/            # Site configuration and data files
-├── _includes/        # Reusable template components
-├── _layouts/         # Page layout templates
-├── _sass/            # Custom SCSS/CSS styles
-├── assets/           # Images, documents, and static files
-│   ├── images/       # Project images and diagrams
-│   └── documents/    # PDFs, datasheets, and resources
-├── projects/         # Individual project pages and tutorials
-├── about/            # About page and personal information
-├── _config.yml       # Jekyll site configuration
-├── Gemfile           # Ruby dependencies
-└── README.md         # This file
-```
 
 ### Key Directories
 - **`_posts/`**: Blog entries documenting project progress, technical insights, and learning experiences

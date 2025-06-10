@@ -8,6 +8,9 @@ tags:
   - free hardware
 ---
 
+Well, it's been almost a month since I returned to my beloved Monterrey, in a new stage of my life, which is moving in with my girlfriend here. It hasn't been that easy but it does have its challenges, especially making decisions, agreeing on times and spaces, etc., etc. But that's not what interests us in this blog. So while a good job comes along, I've been polishing my skills as a developer and we have a new project.
+
+# OpenBLT, CAN and UART working in a Bluepill. 
 I’m back at it—programming, writing code, and, well… negotiating time with my girlfriend (she’s not a huge fan of how many hours I spend on this stuff 😅). Anyway, over the past few weeks, I’ve been working on adapting OpenBLT to a Bluepill Plus board.
 
 It wasn’t exactly a walk in the park. I hadn’t touched microcontrollers in over five months, so getting back into the groove took some effort. The bootloader migration itself only took about three or four days to get up and running, but documenting everything? That’s where I really struggled. I felt rusty—and honestly, even remembering how to use Jekyll to write this blog was a small adventure in itself.

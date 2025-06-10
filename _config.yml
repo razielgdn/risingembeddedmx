@@ -169,22 +169,12 @@ exclude:
     
   - blog.md
 
-collections_dir: about
-collections:
-  about:
-  output: true
-
-#init projects page  
-collections_dir: projects
+collections_dir: contents
 collections:
   projects:
     output: true
-#end projects page
-
-#init 3dprinter zone      
   3dprinting:
     output: true    
-#end 3dprinter zone 
 
 defaults:
   - scope:
@@ -239,9 +229,7 @@ defaults:
         nav: navPrinting   
       aside:
         toc: true   
-## end 3dprinting zone     
-
-## Init notes
+#  notes
 #   - scope:
 #       path: "_projects/en/notes"
 #     values:
@@ -269,10 +257,7 @@ defaults:
 #       show_edit_on_github: false
 # #      show_date: false
       # lightbox: true
-
-## End notes
-
-## init about
+#  about
   - scope:
       path: "about/en"
     values:
@@ -300,7 +285,6 @@ defaults:
       lang: es_MX
       show_edit_on_github: false
       show_date: false    
-## end about
 
 ## => Plugins
 ##############################
