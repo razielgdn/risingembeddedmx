@@ -41,6 +41,7 @@ RUN sudo apt-get -y install git \
     libgdbm6 \
     libgdbm-dev \
     libdb-dev \
+    nano \
     apt-utils 
     
 RUN sudo apt-get -y upgrade    

@@ -1,5 +1,6 @@
 ---
 title: Welcome to the jungle!
+layout: article
 tags: 
   - blog  
 ---
