@@ -13,15 +13,28 @@ Las respuestas a estas preguntas tal vez no sea la mas completa, por experiencia
 
 # Preguntas relacionadas al Lenguaje C
 - ¿Qué es una **keyword**?
-- ¿Qué es el keyword **volatile** y donde/ para qué se utiliza?
+  Una keyword (palabra clave o palabra reservada) **es una palabra que tiene un significado especial predefinido en el lenguaje de programación C** y no puede ser utilizada como identificador (nombre de variable, función, etc.). Estas palabras están reservadas por el compilador para realizar funciones específicas del lenguaje.
+  Ejemplos de keywords en C:
+  - Tipos de datos: **int**, **char**, **float**, **double**, **void**
+  - Modificadores: **static**, **const**, **volatile**, **extern**
+  - Control de flujo: **if**, **else**, **for**, **while**, **switch**, **case**
+  - Otros: **struct**, **union**, **enum**, **typedef**, **sizeof**
+
+- ¿Qué es el keyword **volatile** y donde/ para qué se utiliza?   
+
+  La palabra clave **volatile** en C indica al compilador que el valor de una variable puede cambiar de forma inesperada, evitando optimizaciones que asumen que el valor es estable. Se usa en sistemas embebidos para variables accedidas por hardware, interrupciones o múltiples hilos. Por ejemplo, una variable mapeada a un registro de hardware (como el registro de estado UART en STM32) se declara `volatile` para garantizar que el compilador lea su valor cada vez en lugar de almacenarlo en caché. Uso: `volatile uint32_t *reg = (uint32_t *)0x40021000;`.
+
 - ¿Para que se usa la palabra reservada **static**? ¿que pasa si se le pone a una variable? ¿qué pasa si la lleva una función?
+  La palabra reservada **static** en C define la duración de almacenamiento y el enlace.  
+    - **Variable**: Una variable `static` conserva su valor entre llamadas a funciones (ámbito local) o restringe su visibilidad al archivo (ámbito global). Una variable local `static` se inicializa una vez y persiste durante la vida del programa. Una variable global `static` solo es visible dentro del archivo. Ejemplo: `static int counter = 0;` en una función mantiene su valor entre llamadas.  
+    - **Función**: Una función `static` solo es visible dentro del archivo, evitando el enlace externo. Esto es útil para funciones auxiliares en proyectos embebidos, como en mi firmware para AVR. Ejemplo: `static void update_led(void);`.
+
 - ¿Cuál es el tamaño del dato **int**? (spoiler depende de la **arquitectura**)
 - ¿Para qué se usa la keyword **typedef**?
 - ¿Qué hace el modificador **const**?
 - ¿Qué es un **apuntador** en **C**?
 - ¿Se puede hacer un apuntador **const**, **volatile**, **static**...?
 - ¿Qué hace la palabra **static** en una variable **global** y en una **local**?
-  static es un espeficador de tipo de almacenamiento, lo que tiene distintos significados dependiendo del contexto. En una función la variable conserva su valor entre cada llamada de la función. Fuera de funciones restringe la visibilidad de la variable al archivo donde se utiliza. 
 
 - 
 - ¿Para que se utiliza la palabra reservada **struct**?
@@ -52,38 +65,24 @@ Las respuestas a estas preguntas tal vez no sea la mas completa, por experiencia
 - ¿Qué hace el **ensamblador**?
 - ¿Qué hace el **linker**?
 
- 1. Pre-Processing
-
-    Pre-processing is the first step in the compilation process in C performed using the pre-processor tool (A pre-written program invoked by the system during the compilation). All the statements starting with the # symbol in a C program are processed by the pre-processor, and it converts our program file into an intermediate file with no # statements. Under following pre-processing tasks are performed :
-    
-    i. Comments Removal
-    Comments in a C Program are used to give a general idea about a particular statement or part of code actually, comments are the part of code that is removed during the compilation process by the pre-processor as they are not of particular use for the machine. The comments in the below program will be removed from the program when the pre-processing phase completes.
-
-    ii. Macros Expansion
-    Macros are some constant values or expressions defined using the #define directives in C Language. A macro call leads to the macro expansion. The pre-processor creates an intermediate file where some pre-written assembly level instructions replace the defined expressions or constants (basically matching tokens). To differentiate between the original instructions and the assembly instructions resulting from the macros expansion, a '+' sign is added to every macros expanded statement.
-    
-    iii. File inclusion
-    File inclusion in C language is the addition of another file containing some pre-written code into our C Program during the pre-processing.
-
-    iv. Conditional Compilation
-    The preprocessor replaces all the conditional compilation directives with some pre-defined assembly code and passes a newly expanded file to the compiler.
-
-    Now let's see the below figure that shows how a pre-processor converts our source code file into an intermediate file. Intermediate file has an extension of .i, and it is the expanded form of our C program containing all the content of header files, macros expansion, and conditional compilation.
-
-    2. Compiling
-
-    Compiling phase in C uses an inbuilt compiler software to convert the intermediate (.i) file into an Assembly file (.s) having assembly level instructions (low-level code). To boost the performance of the program C compiler translates the intermediate file to make an assembly file.
-
-    3. Assembling
-
-    Assembly level code (.s file) is converted into a machine-understandable code (in binary/hexadecimal form) using an assembler. Assembler is a pre-written program that translates assembly code into machine code. It takes basic instructions from an assembly code file and converts them into binary/hexadecimal code specific to the machine type known as the object code.
-
-    The file generated has the same name as the assembly file and is known as an object file with an extension of .obj in DOS and .o in UNIX OS.
-
-    4. Linking
-    
-    Linking is a process of including the library files into our program. Library Files are some predefined files that contain the definition of the functions in the machine language and these files have an extension of .lib. Some unknown statements are written in the object (.o/.obj) file that our operating system can't understand. You can understand this as a book having some words that you don't know, and you will use a dictionary to find the meaning of those words. Similarly, we use Library Files to give meaning to some unknown statements from our object file. The linking process generates an executable file with an extension of .exe in DOS and .out in UNIX OS.
-
+ 1. Pre-procesado
+    El preprocesado es el primer paso en una compilación, en Lenguaje C es realizado por la herramienta del pre-procesador (un programa preescrito, invocado por el sistema durante la compilación) todas las sentencias que comienzan con el simbolo '#' son procesados y se crea un archivo intermedcio sin estas sentencias, las tares del preprocesado son las siguiente:
+    1. Eliminación los comentarios.
+       Los comentarios son usados en el codigo para dar una idea particulas acerca de las sentencias en la parte del código particular o de una seccion completa. Los comentarios se eliminan por el preprocesador porque no son de uso para la máquina. 
+    2. Expansión de Macros.
+       Las macros son algunos valores constatnes o expresiones definidas usando las directivas #define en lenguaje C. Una llamada a macro consduce a la expansión de la macro. El preprocesador crea un archivo intermedio donde algunas instrucciones pre-escritas a nivel de ensamblador reemplanan las expresiones constantes definidas.  Para diferenciar entre las instrucciones originales y las de ensamblador resultante de la expansión de macros se añade un signo '+' a cada sentencia expandida de macros.     
+    3. Inclusion de archivos.
+       La inclusión de archivos en lenguaje C es la adición de otro archivo que contiene código preescrito (los headers  que hacen referencia a otros archivos de C, ya sean estándar o personalizaos).
+    4. Compilación condicional
+       El preprocesador reeemplaza todas las directivas de compilacion condicional con algún código ensamblador predefinido y pasa un nuevo archivo expandido al compilador. 
+    Al finalizar, se genera un archivo intermedio con extención *.i*
+2. Compilación:
+   La fase de compilación en C utiliza un sofware compilador incorporado para convertir el Archivo intermedio *.i*  en un archivo ensamblador *.s* con instrucciones de nivel ensamblador (código de bajo nivel), en esta fase se hacen las optimizaciones para que el rendimiento del programa aumente. 
+3. Ensamblador (mas o menos la traducción de Assembling) 
+   El código de nivel ensamblador se conviere en un código comprensible por la máquina en forma 
+   de binaria (hexadecimal/binarios) por medio de un ensamblador, que es un programa preescrito que traduce el codigo intermedio a código máquina. El archivo de salida por lo general tiene un formato de salida *'.obj'* en DOS y *'.o'* en UNIX
+4. Linking (Enlace)
+   'linking' es el proceso de incluir los archivos de las bibliotecas en el programa, los archivos de biblioteca son archivos predefinidos que contienen la definición de las funciones en el lenguaje de máquina y estos archivos tienen una extención *.lib*, algunas sentencias desconocidas estan escritas en el archivo objeto (.o, .obj) que el sistema operativo no puede entender y se utilizara un diccionario para encontrar el significado de esas palabras. Del mismo modo, utilizamos archivos de biblioteca para dar significado a algunas declaraciones desconocidas de nuestro archivo objeto. Al terminar el proceso de enlazado, se genera un archivo ejecutable, *.exe* en DOS, *.bin*, *.elf*, *.hex* cuando se trata de firmware.
 
 - ¿Qué es una **macro**?
 - ¿Qué es una función **in-line**?
