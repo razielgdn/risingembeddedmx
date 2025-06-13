@@ -12,7 +12,7 @@ tags:
 Las respuestas a estas preguntas tal vez no sea la mas completa, por experiencia propia se que esto es mejor investigarlo y comprenderlo que memorizarlo y no saber de que va. Pero más adelante se irán contestando en la etapa de teoría y proyectos. No desesperen amigos, la senda del gran viaje es larga. 
 
 # Preguntas relacionadas al Lenguaje C
-- ¿Qué es una **keyword**?
+1. ¿Qué es una **keyword**?
   Una keyword (palabra clave o palabra reservada) **es una palabra que tiene un significado especial predefinido en el lenguaje de programación C** y no puede ser utilizada como identificador (nombre de variable, función, etc.). Estas palabras están reservadas por el compilador para realizar funciones específicas del lenguaje.
   Ejemplos de keywords en C:
   - Tipos de datos: **int**, **char**, **float**, **double**, **void**
@@ -20,31 +20,78 @@ Las respuestas a estas preguntas tal vez no sea la mas completa, por experiencia
   - Control de flujo: **if**, **else**, **for**, **while**, **switch**, **case**
   - Otros: **struct**, **union**, **enum**, **typedef**, **sizeof**
 
-- ¿Qué es el keyword **volatile** y donde/ para qué se utiliza?   
+2. ¿Qué es el keyword **volatile** y donde/ para qué se utiliza?   
 
   La palabra clave **volatile** en C indica al compilador que el valor de una variable puede cambiar de forma inesperada, evitando optimizaciones que asumen que el valor es estable. Se usa en sistemas embebidos para variables accedidas por hardware, interrupciones o múltiples hilos. Por ejemplo, una variable mapeada a un registro de hardware (como el registro de estado UART en STM32) se declara `volatile` para garantizar que el compilador lea su valor cada vez en lugar de almacenarlo en caché. Uso: `volatile uint32_t *reg = (uint32_t *)0x40021000;`.
 
-- ¿Para que se usa la palabra reservada **static**? ¿que pasa si se le pone a una variable? ¿qué pasa si la lleva una función?
+3. ¿Para que se usa la palabra reservada **static**? ¿que pasa si se le pone a una variable? ¿qué pasa si la lleva una función?
   La palabra reservada **static** en C define la duración de almacenamiento y el enlace.  
     - **Variable**: Una variable `static` conserva su valor entre llamadas a funciones (ámbito local) o restringe su visibilidad al archivo (ámbito global). Una variable local `static` se inicializa una vez y persiste durante la vida del programa. Una variable global `static` solo es visible dentro del archivo. Ejemplo: `static int counter = 0;` en una función mantiene su valor entre llamadas.  
     - **Función**: Una función `static` solo es visible dentro del archivo, evitando el enlace externo. Esto es útil para funciones auxiliares en proyectos embebidos, como en mi firmware para AVR. Ejemplo: `static void update_led(void);`.
 
-- ¿Cuál es el tamaño del dato **int**? (spoiler depende de la **arquitectura**)
-- ¿Para qué se usa la keyword **typedef**?
-- ¿Qué hace el modificador **const**?
-- ¿Qué es un **apuntador** en **C**?
-- ¿Se puede hacer un apuntador **const**, **volatile**, **static**...?
-- ¿Qué hace la palabra **static** en una variable **global** y en una **local**?
+4. ¿Cuál es el tamaño del dato **int**? (spoiler depende de la **arquitectura**)
+  El tamaño de un `int` en C depende de la arquitectura y el compilador. Típicamente:  
+  - Microcontroladores de 8 bits (e.g., AVR): `int` es de 16 bits (2 bytes).  
+  - Microcontroladores de 32 bits (e.g., STM32): `int` es de 32 bits (4 bytes).  
+  - Sistemas de 16 o 64 bits: `int` puede variar (2 o 4 bytes).  
+5. ¿Para qué se usa la keyword **typedef**?
+   La palabra clave **typedef** en C crea un alias para un tipo de dato existente, mejorando la legibilidad y portabilidad del código. Se usa comúnmente para simplificar tipos complejos, como estructuras o apuntadores. Por ejemplo:
+```c
+ typedef struct { 
+    uint32_t id; 
+    uint8_t status; 
+ } Device_t;
+```  
+  Facilita declarar variables como `Device_t sensor;`.
+  Otro ejemplo seria: `typedef big_int_data`
 
-- 
-- ¿Para que se utiliza la palabra reservada **struct**?
-- ¿Para que se utiliza la palabra reservada **enum**?
-- ¿Para que se utiliza la palabra reservada **union**?
-- ¿Cuál es la **diferencia** entre **union** y **struct**? 
-  ¿Cuál es el tamaño de un **struct** y de **union**?  
-- ¿Cual es el tamaño de un apuntador?    
-- ¿Qué es una función?
-- ¿Cómo se llama una función por apuntador?
+6. ¿Qué hace el modificador **const**?
+   El modificador **const** en C indica que el valor de una variable no puede modificarse después de su inicialización. Se usa para garantizar la integridad de los datos, especialmente para constantes o datos de solo lectura. Por ejemplo, `const int MAX_VALUE = 100;` evita cambios en `MAX_VALUE`. En sistemas embebidos, uso `const` para tablas de consulta o datos de configuración almacenados en memoria flash para evitar escrituras accidentales.
+
+7. ¿Qué es un **apuntador** en **C**?
+   Un apuntador en C es una variable que almacena la dirección de memoria de otra variable. Permite el acceso y manipulación directa de la memoria, esencial en sistemas embebidos para acceder a registros de hardware o memoria dinámica. Por ejemplo, en mis proyectos con STM32, uso apuntadores como     
+```c
+uint32_t *reg = (uint32_t *)0x40021000;
+``` 
+   para acceder a registros de periféricos.
+
+8. ¿Se puede hacer un apuntador **const**, **volatile**, **static**...?
+   Sí, un apuntador puede modificarse con `const`, `volatile` o `static`:  
+   - **const**: Un apuntador `const` puede evitar la modificación del apuntador (`int *const ptr`) o de los datos a los que apunta (`const int *ptr`).  
+   - **volatile**: Un apuntador `volatile` asegura que el compilador no optimice el acceso a los datos apuntados, útil para registros de hardware (e.g., `volatile int *reg`).  
+   - **static**: Un apuntador `static` tiene almacenamiento persistente (local) o alcance de archivo (global).  
+  Ejemplo: En mis proyectos con AVR, uso `volatile const uint8_t *status_reg` para registros de hardware de solo lectura accedidos por interrupciones.
+
+9. ¿Qué hace la palabra **static** en una variable **global** y en una **local**?
+
+ 
+10. ¿Para que se utiliza la palabra reservada **struct**?
+11. ¿Para que se utiliza la palabra reservada **enum**?
+12. ¿Para que se utiliza la palabra reservada **union**?
+13. ¿Cuál es la **diferencia** entre **union** y **struct**? 
+14.  ¿Cuál es el tamaño de un **struct** y de **union**?  
+15. ¿Cual es el tamaño de un apuntador?    
+16. ¿Qué es una función?
+17. ¿Cómo se llama una función por apuntador?
+ejemplo:
+```c 
+#include <stdio.h>
+typedef unsigned char byte;
+typedef int (*operation)(byte, byte);
+
+int add(byte a, byte b) { return a + b; }
+int multiply(byte a, byte b) { return a * b; }
+
+int main() {
+    byte x = 5, y = 3;
+    operation op = add;
+    printf("Add: %d\n", op(x, y)); // Output: Add: 8
+    op = multiply;
+    printf("Multiply: %d\n", op(x, y)); // Output: Multiply: 15
+    return 0;
+}
+
+```
 - ¿Cuáles son las dos formas de pasar parámetros a una función?
 - ¿Cuál es el tamaño de los tipos de variable: int, char, float, etc.?
 - ¿Si tengo un apuntador a una estructura, cual es la diferencia en tamaño a un apuntador a una función o a una variable?

@@ -40,8 +40,7 @@ RUN sudo apt-get -y install git \
     libffi-dev \
     libgdbm6 \
     libgdbm-dev \
-    libdb-dev \
-    nano \
+    libdb-dev \    
     apt-utils 
     
 RUN sudo apt-get -y upgrade    
