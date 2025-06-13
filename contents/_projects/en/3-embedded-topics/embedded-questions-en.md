@@ -18,8 +18,6 @@ tags:
 
 If you try to use a keyword as a variable name, the compiler will generate a syntax error.
 
-
-
 1. Pre-Processing    
     Pre-processing is the first step in the compilation process in C performed using the pre-processor tool (A pre-written program invoked by the system during the compilation). All the statements starting with the # symbol in a C program are processed by the pre-processor, and it converts our program file into an intermediate file with no # statements. Under following pre-processing tasks are performed :
     
@@ -48,3 +46,5 @@ If you try to use a keyword as a variable name, the compiler will generate a syn
     4. Linking
     
     Linking is a process of including the library files into our program. Library Files are some predefined files that contain the definition of the functions in the machine language and these files have an extension of .lib. Some unknown statements are written in the object (.o/.obj) file that our operating system can't understand. You can understand this as a book having some words that you don't know, and you will use a dictionary to find the meaning of those words. Similarly, we use Library Files to give meaning to some unknown statements from our object file. The linking process generates an executable file with an extension of .exe in DOS and .out in UNIX OS.
+
+
