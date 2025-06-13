@@ -63,14 +63,29 @@ uint32_t *reg = (uint32_t *)0x40021000;
   Ejemplo: En mis proyectos con AVR, uso `volatile const uint8_t *status_reg` para registros de hardware de solo lectura accedidos por interrupciones.
 
 9. ¿Qué hace la palabra **static** en una variable **global** y en una **local**?
-
+   - **Variable local `static`**: Conserva su valor entre llamadas a funciones, se inicializa una vez y persiste durante la vida del programa. Ejemplo: `static int count = 0;` en una función se incrementa entre llamadas.  
+   - **Variable global `static`**: Restringe la visibilidad al archivo donde se declara, evitando el enlace externo. Ejemplo: `static int config = 10;` solo es accesible dentro del archivo.  
  
 10. ¿Para que se utiliza la palabra reservada **struct**?
+   La palabra reservada **struct** en C define un tipo de dato compuesto que agrupa variables de diferentes tipos bajo un solo nombre. Se usa para organizar datos relacionados, como configuraciones de hardware o datos de sensores. 
+
 11. ¿Para que se utiliza la palabra reservada **enum**?
+    La palabra reservada **enum** en C define un tipo enumerado, asignando nombres a un conjunto de constantes enteras para mejorar la legibilidad del código. Se usa para estados u opciones, como códigos de error o modos. Ejemplo: `enum State { OFF, ON, IDLE };` en mis proyectos con AVR define estados del dispositivo, haciendo el código más claro que usar enteros crudos.
+
 12. ¿Para que se utiliza la palabra reservada **union**?
+    The `union` keyword in C defines a data type that allows different variables to share the same memory location, used to save space or reinterpret data. Only one member is valid at a time. Example: In my STM32 projects, `union Data { uint32_t raw; float value; };` allows accessing the same data as an integer or float.
 13. ¿Cuál es la **diferencia** entre **union** y **struct**? 
+    La palabra reservada **union** en C define un tipo de dato que permite que diferentes variables compartan la misma ubicación de memoria, usado para ahorrar espacio o reinterpretar datos.
+
 14.  ¿Cuál es el tamaño de un **struct** y de **union**?  
+   - **Diferencia**: Un `struct` asigna memoria para todos sus miembros, almacenándolos de forma contigua, mientras que un `union` asigna memoria solo para su miembro más grande, compartiendo todos los miembros la misma memoria.  
+    - **Tamaño**: El tamaño de un `struct` es la suma de los tamaños de sus miembros (más relleno por alineación). El tamaño de un `union` es el del miembro más grande. Ejemplo: Para `struct S { int a; char b; };` (4 + 1 = 5 bytes, más relleno), y `union U { int a; char b; };` (4 bytes, ya que `int` es el más grande), en un sistema de 32 bits.
 15. ¿Cual es el tamaño de un apuntador?    
+    El tamaño de un apuntador en C depende del espacio de direcciones de la arquitectura. Típicamente:  
+    - Sistemas de 8 o 16 bits: 2 bytes.  
+    - Sistemas de 32 bits (e.g., STM32): 4 bytes.  
+    - Sistemas de 64 bits: 8 bytes.  
+    Todos los apuntadores (e.g., a `int`, `struct` o funciones) tienen el mismo tamaño en una arquitectura dada, ya que almacenan direcciones de memoria.
 16. ¿Qué es una función?
 17. ¿Cómo se llama una función por apuntador?
 ejemplo:
