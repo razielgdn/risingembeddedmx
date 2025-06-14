@@ -8,10 +8,7 @@ tags:
  - español   
 ---
 
-
 Las respuestas a estas preguntas tal vez no sea la mas completa, por experiencia propia se que esto es mejor investigarlo y comprenderlo que memorizarlo y no saber de que va. Pero más adelante se irán contestando en la etapa de teoría y proyectos. No desesperen amigos, la senda del gran viaje es larga.   
-
- 
 
 # Lenguaje C
 
@@ -848,28 +845,29 @@ Direcciones Bajas
 
 # Protocolos de comunicación:   
 1. ¿Qué es un protocolo de comunicación **síncrono**?     
-   Un protocolo de comunicación síncrono utiliza una señal de reloj compartida para coordinar la transmisión de datos entre dispositivos, asegurando que emisor y receptor operen en sincronía. Ejemplos incluyen SPI e I2C. En mis proyectos con STM32, uso la señal de reloj de SPI para sincronizar la transferencia de datos con periféricos como sensores, garantizando un tiempo preciso. 
+   Un protocolo de comunicación síncrono utiliza una señal de reloj compartida para coordinar la transmisión de datos entre dispositivos, asegurando que emisor y receptor operen en sincronía. Ejemplos incluyen SPI e I2C. 
 
 2. ¿Qué es un protocolo de comunicación **asíncrono**?   
-   Un protocolo de comunicación asíncrono no usa un reloj compartido, sino que depende de bits de inicio y parada para enmarcar los datos. UART es un ejemplo común. En mis proyectos con AVR, uso UART para comunicación serial con una PC, configurando tasas de baudios para garantizar una transferencia de datos confiable sin una línea de reloj.
+   Un protocolo de comunicación asíncrono no usa un reloj compartido, sino que depende de bits de inicio y parada para enmarcar los datos. UART es un ejemplo común. 
 
 3. ¿Cómo se realiza una **comunicación serial**?   
-   La comunicación serial transmite datos secuencialmente a través de un solo canal, bit por bit, usando protocolos como UART, SPI o I2C. Implica configurar parámetros (e.g., tasa de baudios para UART, polaridad del reloj para SPI) y manejar tramas de datos. En mis proyectos con STM32, configuro UART para enviar datos de sensores a una terminal, usando bits de inicio/parada para enmarcar. 
+   La comunicación serial transmite datos secuencialmente a través de un solo canal, bit por bit, usando protocolos como UART, SPI o I2C. Implica configurar parámetros (e.g., tasa de baudios para UART, polaridad del reloj para SPI) y manejar tramas de datos. 
+
 4. Explica brevemente como funciona el protocolo **I2C**.   
-   I2C (Inter-Integrated Circuit) es un protocolo síncrono de dos cables que usa SDA (datos) y SCL (reloj). Un dispositivo maestro controla el reloj y se comunica con múltiples dispositivos esclavos usando direcciones de 7 o 10 bits. Los datos se envían en tramas de 8 bits con bits ACK/NACK. En mis proyectos con STM32, uso I2C para interactuar con sensores como módulos de temperatura, configurando el STM32 como maestro.
+   I2C (Inter-Integrated Circuit) es un protocolo síncrono de dos cables que usa SDA (datos) y SCL (reloj). Un dispositivo maestro controla el reloj y se comunica con múltiples dispositivos esclavos usando direcciones de 7 o 10 bits. Los datos se envían en tramas de 8 bits con bits ACK/NACK. 
 
 6. Explica brevemente como funciona el protocolo **SPI**.   
-   SPI (Serial Peripheral Interface) es un protocolo síncrono de dúplex completo que usa cuatro líneas: MOSI (salida del maestro, entrada del esclavo), MISO (entrada del maestro, salida del esclavo), SCLK (reloj) y SS (selección de esclavo). El maestro inicia la comunicación, seleccionando un esclavo mediante SS y sincronizando datos con SCLK. En mis proyectos con AVR, uso SPI para comunicarme con una tarjeta SD, configurando el AVR como maestro para transferencias de datos de alta velocidad.
+   SPI (Serial Peripheral Interface) es un protocolo síncrono de dúplex completo que usa cuatro líneas: MOSI (salida del maestro, entrada del esclavo), MISO (entrada del maestro, salida del esclavo), SCLK (reloj) y SS (selección de esclavo). El maestro inicia la comunicación, seleccionando un esclavo mediante SS y sincronizando datos con SCLK. 
    
 7. ¿Conoces el protocolo **CAN**?   
-   Sí, CAN (Controller Area Network) es un protocolo asíncrono robusto usado en sistemas automotrices e industriales para comunicación confiable entre múltiples nodos. Usa un par diferencial (CAN_H, CAN_L) y soporta comunicación basada en mensajes con arbitraje para evitar colisiones. En mis proyectos con STM32, he usado CAN para conectar microcontroladores en una red vehicular, aprovechando su detección de errores y tolerancia a fallos.
+   Sí, CAN (Controller Area Network) es un protocolo asíncrono robusto usado en sistemas automotrices e industriales para comunicación confiable entre múltiples nodos. Usa un par diferencial (CAN_H, CAN_L) y soporta comunicación basada en mensajes con arbitraje para evitar colisiones. 
 
 8. ¿Conoces el protocolo **LIN**?   
-   Sí, LIN (Local Interconnect Network) es un protocolo serial asíncrono de bajo costo usado en sistemas automotrices para aplicaciones no críticas (e.g., control de ventanas). Usa un bus de un solo cable con topología maestro-esclavo, donde el maestro controla la comunicación. No he usado LIN directamente en mis proyectos, pero entiendo su rol como una alternativa más simple a CAN para tareas de bajo ancho de banda.
+   Sí, LIN (Local Interconnect Network) es un protocolo serial asíncrono de bajo costo usado en sistemas automotrices para aplicaciones no críticas (e.g., control de ventanas). Usa un bus de un solo cable con topología maestro-esclavo, donde el maestro controla la comunicación.
 
 9. ¿Qué significa que un protocolo sea **Full-Duplex** ó **Half-Duplex**?   
    - SPI: Recomendado para comunicación de alta velocidad y corta distancia con pocos dispositivos, como pantallas o tarjetas SD, debido a su dúplex completo y tasas de reloj rápidas. En mis proyectos con AVR, uso SPI para interfaces con tarjetas SD.
-   - I2C: Ideal para comunicación de baja velocidad con múltiples dispositivos en un bus compartido, como sensores o EEPROMs, por su simplicidad de dos cables. En mis proyectos con STM32, uso I2C para sensores de temperatura.
+   - I2C: Ideal para comunicación de baja velocidad con múltiples dispositivos en un bus compartido, como sensores o EEPROMs, por su simplicidad de dos cables. 
   
 10. ¿En qué aplicaciones se recomienda utilizar SPI y en cuales I2C?   
     Los errores de comunicación se manejan con técnicas como:
@@ -887,9 +885,9 @@ Direcciones Bajas
     Un checksum es un valor calculado a partir de los datos (e.g., sumando bytes) para verificar su integridad durante la transmisión. El receptor lo recalcula y compara para detectar errores. En mis proyectos con STM32, uso checksums en la comunicación UART para asegurar que los datos de sensores no estén corruptos.
 
 14. ¿Qué es un **frame**?   
-    Una trama es una unidad estructurada de datos en un protocolo de comunicación, que contiene carga útil, cabeceras y bits de control (e.g., bits de inicio/parada, dirección). En UART, una trama incluye un bit de inicio, bits de datos, paridad opcional y bits de parada. En mis proyectos con STM32, configuro tramas UART para transmitir lecturas de sensores de forma confiable.
+    Una trama es una unidad estructurada de datos en un protocolo de comunicación, que contiene carga útil, cabeceras y bits de control (e.g., bits de inicio/parada, dirección). En UART, una trama incluye un bit de inicio, bits de datos, paridad opcional y bits de parada. 
 
-15. Explica como has usado protocolos de comunicación en los proyectos
+15. Explica como has usado protocolos de comunicación en tus proyectos
 
 # Soft Skills
  Muchas entrevistas se enfocan en como resuelves problemas desde el punto de vista funcional, tanto en cuestiones técnicas como en **interacción humana** por medio del trabajo en equipo. Esto con preguntas del tipo:
@@ -897,7 +895,9 @@ Direcciones Bajas
 - ¿Cuáles son los problemas que has tenido para organizar un equipo de trabajo?
 - ¿Cuál ha sido tu mayor reto al trabajar en un equipo?
 - ¿En que proyectos has trabajado? ¿A grandes rasgos que se hace en ellos?
+
 En esta parte **puedes describir proyectos personales, y académicos en el caso que no tengas una experiencia previa de trabajo**. Y si ya has tenido un trabajo anteriormente se vale decir con qué tecnología trabajaste, y mas o menos de que va para no violar las clausulas de exclusividad y temas de esa índole.
+
 - Si te toca hacer un ejercicio técnico en conjunto, intenta explicar tu lógica para resolverlo de la mejor manera, nosotros sabemos que no es muy fácil escribir código y que funcione a la primera, pero si tienes el panorama general bien claro desde el principio y planteas la solución de la mejor manera, la codificación será lo  de menos importancia.
 
 Espero que esta información sea de utilidad para alguien, aquí si se necesita un poco de esfuerzo y mucha suerte, sobre todo para conseguir un primer empleo. Un consejo para mover la estadística a favor es tener un buen perfil en linkedIn y agregar a los headhunters/RRHH de empresas de tecnología así como ingenieros que  ya estén desarrollando. Sin temor, y sin vergüenza. 
