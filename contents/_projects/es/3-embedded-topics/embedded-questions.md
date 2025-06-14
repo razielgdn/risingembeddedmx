@@ -388,36 +388,36 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
 9.  ¿Todos los microcontroladores contienen un procesador?
     Sí, todos los microcontroladores contienen un procesador (CPU) que ejecuta instrucciones del firmware.
 
-10. ¿Qué **módulos** puede tener un microcontrolador?
+10. ¿Qué **módulos** puede tener un microcontrolador?    
     Un microcontrolador puede incluir módulos como:  
     - GPIO: Pines de entrada/salida.  
     - UART, SPI, I2C: Para comunicación serial.  
     - ADC/DAC: Conversión analógica-digital y viceversa.  
     - Timers: Para conteo o PWM.  
     - Interrupciones: Para manejar eventos.  
-11. ¿Qué es un **DAC**?
+11. ¿Qué es un **DAC**?    
     Un DAC (Convertidor Digital-Analógico) es un módulo que convierte señales digitales en analógicas, generando voltajes proporcionales a valores digitales.
-12. ¿Qué es un **ADC**?
+12. ¿Qué es un **ADC**?     
     Un ADC (Convertidor Analógico-Digital) convierte señales analógicas (e.g., voltajes) en valores digitales.
 
-13. ¿Qué es la **ALU**?
+13. ¿Qué es la **ALU**?     
     La ALU (Unidad Aritmética y Lógica) es un componente del procesador que realiza operaciones aritméticas (e.g., suma, resta) y lógicas (e.g., AND, OR). 
 
-14. ¿Qué es un **timer**/**counter**?
+14. ¿Qué es un **timer**/**counter**?    
     Un timer/counter es un módulo que cuenta pulsos de reloj o eventos externos, usado para medir tiempo, generar PWM o disparar interrupciones.
 
-15. ¿Qué hace un modulo **PWM**?
+15. ¿Qué hace un modulo **PWM**?    
     Un módulo PWM (Pulse Width Modulation - Modulación por Ancho de Pulso) es un periférico de hardware que genera señales digitales con un ciclo de trabajo variable para controlar la potencia promedio entregada a una carga.   
     El PWM genera una señal cuadrada con:
     - Frecuencia fija: Determinada por el período total
     - Ciclo de trabajo variable: Porcentaje del tiempo que la señal está en estado alto
 
-16.  ¿Qué es una **UART**?
+16.  ¿Qué es una **UART**?    
     Una UART (Universal Asynchronous Receiver-Transmitter) es un dispositivo de hardware que convierte datos entre formato paralelo y serial para la comunicación asíncrona. La UART permite que un microcontrolador se comunique con otros dispositivos enviando y recibiendo datos de forma serial (bit por bit) a través de solo dos cables, en lugar de necesitar múltiples líneas como en la comunicación paralela.
-17.  ¿Qué es una fuente de reloj?
+17.  ¿Qué es una fuente de reloj?    
     Una fuente de reloj es un circuito que genera señales periódicas para sincronizar operaciones en un microcontrolador. Puede ser un oscilador de cristal, RC interno o PLL. En STM32, configuro un cristal externo de 8 MHz como fuente principal para precisión.
 
-18.  ¿Qué es  un **PLL**, para que se puede usar en un microcontrolador?
+18.  ¿Qué es  un **PLL**, para que se puede usar en un microcontrolador?    
     Un PLL (Lazo de Fase Bloqueada) es un circuito que multiplica o divide una frecuencia de reloj para generar señales de mayor o menor frecuencia. En STM32, uso PLL para escalar un reloj de 8 MHz a 72 MHz, optimizando el rendimiento del sistema.
 
 19. ¿Cómo puedes generar señales de reloj/ osciladores?   
@@ -428,9 +428,9 @@ Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoq
     - **Osciladores internos**: Como el HSI en STM32.  
     En mis proyectos, selecciono cristales externos para aplicaciones críticas en tiempo.
 
-20. ¿Qué es una **interrupción**?
+20. ¿Qué es una **interrupción**?     
    Una interrupción es un evento que detiene temporalmente la ejecución del programa principal para ejecutar una rutina de servicio (ISR). Puede ser disparada por hardware (e.g., timers) o software. 
-21. ¿Qué es el **polling**?
+21. ¿Qué es el **polling**?    
     El polling es una técnica donde el programa revisa repetidamente el estado de un periférico para detectar eventos, en lugar de usar interrupciones. 
     El programa ejecuta un bucle que constantemente pregunta "¿ha ocurrido algo?" hasta que detecta el evento esperado.
 ```c
@@ -464,7 +464,7 @@ while(1) {
     Latencia variable: Depende de cuándo ocurre la verificación en el bucle
     Escalabilidad limitada: Difícil manejar muchos eventos simultáneos
 
-22. ¿Cómo manejas una interrupción (utilizando lenguaje C)? (spoiler por el ISR usando funciones, para ARM usas el NVIC) 
+22. ¿Cómo manejas una interrupción (utilizando lenguaje C)? (spoiler por el ISR usando funciones, para ARM usas el NVIC)     
    En C, una interrupción se maneja definiendo una función ISR (Interrupt Service Routine). En STM32 (ARM), uso el NVIC (Nested Vectored Interrupt Controller) para priorizar y habilitar interrupciones. Ejemplo:  
 ```c
 void TIM2_IRQHandler(void) {
@@ -474,11 +474,11 @@ void TIM2_IRQHandler(void) {
   }
 }
 ```
-23. ¿Que es un watchdog timer? ¿Qué funciones tiene?
-    Un Watchdog Timer es un temporizador de hardware diseñado para detectar y recuperarse de fallas del software, reiniciando automáticamente el sistema cuando detecta que el programa principal se ha "colgado" o está ejecutándose incorrectamente.  
+23. ¿Que es un watchdog timer? ¿Qué funciones tiene?    
+    Un Watchdog Timer es un temporizador de hardware diseñado para detectar y recuperarse de fallas del software, reiniciando automáticamente el sistema cuando detecta que el programa principal se ha "colgado" o está ejecutándose incorrectamente.     
     El watchdog funciona como un temporizador descendente que debe ser "alimentado" (reset) periódicamente por el software. Si no se resetea dentro del tiempo límite, asume que el sistema está bloqueado y genera un reset del sistema.  
 
-24. Si tengo que hacer un delay, ¿por qué me conviene más implementarlo por medio de una cuenta descendente que por una ascendente?
+24. Si tengo que hacer un delay, ¿por qué me conviene más implementarlo por medio de una cuenta descendente que por una ascendente?     
    La implementación de delays con cuenta descendente tiene ventajas significativas sobre la cuenta ascendente, principalmente relacionadas con eficiencia del procesador y optimización del código.
     - **Cuenta descendente (más eficiente):**    
 
@@ -518,14 +518,14 @@ void TIM2_IRQHandler(void) {
     ```
     Se notan las ventajas de las cuentas descendentes, se utilizan menos instrucciones de CPU, se aprovechan las flags del procesador, hay un menor uo de registros y accesos a memoria RAM. Cuando se trabaja con sistemas muy pequeños como microcontroladores de 8 bits hay que tomar en cuenta que los recursos son limitados y cada instruccion consume recursos.  
 
-25. ¿Cómo se organiza la memoria de un microcontrolador?
+25. ¿Cómo se organiza la memoria de un microcontrolador?    
     La memoria de un microcontrolador se organiza en:
     - Flash: Almacena el firmware (instrucciones).
     - RAM: Para datos dinámicos, pila y variables.
     - EEPROM: Para datos no volátiles (e.g., configuraciones).
     - Registros: Para control de periféricos.
 
-26. ¿Qué tipos de memoria existen (de acuerdo con su fabricación)? Flash, eeprom, ram, nand, etc, intenta saber un poco de todas.
+26. ¿Qué tipos de memoria existen (de acuerdo con su fabricación)? Flash, eeprom, ram, nand, etc, intenta saber un poco de todas.    
     Los tipos de memoria incluyen:
     - Flash: No volátil, para firmware (e.g., en STM32).
     - EEPROM: No volátil, para configuraciones persistentes.
@@ -533,8 +533,8 @@ void TIM2_IRQHandler(void) {
     - NAND/NOR: Flash para almacenamiento masivo (e.g., SD cards).
     - ROM: Solo lectura, preprogramada.
 
-27. ¿Cuales son las partes de la memoria de un sistema y que se hace en cada una de ellas? 
-    Segmentos de Memoria en Sistemas Embebidos    
+27. ¿Cuales son las partes de la memoria de un sistema y que se hace en cada una de ellas?     
+    Segmentos de Memoria en Sistemas Embebidos        
     La memoria de un sistema embebido se organiza en diferentes segmentos, cada uno con un propósito específico. Comprender estos segmentos es crucial para la programación eficiente y la depuración.    
     Segmentos Principales de Memoria    
     1. Segmento de Código (.text)
@@ -651,89 +651,242 @@ Direcciones Altas
 └─────────────────┘
 Direcciones Bajas
 ```
-28. ¿Qué es un puerto de entrada- salida/ ¿Qué es el **GPIO**?
+28. ¿Qué es un puerto de entrada- salida/ ¿Qué es el **GPIO**?    
+    - **Un puerto de entrada-salida** es una interfaz física que permite al microcontrolador comunicarse con el mundo exterior. Es el punto de conexión entre el procesador y los dispositivos externos como sensores, actuadores, LEDs, botones, etc. Los puertos pueden funcionar en dos modos principales:   
+      - Entrada (Input): Reciben señales del exterior hacia el microcontrolador
+      - Salida (Output): Envían señales desde el microcontrolador hacia el exterior
+    - ¿Qué es GPIO?
+      **GPIO** significa **General Purpose Input/Output** (Entrada/Salida de Propósito General). Son pines del microcontrolador que pueden configurarse como entrada o salida según las necesidades del programa.
+      Características principales del GPIO:  
+       - Flexibilidad: Cada pin puede configurarse independientemente como entrada o salida.
+       - Control por software: La configuración y estado se controla mediante registros.
+       - Estados digitales: Manejan señales digitales (HIGH/LOW, 1/0).
+       - Voltajes típicos: 3.3V o 5V dependiendo del microcontrolador.
 
-29. ¿Como se mapea un **GPIO** dentro del microcontrolador (en referencia a lenguaje C)?
+29. ¿Como se mapea un **GPIO** dentro del microcontrolador (en referencia a lenguaje C)?      
+    Se realiza por medio de registros que son espacios de memoria dedicados. 
+    Se debe revisar la hoda de datos de cada dispositivo para verificar correctamente. por ejemplo en una arquitectura AVR se realiza principalmente mediante los siguientes:
+       - **DDR** (Data Direction Register): Define si el pin es entrada (0) o salida (1).
+       - **PORT**: Controla el estado de salida del pin.
+       - **PIN**: Lee el estado actual del pin.
+       - **PULL**: Configura resistencias pull-up/pull-down.
 
-30.  What is memory leaking?
-  A memory leak occurs when programmers create a memory in a heap and forget to delete it. The consequence of the memory leak is that it reduces the performance of the computer by reducing the amount of available memory. Eventually, in the worst case, too much of the available memory may become allocated, all or part of the system or device stops working correctly, the application fails, or the system slows down vastly.
-    Causes of Memory Leaks in C:
-    1. When dynamically allocated memory is not freed up by calling free then it leads to memory leaks. Always make ensure that for every dynamic memory allocation using malloc or calloc, there is a corresponding free call.    
-    2. When track of pointers that references to the allocated memory is lost then it may happen that memory is not freed up. Hence keep the track of all pointers and make ensure that memory is freed.    
-    3. When the program terminates abruptly and the allocated memory is not freed or if any part of code prevents the call of free then memory leaks may happen.
-31. What is Stack Overflow and Underflow?
-    1. Overflow:
-        A stack overflow is a type of buffer overflow error that occurs when a computer program tries to use more memory space in the call stack than has been allocated to that stack. The call stack, also referred to as the stack segment, is a fixed-sized buffer that stores local function variables and return address data during program execution
+30.  Qué es una fuga de memoria (memory leaking)?      
+   Una fuga de memoria (memory leak) ocurre cuando un programa reserva memoria pero no la libera de vuelta al sistema cuando ya no la necesita. Con el tiempo, esto hace que el programa consuma cada vez más memoria, pudiendo causar ralentización del sistema o fallos.    
+   Escenarios comunes:
+   - Asignar memoria en un bucle sin liberarla
+   - Perder punteros a memoria asignada
+   - Manejo de excepciones que evita el código de limpieza
+   - Referencias circulares en lenguajes con recolección de basura
+   - No cerrar adecuadamente archivos o conexiones de base de datos
 
-        Causes:One of the most common causes of a stack overflow is the recursive function, a type of function that repeatedly calls itself in an attempt to carry out specific logic. Each time the function calls itself, it uses up more of the stack memory. If the function runs too many times, it can eat up all the available memory, resulting in a stack overflow.
+31. ¿Qué es Stack Overflow and Underflow?    
+    1. Stack Overflow: Ocurre cuando el stack crece más allá de su límite asignado, sobrescribiendo memoria adyacente o causando un error del sistema. **Causas principales**:
+       - Recursión infinita o muy profunda:
+         ```c
+         int factorial(int n) 
+         {
+           return n * factorial(n-1);  // Sin caso base - recursión infinita
+         }
+         ```
+       - Variables locales muy grandes: 
+         ```c
+         void funcion() {
+         int array[10000000];  // Array muy grande en el stack
+         // Puede causar overflow
+         }
+         ``` 
+       - Cadenas largas de llamadas a funciones:
+         ```c 
+         void funcion_a() { funcion_b(); }
+         void funcion_b() { funcion_c(); }
+         // ... muchas funciones anidadas
+         ```
+    2. Underflow    
+       Ocurre cuando se intenta extraer más elementos de la pila de los que realmente contiene, o cuando se accede a posiciones inválidas por debajo del límite inferior del stack. Causas principales:    
+        - Operaciones pop en pila vacía:
+        ```c
+        Stack* pila = crear_pila();
+        // Pila está vacía
+        int valor = pop(pila);  // Stack underflow
+        ```  
+        - Desbalance en operaciones push/pop:
+        ```c
+        push(pila, 10);
+        push(pila, 20);
+        pop(pila);  // OK
+        pop(pila);  // OK
+        pop(pila);  // Stack underflow - pila vacía 
+        ```
+        - Errores en manejo de punteros de pila:    
+        ```c
+        // Manipulación incorrecta del stack pointer
+        stack_pointer--;  // Sin verificar límites
+        ```
 
-        When a stack overflow occurs, the excess data can corrupt other variables and address data, effectively changing variable values and overwriting return addresses.
+32. ¿Como puedo saber el tamaño de una estructura sin utilizar el operador sizeof? pista, se usan apuntadores y una operación sencilla. En su momento falle al responder.    
+    La técnica es con apuntadores:
+    ```c
+    #include <stdio.h>
+
+    struct MiEstructura {
+        int a;
+        char b;
+        double c;
+        short d;
+    };
+
+    int main() {
+        // Crear un puntero a la estructura (sin asignar memoria)
+        struct MiEstructura *ptr = 0;  // o NULL
         
-        In some cases, this will cause the program to crash
-
-    2. Underflow
-    Underflow happens when we try to pop an item from an empty stack.
-
-    This error can also lead to unexpected behaviour or a program crash.
-
-32. ¿Como puedo saber el tamaño de una estructura sin utilizar el operador sizeof? pista, se usan apuntadores y una operación sencilla. En su momento falle al responder.
-
+        // El truco: sumar 1 al puntero y convertir a entero
+        size_t tamaño = (char*)(ptr + 1) - (char*)ptr;
+        
+        printf("Tamaño de la estructura: %zu bytes\n", tamaño);
+        printf("sizeof() para comparar: %zu bytes\n", sizeof(struct MiEstructura));
+        
+        return 0;
+    }
+    ```
+   Aritmética de apuntadores:    
+   Cuando sumas 1 a un apuntador de estructura, el compilador automáticamente avanza el apuntador por el tamaño completo de la estructura (incluyendo padding/alineación).
+   El cálculo:    
+    - **ptr** apunta a la dirección **0**.
+    - **ptr + 1** apunta a la dirección **0 + tamaño_de_estructura**.
+    - La diferencia entre ambas direcciones es exactamente el tamaño de la estructura
+   Conversión a char: Se convierte a **char*** porque:
+      - Un **char** siempre ocupa 1 byte.
+      - La diferencia entre dos **char*** nos da el número exacto de bytes.
+      - Sin esta conversión, obtendríamos el número de estructuras, no bytes.
 
 # Sistema Operativo
-1. ¿Qué es un **sistema operativo**?
-2. ¿Qué es un **sistema operativo de tiempo real**?
-3. ¿Cuál es la diferencia entre sistema monolítico y uno microkernel?
-4. ¿Qué es un **semáforo**?
-5. ¿Qué es **mutex**?
-6. ¿Qué es **RTOS**?
-7. ¿Qué es **Embedded Linux**?
-8. ¿Has utilizado alguna tarjeta de desarrollo que soporte sistema operativo? (Raspberry, beaglebone)
- Utilizando Linux (bash). 
-    - ¿Cómo te mueves entre directorios?
-    - ¿Cómo obtienes la fecha?
-    - Describir algún algoritmo para hacer respaldos. 
+1. ¿Qué es un **sistema operativo**?    
+   Un sistema operativo es el software fundamental que actúa como intermediario entre el hardware de la computadora y las aplicaciones del usuario. Sus funciones principales incluyen:
+   - **Gestión de recursos**: Administra CPU, memoria, dispositivos de entrada/salida y almacenamiento de manera eficiente entre múltiples procesos.
+   - **Interfaz de usuario**: Proporciona una forma de interactuar con el sistema, ya sea mediante línea de comandos o interfaz gráfica.
+   - **Servicios del sistema**: Ofrece servicios como gestión de archivos, comunicación entre procesos, seguridad y control de acceso.
+   - **Abstracción del hardware**: Oculta la complejidad del hardware, permitiendo que las aplicaciones funcionen sin conocer detalles específicos del hardware subyacente.
 
-# Protocolos de comunicación:
-1. ¿Qué es un protocolo de comunicación **síncrono**?  
+2. ¿Qué es un **sistema operativo de tiempo real**?    
+    Un sistema operativo de tiempo real (RTOS) está diseñado para responder a eventos dentro de límites de tiempo estrictos y predecibles. Características clave:
+     - Determinismo: Garantiza que las tareas críticas se ejecuten dentro de plazos específicos (deadlines).
+     - Prioridades: Implementa sistemas de prioridades estrictos donde las tareas de mayor prioridad siempre se ejecutan primero.
+     - Latencia mínima: Minimiza el tiempo de respuesta a interrupciones y eventos críticos.
+     - Tipos:
+        - Hard Real-Time: Fallar un deadline puede ser catastrófico (sistemas de control de vuelo)
+        - Soft Real-Time: Los deadlines son importantes pero no críticos (sistemas multimedia)
+
+3. ¿Cuál es la diferencia entre sistema monolítico y uno microkernel?
+    - Sistema Monolítico:   
+      - Todo el kernel ejecuta en un solo espacio de memoria.
+      - Servicios del SO (drivers, sistema de archivos, red) están en el kernel.
+      - Mayor rendimiento por menos cambios de contexto.
+      - Mayor riesgo: un fallo puede colapsar todo el sistema.
+      Ejemplos: Linux, Windows
+    - Microkernel:
+      - Kernel mínimo con servicios básicos (IPC, gestión de memoria básica)
+      - Servicios ejecutan como procesos separados en espacio de usuario
+      - Mayor estabilidad y seguridad
+      - Menor rendimiento por más cambios de contexto
+    Ejemplos: QNX, Minix
+4. ¿Qué es un **semáforo**?    
+   Un semáforo es un mecanismo de sincronización que controla el acceso a recursos compartidos en sistemas concurrentes.
+   - Funcionamiento:
+      - Mantiene un contador interno
+      - Wait (P): Decrementa el contador; si es negativo, bloquea el proceso
+      - Signal (V): Incrementa el contador; si hay procesos esperando, despierta uno
+   - Tipos:
+      - Binario: Contador 0 o 1 (similar a mutex)
+      - Contador: Permite múltiples accesos simultáneos
+5. ¿Qué es **mutex**?    
+   Mutex (Mutual Exclusion) es un mecanismo de sincronización que permite que solo un hilo acceda a un recurso compartido a la vez.
+   - Características:
+      - Exclusión mutua: Solo un hilo puede "poseer" el mutex
+      - Propiedad: Solo el hilo que adquirió el mutex puede liberarlo
+      - Bloqueo: Si está ocupado, otros hilos esperan
+   - Diferencia con semáforo:
+      - Mutex es propiedad de un hilo específico
+      - Semáforo puede ser liberado por cualquier proceso
+
+6. ¿Qué es **RTOS**?     
+   RTOS (Real-Time Operating System) es la abreviatura de Sistema Operativo de Tiempo Real. Características específicas:  
+     - Scheduler determinista: Algoritmos de planificación que garantizan tiempos de respuesta predecibles.
+     - Gestión de prioridades: Sistema de prioridades fijas o dinámicas con herencia de prioridad.
+     -  Servicios de tiempo real: Temporizadores precisos, manejo de interrupciones con latencia mínima.    
+    Ejemplos populares:
+       - FreeRTOS (código abierto)
+       - VxWorks (comercial)
+       - QNX (microkernel)
+       - RT-Thread
+
+7. ¿Qué es **Embedded Linux**?     
+   Embedded Linux es una versión optimizada del kernel Linux diseñada para sistemas embebidos con recursos limitados.
+   - Características:
+      - Tamaño reducido: Kernel y sistema de archivos minimizados
+      - Tiempo de arranque rápido: Optimizado para iniciar rápidamente
+      - Configuración específica: Solo incluye drivers y servicios necesarios
+      - Soporte de hardware: Amplia gama de arquitecturas (ARM, MIPS, x86)
+   - Distribuciones populares:
+      - Yocto Project
+      - Buildroot
+      - OpenWrt
+      - Raspbian (Raspberry Pi OS)
+    - Ventajas:
+        - Costo reducido (gratuito)
+        - Gran comunidad de desarrolladores
+        - Flexibilidad y personalización
+
+8. ¿Has utilizado alguna tarjeta de desarrollo que soporte sistema operativo? (Raspberry, beaglebone)
+ 
+9. Utilizando Linux (bash). 
+    - ¿Cómo te mueves entre directorios? 
+
+    - ¿Cómo obtienes la fecha? 
+
+    - Describir algún algoritmo para hacer respaldos.  
+
+# Protocolos de comunicación:   
+1. ¿Qué es un protocolo de comunicación **síncrono**?     
    Un protocolo de comunicación síncrono utiliza una señal de reloj compartida para coordinar la transmisión de datos entre dispositivos, asegurando que emisor y receptor operen en sincronía. Ejemplos incluyen SPI e I2C. En mis proyectos con STM32, uso la señal de reloj de SPI para sincronizar la transferencia de datos con periféricos como sensores, garantizando un tiempo preciso. 
 
-2. ¿Qué es un protocolo de comunicación **asíncrono**?
+2. ¿Qué es un protocolo de comunicación **asíncrono**?   
    Un protocolo de comunicación asíncrono no usa un reloj compartido, sino que depende de bits de inicio y parada para enmarcar los datos. UART es un ejemplo común. En mis proyectos con AVR, uso UART para comunicación serial con una PC, configurando tasas de baudios para garantizar una transferencia de datos confiable sin una línea de reloj.
 
-3. ¿Cómo se realiza una **comunicación serial**?
+3. ¿Cómo se realiza una **comunicación serial**?   
    La comunicación serial transmite datos secuencialmente a través de un solo canal, bit por bit, usando protocolos como UART, SPI o I2C. Implica configurar parámetros (e.g., tasa de baudios para UART, polaridad del reloj para SPI) y manejar tramas de datos. En mis proyectos con STM32, configuro UART para enviar datos de sensores a una terminal, usando bits de inicio/parada para enmarcar. 
-4. Explica brevemente como funciona el protocolo **I2C**.
+4. Explica brevemente como funciona el protocolo **I2C**.   
    I2C (Inter-Integrated Circuit) es un protocolo síncrono de dos cables que usa SDA (datos) y SCL (reloj). Un dispositivo maestro controla el reloj y se comunica con múltiples dispositivos esclavos usando direcciones de 7 o 10 bits. Los datos se envían en tramas de 8 bits con bits ACK/NACK. En mis proyectos con STM32, uso I2C para interactuar con sensores como módulos de temperatura, configurando el STM32 como maestro.
 
-6. Explica brevemente como funciona el protocolo **SPI**.
+6. Explica brevemente como funciona el protocolo **SPI**.   
    SPI (Serial Peripheral Interface) es un protocolo síncrono de dúplex completo que usa cuatro líneas: MOSI (salida del maestro, entrada del esclavo), MISO (entrada del maestro, salida del esclavo), SCLK (reloj) y SS (selección de esclavo). El maestro inicia la comunicación, seleccionando un esclavo mediante SS y sincronizando datos con SCLK. En mis proyectos con AVR, uso SPI para comunicarme con una tarjeta SD, configurando el AVR como maestro para transferencias de datos de alta velocidad.
    
-7. ¿Conoces el protocolo **CAN**?
+7. ¿Conoces el protocolo **CAN**?   
    Sí, CAN (Controller Area Network) es un protocolo asíncrono robusto usado en sistemas automotrices e industriales para comunicación confiable entre múltiples nodos. Usa un par diferencial (CAN_H, CAN_L) y soporta comunicación basada en mensajes con arbitraje para evitar colisiones. En mis proyectos con STM32, he usado CAN para conectar microcontroladores en una red vehicular, aprovechando su detección de errores y tolerancia a fallos.
 
-8. ¿Conoces el protocolo **LIN**?
+8. ¿Conoces el protocolo **LIN**?   
    Sí, LIN (Local Interconnect Network) es un protocolo serial asíncrono de bajo costo usado en sistemas automotrices para aplicaciones no críticas (e.g., control de ventanas). Usa un bus de un solo cable con topología maestro-esclavo, donde el maestro controla la comunicación. No he usado LIN directamente en mis proyectos, pero entiendo su rol como una alternativa más simple a CAN para tareas de bajo ancho de banda.
 
-9. ¿Qué significa que un protocolo sea **Full-Duplex** ó **Half-Duplex**?
+9. ¿Qué significa que un protocolo sea **Full-Duplex** ó **Half-Duplex**?   
    - SPI: Recomendado para comunicación de alta velocidad y corta distancia con pocos dispositivos, como pantallas o tarjetas SD, debido a su dúplex completo y tasas de reloj rápidas. En mis proyectos con AVR, uso SPI para interfaces con tarjetas SD.
    - I2C: Ideal para comunicación de baja velocidad con múltiples dispositivos en un bus compartido, como sensores o EEPROMs, por su simplicidad de dos cables. En mis proyectos con STM32, uso I2C para sensores de temperatura.
   
-10. ¿En qué aplicaciones se recomienda utilizar SPI y en cuales I2C?
+10. ¿En qué aplicaciones se recomienda utilizar SPI y en cuales I2C?   
     Los errores de comunicación se manejan con técnicas como:
     - **Checksums/CRC**: Verifican la integridad de los datos.
     - **ACK/NACK**: Confirman la recepción exitosa (e.g., I2C).
     - **Timeouts**: Detectan comunicaciones estancadas.
     - **Retransmission**: Reenvían datos corruptos (e.g., CAN).
 
-11. ¿Cómo se manejan los errores de comunicación en un protocolo?
+11. ¿Cómo se manejan los errores de comunicación en un protocolo?    
 
-12. ¿Qué es el bit de inicio?
+12. ¿Qué es el bit de inicio?   
     El bit de inicio es una señal en protocolos asíncronos como UART que marca el comienzo de una trama de datos, alertando al receptor para que inicie el muestreo. Típicamente es una señal baja (0) seguida de bits de datos. 
     
-13. ¿Qué es un **checksum**?
+13. ¿Qué es un **checksum**?   
     Un checksum es un valor calculado a partir de los datos (e.g., sumando bytes) para verificar su integridad durante la transmisión. El receptor lo recalcula y compara para detectar errores. En mis proyectos con STM32, uso checksums en la comunicación UART para asegurar que los datos de sensores no estén corruptos.
 
-14. ¿Qué es un **frame**?
+14. ¿Qué es un **frame**?   
     Una trama es una unidad estructurada de datos en un protocolo de comunicación, que contiene carga útil, cabeceras y bits de control (e.g., bits de inicio/parada, dirección). En UART, una trama incluye un bit de inicio, bits de datos, paridad opcional y bits de parada. En mis proyectos con STM32, configuro tramas UART para transmitir lecturas de sensores de forma confiable.
 
 15. Explica como has usado protocolos de comunicación en los proyectos
