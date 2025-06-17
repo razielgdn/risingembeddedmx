@@ -20,7 +20,9 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
   - Others: **struct**, **union**, **enum**, **typedef**, **sizeof** 
 
 2. **What is the *volatile* keyword and where/what is it used for?**         
-   The **volatile** keyword in C tells the compiler that a variable's value can change unexpectedly, preventing optimizations that assume the value is stable. It's used in embedded systems for variables accessed by hardware, interrupts, or multiple threads. For example, a variable mapped to a hardware register (like the UART status register in STM32) is declared *volatile* to ensure the compiler reads its value every time instead of caching it. Usage: 
+   The **volatile** keyword in C tells the compiler that a variable's value can change unexpectedly, preventing optimizations that assume the value is stable. It's used in embedded systems for variables accessed by hardware, interrupts, or multiple threads.     
+
+   For example, a variable mapped to a hardware register (like the UART status register in STM32) is declared *volatile* to ensure the compiler reads its value every time instead of caching it. Usage: 
    ```c
    volatile uint32_t *reg = (uint32_t *)0x40021000;
    ```
@@ -32,7 +34,8 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
     static int counter = 0;
     ```
     in a function maintains its value between calls.  
-    - **Function**: A *static* function is only visible within the file, preventing external linkage. This is useful for auxiliary functions in embedded projects, like in my AVR firmware. Example: 
+    - **Function**: A *static* function is only visible within the file, preventing external linkage. This is useful for auxiliary functions in embedded projects, like in my AVR firmware.     
+    Example:    
     ```c
     static void update_led(void);
     ```
@@ -52,13 +55,14 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
      } Device_t;
     ```  
   This makes it easy to declare variables like `Device_t sensor;`{:.info}.
-  Another example would be: `typedef big_int_data`{:.info}
-
+  
 6. **What does the *const* modifier do?**    
-   The **const** modifier in C indicates that a variable's value cannot be modified after initialization. It's used to guarantee data integrity, especially for constants or read-only data. For example, `const int MAX_VALUE = 100;`{:.info} prevents changes to `MAX_VALUE`{:.info}. In embedded systems, I use *const* for lookup tables or configuration data stored in flash memory to prevent accidental writes.
+   The **const** modifier in C indicates that a variable's value cannot be modified after initialization. It's used to guarantee data integrity, especially for constants or read-only data.     
+   For example, `const int MAX_VALUE = 100;`{:.info} prevents changes to `MAX_VALUE`{:.info}. In embedded systems, I use *const* for lookup tables or configuration data stored in flash memory to prevent accidental writes.
 
 7. **What is a *pointer* in *C*?**    
-   A pointer in C is a variable that stores the memory address of another variable. It allows direct access and manipulation of memory, essential in embedded systems for accessing hardware registers or dynamic memory. For example, in my STM32 projects, I use pointers like     
+   A pointer in C is a variable that stores the memory address of another variable. It allows direct access and manipulation of memory, essential in embedded systems for accessing hardware registers or dynamic memory.     
+   For example, in my STM32 projects, I use pointers like       
     ```c
     uint32_t *reg = (uint32_t *)0x40021000;
     ``` 
@@ -71,14 +75,17 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
    - **static**: A `static`{:.info} pointer has persistent storage (local) or file scope (global).  
 
 9. **What does the *static* word do in a *global* variable and in a *local* one?**     
-   - **Local `static`{:.info} variable**: Retains its value between function calls, is initialized once and persists during the program's lifetime. Example: `static int count = 0;`{:.info} in a function increments between calls.  
+   - **Local `static`{:.info} variable**: Retains its value between function calls, is initialized once and persists during the program's lifetime.    
+   
+   Example: `static int count = 0;`{:.info} in a function increments between calls.  
    - **Global `static`{:.info} variable**: Restricts visibility to the file where it's declared, preventing external linkage. Example: `static int config = 10;`{:.info} is only accessible within the file.  
  
 10. **What is the *struct* reserved word used for?**    
    The **struct** reserved word in C defines a composite data type that groups variables of different types under a single name. It's used to organize related data, like hardware configurations or sensor data. 
 
 11. **What is the *enum* reserved word used for?**    
-    The **enum** reserved word in C defines an enumerated type, assigning names to a set of integer constants to improve code readability. It's used for states or options, like error codes or modes. Example: `enum State { OFF, ON, IDLE };`{:.info} in AVR projects defines device states, making code clearer than using raw integers.
+    The **enum** reserved word in C defines an enumerated type, assigning names to a set of integer constants to improve code readability. It's used for states or options, like error codes or modes.    
+    Example: `enum State { OFF, ON, IDLE };`{:.info} in AVR projects defines device states, making code clearer than using raw integers.
 
 12. **What is the *union* reserved word used for?**     
     The **union** reserved word in C defines a data type that allows different variables to share the same memory location, used to save space or reinterpret data. Only one member is valid at a time. 
@@ -134,12 +141,12 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
    
 17. **What are the two ways to pass parameters to a function?**      
     In C, parameters are passed to functions in two ways:  
-    - **By value**: A copy of the argument is passed, and changes don't affect the original.   
+    - **By value**: A copy of the argument is passed, and changes don't affect the original.      
       Example: 
       ```c
       void set_value(int x);
       ```  
-    - **By reference**: A pointer to the argument is passed, allowing modification of the original.    
+    - **By reference**: A pointer to the argument is passed, allowing modification of the original.        
       Example: 
       ```c
       void set_value(int *x); *x = 10;
@@ -155,7 +162,8 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
     - **long**: 4 or 8 bytes, depending on architecture.  
 
 19. **If I have a pointer to a structure, what is the size difference compared to a pointer to a function or to a variable?**     
-    All pointers in C (to structures, functions, or variables) have the same size on a given architecture, since they store memory addresses. For example, on a 32-bit STM32, a `struct S *`{:.info}, `void (*func)(void)`{:.info}, and *int** are all 4 bytes.    
+    All pointers in C (to structures, functions, or variables) have the same size on a given architecture, since they store memory addresses.     
+    For example, on a 32-bit STM32, a `struct S *`{:.info}, `void (*func)(void)`{:.info}, and *int** are all 4 bytes.     
     The difference is in what they point to, not in their size.
 
 20. **What does the size of a memory address depend on? (hint: there are 8, 16, 32, and even 64-bit architectures)**    
@@ -167,8 +175,9 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
     This determines the size of pointers. 
 
 21. **How do you do a *cast* (type masking)?**     
-    A **cast** in C converts a value from one type to another using **(type)**. It's used to ensure type compatibility or reinterpret data. Example: `int x = (int)3.14;`{:.info} converts a **float** to **int**. In embedded systems, I use casts for pointer conversions, like `(uint32_t *)0x40021000`{:.info} to access hardware registers in STM32 projects.
-
+    A **cast** in C converts a value from one type to another using **(type)**. It's used to ensure type compatibility or reinterpret data.     
+    Example: `int x = (int)3.14;`{:.info} converts a **float** to **int**. In embedded systems, 
+ 
 22. **Do you know how to do bit operations, do you master the so-called *bitwise* (if you don't, I recommend you research it).**     
     Bit operations manipulate individual bits using operators: 
      - **&** AND 
@@ -183,8 +192,9 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
     To convert from decimal to hexadecimal:      
     1. Divide the decimal number by 16, note the quotient and remainder.  
     2. Convert remainders (0-15) to hex digits (0-9, A-F).  
-    3. Repeat until the quotient is 0, then read the remainders in reverse order.  
-    Example: 255 ÷ 16 = 15 (quotient), 15 (remainder = F); 15 ÷ 16 = 0, 15 (F). Result: 0xFF.    
+    3. Repeat until the quotient is 0, then read the remainders in reverse order.      
+
+    Example: 255 ÷ 16 = 15 (quotient), 15 (remainder = F); 15 ÷ 16 = 0, 15 (F). Result: 0xFF.     
     **Note:** a hack is to directly print the data in hexadecimal format. It works well in contests. 
 
 24. **How do you quickly convert from decimal to binary?**     
@@ -194,9 +204,11 @@ A keyword (reserved word) **is a word that has a special predefined meaning in t
     Example: 13 ÷ 2 = 6, remainder 1; 6 ÷ 2 = 3, 0; 3 ÷ 2 = 1, 1; 1 ÷ 2 = 0, 1. 
 
 25. **What is a local variable? What is a global variable? How do they differ?**    
-    - **Local variable**: Declared inside a function, with scope limited to that function and lifetime until the function ends. Example: **int x;** in a function.  
-    - **Global variable**: Declared outside functions, accessible throughout the program, with lifetime during program execution. Example: **int x;** in file scope.  
-    - **Difference**: Local variables are temporary and function-specific; global variables are persistent and globally scoped. In my AVR projects, I use globals for configurations and locals for temporary calculations.
+    - **Local variable**: Declared inside a function, with scope limited to that function and lifetime until the function ends.     
+    Example: **int x;** in a function.  
+    - **Global variable**: Declared outside functions, accessible throughout the program, with lifetime during program execution.     
+    Example: **int x;** in file scope.  
+    - **Difference**: Local variables are temporary and function-specific; global variables are persistent and globally scoped. 
 
 26. **What is the *extern* modifier used for?**    
     The **extern** modifier in C declares a variable or function defined in another file, allowing access without redefining it. It extends the visibility of the variable or function between files. 
@@ -312,9 +324,11 @@ Functions are safer and debuggable; macros are faster but risky.
 
 40. **What is the difference between using a macro and *const*?**    
     - **Macro**: A *#define* directive replaces code inline during preprocessing, without type safety and with possible side effects. Example: #define `SQUARE(x) ((x)*(x))` can cause errors if arguments have side effects.  
-    - **const**: A *const* variable is a fixed value stored in memory, with type checking and no expansion. Example: `const int MAX = 100;` ensures safety. Macros are faster but risky; `const` is safer and clearer. 
+    - **const**: A *const* variable is a fixed value stored in memory, with type checking and no expansion.     
+    Example: `const int MAX = 100;` ensures safety. Macros are faster but risky; `const` is safer and clearer. 
 41. What is the concept of dynamic memory?    
-    Dynamic memory in C is allocated at runtime using functions like `malloc`, `calloc`, `realloc` and `free`, generally in the heap. It allows flexible memory usage for structures like buffers or lists. 
+    Dynamic memory in C is allocated at runtime using functions like `malloc`, `calloc`, `realloc` and `free`, generally in the heap.     
+    It allows flexible memory usage for structures like buffers or lists. 
 
 42. **What are the functions for using dynamic memory?**
    - **malloc():** The name comes from **"memory allocation"** and is used to reserve a large block of memory.
@@ -350,9 +364,12 @@ ptr = (cast-type*) malloc(byte-size)
     Where ptr is reallocated with new size **newSize**.
 
 43. **What is an *API*?**
-    An API (Application Programming Interface) is a set of functions, protocols or tools that enables communication between software components. In embedded systems, APIs like STM32's HAL provide functions to interact with hardware (e.g., **HAL_UART_Transmit** for UART). In my projects, I use APIs to abstract hardware details and simplify firmware development.
+    An API (Application Programming Interface) is a set of functions, protocols or tools that enables communication between software components. In embedded systems, APIs like STM32's HAL provide functions to interact with hardware (e.g., **HAL_UART_Transmit** for UART).     
+    In my projects, I use APIs to abstract hardware details and simplify firmware development.
 
-As a suggestion, the embedded systems developer no longer thinks in an object-oriented approach, it could be described as adhering to classic structured programming, however. The definition that I can personally define is hardware control through software structures and algorithms. The binary world (encoded in hexadecimal) is the daily bread for the **Embedded SW Developer**.
+As a suggestion, the embedded systems developer no longer thinks in an object-oriented approach, it could be described as adhering to classic structured programming, however. The definition that I can personally define is hardware control through software structures and algorithms. 
+
+Viewing the world in binary (encoded in hexadecimal) is just another day at the office for an **Embedded SW Developer**.
 
 # Processor and Memory Architectures
 1. **What architectures do you know? (In my personal case)**
@@ -364,7 +381,7 @@ As a suggestion, the embedded systems developer no longer thinks in an object-or
    - PIC: Used in Microchip microcontrollers.
   
 2. **What is the difference between *Harvard* and *Von Neumann* architecture?**
-   - Harvard: Uses separate memories for instructions (program) and data, with independent buses, allowing simultaneous access. It's common in microcontrollers like AVR and STM32.
+   - Harvard: Uses separate memories for instructions (program) and data, with independent buses, allowing simultaneous access. It's common in microcontrollers like AVR and STM32.    
    - Von Neumann: Uses a single memory and bus for both instructions and data, which can limit performance. It's typical in PCs. 
 
 3. **What does it mean to have a 32-bit microcontroller/processor? (referring to how it handles memory)**
@@ -375,10 +392,13 @@ As a suggestion, the embedded systems developer no longer thinks in an object-or
    - **Machine cycle**: It's the time needed to complete an instruction, which may require multiple clock cycles, depending on the instruction and architecture.  
    
 5. **What does it mean for a microcontroller to be *big endian*?**
-   A **big endian** microcontroller stores data in memory by placing the most significant byte (MSB) at the lowest address. For example, the value 0x1234 is stored as 12 34. It's common in some network architectures. In my projects, I've worked with STM32, which is **little endian**, but I understand **big endian** for protocols like CAN.
+   A **big endian** microcontroller stores data in memory by placing the most significant byte (MSB) at the lowest address.      
+   For example, the value 0x1234 is stored as 12 34. It's common in some network architectures. In my projects.      
+   I've worked with STM32, which is **little endian**, but I understand **big endian** for protocols like CAN.
  
 6. **What does it mean for a processor to be *little endian*?**
-   A **little endian** processor stores data by placing the least significant byte (LSB) at the lowest address. For example, 0x1234 is stored as 34 12. It's typical in ARM Cortex-M and x86. In my STM32 projects, I use **little endian** to access registers and data, ensuring correct order in reads/writes.
+   A **little endian** processor stores data by placing the least significant byte (LSB) at the lowest address.     
+   For example, 0x1234 is stored as 34 12. It's typical in ARM Cortex-M and x86. In my STM32 projects, I use **little endian** to access registers and data, ensuring correct order in reads/writes.
  
 7. **What is a *processor*?**
    A processor is an electronic circuit that executes program instructions, performing arithmetic, logical, and control operations. In embedded systems, it's the core of a microcontroller.
@@ -453,17 +473,17 @@ while(1) {
    Sequential control: Events are verified in a specific order
    Deterministic response: Predictable response time
    -  **Advantages**:
-    Simplicity: Easy to implement and understand
-    Total control: The programmer decides when and what to check
-    Determinism: Predictable system behavior
-    No interrupt overhead: No context switching
-    Simple debugging: Linear program flow
+      - Simplicity: Easy to implement and understand
+      - Total control: The programmer decides when and what to check
+      - Determinism: Predictable system behavior
+      - No interrupt overhead: No context switching
+      - Simple debugging: Linear program flow
 
     - **Disadvantages**:
-    CPU consumption: Wastes cycles constantly checking
-    Power consumption: The processor never enters low-power mode
-    Variable latency: Depends on when verification occurs in the loop
-    Limited scalability: Difficult to handle many simultaneous events
+      - CPU consumption: Wastes cycles constantly checking
+      - Power consumption: The processor never enters low-power mode
+      - Variable latency: Depends on when verification occurs in the loop
+      - Limited scalability: Difficult to handle many simultaneous events
     22. **How do you handle an interrupt (using C language)? (spoiler: through ISR using functions, for ARM you use NVIC)**     
    In C, an interrupt is handled by defining an ISR (Interrupt Service Routine) function. In STM32 (ARM), I use the NVIC (Nested Vectored Interrupt Controller) to prioritize and enable interrupts. Example:  
 ```c
@@ -475,7 +495,7 @@ void TIM2_IRQHandler(void) {
 }
 ```
 23. **What is a watchdog timer? What functions does it have?**    
-    A Watchdog Timer is a hardware timer designed to detect and recover from software failures, automatically restarting the system when it detects that the main program has "hung" or is executing incorrectly.     
+    A Watchdog Timer is a hardware timer designed to detect and recover from software failures, automatically restarting the system when it detects that the main program has "hung" or is executing incorrectly.      
     The watchdog works as a countdown timer that must be "fed" (reset) periodically by software. If it's not reset within the time limit, it assumes the system is stuck and generates a system reset.  
 
 24. **If I need to implement a delay, why is it better to implement it using a countdown rather than a count-up?**     
@@ -516,7 +536,8 @@ void TIM2_IRQHandler(void) {
         cmp r0, r1         ; Compare with limit
         blt loop           ; Jump if less
     ```
-    The advantages of countdown are noticeable: fewer CPU instructions are used, processor flags are leveraged, there's less register usage and RAM memory accesses. When working with very small systems like 8-bit microcontrollers, you must consider that resources are limited and each instruction consumes resources.  
+    The advantages of countdown are noticeable: fewer CPU instructions are used, processor flags are leveraged, there's less register usage and RAM memory accesses.    
+    When working with very small systems like 8-bit microcontrollers, you must consider that resources are limited and each instruction consumes resources.  
 
 25. **How is microcontroller memory organized?**    
     Microcontroller memory is organized into:
@@ -665,7 +686,8 @@ Low Addresses
 
 29. **How is a **GPIO** mapped within the microcontroller (in reference to C language)?**      
     It's done through registers which are dedicated memory spaces. 
-    The datasheet of each device must be reviewed to verify correctly. For example, in an AVR architecture it's mainly done through the following:
+    The datasheet of each device must be reviewed to verify correctly.     
+    For example, in an AVR architecture it's mainly done through the following:  
        - **DDR** (Data Direction Register): Defines if the pin is input (0) or output (1).
        - **PORT**: Controls the pin's output state.
        - **PIN**: Reads the pin's current state.

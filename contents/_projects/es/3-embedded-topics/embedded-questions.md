@@ -369,7 +369,7 @@ ptr = (cast-type*) malloc(byte-size)
 43. **¿Qué es una *API*?**
     Una API (Interfaz de Programación de Aplicaciones) es un conjunto de funciones, protocolos o herramientas que permite la comunicación entre componentes de software. En sistemas embebidos, APIs como la HAL de STM32 proporcionan funciones para interactuar con hardware (e.g., **HAL_UART_Transmit** para UART). En mis proyectos, uso APIs para abstraer detalles del hardware y simplificar el desarrollo de firmware.
 
-Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoque orientado a  objetos, podría describirse como apegado a la programación estructurada clásica, sin embargo. La definición que en lo personal puedo definir es el control de Hardware por medio de estructuras y algoritmos de Software. El mundo en binario (códificado en hexadecimal) es el pan de cada día para el **Embedded SW Developer.**  
+Como sugerencia, el desarrollador de Sistemas embebidos ya no piensa en un enfoque orientado a  objetos, podría describirse como apegado a la programación estructurada clásica, sin embargo. La definición que en lo personal puedo definir es el control de Hardware por medio de estructuras y algoritmos de Software. Ver el mundo en binario (códificado en hexadecimal) es el pan de cada día para el **Embedded SW Developer.**  
 
 # Arquitecturas de procesador y memoria
 1. **¿Qué arquitecturas conoces? (En mi caso personal)**
