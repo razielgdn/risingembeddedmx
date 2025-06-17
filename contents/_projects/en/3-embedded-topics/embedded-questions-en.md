@@ -1,5 +1,5 @@
 ---
-title: Questions in an interview to be Embedded Software Developer
+title: Interview questions for Embedded Software Developer positions
 permalink: /projects/en/embedded-topics/embedded-questions-en
 key: embedded
 tags: 
