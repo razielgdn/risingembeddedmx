@@ -781,6 +781,8 @@ Low Addresses
       - A **char** always occupies 1 byte.
       - The difference between two **char*** gives us the exact number of bytes.
       - Without this conversion, we would get the number of structures, not bytes.
+
+      
 # Operating System
 1. **What is an *operating system*?**    
    An operating system is fundamental software that acts as an intermediary between computer hardware and user applications. Its main functions include:
