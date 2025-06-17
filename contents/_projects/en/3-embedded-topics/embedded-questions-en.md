@@ -912,7 +912,7 @@ If you have to do a technical exercise together, try to explain your logic for s
 {:.success}
 I hope this information is useful to someone. Here you need some effort and a lot of luck, especially to get a first job. One tip to move the statistics in your favor is to have a good LinkedIn profile and add headhunters/HR from tech companies as well as engineers who are already developing. Without fear, and without shame.
 For now I say goodbye, I'll try to update this post whenever I can.
-**# Sources**
+# Sources
 I'll leave you a list of places where you can find solutions to some of these questions, and many more to prepare.
 - [Top 18 Embedded Systems Interview Questions and Answers](https://www.guru99.com/embedded-systems-interview-questions.html)
 - [Embedded C Interview Questions](https://www.interviewbit.com/embedded-c-interview-questions/)
