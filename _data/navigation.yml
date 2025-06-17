@@ -76,7 +76,7 @@ projects-en:
         url: "/projects/en/2-avr-section/build-and-flash"   
   - title: Embedded systems topics  
     children:    
-      - title: "Interview for an embedded Developer job"
+      - title: "Interview questions for Embedded Software Developer positions"
         url: "/projects/en/embedded-topics/embedded-questions-en" 
   - title: "Yocto project"
     children:
@@ -109,7 +109,7 @@ projects-es:
       url: /projects/es/embedded-topics/embedded-devDef 
     - title: ¿Que debo saber?
       url: /projects/es/embedded-topics/embedded-knowledges 
-    - title: Preguntas de entrevista
+    - title: Preguntas de entrevista técnica
       url: /projects/es/embedded-topics/embedded-questions
       
   - title: Yocto Project

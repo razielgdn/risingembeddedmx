@@ -59,7 +59,7 @@ Una keyword (palabra clave o palabra reservada) **es una palabra que tiene un si
    El modificador **const** en C indica que el valor de una variable no puede modificarse después de su inicialización. Se usa para garantizar la integridad de los datos, especialmente para constantes o datos de solo lectura. Por ejemplo, `const int MAX_VALUE = 100;`{:.info} evita cambios en `MAX_VALUE`{:.info}. En sistemas embebidos, uso `const`{:.info} para tablas de consulta o datos de configuración almacenados en memoria flash para evitar escrituras accidentales.
 
 7. **¿Qué es un *apuntador* en *C*?**    
-   Un apuntador en C es una variable que almacena la dirección de memoria de otra variable. Permite el acceso y manipulación directa de la memoria, esencial en sistemas embebidos para acceder a registros de hardware o memoria dinámica. Por ejemplo, en mis proyectos con STM32, uso apuntadores como     
+   Un apuntador en C es una variable que almacena la dirección de memoria de otra variable. Permite el acceso y manipulación directa de la memoria, esencial en sistemas embebidos para acceder a registros de hardware o memoria dinámica. 
 ```c
 uint32_t *reg = (uint32_t *)0x40021000;
 ``` 
@@ -211,7 +211,8 @@ uint32_t *reg = (uint32_t *)0x40021000;
 25. **¿Qué es una variable local? ¿Qué es una variable global? ¿En que se diferencian?**
     - **Variable local**: Declarada dentro de una función, con ámbito limitado a esa función y vida hasta que la función termina. Ejemplo: **int x;** en una función.  
     - **Variable global**: Declarada fuera de funciones, accesible en todo el programa, con vida durante la ejecución del programa. Ejemplo: **int x;** en el ámbito del archivo.  
-    - **Diferencia**: Las variables locales son temporales y específicas de la función; las globales son persistentes y de alcance global. En mis proyectos con AVR, uso globales para configuraciones y locales para cálculos temporales.
+    - **Diferencia**: Las variables locales son temporales y específicas de la función; las globales son persistentes y de alcance global. 
+    En mis proyectos con AVR, uso globales para configuraciones y locales para cálculos temporales.
 
 26. **¿Para qué se utiliza el modificador *extern*?**
     El modificador **extern** en C declara una variable o función definida en otro archivo, permitiendo su acceso sin redefinirla. Extiende la visibilidad de la variable o función entre archivos. 
@@ -325,7 +326,8 @@ Las funciones son más seguras y depurables; las macros son más rápidas pero a
     ```c 
     volatile const uint8_t *reg = (uint8_t *)0x40021000;
     ```
-    para un registro de hardware de solo lectura que se actualiza por interrupciones. En mis proyectos con STM32, lo uso para registros de estado actualizados por hardware pero de solo lectura en firmware.
+    para un registro de hardware de solo lectura que se actualiza por interrupciones. 
+    En mis proyectos con STM32, lo uso para registros de estado actualizados por hardware pero de solo lectura en firmware.
 
 40. **¿Cuál es la diferencia entre usar una macro y *const*?**
     - **Macro**: Una directiva `#define` reemplaza código en línea durante el preprocesado, sin seguridad de tipos y con posible efectos secundarios. Ejemplo: `#define SQUARE(x) ((x)*(x))` puede causar errores si los argumentos tienen efectos secundarios.  
@@ -896,7 +898,8 @@ Direcciones Bajas
      - Requiere más hardware (líneas separadas de TX y RX)
   
 10. **¿En qué aplicaciones se recomienda utilizar SPI y en cuales I2C?**  
-     - SPI: Recomendado para comunicación de alta velocidad y corta distancia con pocos dispositivos, como pantallas o tarjetas SD, debido a su dúplex completo y tasas de reloj rápidas. En mis proyectos con AVR, uso SPI para interfaces con tarjetas SD.
+     - SPI: Recomendado para comunicación de alta velocidad y corta distancia con pocos dispositivos, como pantallas o tarjetas SD, debido a su dúplex completo y tasas de reloj rápidas.    
+     En mis proyectos con AVR, uso SPI para interfaces con tarjetas SD.
      - I2C: Ideal para comunicación de baja velocidad con múltiples dispositivos en un bus compartido, como sensores o EEPROMs, por su simplicidad de dos cables.     
 
 11. **¿Cómo se manejan los errores de comunicación en un protocolo?**    
@@ -909,7 +912,7 @@ Direcciones Bajas
     El bit de inicio es una señal en protocolos asíncronos como UART que marca el comienzo de una trama de datos, alertando al receptor para que inicie el muestreo. Típicamente es una señal baja (0) seguida de bits de datos. 
     
 13. **¿Qué es un *checksum*?**   
-    Un checksum es un valor calculado a partir de los datos (e.g., sumando bytes) para verificar su integridad durante la transmisión. El receptor lo recalcula y compara para detectar errores. En mis proyectos con STM32, uso checksums en la comunicación UART para asegurar que los datos de sensores no estén corruptos.
+    Un checksum es un valor calculado a partir de los datos (e.g., sumando bytes) para verificar su integridad durante la transmisión. El receptor lo recalcula y compara para detectar errores. 
 
 14. **¿Qué es un *frame*?**   
     Una trama es una unidad estructurada de datos en un protocolo de comunicación, que contiene carga útil, cabeceras y bits de control (e.g., bits de inicio/parada, dirección). En UART, una trama incluye un bit de inicio, bits de datos, paridad opcional y bits de parada. 
