@@ -4,4 +4,5 @@ source "https://rubygems.org/"
 #gem "faraday-retry"
 gem "kramdown-parser-gfm"
 gem "webrick"
+gem "jekyll-feed"
 gemspec
