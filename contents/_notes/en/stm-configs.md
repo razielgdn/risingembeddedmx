@@ -1,7 +1,8 @@
 ---
 layout: article
 title: STM tools. 
-permalink: /projects/es/notes/stm-configs_en
+permalink: /notes/en/stm-configs_en
 key: configuration   
 ---
 
+hello

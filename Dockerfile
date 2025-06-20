@@ -13,13 +13,9 @@ RUN groupadd --gid $USER_GID $USERNAME \
      && apt-get install -y sudo \
      && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
      && chmod 0440 /etc/sudoers.d/$USERNAME
-
-
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
 
-# "#################################################"
-# "Get the latest APT packages"
 RUN sudo apt-get update
 ENV TZ="America/Monterrey"
 RUN sudo apt-get install -y tzdata
@@ -40,8 +36,7 @@ RUN sudo apt-get -y install git \
     libffi-dev \
     libgdbm6 \
     libgdbm-dev \
-    libdb-dev \   
-    nano \ 
+    libdb-dev \        
     apt-utils 
     
 RUN sudo apt-get -y upgrade    
@@ -58,8 +53,7 @@ ENV PATH ${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH
 
 RUN   git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} 
 RUN   git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build 
-    
-#RUN sudo echo 'eval "$(rbenv init -)"' > /etc/profile.d/rbenv.sh
+
 # "#################################################"
 # "Install ruby and set the global version"
 RUN  rbenv install ${RUBY_VERSION} \
@@ -67,7 +61,4 @@ RUN  rbenv install ${RUBY_VERSION} \
 # "#################################################"
 # "Install the version of Jekyll that GitHub Pages supports"
 # "Based on: https://pages.github.com/versions/"
-# "Note: If you always want the latest 3.9.x version,"
-# "       use this line instead:"
-# "       RUN gem install jekyll -v '~>3.9'"
 RUN  gem install jekyll 
