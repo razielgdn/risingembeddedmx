@@ -18,4 +18,4 @@ I'm currently working on the site using Docker, and I plan to do the same with c
 
 Finally, I'm working on a technical notes section with topics about resources used in my projects or needed for specific technologies. The first articles in this section explain how to install and use Docker to create this website.
 - [Docker introduction](https://razielgdn.github.io/risingembeddedmx/notes/en/docker-inst-en)
-- [Docker](https://razielgdn.github.io/risingembeddedmx/notes/en/docker-jekyll-en)
+- [Docker for Jekyll](https://razielgdn.github.io/risingembeddedmx/notes/en/docker-jekyll-en)

@@ -65,4 +65,4 @@ WORKDIR /workspace
 EXPOSE 4000
 
 # Default command
-CMD ["bash"]
+CMD ["/bin/bash"]
