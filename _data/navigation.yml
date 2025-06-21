@@ -138,7 +138,7 @@ notes-en:
      - title: Docker introduction and installation 
        url: /notes/en/docker-inst-en                
      - title: Dockerfile, jekyll workspace
-       url: /notes/es/docker-jekyll-en  
+       url: /notes/en/docker-jekyll-en  
     #- title: STM Tools configuration
     #  url: /projects/en/notes/stm-configs_en
 
@@ -151,8 +151,8 @@ notes-es:
     children:
      - title: Introducción e instalación de Docker
        url: /notes/es/docker-inst-es
-     - title: Dockerfile, trabajando con Jekyll
-       url: /notes/es/docker-jekyll-es 
+     #- title: Dockerfile, trabajando con Jekyll
+       #url: /notes/es/docker-jekyll-es 
 
 about-en:
  - title: Languages 

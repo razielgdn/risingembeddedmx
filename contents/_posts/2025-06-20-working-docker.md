@@ -1,5 +1,5 @@
 ---
-title: "Why I use docker?"
+title: "Working with docker"
 layout: article
 tags:
 - studying
@@ -7,7 +7,15 @@ tags:
 - documentation
 ---
 
-This site use Jekyll to be created at the begining I used a native installation in fedora 38 or 39 I dont remmember  but my pc failed by an electrical failure and I lost the ssd. After replace the hardware and start to be more active with my content I decided to use Ubuntu because Its more used by the mortals.  
 
-Somebody said that I am a kind of masoquist and traidor to the free software because I use fedora since 2008 whan I star in my journey as developer (In a future post I will count the history maybe) 
-Well Whether I like it or not, ubuntu is more used (As i know) to develop embedded systems behind linux.  And how I want to help other developers more specific my Universidad tecnologica de la mixteca Colleague (i prefeer say comrades but I know more conservative engineers in the field and... on second though my readers use gnu linux)   
+This site uses Jekyll to be created. At the beginning, I used a native installation on Fedora 38 or 39 (I don't remember which), but my PC failed due to an electrical failure and I lost the SSD. After replacing the hardware and deciding to be more active with my content, I chose to use Ubuntu because it's more widely used by regular people.
+
+Someone told me that I'm a kind of masochist and traitor to free software because I've been using Fedora since 2008, when I started my journey as a developer. (In a future post, I might tell that story... maybe!) He was laughing, or maybe he uses Debian, or used it back in 2009. Well, whether I like it or not, Ubuntu is more commonly used (as far as I know) for developing embedded systems on Linux.
+
+Since I want to help other developers, specifically my colleagues at Universidad Tecnológica de la Mixteca (I prefer to say "comrades," but I know there are more conservative engineers in the field, and... on second thought, my readers do use GNU/Linux), I researched containers and decided to use Docker to manage my webpage locally and work with this site.
+
+I'm currently working on the site using Docker, and I plan to do the same with compilation tools for AVR and STM32. In the future, I'll also work with the Yocto Project because my brother gifted me a [Le Potato AML-S005X-CC](https://libre.computer/products/aml-s905x-cc/){:target="_blank"} board . I also don't use my Raspberry Pi 4 much. So many projects, so little time! Sometimes, as the song goes, I think "A mí que me lleve el diablo" (roughly translated as "let the devil take me").
+
+Finally, I'm working on a technical notes section with topics about resources used in my projects or needed for specific technologies. The first articles in this section explain how to install and use Docker to create this website.
+- [Docker introduction](https://razielgdn.github.io/risingembeddedmx/notes/en/docker-inst-en)
+- [Docker](https://razielgdn.github.io/risingembeddedmx/notes/en/docker-jekyll-en)
