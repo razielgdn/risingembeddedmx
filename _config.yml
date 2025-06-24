@@ -165,8 +165,9 @@ exclude:
   - package-lock.json
   - package.json
   - Dockerfile
-  - /run-once.sh  
-    
+  - docker-compose.yml
+  - .dockerignore
+  - run-once.sh      
   - blog.md
 
 collections_dir: contents

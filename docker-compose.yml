@@ -1,29 +1,24 @@
-version: '3.8'
-
 services:
   jekyll:
     build: .
     container_name: jekyll-site
     ports:
       - "4000:4000"
-    volumes:
-      # Montar el directorio de trabajo
+    volumes:  
       - .:/workspace
-      # Persistir las gemas y rbenv
-      - jekyll-gems:/home/remoteUser/.rbenv
-      # Persistir el historial de bash
+      - jekyll-rbenv:/home/remoteUser/.rbenv
       - jekyll-history:/home/remoteUser/.bash_history_volume
-      # Persistir la configuración de bash
       - jekyll-bash-config:/home/remoteUser/.bashrc.d
     environment:
       - TZ=America/Monterrey
+      - BUNDLE_PATH=/home/remoteUser/.rbenv/gems
     stdin_open: true
     tty: true
     working_dir: /workspace
     command: /bin/bash
 
 volumes:
-  jekyll-gems:
+  jekyll-rbenv:
     driver: local
   jekyll-history:
     driver: local
