@@ -137,7 +137,9 @@ notes-en:
     children:
      - title: Docker introduction and installation 
        url: /notes/en/docker-inst-en                
-     - title: Dockerfile, jekyll workspace
+     - title: Dockerfile basics
+       url: /notes/en/docker-dockerfile-en
+     - title: "Dockerfile: Practical Examples"
        url: /notes/en/docker-jekyll-en  
     #- title: STM Tools configuration
     #  url: /projects/en/notes/stm-configs_en
@@ -151,6 +153,10 @@ notes-es:
     children:
      - title: Introducción e instalación de Docker
        url: /notes/es/docker-inst-es
+     - title: Fundamentos de Dockerfile
+       url: /notes/es/docker-dockerfile-es   
+     - title: "Dockerfile: Ejemplos Prácticos"
+       url: /notes/es/docker-jekyll-es
      #- title: Dockerfile, trabajando con Jekyll
        #url: /notes/es/docker-jekyll-es 
 

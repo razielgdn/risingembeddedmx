@@ -14,18 +14,18 @@ Before following the examples, ensure you have:
 - Git for cloning repositories
 - A basic understanding of command-line interfaces
 
-## Jekyll Concepts
+# Jekyll Concepts
 
-### What is Ruby?
+## What is Ruby?
 Ruby is a high-level, general-purpose programming language known for its simplicity and readable syntax. It’s beginner-friendly yet powerful enough for large-scale applications. Ruby powers the Ruby on Rails web framework and tools like Jekyll. To use Jekyll, you need Ruby installed to manage dependencies and run commands.
 
-### What is Jekyll?
+## What is Jekyll?
 Jekyll is a static site generator written in Ruby. Unlike traditional content management systems (e.g., WordPress) that rely on databases, Jekyll transforms plain text files (Markdown or HTML) into a static website. It’s ideal for blogs and documentation due to its simplicity, speed, and integration with GitHub Pages, which offers free hosting from a GitHub repository. Jekyll supports customizable layouts, themes, plugins, and configuration.
 
-### What is a Jekyll Theme?
+## What is a Jekyll Theme?
 A Jekyll theme is a pre-designed collection of templates, layouts, stylesheets, and assets (e.g., images, fonts) that defines a site’s appearance and structure. Themes enable quick setup of professional websites without designing from scratch. They include templates for pages like homepages, blog posts, and archives. Themes can be customized via the `_config.yml` file or by modifying their source files.
 
-### How to Use a Jekyll Theme?
+## How to Use a Jekyll Theme?
 You can apply a Jekyll theme in two ways:
 1. **Remote Theme** (GitHub Pages-compatible):
    For GitHub Pages hosting, specify a theme published as a Ruby gem in your `_config.yml`:
@@ -36,15 +36,15 @@ You can apply a Jekyll theme in two ways:
 2. **Local Theme**:
    For local development or extensive customization, clone a theme’s files into your project directory to modify layouts, styles, and includes directly.
 
-## GitHub Pages
+# GitHub Pages
 
-### What is GitHub Pages?
+## What is GitHub Pages?
 GitHub Pages is a free hosting service provided by GitHub for publishing static websites directly from a GitHub repository. It’s particularly popular for hosting Jekyll sites, as it natively supports Jekyll’s static site generation. GitHub Pages allows you to create personal, project, or organization websites, making it an excellent choice for blogs, portfolios, or documentation.
 
-### How Does GitHub Pages Work with Jekyll?
+## How Does GitHub Pages Work with Jekyll?
 GitHub Pages automatically builds and serves Jekyll sites when you push your repository to GitHub. You can use a supported theme (via `_config.yml`) or customize your site with local theme files. The generated static files are served from a specific branch (typically `gh-pages` or `main`) or a `/docs` folder in your repository.
 
-### Why Use GitHub Pages with Docker?
+## Why Use GitHub Pages with Docker?
 Using Docker for local Jekyll development ensures your environment matches GitHub Pages’ build process, avoiding dependency conflicts. You can test your site locally in a container, push changes to GitHub, and let GitHub Pages handle deployment. This workflow streamlines development and ensures consistency between local previews and the live site.
 
 This blog uses Jekyll with a customized [TeXt Theme](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/quick-start){:target="_blank"}, developed locally in a Docker container and deployed via GitHub Pages.

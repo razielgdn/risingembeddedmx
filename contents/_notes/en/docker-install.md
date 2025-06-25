@@ -7,7 +7,6 @@ date: 2025-06-19
 lang: en
 ---
 
-
 According to Wikipedia, Docker is an open-source project that automates the deployment of applications within software containers, providing an additional layer of abstraction and automation for application virtualization across multiple operating systems. Docker uses Linux kernel resource isolation features, such as cgroups and namespaces, to allow independent "containers" to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines.
 
 Its history began in 2008 when Solomon Hykes started Docker as a project within the company dotCloud. In March 2013, it was released as open source, and the project has grown since then to the extent of being natively included in Windows and is now an industry standard.
