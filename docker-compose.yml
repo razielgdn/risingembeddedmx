@@ -5,6 +5,10 @@ services:
     ports:
       - "4000:4000"
     volumes:  
+      # Bind mount the current directory to /workspace in the container
+      # and use named volumes for persistent data
+      # for rbenv, bash history, and bash configuration
+      # This allows you to keep your Jekyll site files and configurations
       - .:/workspace
       - jekyll-rbenv:/home/remoteUser/.rbenv
       - jekyll-history:/home/remoteUser/.bash_history_volume

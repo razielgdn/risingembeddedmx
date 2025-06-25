@@ -57,12 +57,10 @@ This blog uses Jekyll with a customized [TeXt Theme](https://kitian616.github.io
 FROM ubuntu:22.04
 
 # Configure timezone (prevents interactive prompts)
-# Set the timezone to America/Monterrey
 ENV TZ="America/Monterrey"
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Install system dependencies and tools
-# This includes essential build tools and libraries for Ruby and Jekyll
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -85,10 +83,6 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure user
-# This section creates a non-root user for running applications.
-# It sets the username, user ID, and group ID.
-# The user is granted sudo privileges without a password prompt.
-# This is important for security and best practices in containerized environments.
 ARG USERNAME=remoteUser
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
@@ -98,42 +92,48 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-   
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
 # Configure Ruby with rbenv
-# This section sets up rbenv for Ruby version management.
-# It defines the root directory for rbenv and the Ruby version to be installed.
 ENV RBENV_ROOT="/home/$USERNAME/.rbenv"
 ENV RUBY_VERSION="3.4.4"
 ENV PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
 
 # Install rbenv and ruby-build
 RUN git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} \
-    && git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build \
-    && echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    && git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build
+
+# Configure bash to load rbenv and persistent history
+RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc \
+    && echo 'eval "$(rbenv init -)"' >> ~/.bashrc \
+    && echo 'export HISTFILE=/home/remoteUser/.bash_history_volume/.bash_history' >> ~/.bashrc \
+    && echo 'export HISTSIZE=10000' >> ~/.bashrc \
+    && echo 'export HISTFILESIZE=10000' >> ~/.bashrc
 
 # Install Ruby
-# This section installs the specified Ruby version using rbenv.
 RUN rbenv install ${RUBY_VERSION} \
     && rbenv global ${RUBY_VERSION} \
     && rbenv rehash
 
 # Install Jekyll and Bundler
-# This section installs Jekyll and Bundler using the RubyGems package manager.
 RUN gem install bundler jekyll \
     && rbenv rehash
+
+# Create directories for mounted volumes and Bundler gems
+RUN mkdir -p /home/$USERNAME/.bash_history_volume \
+    && mkdir -p /home/$USERNAME/.bashrc.d \
+    && mkdir -p /home/$USERNAME/.rbenv/gems \
+    && chown -R $USERNAME:$USERNAME /home/$USERNAME/.rbenv/gems
+
 # Set up workspace directory for projects
 WORKDIR /workspace
 
 # Expose Jekyll's default port
-# This allows external access to the Jekyll server when running in the container.
-EXPOSE 4000 
+EXPOSE 4000
 
-# This sets the default command to be executed when the container starts.
+# Default command
 CMD ["bash"]
-
 ```
 
 ## Building and Running the Container
@@ -171,6 +171,84 @@ CMD ["bash"]
    bundle exec jekyll serve --host 0.0.0.0 --port 4000 --baseurl "/risingembeddedmx" --livereload 
    ```
 
+## Using docker compose
+Docker Compose is a tool for defining and managing multi-container Docker applications using a YAML file. It allows you to configure services, networks, and volumes in a single file, then start and stop the entire application with simple commands. Each service typically represents a container, and Docker Compose simplifies tasks like running multiple containers (e.g., a web app and a database) with predefined settings, ensuring consistent environments.
+
+### Yaml file
+Another way to build and access the container for this site is by using the Docker Compose tool.
+A YAML file was created:
+```yaml
+services:
+  jekyll:
+    build: .
+    container_name: jekyll-site
+    ports:
+      - "4000:4000"
+    volumes:  
+      # Bind mount the current directory to /workspace in the container
+      # and use named volumes for persistent data
+      # for rbenv, bash history, and bash configuration
+      # This allows you to keep your Jekyll site files and configurations
+      - .:/workspace
+      - jekyll-rbenv:/home/remoteUser/.rbenv
+      - jekyll-history:/home/remoteUser/.bash_history_volume
+      - jekyll-bash-config:/home/remoteUser/.bashrc.d
+    environment:
+      - TZ=America/Monterrey
+      - BUNDLE_PATH=/home/remoteUser/.rbenv/gems
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
+    command: /bin/bash
+
+volumes:
+  jekyll-rbenv:
+    driver: local
+  jekyll-history:
+    driver: local
+  jekyll-bash-config:
+    driver: local
+```
+
+With these configs, the process to use the site is as follows: 
+
+1. The first time, build the container:
+   ```bash
+   docker-compose up --build -d 
+   ```
+2. Start the container:
+   ```bash
+   docker-compose up -d 
+   ``` 
+
+3. Execute a bash inside the container:
+   ```bash
+   docker-compose exec jekyll bash
+   ```
+4. The first time in the container, run the initial script.
+   ```bash
+   ./run-once.sh
+   ```
+
+5. Compile the site with the following line:
+   ```bash
+   bundle exec jekyll serve --host 0.0.0.0 --port 4000 --baseurl "/risingembeddedmx" --livereload
+   ```
+
+6. The site is available on: **http://127.0.0.1:4000/risingembeddedmx/notes/en/docker-jekyll-en**.   
+   
+7. When your changes are ready, press <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop the process.
+   
+8. Exit the container by typing:
+   ```bash
+   exit
+   ```
+
+9.  Turn off the container: 
+   ```bash
+   docker-compose down
+   ```
+
 ## Using Jekyll with VS Code
 This blog uses Docker to compile the Jekyll site locally and preview content before publishing. To integrate with VS Code, install these extensions:    
 - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers){:target="_blank"}   
@@ -178,13 +256,21 @@ This blog uses Docker to compile the Jekyll site locally and preview content bef
 
 In Visual Studio Code, you can use the container directly from the graphical interface. Once the extensions are installed and the Dockerfile is ready, follow these steps to run your environment inside a container:
 Follow these steps to develop in a containerized environment:
+
 1. Open VS Code and press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to access the command palette.
+   
 2. Select **Dev Containers: Open Folder in Container**.
+
 3. Choose your project folder and click **Open**.
+
 4. When prompted, select **Add configuration to user data folder**.
+
 5. Choose **From Dockerfile** as the configuration source.
+
 6. Accept default settings in subsequent prompts.
+
 7. Wait for the container to build and initialize.
+
 8. Run the `run-once.sh` script to set up the Jekyll environment:
    ```bash
    ./run-once.sh
@@ -193,11 +279,14 @@ Follow these steps to develop in a containerized environment:
    ```bash
    bundle exec jekyll serve --livereload
    ```
-10.(optional) Build the site for production:
-    ```bash
+
+10. (optional) Build the site for production:
+   ```bash
     JEKYLL_ENV=production bundle exec jekyll build
-    ```
+   ```
+
 11. Access the site at `http://localhost:4000` (adjust the path if your site uses a base URL, e.g., `http://localhost:4000/risingembeddedmx`).
+
 
 # Container to compile STM32 Projects
 This section shows a Dockerfile for compiling STM32 microcontroller projects, based on the [openblt to Bluepill board project](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT){:target="_blank"}
