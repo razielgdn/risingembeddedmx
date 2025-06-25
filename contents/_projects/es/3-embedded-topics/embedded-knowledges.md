@@ -2,6 +2,7 @@
 title: ¿Qué debo saber?
 permalink: /projects/es/embedded-topics/embedded-knowledges
 key: embedded
+lang: es-MX
 ---
 Conocimientos básicos.
 

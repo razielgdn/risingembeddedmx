@@ -2,6 +2,7 @@
 title: OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx
 permalink: /projects/es/1-openblt/openblt-bluepill
 key: openblt-es
+lang: es-MX
 ---
 
 # Introducción
@@ -13,24 +14,24 @@ Este proyecto se desarrolló con el objetivo de habilitar la actualización de f
 ## Tarjeta Bluepill Plus STM32F103C8T6
 En esta etapa, el *bootloader* OpenBLT es completamente funcional a través de las interfaces RS232 y CAN en la tarjeta **Bluepill Plus**.  
 
-La documentación para el dispositivo está disponible en su [repositorio de GitHub](https://github.com/WeActStudio/BluePill-Plus), y también se puede encontrar un buen resumen en [stm32-base.org](https://stm32-base.org/boards/STM32F103C8T6-WeAct-Blue-Pill-Plus-Clone).  
+La documentación para el dispositivo está disponible en su [repositorio de GitHub](https://github.com/WeActStudio/BluePill-Plus){:target="_blank"}, y también se puede encontrar un buen resumen en [stm32-base.org](https://stm32-base.org/boards/STM32F103C8T6-WeAct-Blue-Pill-Plus-Clone){:target="_blank"}.  
 
 ## Tarjeta Blackpill V3.0 STM32F411CEU6
 También estoy evaluando la board Blackpill V3.0 para uso futuro. Aunque carece de soporte integrado para CAN y tiene menor prioridad para el proyecto con OpenBLT, planeo portar el *bootloader* una vez que la implementación basada en Bluepill esté completa.  
-La documentación está disponible en el [repositorio de GitHub de la tarjeta](https://github.com/WeActStudio/WeActStudio.BlackPill). Según el esquema y los detalles del hardware, el Microcontrolador STM32F411 parece ser compatible con el STM32F403, requiriendo solo adaptaciones menores para el desarrollo.  
-Un resumen útil también se proporciona en [stm32-base.org](https://stm32-base.org/boards/STM32F401CEU6-WeAct-Black-Pill-V3.0).  
+La documentación está disponible en el [repositorio de GitHub de la tarjeta](https://github.com/WeActStudio/WeActStudio.BlackPill){:target="_blank"}. Según el esquema y los detalles del hardware, el Microcontrolador STM32F411 parece ser compatible con el STM32F403, requiriendo solo adaptaciones menores para el desarrollo.  
+Un resumen útil también se proporciona en [stm32-base.org](https://stm32-base.org/boards/STM32F401CEU6-WeAct-Black-Pill-V3.0){:target="_blank"}.  
 
 ## OpenBLT
-**OpenBLT** es de código abierto y está licenciado bajo la Licencia Pública General de GNU v3 (GPLv3). Fue creado y es mantenido por **Feaser**. Puedes visitar su [sitio web oficial](https://www.feaser.com/openblt/doku.php?id=homepage) para obtener más información y documentación.
+**OpenBLT** es de código abierto y está licenciado bajo la Licencia Pública General de GNU v3 (GPLv3). Fue creado y es mantenido por **Feaser**. Puedes visitar su [sitio web oficial](https://www.feaser.com/openblt/doku.php?id=homepage){:target="_blank"} para obtener más información y documentación.
 
 ## Aplicaciones de Prueba
-Las aplicaciones de prueba fueron obtenidas del [repositorio de GitHub](https://github.com/miniwinwm/BluePillDemo) de **John Blaiklock**, y el código fuente original fue adaptado para este proyecto.
+Las aplicaciones de prueba fueron obtenidas del [repositorio de GitHub](https://github.com/miniwinwm/BluePillDemo){:target="_blank"} de **John Blaiklock**, y el código fuente original fue adaptado para este proyecto.
 
 # Portando OpenBLT a STM32F103C8Tx
 El código fue portado del demo del proyecto openblt STM32F103RB (con la tarjeta STM32 Nucleo-64) a una bluepill con el micro STM32F103C8Tx.
 
 ## Descargar OpenBLT
-El paquete completo de OpenBLT está disponible en la [página de descargas de Feaser](https://www.feaser.com/openblt/doku.php?id=download).
+El paquete completo de OpenBLT está disponible en la [página de descargas de Feaser](https://www.feaser.com/openblt/doku.php?id=download){:target="_blank"}.
 
 ## Preparar un entorno de trabajo
 1. Crea un directorio de trabajo para el proyecto Bluepill:
@@ -607,7 +608,7 @@ Navega al directorio Prog/ y ejecuta:
     ```
 ¡Todo listo con el firmware para flashear la  tarjeta Bluepill Plus!
 
-**Nota:** Los pasos siguientes, incluyendo instrucciones detalladas para usar el *bootloader*, realizar actualizaciones de firmware y trabajar con MicroBoot, están completamente explicados en la documentación del proyecto disponible en mi respositorio: [razielgdn GitHub ](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT).
+**Nota:** Los pasos siguientes, incluyendo instrucciones detalladas para usar el *bootloader*, realizar actualizaciones de firmware y trabajar con MicroBoot, están completamente explicados en la documentación del proyecto disponible en mi respositorio: [razielgdn GitHub ](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT){:target="_blank"}.
 
 # Flashear el *bootloader* y la Aplicación       
 Una vez que tanto el *bootloader* como la aplicación se hayan construido con éxito, puedes flashearlos en la tarjeta Bluepill Plus usando tu programador preferido (por ejemplo, ST-Link, J-Link o un adaptador USB-to-serial con una herramienta DFU). Sigue estos pasos:    
@@ -619,7 +620,7 @@ Una vez que tanto el *bootloader* como la aplicación se hayan construido con é
 
 ## Cargar la Aplicación a través de OpenBLT   
 Para cargar la aplicación compilada (Prog/bin/demoprog_stm32f103.srec) en la tarjeta Bluepill Plus, usa la utilidad de línea de comandos BootCommander.    
-Asegúrate de que la interfaz y la configuración de velocidad de baudios en MicroBoot coincidan con las de la tarjeta y la configuración del *bootloader*. Puedes seguir el ejemplo de OpenBLT con [STM32F4 Nucleo Board](https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results). O la documentación en [openBLT to bluepill](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT). 
+Asegúrate de que la interfaz y la configuración de velocidad de baudios en MicroBoot coincidan con las de la tarjeta y la configuración del *bootloader*. Puedes seguir el ejemplo de OpenBLT con [STM32F4 Nucleo Board](https://razielgdn.github.io/risingembeddedmx/projects/en/1-openblt/openblt-results){:target="_blank"}. O la documentación en [openBLT to bluepill](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT){:target="_blank"}. 
 
 ### UART 
 Ejecuta BootCommander con parámetros RS232:
@@ -655,7 +656,7 @@ Aprovechar CAN permite una comunicación robusta y en tiempo real entre disposit
 
 # Repositorio de Código Fuente y video tutorial
 
-El código fuente completo para el *bootloader* y los demos está disponible en el repositorio de GitHub: [https://github.com/razielgdn](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT).    
+El código fuente completo para el *bootloader* y los demos está disponible en el repositorio de GitHub: [https://github.com/razielgdn](https://github.com/razielgdn/black-and-blue-pill-plus-with-openBLT){:target="_blank"}.    
 
 También está disponible un tutorial en video que muestra cómo usar el *bootloader* y flashear las demostraciones en YouTube:    
 

@@ -3,24 +3,46 @@ header:
   - title:      Blog
     url:        
     key:        blog
+  - titles:
+       # @start locale config
+      en      : &EN       About
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      es      : &ES      Acerca de mi
+      es-MX   : *ES
+    # @end locale config      
+    url:        /about/en/about  
   - titles:      
       en      : &EN        Projects
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      es      : &ES     Projectos
+      es      : &ES     Proyectos
       es-MX   : *ES
  
     url:        /projects/en/1-openblt/openblt-start
     key:        projects      
-  - titles:      
-      en      : &EN     3D printing Zone
+  - titles:
+      en      : &EN    Technical Notes
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      es      : &ES     Zona de impresión 3D
+      es      : &ES     Notas técnicas
+      es-MX   : *ES  
+
+    url:        /notes/en/docker-inst-en
+    key:        notes
+  - titles:      
+      en      : &EN     3D Printing
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      es      : &ES     Impresión 3D
       es-MX   : *ES
     url:        /3DprintingZone
   - titles:      
@@ -33,20 +55,7 @@ header:
       es      : &ES      Archivo 
       es-MX   : *ES
     # @end locale config
-    url:        /archive
-  - titles:
-       # @start locale config
-      en      : &EN       About
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      es      : &ES      Acerca de mi
-      es-MX   : *ES
-    # @end locale config      
-    url:        /about/en/about
-  #- title:       Notes
-  #  url:        /projects/en/notes/stm-configs_en
+    url:        /archive  
   - title:      GitHub
     url:        "https://github.com/razielgdn"   
     blank: true 
@@ -119,25 +128,37 @@ projects-es:
     - title: Crear un sistema mínimo
       url: /projects/es/yocto/yoctoi    
       
-# notes-en:
-#   - title: Languages
-#     children:
-#     - title:  Español
-#       url:    /projects/es/notes/stm-configs_es    
-#   - title: Notes
-#     children:
-#     - title: STM Tools configuration
-#       url: /projects/en/notes/stm-configs_en
+notes-en:
+  - title: Languages
+    children:
+    - title:  Español
+      url:    /notes/es/docker-inst-es    
+  - title: Docker
+    children:
+     - title: Docker introduction and installation 
+       url: /notes/en/docker-inst-en                
+     - title: Dockerfile basics
+       url: /notes/en/docker-dockerfile-en
+     - title: "Dockerfile: Practical Examples"
+       url: /notes/en/docker-jekyll-en  
+    #- title: STM Tools configuration
+    #  url: /projects/en/notes/stm-configs_en
 
-# notes-es: 
-#   - title: Idiomas
-#     children:   
-#       - title:  English
-#         url: /projects/en/notes/stm-configs_en
-#   - title: Notas
-#     children:
-#     - title: Herreamientas de STM 
-#       url: /projects/es/notes/stm-configs_es
+notes-es: 
+  - title: Idiomas
+    children:   
+    - title:  English
+      url: /notes/en/docker-inst-en
+  - title: Docker
+    children:
+     - title: Introducción e instalación de Docker
+       url: /notes/es/docker-inst-es
+     - title: Fundamentos de Dockerfile
+       url: /notes/es/docker-dockerfile-es   
+     - title: "Dockerfile: Ejemplos Prácticos"
+       url: /notes/es/docker-jekyll-es
+     #- title: Dockerfile, trabajando con Jekyll
+       #url: /notes/es/docker-jekyll-es 
 
 about-en:
  - title: Languages 

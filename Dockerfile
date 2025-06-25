@@ -1,33 +1,12 @@
 FROM ubuntu:22.04
-RUN echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
- ARG USERNAME=remoteUser
- ARG USER_UID=1000
- ARG USER_GID=$USER_UID
 
-# Create the user
-RUN groupadd --gid $USER_GID $USERNAME \
-     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
-     #
-     # [Optional] Add sudo support. Omit if you don't need to install software after connecting.
-     && apt-get update \
-     && apt-get install -y sudo \
-     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-     && chmod 0440 /etc/sudoers.d/$USERNAME
-
-
-# [Optional] Set the default user. Omit if you want to keep the default as root.
-USER $USERNAME
-
-# "#################################################"
-# "Get the latest APT packages"
-RUN sudo apt-get update
+# Configure timezone (prevents interactive prompts)
 ENV TZ="America/Monterrey"
-RUN sudo apt-get install -y tzdata
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# "#################################################"
-# "Install Ubuntu prerequisites for Ruby and GitHub Pages (Jekyll)"
-# "Partially based on https://gist.github.com/jhonnymoreira/777555ea809fd2f7c2ddf71540090526"
-RUN sudo apt-get -y install git \
+# Install system dependencies and tools
+RUN apt-get update && apt-get install -y \
+    git \
     curl \
     autoconf \
     bison \
@@ -40,34 +19,60 @@ RUN sudo apt-get -y install git \
     libffi-dev \
     libgdbm6 \
     libgdbm-dev \
-    libdb-dev \   
-    nano \ 
-    apt-utils 
-    
-RUN sudo apt-get -y upgrade    
-# "#################################################"
-# "GitHub Pages/Jekyll is based on Ruby. Set the version and path"
-# "As of this writing, use Ruby 3.4.4
-# "Based on: https://talk.jekyllrb.com/t/liquid-4-0-3-tainted/7946/12"
-ENV RBENV_ROOT /home/remoteUser/.rbenv
-ENV RUBY_VERSION 3.4.4
-ENV PATH ${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH
+    libdb-dev \
+    apt-utils \
+    sudo \
+    tzdata \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# "#################################################"
-# "Install rbenv to manage Ruby versions"
+# Configure user
+ARG USERNAME=remoteUser
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
 
-RUN   git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} 
-RUN   git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build 
-    
-#RUN sudo echo 'eval "$(rbenv init -)"' > /etc/profile.d/rbenv.sh
-# "#################################################"
-# "Install ruby and set the global version"
-RUN  rbenv install ${RUBY_VERSION} \
-  && rbenv global ${RUBY_VERSION}
-# "#################################################"
-# "Install the version of Jekyll that GitHub Pages supports"
-# "Based on: https://pages.github.com/versions/"
-# "Note: If you always want the latest 3.9.x version,"
-# "       use this line instead:"
-# "       RUN gem install jekyll -v '~>3.9'"
-RUN  gem install jekyll 
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
+
+USER $USERNAME
+WORKDIR /home/$USERNAME
+
+# Configure Ruby with rbenv
+ENV RBENV_ROOT="/home/$USERNAME/.rbenv"
+ENV RUBY_VERSION="3.4.4"
+ENV PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
+
+# Install rbenv and ruby-build
+RUN git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} \
+    && git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build
+
+# Configure bash to load rbenv and persistent history
+RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc \
+    && echo 'eval "$(rbenv init -)"' >> ~/.bashrc \
+    && echo 'export HISTFILE=/home/remoteUser/.bash_history_volume/.bash_history' >> ~/.bashrc \
+    && echo 'export HISTSIZE=10000' >> ~/.bashrc \
+    && echo 'export HISTFILESIZE=10000' >> ~/.bashrc
+
+# Install Ruby
+RUN rbenv install ${RUBY_VERSION} \
+    && rbenv global ${RUBY_VERSION} \
+    && rbenv rehash
+
+# Install Jekyll and Bundler
+RUN gem install bundler jekyll \
+    && rbenv rehash
+
+# Create directories for mounted volumes
+RUN mkdir -p /home/$USERNAME/.bash_history_volume \
+    && mkdir -p /home/$USERNAME/.bashrc.d
+
+# Set up workspace directory for projects
+WORKDIR /workspace
+
+# Expose Jekyll's default port
+EXPOSE 4000
+
+# Default command
+CMD ["bash"]

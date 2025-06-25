@@ -165,8 +165,9 @@ exclude:
   - package-lock.json
   - package.json
   - Dockerfile
-  - /run-once.sh  
-    
+  - docker-compose.yml
+  - .dockerignore
+  - run-once.sh      
   - blog.md
 
 collections_dir: contents
@@ -174,7 +175,9 @@ collections:
   projects:
     output: true
   3dprinting:
-    output: true    
+    output: true 
+  notes:
+    output: true     
 
 defaults:
   - scope:
@@ -229,34 +232,34 @@ defaults:
         nav: navPrinting   
       aside:
         toc: true   
-#  notes
-#   - scope:
-#       path: "_projects/en/notes"
-#     values:
-#       layout: article
-#       nav_key: notes
-#       sidebar:
-#         nav: notes-en
-#       license: true
-#       aside:
-#         toc: true
-#       show_edit_on_github: false
-#       show_date: false
-#       # lightbox: true
-#   - scope:
-#       path: "_projects/es/notes"
-#     values:
-#       layout: article
-#       nav_key: notas
-#       sidebar:
-#         nav: notes-es
-#       license: true
-#       aside:
-#         toc: true
-#       lang: es_MX
-#       show_edit_on_github: false
-# #      show_date: false
+  # notes
+  - scope:
+      path: "_notes/en"
+    values:
+      layout: article
+      nav_key: notes
+      sidebar:
+        nav: notes-en
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: false
+      show_date: false
       # lightbox: true
+  - scope:
+      path: "_notes/es"
+    values:
+      layout: article
+      nav_key: notas
+      sidebar:
+        nav: notes-es
+      license: true
+      aside:
+        toc: true
+      lang: es_MX
+      show_edit_on_github: false
+      show_date: false
+      #lightbox: true
 #  about
   - scope:
       path: "about/en"
