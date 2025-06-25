@@ -5,6 +5,7 @@ tags:
  - estudiando
  - Embedded C
  - spanish
+lang: es-MX
 ---
 
 **La lucha de buscar trabajo - Otra vez**

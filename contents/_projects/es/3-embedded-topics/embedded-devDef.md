@@ -2,6 +2,7 @@
 title: ¿Qué es un ingeniero de sistemas embebidos?
 permalink: /projects/es/embedded-topics/embedded-devDef
 key: embedded
+lang: es-MX
 ---
 
 
