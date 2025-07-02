@@ -141,6 +141,12 @@ notes-en:
        url: /notes/en/docker-dockerfile-en
      - title: "Dockerfile: Practical Examples"
        url: /notes/en/docker-jekyll-en  
+  - title: Make
+    children:
+     - title: "Make: Introduction and basics"
+       url: /notes/en/make-intro-en
+     - title: "Makefile: Practical Examples"
+       url: /notes/en/make-example-en
     #- title: STM Tools configuration
     #  url: /projects/en/notes/stm-configs_en
 

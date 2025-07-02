@@ -26,7 +26,7 @@ Así que me puse a pensar que sería buena idea contar mi historia de cómo ha s
 
 En fin, ahora intento conseguir de nuevo un empleo en el mundo "High Tech" y, como ya lo preveía y en esta senoidal llamada vida, ha sido más difícil de lo que pensaba.
 
-# Breve historia del como me volvi ingeniero de software embebido
+# Breve historia del como me convertí en ingeniero de software embebido
 
 ## Mi bachillerato
 
@@ -59,9 +59,9 @@ Entonces ahí cuando me toco escoger que iba a estudiar, me decidí por la Ingen
 
 ## La universidad
 
-En 2010 se terminó el bachillerato y seguia la siguiente etapa: La Universidad que de verdad fue difícil, dadas mis condiciones económicas no tenia muchas opciones, solo habia dos: [El Instituto Tecnológico de Oaxaca](https://www.itoaxaca.edu.mx/){:target="_blank"} (ahora no se como se llama TecNM oaxaca, algo así. Como nota el día que estas lineas se escriben la página estaba offline y la información salio de su página de facebook) y la  otrora gloriosa [Universidad Tecnológica de la Misteca](https://www.utm.mx/web/){:target="_blank"}.
+En 2010 se terminó el bachillerato y seguia la siguiente etapa: La Universidad que de verdad fue difícil, dadas mis condiciones económicas no tenia muchas opciones, solo habia dos: [El Instituto Tecnológico de Oaxaca (ITO)](https://www.itoaxaca.edu.mx/){:target="_blank"} (ahora no se como se llama TecNM oaxaca, algo así. Como **nota** el día que estas lineas se escriben la página estaba offline y la información salio de su página de facebook) y la  otrora gloriosa [Universidad Tecnológica de la Mixteca (UTM)](https://www.utm.mx/web/){:target="_blank"}.
 
-En realidad que la decisión fue simple, sobre todo al ver como un profesor de física tenia el poder de "asegurar" un lugar a un compañero mediante una llamada telefonica por una "pequeña gratificación" vamos a decirle. Y a la UTM solo era necesario pasar un examen de admisión, que por alguna razón tenían los mismos ejercicio de mecánica clásica que tuve que resolver en concursos de niños genio. 
+En realidad que la decisión fue simple, sobre todo al ver como un profesor de física del bachillerato tenia el poder de "asegurar" un lugar en el ITO a un compañero mediante una llamada telefonica por una "pequeña gratificación", vamos a decirle. Y a la UTM solo era necesario pasar un examen de admisión, que por alguna razón tenían los mismos ejercicio de mecánica clásica que tuve que resolver en concursos de niños genio. 
 
 Para no alargar más esta parte de la historia la Universidad me costó mucho, no en dinero pero si en esfuerzo, lágrimas y sangre, de hecho al inicio entramos como 40 nuevos alumnos al curso propedéutico,  30 nos inscribimos al primer semestre, mas unos 6 u 8 recursantes. 
 Al finalizar 5 años después, egresamos 8, solo 4 sin reprobar algún grado. Una vez conquistado eso pensaba que la vida profesional sería fácil y no fué asi. 
