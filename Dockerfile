@@ -1,29 +1,14 @@
-FROM ubuntu:22.04
+FROM ruby:3.4.4-slim
 
-# Configure timezone (prevents interactive prompts)
+# Configure timezone
 ENV TZ="America/Monterrey"
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Install system dependencies and tools
+# Install dependencies
 RUN apt-get update && apt-get install -y \
     git \
-    curl \
-    autoconf \
-    bison \
-    build-essential \
-    libssl-dev \
-    libyaml-dev \
-    libreadline6-dev \
-    zlib1g-dev \
-    libncurses5-dev \
-    libffi-dev \
-    libgdbm6 \
-    libgdbm-dev \
-    libdb-dev \
-    apt-utils \
     sudo \
-    tzdata \
-    && apt-get clean \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure user
@@ -31,48 +16,25 @@ ARG USERNAME=remoteUser
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
-    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-    && chmod 0440 /etc/sudoers.d/$USERNAME
+RUN groupadd --gid ${USER_GID} ${USERNAME} \
+    && useradd --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME} \
+    && echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USERNAME} \
+    && chmod 0440 /etc/sudoers.d/${USERNAME} \
+    && usermod -aG staff ${USERNAME}
 
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-# Configure Ruby with rbenv
-ENV RBENV_ROOT="/home/$USERNAME/.rbenv"
-ENV RUBY_VERSION="3.4.4"
-ENV PATH="${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:$PATH"
-
-# Install rbenv and ruby-build
-RUN git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} \
-    && git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build
-
-# Configure bash to load rbenv and persistent history
-RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc \
-    && echo 'eval "$(rbenv init -)"' >> ~/.bashrc \
-    && echo 'export HISTFILE=/home/remoteUser/.bash_history_volume/.bash_history' >> ~/.bashrc \
-    && echo 'export HISTSIZE=10000' >> ~/.bashrc \
-    && echo 'export HISTFILESIZE=10000' >> ~/.bashrc
-
-# Install Ruby
-RUN rbenv install ${RUBY_VERSION} \
-    && rbenv global ${RUBY_VERSION} \
-    && rbenv rehash
-
+RUN mkdir -p /home/${USERNAME}/.gem
+RUN export GEM_HOME="/home/${USERNAME}/.gem" 
 # Install Jekyll and Bundler
-RUN gem install bundler jekyll \
-    && rbenv rehash
+RUN gem install bundler jekyll
 
-# Create directories for mounted volumes
-RUN mkdir -p /home/$USERNAME/.bash_history_volume \
-    && mkdir -p /home/$USERNAME/.bashrc.d
-
-# Set up workspace directory for projects
-WORKDIR /workspace
-
+# Set up workspace
+WORKDIR /home/${USERNAME}/workspace
 # Expose Jekyll's default port
 EXPOSE 4000
 
 # Default command
 CMD ["bash"]
+#CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--port", "4000", "--livereload"]

@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-feed", "~> 0.17.0"
   spec.add_runtime_dependency "kramdown-parser-gfm", "~> 1.1"
   spec.add_runtime_dependency "jemoji", "~> 0.13.0"
+  spec.add_runtime_dependency "google-protobuf", "~> 4.29"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake", ">= 10.0"
 end

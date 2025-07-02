@@ -1,30 +1,20 @@
+version: '3.9'
 services:
   jekyll:
     build: .
     container_name: jekyll-site
     ports:
       - "4000:4000"
-    volumes:  
-      # Bind mount the current directory to /workspace in the container
-      # and use named volumes for persistent data
-      # for rbenv, bash history, and bash configuration
-      # This allows you to keep your Jekyll site files and configurations
+    volumes:
       - .:/workspace
-      - jekyll-rbenv:/home/remoteUser/.rbenv
-      - jekyll-history:/home/remoteUser/.bash_history_volume
-      - jekyll-bash-config:/home/remoteUser/.bashrc.d
+      - jekyll-rbenv:/home/remoteUser/.gem
     environment:
       - TZ=America/Monterrey
-      - BUNDLE_PATH=/home/remoteUser/.rbenv/gems
+      - BUNDLE_PATH=/home/remoteUser/.gem
     stdin_open: true
     tty: true
-    working_dir: /workspace
-    command: /bin/bash
-
+    working_dir: /home/remoteUser/workspace
+    #command: bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload 
 volumes:
   jekyll-rbenv:
-    driver: local
-  jekyll-history:
-    driver: local
-  jekyll-bash-config:
     driver: local
