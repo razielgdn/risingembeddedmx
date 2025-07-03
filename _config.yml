@@ -296,3 +296,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - kramdown-parser-gfm
+ 
