@@ -163,8 +163,12 @@ notes-es:
        url: /notes/es/docker-dockerfile-es   
      - title: "Dockerfile: Ejemplos Prácticos"
        url: /notes/es/docker-jekyll-es
-     #- title: Dockerfile, trabajando con Jekyll
-       #url: /notes/es/docker-jekyll-es 
+  - title: Make
+    children:
+     - title: "Make: Introducción y fundamentos"
+       url: /notes/es/make-intro-es
+     - title: "Makefile: Ejemplos Prácticos"
+       url: /notes/es/make-example-es
 
 about-en:
  - title: Languages 
