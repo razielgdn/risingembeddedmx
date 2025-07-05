@@ -13,7 +13,7 @@ header:
       es      : &ES      Acerca de mi
       es-MX   : *ES
     # @end locale config      
-    url:        /about/en/about  
+    url:        /about/about-en
   - titles:      
       en      : &EN        Projects
       en-GB   : *EN
@@ -174,12 +174,12 @@ about-en:
  - title: Languages 
    children: 
    - title: Español 
-     url: /about/es/quien-soy
+     url: /about/about-es
  - title: About the author 
 
 about-es:
 - title: Idiomas 
   children: 
   - title: Inglés 
-    url: /about/en/about     
+    url: /about/about-en
 - title: Acerca del Autor
