@@ -40,7 +40,7 @@ STM32H5 Demo Development Project: Set up and migrated a bootloader to flash an S
 Utilized the following tools and technologies:  
 - **Languages**: C/C++, Python, Bash.  
 - **Platforms and Tools**: STM32CubeIDE, Raspbian, Git, GitHub, Jira.
-- **Protocols and Hardware**: CAN, JTAG, STM32H5.
+- **Protocols and Hardware**: CAN, JTAG, STM32H5, STM SPC560Bx MCU. 
 - **Documentation**: Markdown. DOORS
 
 ## Dextra Technologies
