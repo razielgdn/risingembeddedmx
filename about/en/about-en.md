@@ -57,7 +57,7 @@ Utilized automotive tools including Geny, CANoe, and Cessar, along with Jira for
 Utilized the following tools and technologies:  
 - **Languages**: *C*, *CAPL*.  
 - **Platforms and Tools**: *Tresos*, *DOORS*, *Jira*, *Git*, *GitHub*, *WinIdea* (JTAG debugger), *CANoe*, *CANdela*.  
-- **Hardware**: STM automotive MCU, oscilloscope, electronic load. 
+- **Hardware**: STM SPC560B MCU, Freescale MCP5606 MCU, oscilloscope, electronic load. 
   
 ## CODE Ingeniería
 *May 2019 – May 2020*, **Programador Embebido**.     
