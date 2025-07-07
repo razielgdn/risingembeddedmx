@@ -169,6 +169,7 @@ exclude:
   - .dockerignore
   - run-once.sh      
   - blog.md
+  - .sass-cache/
 
 collections_dir: contents
 collections:

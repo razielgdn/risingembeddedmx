@@ -1,7 +1,11 @@
 ---
 title: Octavio Raziel Güendulain Pérez
-permalink: /about/es/quien-soy
+permalink: /about/about-es
 key: quien-soy
+lang: es-MX
+aside:
+   toc: true
+modify_date: 2024-07-04
 ---
 
 
