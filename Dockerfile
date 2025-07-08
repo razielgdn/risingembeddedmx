@@ -25,14 +25,13 @@ ENV GEM_HOME="/home/${USERNAME}/.gem"
 ENV PATH="${GEM_HOME}/bin:$PATH"
 RUN mkdir -p /home/${USERNAME}/.gem
 
-
-# Install Jekyll and Bundler
-RUN gem install bundler jekyll
-
 # Set up workspace
 
 WORKDIR /home/${USERNAME}/workspace
-
+# Install Jekyll and Bundler
+RUN gem install bundler && \
+    gem install jekyll && \
+    gem install jekyll-text-theme
 # Expose Jekyll's default port
 EXPOSE 4000
 
