@@ -10,8 +10,8 @@ jekyll -v
 # Update gems
 echo "bundle install"
 bundle install
-echo "bundle update"
-bundle update
+#echo "bundle update"
+#bundle update
 
 # Get the presumed value for the baseurl (this folder name) 
 var=$(pwd)

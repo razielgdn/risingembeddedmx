@@ -30,10 +30,12 @@ RUN mkdir -p /home/${USERNAME}/.gem
 RUN gem install bundler jekyll
 
 # Set up workspace
+
 WORKDIR /home/${USERNAME}/workspace
+
 # Expose Jekyll's default port
 EXPOSE 4000
 
 # Default command
-CMD ["bash"]
+
 #CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--port", "4000", "--livereload"]
