@@ -9,6 +9,7 @@ lang: en
 ---
 {% comment %}
 <!--
+    07-13-2025 -> 
     07-05-2025 -> Grammar check and date corrections.
     05-29-2024 -> Update style and add TI part.
     05-28-2024 -> Update About-en.md fixing errors and changing HTML tables to lists.
@@ -16,17 +17,21 @@ lang: en
 -->
 {% endcomment %}
 
-Electronic engineer with over 5 years of experience in embedded systems development. 
+**Electronic Engineer** with 5 years of experience in embedded systems development, specializing in automotive industry applications.  Experienced in communication protocols including CAN, LIN, I2C, and SPI, with hands-on experience implementing UDS (Unified Diagnostic Services).  
+
+**Technical Proficiency:** Knowledges of microcontroller and microprocessor architectures, including Cortex-A, Cortex-M, and AVR platforms. Proficient in C programming across multiple MCU families (TI, STM, NXP/Freescale, and Microchip). Skilled in embedded debugging using JTAG interfaces with J-Link, GDB, WinIDEA, and ST-Link tools.  
+
+**Development & Integration:** Knowledges in software version control and integration using Git, GitHub, and IBM IMS. Adept at following Agile/SCRUM methodologies for embedded software development with project management through Jira.
 
 # Embedded Systems Experience
-Since 2019, Octavio has been working professionally in embedded systems.
 
 ## Dextra Technologies, a Deloitte Business
-*February 2022 – March 2024*, **Software Engineer II**   
-Worked on two main projects:
+*February – March 2024*, **Software Engineer II**   
+Worked on two main projects: Automotive Brake Control ECU development and STM32H735 demo platform development. Collaborated with cross-functional teams to address technical challenges and meet project deadlines effectively.   
+
 - **STM32H735G Development Kit project**:    
 Implemented OpenBLT bootloader project on STM32H735G platform. The platform required a method to flash binaries from a Raspberry Pi to the STM32H5 microcontroller using CAN, I2C, and UART communication buses.    
-To handle this situation, migrated the OpenBLT project from the Nucleo-H563ZI demo to the STM32H735 platform by reconfiguring GPIO, CAN, SPI, and UART interfaces and updating the corresponding STM32 HAL drivers. Git and GitHub were used to manage software version control and track changes.   
+To handle this situation, migrated the OpenBLT project from the Nucleo-H563ZI demo to the STM32H53 platform by reconfiguring GPIO, CAN, SPI, and UART interfaces and updating the corresponding STM32 HAL drivers. Git and GitHub were used to manage software version control and track changes.   
 
 - **Brake Control ECU Project**:  
   Automotive Brake Control ECU Project: Developed software for automotive customer focusing on optimizing functionality and ensuring compliance with industry standards. 
@@ -43,8 +48,8 @@ Utilized the following tools and technologies:
 - **Documentation**: Markdown. DOORS
 
 ## Dextra Technologies
-*December 2020 – January 2022*, **Embedded Software Developer Jr**     
-**BCM (Body Control Module)**:       
+*December 2020 – January 2022*, **Embedded Software Developer Jr**  
+- **BCM (Body Control Module)**:       
 Project for Lights and Communications ECU, provided customer support through requirements and issues analysis to identify optimal implementation approaches for new features and solutions. 
 - **Requirements Analysis:** Conducted requirements analysis and verified the availability of all hardware components (including GPIOs, timers, CAN ports, sensors, and transceivers), software resources (e.g., Customer Model, APIs, data structures, reserved memory), resources in the DBCs (CAN databases) and LDFs (LIN Description Files) and definitions of Diagnostics trouble codes (DTCs) and Data Idenfifiers (DIDs) following the UDS protocol. Documented the analysis and defined priority levels and effort estimation.
 - **Software Implementations**: Implementations were performed in the project using C language and some vector tools, common task included:
@@ -66,13 +71,11 @@ Utilized the following tools and technologies:
 Research and development of embedded systems, focused on Linux and Android environments. 
 Worked with NXP devices including **i.MX8** and **i.MX6** SoCs, utilizing Yocto Project and Android sources to set up and configure embedded systems for diverse applications and customers.
 
-**Role Activities**
-- Touchpad Driver Configuration: Enabled and configured the touchpad driver for a display screen on a tablet prototype for table saw tool application. Used Yocto Project to create a Linux system, modifying the device tree to connect the touchpad inputs and outputs. Modified a kernel module from a demo to adapt it to the development board that running the system. 
-- Calibrated RAM and Flash memory for an i.MX6-based device using U-Boot to run stress tests.
-- Dual OS Implementation: Created a Yocto Project image to run two operating systems simultaneously on the NXP i.MX8QM platform (system on chip with 6 processors and 4 microcontrollers). Wrote configurations in the System Controller Firmware (SCFW), which was the firmware for a Cortex-M4 microcontroller that manages system peripherals (UARTs, CAN, I2C, SPI, HDMI). Update the device tree to use the multimedia peripherials as HDMI, Audio and Communications. 
-- Researched and supported customers in using the SCFW on NXP i.MX8QM and i.MX8QX development boards.  
-- Analyzed the root cause of an issue in an automotive dashboard based in embedded Linux. To identify the cause, I created a bash script to generate logs that revealed when the system was failing.
-
+- Role Activities
+  - Configured and adapted display and touchpad drivers for Sabre SD board-based hardware.  
+  - Calibrated RAM and Flash memory for an i.MX6-based device.  
+  - Supported a customer in configuring and optimizing the NXP eCockpit system.  
+  - Researched and supported customers in using the System Controller Firmware (SCFW) on NXP i.MX8QM and i.MX8QX development boards.  
 - Configured embedded systems for diverse applications using Yocto Project and Android sources.  
 - Utilized the following tools and technologies:  
   - **Languages**: C/C++, Bash. 
@@ -156,7 +159,7 @@ Since 2009, I was working with may languages:
   - **Geny**: 2 years.  
   - **CANoe**: 2 years.  
   - **CANdela**: 2 years.  
-- **Tresos**: 1.5 year.  
+- **Tresos**: 1 year.  
 - **Unit Testing** (using SWATT): 2 years.  
 - **MISRA**: 2 years.  
 - **UDS Diagnostic Services**: 2 years.
