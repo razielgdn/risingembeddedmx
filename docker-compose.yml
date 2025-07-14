@@ -5,16 +5,12 @@ services:
     container_name: jekyll-site
     ports:
       - "4000:4000"
-    volumes:
-      - .:/home/remoteUser/workspace
-      - jekyll-gems:/home/remoteUser/.gem
+    volumes:      
+      - .:/home/remoteUser/workspace      
     environment:
-      - TZ=America/Monterrey
-      - BUNDLE_PATH=/home/remoteUser/.gem
+      - TZ=America/Monterrey      
     stdin_open: true
     tty: true
     working_dir: /home/remoteUser/workspace
-    #command: bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload
-volumes:
-  jekyll-gems:
-    driver: local
+#    command: bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload
+

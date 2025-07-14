@@ -1,5 +1,5 @@
 ---
-title: "Historias Personales I. ¿Y ahora qué necesito?"
+title: "Historias Personales. ¿Y ahora qué necesito?"
 layout: article
 tags:
     - trabajo

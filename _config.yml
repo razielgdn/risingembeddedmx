@@ -89,11 +89,8 @@ sources: # bootcdn (default), unpkg
 ## => Sharing
 ##############################
 sharing:
-  provider: false # false (default), "addtoany", "addthis", "custom"
+  provider: addtoany # false (default), "addtoany", "custom"
 
-  ## AddThis
-  addthis:
-    id: # AddThis pubid, e.g. ra-5xxxxxxxxxxx
 
 
 ## => Comments
@@ -207,7 +204,8 @@ defaults:
       aside:
         toc: true
       show_edit_on_github: false
-      show_date: false
+      show_date: true
+      sharing: true
 ## Spanish Section.
   - scope:
       path: "_projects/es"
@@ -221,7 +219,8 @@ defaults:
         toc: true
       lang: es-MX  
       show_edit_on_github: false
-      show_date: false
+      show_date: true
+      sharing: true
 
 ## 3d printing zone
   - scope:
@@ -232,7 +231,8 @@ defaults:
       sidebar:
         nav: navPrinting   
       aside:
-        toc: true   
+        toc: true  
+      sharing: true 
   # notes
   - scope:
       path: "_notes/en"
@@ -246,6 +246,7 @@ defaults:
         toc: true
       show_edit_on_github: false
       show_date: false
+      sharing: true
       # lightbox: true
   - scope:
       path: "_notes/es"
@@ -260,6 +261,7 @@ defaults:
       lang: es_MX
       show_edit_on_github: false
       show_date: false
+      sharing: true
       #lightbox: true
 #  about
   - scope:
@@ -275,6 +277,7 @@ defaults:
       lang: en
       show_edit_on_github: false
       show_date: false
+      sharing: false
 
   - scope:
       path: "about/es"
@@ -289,6 +292,7 @@ defaults:
       lang: es_MX
       show_edit_on_github: false
       show_date: false    
+      sharing: false
 
 ## => Plugins
 ##############################
