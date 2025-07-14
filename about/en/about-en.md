@@ -9,7 +9,7 @@ lang: en
 ---
 {% comment %}
 <!--
-    07-13-2025 -> 
+    07-13-2025 -> Update abstract to get more impact
     07-05-2025 -> Grammar check and date corrections.
     05-29-2024 -> Update style and add TI part.
     05-28-2024 -> Update About-en.md fixing errors and changing HTML tables to lists.
@@ -17,11 +17,11 @@ lang: en
 -->
 {% endcomment %}
 
-**Electronic Engineer** with 5 years of experience in embedded systems development, specializing in automotive industry applications.  Experienced in communication protocols including CAN, LIN, I2C, and SPI, with hands-on experience implementing UDS (Unified Diagnostic Services).  
+## Sumary
 
-**Technical Proficiency:** Knowledges of microcontroller and microprocessor architectures, including Cortex-A, Cortex-M, and AVR platforms. Proficient in C programming across multiple MCU families (TI, STM, NXP/Freescale, and Microchip). Skilled in embedded debugging using JTAG interfaces with J-Link, GDB, WinIDEA, and ST-Link tools.  
-
-**Development & Integration:** Knowledges in software version control and integration using Git, GitHub, and IBM IMS. Adept at following Agile/SCRUM methodologies for embedded software development with project management through Jira.
+**Electronic Engineer** with embedded software development experience since 2019, including 4 years specializing in the automotive industry. Demonstrated expertise in communication protocols (CAN, LIN, I2C, SPI) and UDS implementation, with comprehensive knowledge of microcontroller and microprocessor architectures including Cortex-A, Cortex-M, and AVR platforms.  
+**Technical Proficiency:** Proficient in C programming across multiple MCU families (TI, STM, NXP/Freescale, and Microchip). Skilled in embedded debugging using JTAG interfaces with J-Link, GDB, WinIDEA, and ST-Link tools. Experienced in software version control and integration using Git, GitHub, and IBM IMS, managing team integration workflows and product releases.   
+**Leadership & Development:** Proven track record in onboarding and mentoring new team members while managing task assignments, effort estimation, and project timelines. Adept at following SCRUM methodology for embedded software development with project management through Jira.
 
 # Embedded Systems Experience
 
@@ -50,16 +50,15 @@ Utilized the following tools and technologies:
 ## Dextra Technologies
 *December 2020 – January 2022*, **Embedded Software Developer Jr**  
 - **BCM (Body Control Module)**:       
-Project for Lights and Communications ECU, provided customer support through requirements and issues analysis to identify optimal implementation approaches for new features and solutions. 
-- **Requirements Analysis:** Conducted requirements analysis and verified the availability of all hardware components (including GPIOs, timers, CAN ports, sensors, and transceivers), software resources (e.g., Customer Model, APIs, data structures, reserved memory), resources in the DBCs (CAN databases) and LDFs (LIN Description Files) and definitions of Diagnostics trouble codes (DTCs) and Data Idenfifiers (DIDs) following the UDS protocol. Documented the analysis and defined priority levels and effort estimation.
+Project for Lights and Communications ECU, providing comprehensive customer support through requirements analysis and issue resolution to identify optimal implementation approaches for new features and solutions.
+- **Requirements Analysis:** Conducted requirements analysis and verified the availability of all hardware components (including GPIOs, timers, CAN ports, sensors, and transceivers), software resources (e.g., Customer Model, APIs, data structures, reserved memory), resources in the DBCs (CAN databases) and LDFs (LIN Description Files) and definitions of Diagnostics trouble codes (DTCs) and Data Identifiers (DIDs) following the UDS protocol. Documented the analysis and defined priority levels and effort estimation.
 - **Software Implementations**: Implementations were performed in the project using C language and some vector tools, common task included:
   - Updated CAN Messages and signals in the project using vector Geny to manage the databases (DBC, LDF) and the auto-generated code as headers and automatic gateways. 
   - Developed the logic and implemented code modifications to meet customer requirements following MISRA compliance standards and created unit tests using the SWATT tool. Employed CANdela to add new DTCs and DIDs with their associated services (read, write, diagnostic, etc).
 - **Designed integration tests** to ensure software functionality. The tests were performed on customer-provided hardware (test benches) to simulate the vehicle system using CANoe and WinIDEA tools. Additionally, utilized CAPL to automate certain test routines.
-
 - **Issues Resolution:** When an issue was reported by test team or the customer I participated in the analysis of the Issue reproducing the fault/erroneous behavior in the test benches to found the root causes. Using debugging tools (CANoe and WinIDEA) and  and generated reports with proposed solutions.
-- **Software integration:** I was responsible for integrating software from other team members and managing releases utilizing IMS as a version control system and subsequently transitioning to Git.
-- **Team Training and Mentorship:** Participated in onboarding and training new team members, including task administration responsibilities such as ticket assignment and effort estimation.
+- **Software Integration:** Managed software integration from team members and coordinated releases using IMS version control system, later transitioning to Git for team integration workflows and product releases.
+- **Team Management:** Participated in onboarding and training new team members, including administrative responsibilities such as ticket assignment, effort estimation, and project timeline management.
   
 Utilized the following tools and technologies:  
 - **Languages**: *C*, *CAPL*.  
@@ -142,7 +141,17 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
 - **Domina SCRUM con JIRA Agile - Metodologías Ágiles**: [UC-f61ab121-7c1e-437f-88dc-adce85728be5](https://www.udemy.com/certificate/UC-f61ab121-7c1e-437f-88dc-adce85728be5/)  
 - **Yocto Zero to Hero - Building Embedded Linux**: [UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa](https://www.udemy.com/certificate/UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa/)
 
+
+
 # Skills
+
+## Personal Interests
+
+**Technology Enthusiast** with a passion for open-source software and free tools. Self-taught learner who actively explores technologies beyond job requirements, including:
+- **Open Source Experience:** GNU/Linux user since 2008, developing personal projects documented in this technical blog posts and repositories.
+- **Additional Technical Skills:** Python programming, Docker containerization, 3D printing, and currently expanding expertise in Rust programming, RTOS development, KiCad PCB design, Jekyll static site generation, and Yocto Project for Raspberry Pi and  embedded systems.
+- **Continuous Learning:** Committed to staying current with emerging technologies through hands-on experimentation and personal project development, demonstrating adaptability and technical curiosity beyond traditional embedded systems work.
+  
 ## Programming Languages
 Since 2009, I was working with may languages:  
 - **C/C++**: 4 years professionally.  
@@ -150,19 +159,19 @@ Since 2009, I was working with may languages:
 - **Bash**: 3 years automating routines in Linux for technician roles and configuring embedded Linux systems.  
 - **Java**: 2 years as a student, creating simple applications for personal projects.  
 - **LaTeX**: 5 years for student and personal documentation, and 1 year professionally as a part-time freelancer.  
-- **Markdown**: 8 months, used for this site and documenting GitHub projects.
+- **Markdown**: 2 years, used for this site and documenting GitHub projects.
 
 ## Automotive Tools
 - **Autosar**: 1 year adding ports, managing CAN databases (messages and signals), Diagnostic Trouble Codes (DTCs), and gateways.  
 - **Vector Tools**:  
   - **CAN-DB** and **LDF** management: 3 years.  
-  - **Geny**: 2 years.  
-  - **CANoe**: 2 years.  
-  - **CANdela**: 2 years.  
+  - **Geny**: 3 years.  
+  - **CANoe**: 3 years.  
+  - **CANdela**: 4 years.  
 - **Tresos**: 1 year.  
-- **Unit Testing** (using SWATT): 2 years.  
-- **MISRA**: 2 years.  
-- **UDS Diagnostic Services**: 2 years.
+- **Unit Testing** (using SWATT): 3 years.  
+- **MISRA**: 4 years.  
+- **UDS Diagnostic Services**: 4 years.
 
 ## Linux, Distributions, and Tools
 - **Linux Distributions**:  
