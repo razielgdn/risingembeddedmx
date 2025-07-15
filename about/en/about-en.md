@@ -4,7 +4,7 @@ title: Octavio Raziel Güendulain Pérez
 permalink: /about/about-en
 aside:
    toc: true
-modify_date: 2024-07-04
+modify_date: 2024-07-14
 lang: en
 ---
 {% comment %}
@@ -142,15 +142,7 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
 - **Yocto Zero to Hero - Building Embedded Linux**: [UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa](https://www.udemy.com/certificate/UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa/)
 
 
-
 # Skills
-
-## Personal Interests
-
-**Technology Enthusiast** with a passion for open-source software and free tools. Self-taught learner who actively explores technologies beyond job requirements, including:
-- **Open Source Experience:** GNU/Linux user since 2008, developing personal projects documented in this technical blog posts and repositories.
-- **Additional Technical Skills:** Python programming, Docker containerization, 3D printing, and currently expanding expertise in Rust programming, RTOS development, KiCad PCB design, Jekyll static site generation, and Yocto Project for Raspberry Pi and  embedded systems.
-- **Continuous Learning:** Committed to staying current with emerging technologies through hands-on experimentation and personal project development, demonstrating adaptability and technical curiosity beyond traditional embedded systems work.
   
 ## Programming Languages
 Since 2009, I was working with may languages:  
@@ -227,3 +219,10 @@ Since 2009, I was working with may languages:
 - **Electronic/Lab Tools**: Soldering iron, Dremel, microscopes, oscilloscopes, logic analyzers, power sources, electronic loads.  
 - **Electric Tools**: Hammer drill, jigsaw, vacuum cleaner, grinder.  
 - **Mechanical Tools**: Hammer, screwdrivers, pliers, wrenches, crowbars, machetes, axes, chainsaw, and others.
+
+## Personal Interests
+
+**Technology Enthusiast** with a passion for open-source software and free tools. Self-taught learner who actively explores technologies beyond job requirements, including:
+- **Open Source Experience:** GNU/Linux user since 2008, developing personal projects documented in this technical blog posts and repositories.
+- **Additional Technical Skills:** Python programming, Docker containerization, 3D printing, and currently expanding expertise in Rust programming, RTOS development, KiCad PCB design, Jekyll static site generation, and Yocto Project for Raspberry Pi and  embedded systems.
+- **Continuous Learning:** Committed to staying current with emerging technologies through hands-on experimentation and personal project development, demonstrating adaptability and technical curiosity beyond traditional embedded systems work.
