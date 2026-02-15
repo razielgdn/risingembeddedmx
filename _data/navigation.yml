@@ -87,12 +87,14 @@ projects-en:
     children:    
       - title: "Interview questions for Embedded Software Developer positions"
         url: "/projects/en/embedded-topics/embedded-questions-en" 
-  - title: "Yocto project"
+  - title: "Yocto project"    
     children:
       - title: "Introduction to yocto"
         url: "/projects/en/yocto/intro" 
       - title: "Minimal image for a Rasperrypi"
-        url: "/projects/en/yocto/intro/build-raspberrypi"          
+        url: "/projects/en/yocto/build-raspberrypi"   
+      - title: "Building an embedded Linux image from a container"
+        url: "/projects/en/yocto/container-to-work"        
   # - title: Can Network Project
   #   children: 
   #     - title: CAN network objectives
@@ -126,7 +128,7 @@ projects-es:
     - title: Introducción
       url: /projects/es/yocto/intro 
     - title: Crear un sistema mínimo
-      url: /projects/es/yocto/yoctoi    
+      url: /projects/es/yocto/yoctoi     
       
 notes-en:
   - title: Languages

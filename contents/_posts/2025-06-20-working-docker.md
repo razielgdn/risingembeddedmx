@@ -14,7 +14,7 @@ Someone told me that I'm a kind of masochist and traitor to free software becaus
 
 Since I want to help other developers, specifically my colleagues at Universidad Tecnológica de la Mixteca (I prefer to say "comrades," but I know there are more conservative engineers in the field, and... on second thought, my readers do use GNU/Linux), I researched containers and decided to use Docker to manage my webpage locally and work with this site.
 
-I'm currently working on the site using Docker, and I plan to do the same with compilation tools for AVR and STM32. In the future, I'll also work with the Yocto Project because my brother gifted me a [Le Potato AML-S005X-CC](https://libre.computer/products/aml-s905x-cc/){:target="_blank"} board . I also don't use my Raspberry Pi 4 much. So many projects, so little time! Sometimes, as the song goes, I think "A mí que me lleve el diablo" (roughly translated as "let the devil take me").
+I'm currently working on the site using Docker, and I plan to do the same with compilation tools for AVR and STM32. In the future, I'll also work with the Yocto Project because my brother gifted me a [Le Potato AML-S905X-CC](https://libre.computer/products/aml-s905x-cc/){:target="_blank"} board . I also don't use my Raspberry Pi 4 much. So many projects, so little time! Sometimes, as the song goes, I think "A mí que me lleve el diablo" (roughly translated as "let the devil take me").
 
 Finally, I'm working on a technical notes section with topics about resources used in my projects or needed for specific technologies. The first articles in this section explain how to install and use Docker to create this website.
 - [Docker introduction](https://razielgdn.github.io/risingembeddedmx/notes/en/docker-inst-en)
