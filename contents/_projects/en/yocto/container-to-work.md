@@ -165,4 +165,93 @@ docker-compose down
 ```
 This will build the Docker image based on the provided Dockerfile, start the container in detached mode, and allow you to access the shell of the container to start working with Yocto. 
 
+To test a first approach to the build process using a containerized environment. 
+a minimal image could be built using the following command:
+
+```bash
+# Se the environment variables for the build process.
+cd boards/rpi4/poky
+source oe-init-build-env ../build-rpi4
+## You will be moved to the build directory, now you can start the build process for a minimal image.
+```
+Inside the build directory you will find the `conf` folder, which contains the configuration files for the build process. The `bblayers.conf` file defines the layers that will be used in the build, while the `local.conf` file contains specific settings for the build process, such as the target machine, download directory, and other build options.
+
+
+The file `bblayers.conf` contains the configuraition to build a minimal image. with the following content:  
+
+```conf
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+BBLAYERS ?= " \
+  /home/yocto/workspace/boards/rpi4/poky/meta \
+  /home/yocto/workspace/boards/rpi4/poky/meta-poky \
+  /home/yocto/workspace/boards/rpi4/poky/meta-yocto-bsp \  
+  /home/yocto/workspace/boards/rpi4/meta-raspberrypi \  
+  "
+BBLAYERS_NON_REMOVABLE ?= " \
+  /home/yocto/workspace/boards/rpi4/poky/meta \
+  /home/yocto/workspace/boards/rpi4/poky/meta-poky \
+"
+```  
+The file `local.conf` contains the configuration for the build process, with the following content: 
+
+```conf
+# This is the local configuration file for the Yocto build process. It defines various settings and parameters that control how the build is performed.
+# MACHINE: Specifies the target machine for which the image will be built. In this case, it's set to "raspberry
+MACHINE ?= "raspberrypi4-64"
+# DL_DIR: Directory where downloaded source files will be stored. This is important for caching and reusing downloads across builds.
+# SSTATE_DIR: Directory for the shared state cache, which helps speed up builds by reusing previously built components.
+# TMPDIR: Temporary directory for build files and output. This is where the build process will store intermediate files and results.
+DL_DIR ?= "/home/yocto/downloads"
+SSTATE_DIR ?= "/home/yocto/sstate-cache"
+TMPDIR = "/home/yocto/tmp"
+# DISTRO: Specifies the distribution to be built. In this case, it's set to "poky", which is the reference distribution provided by the Yocto Project.
+DISTRO ?= "poky"
+# EXTRA_IMAGE_FEATURES: Additional features to include in the built image. In this case, "debug-tweaks" is added to enable debugging features in the image.
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+# USER_CLASSES: Defines additional classes to be included in the build process. "buildstats" is added to enable build statistics collection.
+USER_CLASSES ?= "buildstats"
+# PATCHRESOLVE: Defines how patch conflicts are resolved during the build process. "noop" means that no automatic resolution will be attempted, and manual intervention may be required if conflicts arise.
+PATCHRESOLVE = "noop"
+# BB_DISKMON_DIRS: Configuration for monitoring disk usage during the build process. It defines thresholds for stopping tasks or halting the build if certain directories exceed specified sizes. This helps prevent the build from consuming too much disk space and allows for better management of resources.
+BB_DISKMON_DIRS ??= "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
+    HALT,${TMPDIR},100M,1K \
+    HALT,${DL_DIR},100M,1K \
+    HALT,${SSTATE_DIR},100M,1K \
+    HALT,/tmp,10M,1K"
+# Number of threads used by BitBake
+BB_NUM_THREADS ?= "4" 
+# Number of parallel make processes
+PARALLEL_MAKE ?= "-j 4"     
+```
+following the procedure descripted in the previous article to build the image you can first download the necessary source files and dependencies using the following command:
+
+```bash
+bitbake -c fetchall core-image-minimal
+```
+
+Build a minimal image using the provided configuration
+```bash
+bitbake core-image-minimal
+``` 
+This command will start the build process for a minimal Linux image using the configurations defined in the `bblayers-minimal.conf` and `local-minimal.conf` files. The build process may take some time, especially on the first run, as it will download and compile all necessary components.
+
+## Cloning the Repository
+To get started with the Yocto project, you can clone the repository that contains the necessary layers and configurations for building your embedded Linux image. This repository is set up to work within the containerized environment we just created.
+
+```bash
+# Clone the repository containing the Yocto project workspace
+git clone https://github.com/razielgdn/rsEmb-Image.git
+# Navigate to the project directory
+cd rsEmb-Image
+# Update submodules to get the necessary layers and components for the Yocto build process
+git submodule update --init --recursive
+# Now you can start working with the Yocto project in the containerized environment
+```
 
