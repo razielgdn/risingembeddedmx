@@ -1,3 +1,4 @@
+# Use the official Ruby image as a base
 FROM ruby:3.4.4-slim
 
 # Configure timezone

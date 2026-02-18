@@ -1,15 +1,20 @@
-version: '3.9'
-services:
-  jekyll:
+# Docker compose file for Jekyll development environment
+# This file defines a service for running a Jekyll site in a Docker container.
+services:                                     # Define the Jekyll service
+  jekyll:                                     # Jekyll service
     build: .
-    container_name: jekyll-site
+    container_name: jekyll-site               # Name of the container
     ports:
-      - "4000:4000"
+      - "4000:4000"                           # Map port 4000 of the container to port 4000 on the host         
     volumes:      
-      - .:/home/remoteUser/workspace      
+      - .:/home/remoteUser/workspace          # Mount the current directory to the container's workspace
     environment:
-      - TZ=America/Monterrey      
+      - TZ=America/Monterrey                  # Set the timezone
+      - TERM=xterm-256color                   # Set terminal type for better compatibility
     stdin_open: true
-    tty: true
-    working_dir: /home/remoteUser/workspace
+    tty: true                                 # Keep the container running and allow interactive terminal
+    working_dir: /home/remoteUser/workspace   # Set the working directory inside the container
+    
+    
+      
 
