@@ -3,6 +3,8 @@ title: Introducción a Yocto
 permalink: /projects/es/yocto/intro
 key: yocto
 lang: es-MX
+date: 2024-06-15
+modify_date: 2025-06-24
 ---
 
 Este es un tema muy avanzado para sistemas embebidos pero por razones de mercado de valores y estratégia de negocios de la empresa donde trabajaba ahora tengo vacaciones indefinidas.

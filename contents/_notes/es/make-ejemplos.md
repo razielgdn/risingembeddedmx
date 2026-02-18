@@ -2,9 +2,9 @@
 title: "Make: Ejemplos de uso en Sistema Embebidos"
 permalink: /notes/es/make-example-es
 key: make-ejemplos
-modify_date: 2025-07-02
-date: 2025-06-30
 lang: es-MX
+date: 2025-07-01
+modify_date: 2025-07-03
 ---
 
 En los proyectos documentados en este sitio web se utilizan varios Makefiles para automatizar la compilación, grabación y limpieza de proyectos embebidos. Este artículo explora cómo funcionan los Makefiles en diferentes entornos de desarrollo y proporciona ejemplos prácticos para microcontroladores AVR y STM32.

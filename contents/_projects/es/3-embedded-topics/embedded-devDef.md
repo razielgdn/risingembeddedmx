@@ -3,10 +3,11 @@ title: ¿Qué es un ingeniero de sistemas embebidos?
 permalink: /projects/es/embedded-topics/embedded-devDef
 key: embedded
 lang: es-MX
+date: 2024-06-15
+modify_date: 2025-06-24
 ---
 
-
- El desarrollador de sistemas embebidos es la persona que se dedica a desarrollar software para microcontroladores y/o microprocesadores.La aplicación es muy variada en muchos campos actuales de diversas áreas de la ingeniería, algunas de las cuales son:
+El desarrollador de sistemas embebidos es la persona que se dedica a desarrollar software para microcontroladores y/o microprocesadores.La aplicación es muy variada en muchos campos actuales de diversas áreas de la ingeniería, algunas de las cuales son:
  + Internet de las cosas (IoT)
  + Medicina
  + Agroindustria

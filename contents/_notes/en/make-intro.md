@@ -2,9 +2,9 @@
 title: "Make: Introduction and basics"
 permalink: /notes/en/make-intro-en
 key: make-en
-modify_date: 2025-07-01
-date: 2025-06-30
 lang: en-US 
+date: 2025-07-01
+modify_date: 2025-07-01
 ---
 
 ## What is Make?

@@ -2,6 +2,8 @@
 title: "Build an Embedded Linux Image for Rasperry Pi 4 with Yocto Project"
 permalink:  /projects/en/yocto/build-raspberrypi
 key: yocto-build-rpi-en
+date: 2025-06-06
+modify_date: 2025-06-10
 ---
 
 It is said that the best way to learn to program is by programming, and the same principle holds true for operating systems. Therefore, in these chapters, we will be working with a new Embedded Linux image for **Raspberry Pi 4**. The documentation I am following corresponds to version 4.0.16 (**kirkstone**), which I chose arbitrarily.

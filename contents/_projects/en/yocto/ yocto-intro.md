@@ -2,6 +2,8 @@
 title: Introduction to Yocto
 permalink: /projects/en/yocto/intro
 key: yocto-intro-en
+date: 2025-06-03
+modify_date: 2025-06-10
 ---
 
 This is a very advanced topic for embedded systems, but due to stock market reasons and business strategy decisions at the company I worked for, I'm currently on an indefinite vacation.

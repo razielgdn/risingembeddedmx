@@ -2,9 +2,9 @@
 title: Docker introduction and installation
 permalink: /notes/en/docker-inst-en
 key: docker-en
-modify_date: 2025-06-19
-date: 2025-06-19  
 lang: en
+date: 2025-06-20
+modify_date: 2025-06-24
 ---
 
 According to Wikipedia, Docker is an open-source project that automates the deployment of applications within software containers, providing an additional layer of abstraction and automation for application virtualization across multiple operating systems. Docker uses Linux kernel resource isolation features, such as cgroups and namespaces, to allow independent "containers" to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines.

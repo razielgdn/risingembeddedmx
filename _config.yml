@@ -245,7 +245,7 @@ defaults:
       aside:
         toc: true
       show_edit_on_github: false
-      show_date: false
+      show_date: true
       sharing: true
       # lightbox: true
   - scope:

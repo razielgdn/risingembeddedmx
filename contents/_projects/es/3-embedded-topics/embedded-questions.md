@@ -7,6 +7,8 @@ tags:
  - interview 
  - español   
 lang: es-MX
+date: 2024-06-15
+modify_date: 2025-06-24
 ---
 
 Las respuestas a estas preguntas tal vez no sea la mas completa, por experiencia propia se que esto es mejor investigarlo y comprenderlo que memorizarlo y no saber de que va. Pero más adelante se irán contestando en la etapa de teoría y proyectos. No desesperen amigos, la senda del gran viaje es larga.   

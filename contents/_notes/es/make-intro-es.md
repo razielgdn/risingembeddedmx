@@ -2,9 +2,9 @@
 title: "Make: Introducción y conceptos básicos"
 permalink: /notes/es/make-intro-es
 key: make-es
-modify_date: 2025-07-01
-date: 2025-06-30
 lang: es-MX
+date: 2025-07-03
+modify_date: 2025-07-03
 ---
 
 ## ¿Qué es Make?

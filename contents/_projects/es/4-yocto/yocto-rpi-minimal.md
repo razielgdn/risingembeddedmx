@@ -3,6 +3,8 @@ title: Yocto para Raspberry Pi 4
 permalink: /projects/es/yocto/yoctoi
 key: yocto
 lang: es-MX
+date: 2024-06-16
+modify_date: 2025-06-24
 ---
 
 Se dice que la mejor manera de aprender a programar es programando, el mismo principio se sigue respetando para cuestiones de sistemas operativos. Así que en

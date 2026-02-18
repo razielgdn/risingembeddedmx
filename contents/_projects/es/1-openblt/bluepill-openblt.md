@@ -3,6 +3,8 @@ title: OpenBLT para la tarjeta Bluepill Plus STM32F103C8Tx
 permalink: /projects/es/1-openblt/openblt-bluepill
 key: openblt-es
 lang: es-MX
+date: 2025-05-17
+modify_date: 2025-06-24
 ---
 
 # Introducción

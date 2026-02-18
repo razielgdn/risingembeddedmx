@@ -3,8 +3,9 @@ layout: article
 title: Octavio Raziel Güendulain Pérez
 permalink: /about/about-en
 aside:
-   toc: true
-modify_date: 2024-07-14
+   toc: true   
+date: 2024-05-27   
+modify_date: 2025-07-14
 lang: en
 ---
 {% comment %}
