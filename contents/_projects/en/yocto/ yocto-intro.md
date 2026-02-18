@@ -1,7 +1,7 @@
 ---
 title: Introduction to Yocto
 permalink: /projects/en/yocto/intro
-key: yocto
+key: yocto-intro-en
 ---
 
 This is a very advanced topic for embedded systems, but due to stock market reasons and business strategy decisions at the company I worked for, I'm currently on an indefinite vacation.

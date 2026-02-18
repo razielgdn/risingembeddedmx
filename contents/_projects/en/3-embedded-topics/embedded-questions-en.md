@@ -1,7 +1,7 @@
 ---
 title: Interview questions for Embedded Software Developer positions
-permalink: /projects/en/embedded-topics/embedded-questions-en
-key: embedded
+permalink: /projects/en/embedded-topics/embedded-questions
+key: embedded-questions-en
 tags: 
  - questions
  - interview 

@@ -83,7 +83,7 @@ risingembeddedmx/
 bundle install
 
 # Serve the site locally
-bundle exec jekyll serve
+bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload
 
 # Build for production
 JEKYLL_ENV=production bundle exec jekyll build
@@ -95,8 +95,6 @@ This is a personal blog, but if you notice any issues or have suggestions, feel 
 ## Connect
 
 - **GitHub**: [@razielgdn](https://github.com/razielgdn)
-- **LinkedIn**: [Professional Profile](https://https://www.linkedin.com/in/octaviorazielgdn/) 
-
+- **LinkedIn**: [Professional Profile](https://https://www.linkedin.com/in/octaviorazielgdn/)
 ---
-
 *"Every line of embedded code I write brings me one step closer to my own piece of land."*
