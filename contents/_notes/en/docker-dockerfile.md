@@ -2,9 +2,9 @@
 title: Dockerfile basics
 permalink: /notes/en/docker-dockerfile-en
 key: docker-en
-modify_date: 2025-06-20
-date: 2025-06-20  
 lang: en 
+date: 2025-06-20
+modify_date: 2025-06-24
 ---
 
 A Dockerfile is a text file that contains a series of instructions used to build a Docker image automatically. It serves as a blueprint for creating consistent, reproducible container environments.

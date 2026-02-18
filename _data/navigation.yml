@@ -95,11 +95,10 @@ projects-en:
         url: "/projects/en/yocto/build-raspberrypi"   
       - title: "Building an embedded Linux image from a container"
         url: "/projects/en/yocto/container-to-work"        
-  # - title: Can Network Project
-  #   children: 
-  #     - title: CAN network objectives
-  #       url:  /projects/en/STM32-CANnetwork/can-objectives  
-
+# - title: Can Network Project
+#   children: 
+#     - title: CAN network objectives
+#       url:  /projects/en/STM32-CANnetwork/can-objectives  
     
 projects-es:
   - title: "Idiomas"

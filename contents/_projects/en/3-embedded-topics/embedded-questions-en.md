@@ -5,6 +5,8 @@ key: embedded-questions-en
 tags: 
  - questions
  - interview 
+date: 2025-06-11
+modify_date: 2025-06-16
 ---
 
 The answers to these questions may not be the most complete. From personal experience, I know it's better to research and understand this rather than memorize it without knowing what it's about. But later on, they will be answered in the theory and projects stage. Don't despair, friends, the path of the great journey is long.   

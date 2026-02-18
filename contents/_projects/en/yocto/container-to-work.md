@@ -1,7 +1,9 @@
 ---
 title: "Building an embedded Linux image from a container"
-permalink:  /projects/en/yocto/container-to-work
-key: yocto-container-en 
+permalink: /projects/en/yocto/container-to-work
+key: yocto-container-en
+date: 2026-02-15
+modify_date: 2026-02-18
 ---
 
 In the previous article, we discussed the Yocto Project and its capabilities for building custom Linux-based operating systems. Now, let's explore how to build an embedded Linux image using a containerized environment.

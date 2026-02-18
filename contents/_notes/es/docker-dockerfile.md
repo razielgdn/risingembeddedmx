@@ -2,9 +2,9 @@
 title: Fundamentos de Dockerfile
 permalink: /notes/es/docker-dockerfile-es
 key: docker-es
-modify_date: 2025-06-20
-date: 2025-06-20  
 lang: es 
+date: 2025-06-20
+modify_date: 2025-06-24
 ---
 
 Un Dockerfile es un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker de manera automática. Funciona como un plano para crear entornos de contenedores consistentes y reproducibles.

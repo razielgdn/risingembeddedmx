@@ -2,9 +2,9 @@
 title: "Dockerfile: Practical Examples for Jekyll and STM32 Workspaces"
 permalink: /notes/en/docker-jekyll-en
 key: docker-en
-modify_date: 2025-06-19
-date: 2025-06-19  
 lang: en-US 
+date: 2025-06-20
+modify_date: 2025-06-24
 ---
 
 ## Prerequisites

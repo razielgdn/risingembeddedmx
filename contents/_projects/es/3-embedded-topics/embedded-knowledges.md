@@ -3,7 +3,10 @@ title: ¿Qué debo saber?
 permalink: /projects/es/embedded-topics/embedded-knowledges
 key: embedded
 lang: es-MX
+date: 2024-06-15
+modify_date: 2025-06-24
 ---
+
 Conocimientos básicos.
 
 Para adentrase en el mundo de los sistemas embebidos, sistemas empotrados, (embedded systems in english) es necesario contar con un cierto preámbulo de conocimientos acerca de lógica digital, matemáticas básicas (y no tan básicas) además de algunas habilidades como alta tolerancia a la frustración y ser autodidacta. 

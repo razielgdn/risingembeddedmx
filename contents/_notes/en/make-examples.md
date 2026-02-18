@@ -2,10 +2,11 @@
 title: "Make: Examples for embedded systems"
 permalink: /notes/en/make-example-en
 key: make-examples
-modify_date: 2025-07-02
-date: 2025-06-30
 lang: en-US 
+date: 2025-07-01
+modify_date: 2025-07-03
 ---
+
 Several Makefiles are used in the projects documented on this website to automate building, flashing, and cleaning embedded projects. This article explores how Makefiles work across different development environments and provides practical examples for AVR and STM32 microcontrollers.
 
 ## Makefile for AVR Projects
