@@ -86,8 +86,8 @@ projects-en:
   - title: Embedded systems topics  
     children:    
       - title: "Interview questions for Embedded Software Developer positions"
-        url: "/projects/en/embedded-topics/embedded-questions-en" 
-  - title: "Yocto project"    
+        url: "/projects/en/embedded-topics/embedded-questions"             
+  - title: "Yocto project"
     children:
       - title: "Introduction to yocto"
         url: "/projects/en/yocto/intro" 
@@ -128,7 +128,7 @@ projects-es:
     - title: Introducción
       url: /projects/es/yocto/intro 
     - title: Crear un sistema mínimo
-      url: /projects/es/yocto/yoctoi     
+      url: /projects/es/yocto/yoctoi    
       
 notes-en:
   - title: Languages
