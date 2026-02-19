@@ -14,7 +14,7 @@ Desarrollador de sistemas embebidos por los últimos 5 años, apasionado por la 
 lector, ciclista cuando no le da flojera, extrañador de vivir en lugares rurales pero gran crítico de la falta de infraestructura.
 
 # Historia laboral:
-Para no ser repetitivo dado que mi CV lo puedes ver en la [pestaña de al lado](https://razielgdn.github.io/risingembeddedmx/about-en) en esta sección añadiré ciertos idiomas y detalles mas personales de mi trayectoria laboral.
+Para no ser repetitivo dado que mi CV lo puedes ver en la [pestaña de al lado](https://razielgdn.github.io/risingembeddedmx/about/about-en) en esta sección añadiré ciertos idiomas y detalles mas personales de mi trayectoria laboral.
 
 ## Primeras experiencias
  Empecé a trabajar a los 10 años o antes ayudando al abuelo en la siembra y la cosecha de sus tierras, acomodando la milpa, echándole fertilizante, dando de beber a las vacas, chivos y borregos, cosechando maíz, frijol, calabaza garbanzo y cortando huizaches (un tipo de arbusto espinoso) y maleza.

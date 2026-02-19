@@ -264,13 +264,13 @@ BB_NUM_THREADS ?= "4"
 # Number of parallel make processes
 PARALLEL_MAKE ?= "-j 4"     
 ```
-following the procedure descripted in the previous article to build the image you can first download the necessary source files and dependencies using the following command:
+Following the procedure descripted in the previous article to build the image you can first download the necessary source files and dependencies using the following command:
 
 ```bash
 bitbake -c fetchall core-image-minimal
 ```
 
-Build a minimal image using the provided configuration
+Build a minimal image using the provided configuration.
 ```bash
 bitbake core-image-minimal
 ``` 
@@ -279,7 +279,10 @@ This last command will start the build process for a minimal Linux image using t
 
 The resulting image will be located inside the `/home/yocto/tmp/deploy/images/raspberrypi4-64/` directory, and you can use it to flash your Raspberry Pi 4 Model B or test it in an emulator.
 
-## Conclusion
-This  article provided a step-by-step guide on how to set up a containerized environment for building embedded Linux images using the Yocto Project. By using Docker and Docker Compose, we can create a consistent and reproducible build environment that simplifies the setup process and allows for easier management of dependencies and configurations. 
+## What is next?
 
-I the next article I will present to you the process of customizing a linux image with a personalized distro and there I will explain how to automate the build process using a scritot to make it easier and faster to build the image with the desired configurations and customizations. Stay tuned for more insights and tutorials on embedded Linux development with Yocto!
+In next articles, I will explore how to customize the image to create a custom distribution adding some pacakges, configurations and a kernel demo to the image. 
+
+
+
+See you in the next article! 
