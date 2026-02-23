@@ -10,8 +10,6 @@ tags:
 translation of prometida: fiancée
 -->
 
-# Yocto Project, Again
-
 ## Why have I been away these last few months?
 ### Finally I have a job
 
@@ -30,18 +28,20 @@ My functions was basically discuss with the customer about the requirements, imp
 
 When the project ends I was transferred to a Light and Brakes controls unit project with less responsabilities and when I collaborate with another old friend **Felipe** a very good comrade that I met in my first job as embedded developer in Code Ingenieria(RIP) his **"Pinche chilango"** heates me because I am more sociable than him to peform  the disgusting act of talk with him in the first day with naturality and don't call him "boss" or "sir" and I take borrowed his best friend "Arturo" to go to take beers. Hehe stories for another day.
 
-> Joaquin, Mi brother Abner and I are now working in the same company again and we bet that Felipe will be here in Aptiv or almost in Monterrey soon as he believes. 
+*Joaquin, My brother Abner and I are now working in the same company again and we bet that Felipe will be here in Aptiv or almost in Monterrey soon as he believes*. 
 
 Well in the Lights and brakes module I was my first approach to AUTOSAR and I was learning some things about this architecture and
 the correct way to implement software components following the standard. Barely a year later Deloitte decided to end the contracts with old Dextra customers and I was supporting internal projects until the great layoffs in February 2024. (most of the history after it are documented in this blog) 
 
 ## Returning to the main tale: new job, new (old) challenges
+
 I was contracted by Aptiv in the same position as I was in Dextra but in a different (almost the same) BCM project, the famous brand of car contracts aptiv to develop the BCM successor of the continental project, a curious fact is that the engineers in the side of the brand of cars are the same that I worked in the past. However the project is structured in a different way, and it implements AUTOSAR from the beginning that is a challenge for me. 
 Besides the practices has management, documentation and the way to work is different, I need to adapt to this new environment and learn a lot of things about the project and the company.
 
 The only one thing that I don't like so much of this company is that my salary decrease in comparison with my previous job. We have good benefits however Dextra get used to retribute with the just and more.  
 
 ### And my personal life continues changing  
+
 Also, as you know, I am experimenting a new lifestyle because I am living with my girlfriend (fiancée) and I need to adapt to this new life too, you know. One of her enemies is my PC, and the time for hugs is more important than developing a custom Linux distribution hehe. 
 
 However, my actual salary is not enough to pay for all the things that Adrianita needs to be happy and I need to find a way to increase my income, maybe with some freelance work or something like that. Adding the fact that we are planning to get married this year I need to find the way to improve my financial situation.
