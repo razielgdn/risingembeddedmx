@@ -94,7 +94,9 @@ projects-en:
       - title: "Minimal image for a Rasperrypi"
         url: "/projects/en/yocto/build-raspberrypi"   
       - title: "Building an embedded Linux image from a container"
-        url: "/projects/en/yocto/container-to-work"        
+        url: "/projects/en/yocto/container-to-work"       
+      - title: "Custom Yocto layer for Raspberry Pi 4" 
+        url: "/projects/en/yocto/custom-distro"
 # - title: Can Network Project
 #   children: 
 #     - title: CAN network objectives

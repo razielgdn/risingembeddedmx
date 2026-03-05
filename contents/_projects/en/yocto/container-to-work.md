@@ -6,7 +6,10 @@ date: 2026-02-15
 modify_date: 2026-02-18
 ---
 
-In the previous article, we discussed the Yocto Project and its capabilities for building custom Linux-based operating systems. Now, let's explore how to build an embedded Linux image using a containerized environment.
+In the previous article, we discussed the Yocto Project and its capabilities for building custom Linux-based operating systems.    
+
+Now, let's explore how to build an embedded Linux image using a containerized environment.   
+
 Using a container can simplify the setup process and ensure a consistent build environment across different machines. Here's a step-by-step guide to building an embedded Linux image from a container
 
 To develop this project, I am using Docker to create the containerized environment from Ubuntu 24.04.3 LTS. You can use any Linux distribution that supports the necessary tools.
