@@ -26,6 +26,21 @@ lang: en
 
 # Embedded Systems Experience
 
+## Aptiv TCM 
+*August 2025 – Present*, **Embedded Software Engineer**
+BCM (Body Control Module) project.
+Main responsibilities include:
+- Software development and maintenance for automotive customer. 
+- Requirements analysis and issue resolution to identify optimal implementation approaches for new features and solutions.
+- Software implementations in the project using C language and vector tools (DaVinci Developer
+ and DaVinci Configurator).
+- Research software defects reported by Testing and Customer. Use debugging tools (CANOE and Lauderbach Trace 32) to analyze CAN Bus log files and replicate issues in the test benches to find root causes. Generate reports with proposed solutions.
+
+Utilized the following tools and technologies:  
+- **Languages**: *C*, *CAPL*, *Python*, *Markdown*.  
+- **Platforms and Tools**: *Jira*, *Git*, *Lauderbach Trace 32*, *CANoe*, *DaVinci Developer*, *DaVinci Configurator*, *Polarion*.  
+- **Hardware**: Infinion Devices, oscilloscope, Digital Analyzer. 
+
 ## Dextra Technologies, a Deloitte Business
 *February – March 2024*, **Software Engineer II**   
 Worked on two main projects: Automotive Brake Control ECU development and STM32H735 demo platform development. Collaborated with cross-functional teams to address technical challenges and meet project deadlines effectively.   
@@ -46,7 +61,7 @@ Utilized the following tools and technologies:
 - **Languages**: C/C++, Python, Bash.  
 - **Platforms and Tools**: STM32CubeIDE, Raspbian, Git, GitHub, Jira.
 - **Protocols and Hardware**: CAN, JTAG, STM32H5, STM SPC560Bx MCU. 
-- **Documentation**: Markdown. DOORS
+- **Documentation**: Markdown, DOORS.
 
 ## Dextra Technologies
 *December 2020 – January 2022*, **Embedded Software Developer Jr**  
