@@ -89,6 +89,21 @@ bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload
 JEKYLL_ENV=production bundle exec jekyll build
 ```
 
+### Run the project with docker
+To run this site in a docker container:
+``` bash
+# Run the container an create the image
+docker compose up -d --build
+
+# Enter to the container
+docker compose exec jekyll bash
+
+# Stop the container
+docker compose down
+
+```
+
+
 ### Contributing
 This is a personal blog, but if you notice any issues or have suggestions, feel free to open an issue or reach out!
 
