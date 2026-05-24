@@ -103,13 +103,12 @@ docker compose down
 
 ```
 
-
 ### Contributing
 This is a personal blog, but if you notice any issues or have suggestions, feel free to open an issue or reach out!
 
 ## Connect
 
 - **GitHub**: [@razielgdn](https://github.com/razielgdn)
-- **LinkedIn**: [Professional Profile](https://https://www.linkedin.com/in/octaviorazielgdn/)
+- **LinkedIn**: [Octavio Guendulain](https://https://www.linkedin.com/in/octaviorazielgdn/)
 ---
 *"Every line of embedded code I write brings me one step closer to my own piece of land."*
