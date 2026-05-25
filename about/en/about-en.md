@@ -5,11 +5,12 @@ permalink: /about/about-en
 aside:
    toc: true   
 date: 2024-05-27   
-modify_date: 2025-07-14
+modify_date: 2026-05-24
 lang: en
 ---
 {% comment %}
 <!--
+    05-24-2026 -> Update Aptiv TCM experience and add new projects.
     07-13-2025 -> Update abstract to get more impact
     07-05-2025 -> Grammar check and date corrections.
     05-29-2024 -> Update style and add TI part.
@@ -20,8 +21,12 @@ lang: en
 
 ## Sumary
 
-**Electronic Engineer** with embedded software development experience since 2019, including 4 years specializing in the automotive industry. Demonstrated expertise in communication protocols (CAN, LIN, I2C, SPI) and UDS implementation, with comprehensive knowledge of microcontroller and microprocessor architectures including Cortex-A, Cortex-M, and AVR platforms.  
-**Technical Proficiency:** Proficient in C programming across multiple MCU families (TI, STM, NXP/Freescale, and Microchip). Skilled in embedded debugging using JTAG interfaces with J-Link, GDB, WinIDEA, and ST-Link tools. Experienced in software version control and integration using Git, GitHub, and IBM IMS, managing team integration workflows and product releases.   
+**Electronic Engineer** with embedded software development experience since 2019, including more than 4 years specializing
+in the automotive industry. Strong expertise in communication protocols (CAN, LIN, I2C, SPI) and UDS diagnostics. 
+Proficient in C programming across multiple MCU families (STM, NXP/Freescale, TI, Microchip) and experienced with Linux-based embedded systems.
+
+**Technical Proficiency:** Proficient in C programming across multiple MCU families (TI, STM, NXP/Freescale, and Microchip). Skilled in embedded debugging using JTAG interfaces with J-Link, GDB, WinIDEA, and ST-Link tools. Experienced in software version control and integration using Git, GitHub, and IBM IMS, managing team integration workflows and product releases. 
+  
 **Leadership & Development:** Proven track record in onboarding and mentoring new team members while managing task assignments, effort estimation, and project timelines. Adept at following SCRUM methodology for embedded software development with project management through Jira.
 
 # Embedded Systems Experience
@@ -30,11 +35,11 @@ lang: en
 *August 2025 – Present*, **Embedded Software Engineer**
 BCM (Body Control Module) project.
 Main responsibilities include:
-- Software development and maintenance for automotive customer. 
-- Requirements analysis and issue resolution to identify optimal implementation approaches for new features and solutions.
-- Software implementations in the project using C language and vector tools (DaVinci Developer
- and DaVinci Configurator).
-- Research software defects reported by Testing and Customer. Use debugging tools (CANOE and Lauderbach Trace 32) to analyze CAN Bus log files and replicate issues in the test benches to find root causes. Generate reports with proposed solutions.
+- Software development and maintenance for Body Control Module (BCM) in automotive projects.
+- Requirements analysis, implementation of new features and issue resolution using Vector tools (DaVinci Developer &DaVinci Configurator).
+- Debugging and root cause analysis of defects using CANoe, Lauterbach TRACE32 and analysis of CAN Bus logs Generation of technical reports with proposed solutions
+- Participated in technical discussions with the Product Owner to evaluate implementation complexity and drove root cause analysis of defects in the system software.
+- Provided mentoring and technical support to junior team members, guiding them on defect analysis, debugging sessions, and issue resolution to accelerate problem-solving.
 
 Utilized the following tools and technologies:  
 - **Languages**: *C*, *CAPL*, *Python*, *Markdown*.  

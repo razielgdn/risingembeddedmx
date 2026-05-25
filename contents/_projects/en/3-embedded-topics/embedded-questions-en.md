@@ -556,7 +556,8 @@ void TIM2_IRQHandler(void) {
     - NAND/NOR: Flash for mass storage (e.g., SD cards).
     - ROM: Read-only, preprogrammed.
 
-27. **What are the parts of system memory and what is done in each one?**    
+27. **What are the parts of system memory and what is done in each one?**   
+ 
     Memory Segments in Embedded Systems        
     Memory in an embedded system is organized into different segments, each with a specific purpose. Understanding these segments is crucial for efficient programming and debugging.    
     Main Memory Segments    
@@ -568,17 +569,19 @@ void TIM2_IRQHandler(void) {
           - Function definitions
           - Interrupt vector tables
           - Bootloader code   
-```c
-// This code is stored in the .text segment
-void my_function(void) {
-    // Executable instructions
-    GPIO_toggle();
-}
-```             
+  
+     ```c
+      // This code is stored in the .text segment
+      void my_function(void) {
+      // Executable instructions
+      GPIO_toggle();
+      }
+     ```             
        - **Characteristics:**
           - Read-only during execution
           - Persistent (survives power loss)
           - Fixed addresses determined at compile time
+
     2. Data Segment (.data)
        - **Location:** RAM (initialized from Flash)  
        - **Purpose:** Stores initialized global and static variables
@@ -586,11 +589,13 @@ void my_function(void) {
        - **Content:**
           - Global variables with initial values
           - Static variables with initial values
-```c
-// These variables go to the .data segment
-int global_counter = 100;        // Initialized global
-static char buffer[10] = "Hello";  // Initialized static
-```          
+  
+        ```c
+        // These variables go to the .data segment
+        int global_counter = 100;        // Initialized global
+        static char buffer[10] = "Hello";  // Initialized static
+        ```  
+
        - **Initialization Process:**
           1. Initial values are stored in Flash memory
           2. During startup, values are copied from Flash to RAM
@@ -602,12 +607,12 @@ static char buffer[10] = "Hello";  // Initialized static
           - Global variables without initial values
           - Static variables without initial values
           - Variables explicitly initialized to zero
-```c
-// These variables go to the .bss segment
-int global_array[100];           // Uninitialized
-static int status_flag;         // Uninitialized
-char reception_buffer[256] = {0};  // Initialized to zero
-```
+        ```c
+        // These variables go to the .bss segment
+        int global_array[100];           // Uninitialized
+        static int status_flag;         // Uninitialized
+        char reception_buffer[256] = {0};  // Initialized to zero
+        ```
        - **Characteristics:**
           - Automatically initialized to zero during startup
           - Takes no space in Flash (only RAM)
@@ -619,15 +624,15 @@ char reception_buffer[256] = {0};  // Initialized to zero
        - **Content:**
           - Dynamically allocated memory blocks
           - Memory managed by malloc/free functions
-```c
-// Heap usage example
-char* dynamic_buffer = malloc(512);  // Dynamic allocation
-if (dynamic_buffer != NULL) {
-    // Use the buffer
-    strcpy(dynamic_buffer, "Dynamic data");
-    free(dynamic_buffer);  // Free memory
-}
-```
+        ```c
+        // Heap usage example
+        char* dynamic_buffer = malloc(512);  // Dynamic allocation
+        if (dynamic_buffer != NULL) {
+            // Use the buffer
+            strcpy(dynamic_buffer, "Dynamic data");
+            free(dynamic_buffer);  // Free memory
+        }
+        ```
        - **Management:**
           - Grows toward higher addresses.
           - Possible fragmentation.
@@ -654,27 +659,30 @@ if (dynamic_buffer != NULL) {
           - Automatic management (LIFO - Last In, First Out).
           - Grows toward lower addresses.
           - Limited size (stack overflow if exceeded).    
+
     6. Memory Distribution Diagram   
-```
-High Addresses
-┌─────────────────┐
-│     Stack       │ ← Grows downward
-│        ↓        │
-├─────────────────┤
-│   Free Space    │
-├─────────────────┤
-│        ↑        │
-│     Heap        │ ← Grows upward
-├─────────────────┤
-│ .bss Segment    │ ← Uninitialized variables
-├─────────────────┤
-│ .data Segment   │ ← Initialized variables
-├─────────────────┤
-│ .text Segment   │ ← Program code
-└─────────────────┘
-Low Addresses
-```
-28. **What is an input-output port? What is *GPIO*?**   
+
+        ```
+        High Addresses
+        ┌─────────────────┐
+        │     Stack       │ ← Grows downward
+        │        ↓        │
+        ├─────────────────┤
+        │   Free Space    │
+        ├─────────────────┤
+        │        ↑        │
+        │     Heap        │ ← Grows upward
+        ├─────────────────┤
+        │ .bss Segment    │ ← Uninitialized variables
+        ├─────────────────┤
+        │ .data Segment   │ ← Initialized variables
+        ├─────────────────┤
+        │ .text Segment   │ ← Program code
+        └─────────────────┘
+        Low Addresses
+        ```
+
+28.  **What is an input-output port? What is *GPIO*?**   
     - **An input-output port** is a physical interface that allows the microcontroller to communicate with the outside world. It's the connection point between the processor and external devices like sensors, actuators, LEDs, buttons, etc. Ports can function in two main modes:   
       - Input: Receive signals from the outside to the microcontroller
       - Output: Send signals from the microcontroller to the outside
@@ -686,7 +694,7 @@ Low Addresses
        - Digital states: Handle digital signals (HIGH/LOW, 1/0).
        - Typical voltages: 3.3V or 5V depending on the microcontroller.
 
-29. **How is a **GPIO** mapped within the microcontroller (in reference to C language)?**      
+29.  **How is a **GPIO** mapped within the microcontroller (in reference to C language)?**      
     It's done through registers which are dedicated memory spaces. 
     The datasheet of each device must be reviewed to verify correctly.     
     For example, in an AVR architecture it's mainly done through the following:  
@@ -695,7 +703,7 @@ Low Addresses
        - **PIN**: Reads the pin's current state.
        - **PULL**: Configures pull-up/pull-down resistors.
 
-30.  **What is a memory leak?**      
+3.   **What is a memory leak?**      
    A memory leak occurs when a program reserves memory but doesn't release it back to the system when it's no longer needed. Over time, this causes the program to consume more and more memory, potentially causing system slowdown or failures.    
    Common scenarios:
    - Allocating memory in a loop without freeing it
@@ -704,7 +712,7 @@ Low Addresses
    - Circular references in garbage-collected languages
    - Not properly closing files or database connections
 
-31. **What is Stack Overflow and Underflow?**   
+4.  **What is Stack Overflow and Underflow?**   
     1. Stack Overflow: Occurs when the stack grows beyond its allocated limit, overwriting adjacent memory or causing a system error. **Main causes**:
        - Infinite or very deep recursion:
          ```c
@@ -748,7 +756,7 @@ Low Addresses
         stack_pointer--;  // Without checking limits
         ```
 
-32. **How can I know the size of a structure without using the sizeof operator? Hint: use pointers and a simple operation. I failed to answer this at the time.**    
+5.  **How can I know the size of a structure without using the sizeof operator? Hint: use pointers and a simple operation. I failed to answer this at the time.**    
     The technique is with pointers:
     ```c
     #include <stdio.h>
