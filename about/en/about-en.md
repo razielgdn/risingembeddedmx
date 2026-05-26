@@ -101,7 +101,83 @@ Worked with NXP devices including **i.MX8** and **i.MX6** SoCs, utilizing Yocto 
   - **Languages**: C/C++, Bash. 
   - **Platforms and Tools**: Yocto Project, Linux, VirtualBox, Segger J-Link debugger. 
   - **Hardware**: i.MX8, i.MX7, i.MX6 development boards, multimeter, digital analyzer, oscilloscope. 
-  
+
+
+# Education
+## [Universidad Tecnológica de la Mixteca](https://www.utm.mx/)
+Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)  
+*Aug 2010 – Jul 2015*     
+- CENEVAL high-performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/ceneval.png).  
+- Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/cedula.png).
+
+## Courses
+
+### From [edX.org](https://courses.edx.org/)
+- UT.6.10x: **Embedded Systems - Shape The World: Microcontroller Input/Output**, The University of Texas System  
+  Certificate of Achievement: [2cd21b17d58e454baa5489e40c4d088f](https://courses.edx.org/certificates/2cd21b17d58e454baa5489e40c4d088f)
+
+### From [Udemy](https://www.udemy.com/)
+- **Autosar Architecture (Learn from Scratch with Demo)**: [UC-abbb789a-ccd3-450d-8dcd-1593e0b17670](https://www.udemy.com/certificate/UC-abbb789a-ccd3-450d-8dcd-1593e0b17670/)  
+- **The Complete Git Guide: Understand and Master Git and GitHub**: [UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf](https://www.udemy.com/certificate/UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf/)  
+- **Domina SCRUM con JIRA Agile - Metodologías Ágiles**: [UC-f61ab121-7c1e-437f-88dc-adce85728be5](https://www.udemy.com/certificate/UC-f61ab121-7c1e-437f-88dc-adce85728be5/)  
+- **Yocto Zero to Hero - Building Embedded Linux**: [UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa](https://www.udemy.com/certificate/UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa/)
+
+# Skills
+
+## Programming Languages
+
+- **C/C++**
+- **Python**
+- **Bash**
+- **CAPL**
+- **yaml**
+
+## Automotive Tools
+- **Autosar** 
+- **Vector Tools** 
+  - **CAN-DB** and **LDF** management
+  - **Geny**
+  - **CANoe**
+  - **CANdela**
+  - **DaVinci Developer**
+  - **DaVinci Configurator**
+- **Tresos**
+- **Unit Testing** 
+- **UDS Diagnostic Services**
+
+## Linux, Distributions, and Tools
+- **Linux Distributions** 
+  - **Ubuntu**
+  - **Fedora** 
+  - **Mint** 
+  - **Debian** 
+  - **Raspberry Pi OS/Raspbian**
+- **Linux-Related Software**
+  - **Docker**
+  - **Linux terminal**
+  - **Vi**, **Nano**
+  - **Meld** 
+  - **FileZilla** 
+  - **TeXmaker**, **TeXstudio**
+- **Yocto Project** 
+  - Constructed systems for NXP, Texas Instruments, and Raspberry Pi devices.
+
+## Debugging Tools
+- **J-link**
+- **GDB, GNU Debugger**
+- **WinIdea**
+
+## Version Control and Administrative Tools
+- **Git**
+- **Jira**
+- **SVN**
+- **IBM IMS Tool**
+
+## Integrated Development Environments (IDEs)
+- **Eclipse IDEs** (STMCubeIDE, Code Composer Studio, Microchip Studio).  
+- **Visual Studio Code**.  
+- **KDevelop**.
+
 # Experience in IT Support and Maintenance
 ## Comercializadora de Equipos de Energía Renovables
 *December 2018 – April 2019*, Photovoltaic Systems Installer  
@@ -143,82 +219,7 @@ Worked with NXP devices including **i.MX8** and **i.MX6** SoCs, utilizing Yocto 
   - Writing manuals and support guides.  
   - Administering Linux and Windows servers for email, cache, databases, IPTables, and performing backups.
 
-# Education
-## [Universidad Tecnológica de la Mixteca](https://www.utm.mx/)
-Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)  
-*Aug 2010 – Jul 2015*     
-- CENEVAL high-performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/ceneval.png).  
-- Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/cedula.png).
-
-## Courses
-
-### From [edX.org](https://courses.edx.org/)
-- UT.6.10x: **Embedded Systems - Shape The World: Microcontroller Input/Output**, The University of Texas System  
-  Certificate of Achievement: [2cd21b17d58e454baa5489e40c4d088f](https://courses.edx.org/certificates/2cd21b17d58e454baa5489e40c4d088f)
-
-### From [Udemy](https://www.udemy.com/)
-- **Autosar Architecture (Learn from Scratch with Demo)**: [UC-abbb789a-ccd3-450d-8dcd-1593e0b17670](https://www.udemy.com/certificate/UC-abbb789a-ccd3-450d-8dcd-1593e0b17670/)  
-- **The Complete Git Guide: Understand and Master Git and GitHub**: [UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf](https://www.udemy.com/certificate/UC-b5f6a7cc-720f-4a28-83f9-deab97227dbf/)  
-- **Domina SCRUM con JIRA Agile - Metodologías Ágiles**: [UC-f61ab121-7c1e-437f-88dc-adce85728be5](https://www.udemy.com/certificate/UC-f61ab121-7c1e-437f-88dc-adce85728be5/)  
-- **Yocto Zero to Hero - Building Embedded Linux**: [UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa](https://www.udemy.com/certificate/UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa/)
-
-# Skills
-
-## Programming Languages
-Since 2009, I have worked with many languages:  
-- **C/C++**: 4 years professionally.  
-- **Python**: 1 year with personal projects and modifying scripts (e.g., python-can).  
-- **Bash**: 3 years automating routines in Linux for technician roles and configuring embedded Linux systems.  
-- **Java**: 2 years as a student, creating simple applications for personal projects.  
-- **LaTeX**: 5 years for student and personal documentation, and 1 year professionally as a part-time freelancer.  
-- **Markdown**: 2 years, used for this site and documenting GitHub projects.
-
-## Automotive Tools
-- **Autosar**: 1 year adding ports, managing CAN databases (messages and signals), Diagnostic Trouble Codes (DTCs), and gateways.  
-- **Vector Tools**:  
-  - **CAN-DB** and **LDF** management: 3 years.  
-  - **Geny**: 3 years.  
-  - **CANoe**: 3 years.  
-  - **CANdela**: 4 years.  
-- **Tresos**: 1 year.  
-- **Unit Testing** (using SWATT): 3 years.  
-- **MISRA**: 4 years.  
-- **UDS Diagnostic Services**: 4 years.
-
-## Linux, Distributions, and Tools
-- **Linux Distributions**:  
-  - **Ubuntu**: 11 years as a user.  
-  - **Fedora**: 13 years as a user.  
-  - **Mint**: 3 years.  
-  - **Debian**: 3 years.  
-  - **Raspberry Pi OS/Raspbian**: 1 year.  
-- **Linux-Related Software**:  
-  - **Docker**: 9 months.  
-  - Linux terminal: 10+ years.  
-  - **Vi**: 5 years.  
-  - **Meld**.  
-  - **FileZilla**.  
-  - **Nano**.  
-  - **TeXmaker**, **TeXstudio**.  
-- **Yocto Project**:  
-  - Constructed systems for NXP, Texas Instruments, and Raspberry Pi devices.
-
-## Debugging Tools
-- **J-link**: 1 year, used with NXP devices.  
-- **GDB, GNU Debugger**: 3 years, running in Eclipse environments with STM, TI, and Atmel/Microchip IDEs.  
-- **WinIdea**: 3 years, to debug ECU devices.
-
-## Version Control and Administrative Tools
-- **Git**: 4 years.  
-- **Jira**: 3 years.  
-- **SVN**: 1 year.  
-- **IBM IMS Tool**: 3 years.
-
-## Integrated Development Environments (IDEs)
-- **Eclipse IDEs** (STMCubeIDE, Code Composer Studio, Microchip Studio).  
-- **Visual Studio Code**.  
-- **KDevelop**.
-
+## Skills and Tools
 ## Network & IT Services
 - **Hardware**:  
   - Network architecture wiring (RJ45, RJ11).  
