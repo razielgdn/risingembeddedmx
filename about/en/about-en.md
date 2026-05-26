@@ -23,7 +23,7 @@ lang: en
 
 **Electronic Engineer** with embedded software development experience since 2019, including more than 4 years specializing
 in the automotive industry. Strong expertise in communication protocols (CAN, LIN, I2C, SPI) and UDS diagnostics. 
-Proficient in C programming across multiple MCU families (STM, NXP/Freescale, TI, Microchip) and experienced with Linux-based embedded systems.
+Passionate about low-level programming, Linux embedded (Yocto) and bringing reliable systems from concept to production.
 
 **Technical Proficiency:** Proficient in C programming across multiple MCU families (TI, STM, NXP/Freescale, and Microchip). Skilled in embedded debugging using JTAG interfaces with J-Link, GDB, WinIDEA, and ST-Link tools. Experienced in software version control and integration using Git, GitHub, and IBM IMS, managing team integration workflows and product releases. 
   
@@ -32,7 +32,7 @@ Proficient in C programming across multiple MCU families (STM, NXP/Freescale, TI
 # Embedded Systems Experience
 
 ## Aptiv TCM 
-*August 2025 – Present*, **Embedded Software Engineer**
+*August 2025 – Present*, **Embedded Software Engineer**    
 BCM (Body Control Module) project.
 Main responsibilities include:
 - Software development and maintenance for Body Control Module (BCM) in automotive projects.
