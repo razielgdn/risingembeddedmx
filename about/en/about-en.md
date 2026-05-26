@@ -19,7 +19,7 @@ lang: en
 -->
 {% endcomment %}
 
-## Sumary
+## Summary
 
 **Electronic Engineer** with embedded software development experience since 2019, including more than 4 years specializing
 in the automotive industry. Strong expertise in communication protocols (CAN, LIN, I2C, SPI) and UDS diagnostics. 
@@ -36,18 +36,18 @@ Proficient in C programming across multiple MCU families (STM, NXP/Freescale, TI
 BCM (Body Control Module) project.
 Main responsibilities include:
 - Software development and maintenance for Body Control Module (BCM) in automotive projects.
-- Requirements analysis, implementation of new features and issue resolution using Vector tools (DaVinci Developer &DaVinci Configurator).
-- Debugging and root cause analysis of defects using CANoe, Lauterbach TRACE32 and analysis of CAN Bus logs Generation of technical reports with proposed solutions
+- Requirements analysis, implementation of new features, and issue resolution using Vector tools (DaVinci Developer & DaVinci Configurator).
+- Debugging and root cause analysis of defects using CANoe and Lauterbach TRACE32, including analysis of CAN Bus logs and generation of technical reports with proposed solutions.
 - Participated in technical discussions with the Product Owner to evaluate implementation complexity and drove root cause analysis of defects in the system software.
 - Provided mentoring and technical support to junior team members, guiding them on defect analysis, debugging sessions, and issue resolution to accelerate problem-solving.
 
 Utilized the following tools and technologies:  
 - **Languages**: *C*, *CAPL*, *Python*, *Markdown*.  
-- **Platforms and Tools**: *Jira*, *Git*, *Lauderbach Trace 32*, *CANoe*, *DaVinci Developer*, *DaVinci Configurator*, *Polarion*.  
-- **Hardware**: Infinion Devices, oscilloscope, Digital Analyzer. 
+- **Platforms and Tools**: *Jira*, *Git*, *Lauterbach Trace 32*, *CANoe*, *DaVinci Developer*, *DaVinci Configurator*, *Polarion*.  
+- **Hardware**: Infineon devices, oscilloscope, digital analyzer. 
 
 ## Dextra Technologies, a Deloitte Business
-*February – March 2024*, **Software Engineer II**   
+*February 2022 – March 2024*, **Software Engineer II**   
 Worked on two main projects: Automotive Brake Control ECU development and STM32H735 demo platform development. Collaborated with cross-functional teams to address technical challenges and meet project deadlines effectively.   
 
 - **STM32H735G Development Kit project**:    
@@ -55,7 +55,7 @@ Implemented OpenBLT bootloader project on STM32H735G platform. The platform requ
 To handle this situation, migrated the OpenBLT project from the Nucleo-H563ZI demo to the STM32H53 platform by reconfiguring GPIO, CAN, SPI, and UART interfaces and updating the corresponding STM32 HAL drivers. Git and GitHub were used to manage software version control and track changes.   
 
 - **Brake Control ECU Project**:  
-  Automotive Brake Control ECU Project: Developed software for automotive customer focusing on optimizing functionality and ensuring compliance with industry standards. 
+  Developed software for an automotive customer, focusing on optimizing functionality and ensuring compliance with industry standards. 
   - Database Integration: Integrated a new database into the project to add messages and signals to the system, specifically implementing two new Diagnostic Trouble Codes (**DTCs**) and message gateways. Utilized **Tresos** to import the database and generate system resources including headers and auto-generated C files. Developed the fault control driver in **C language** following **MISRA compliance** standards, implemented failure signal transmission and gateway functionality, conducted unit testing using **SWATT**, and performed integration testing with **CANoe** and **WinIDEA**.
   - Issue Investigation: Utilized debug tools to analyze **CAN Bus** log files with CANoe to replicate issues reported by the testing department. Identified **root causes** and generated tickets with detailed analysis and proposed solutions.  
   - Implemented issue solutions according to management dashboard priorities.
@@ -72,12 +72,12 @@ Utilized the following tools and technologies:
 *December 2020 – January 2022*, **Embedded Software Developer Jr**  
 - **BCM (Body Control Module)**:       
 Project for Lights and Communications ECU, providing comprehensive customer support through requirements analysis and issue resolution to identify optimal implementation approaches for new features and solutions.
-- **Requirements Analysis:** Conducted requirements analysis and verified the availability of all hardware components (including GPIOs, timers, CAN ports, sensors, and transceivers), software resources (e.g., Customer Model, APIs, data structures, reserved memory), resources in the DBCs (CAN databases) and LDFs (LIN Description Files) and definitions of Diagnostics trouble codes (DTCs) and Data Identifiers (DIDs) following the UDS protocol. Documented the analysis and defined priority levels and effort estimation.
-- **Software Implementations**: Implementations were performed in the project using C language and some vector tools, common task included:
-  - Updated CAN Messages and signals in the project using vector Geny to manage the databases (DBC, LDF) and the auto-generated code as headers and automatic gateways. 
+- **Requirements Analysis:** Conducted requirements analysis and verified the availability of all hardware components (including GPIOs, timers, CAN ports, sensors, and transceivers), software resources (e.g., Customer Model, APIs, data structures, reserved memory), resources in the DBCs (CAN databases) and LDFs (LIN Description Files), and definitions of Diagnostic Trouble Codes (DTCs) and Data Identifiers (DIDs) following the UDS protocol. Documented the analysis and defined priority levels and effort estimation.
+- **Software Implementations**: Implementations were performed in the project using C language and some Vector tools; common tasks included:
+  - Updated CAN messages and signals in the project using Vector Geny to manage the databases (DBC, LDF) and the auto-generated code as headers and automatic gateways. 
   - Developed the logic and implemented code modifications to meet customer requirements following MISRA compliance standards and created unit tests using the SWATT tool. Employed CANdela to add new DTCs and DIDs with their associated services (read, write, diagnostic, etc).
 - **Designed integration tests** to ensure software functionality. The tests were performed on customer-provided hardware (test benches) to simulate the vehicle system using CANoe and WinIDEA tools. Additionally, utilized CAPL to automate certain test routines.
-- **Issues Resolution:** When an issue was reported by test team or the customer I participated in the analysis of the Issue reproducing the fault/erroneous behavior in the test benches to found the root causes. Using debugging tools (CANoe and WinIDEA) and  and generated reports with proposed solutions.
+- **Issue Resolution:** When an issue was reported by the test team or the customer, I participated in the issue analysis by reproducing the fault/erroneous behavior in the test benches to find the root causes, using debugging tools (CANoe and WinIDEA), and generating reports with proposed solutions.
 - **Software Integration:** Managed software integration from team members and coordinated releases using IMS version control system, later transitioning to Git for team integration workflows and product releases.
 - **Team Management:** Participated in onboarding and training new team members, including administrative responsibilities such as ticket assignment, effort estimation, and project timeline management.
   
@@ -91,7 +91,7 @@ Utilized the following tools and technologies:
 Research and development of embedded systems, focused on Linux and Android environments. 
 Worked with NXP devices including **i.MX8** and **i.MX6** SoCs, utilizing Yocto Project and Android sources to set up and configure embedded systems for diverse applications and customers.
 
-- Role Activities
+- Role activities
   - Configured and adapted display and touchpad drivers for Sabre SD board-based hardware.  
   - Calibrated RAM and Flash memory for an i.MX6-based device.  
   - Supported a customer in configuring and optimizing the NXP eCockpit system.  
@@ -146,7 +146,7 @@ Worked with NXP devices including **i.MX8** and **i.MX6** SoCs, utilizing Yocto 
 # Education
 ## [Universidad Tecnológica de la Mixteca](https://www.utm.mx/)
 Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)  
-*Aug 2010 – Jul 2015 *     
+*Aug 2010 – Jul 2015*     
 - CENEVAL high-performance results: [20163002591](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/ceneval.png).  
 - Cédula profesional: [11876075](https://raw.githubusercontent.com/razielgdn/risingembeddedmx/main/assets/images/personalDocuments/cedula.png).
 
@@ -165,7 +165,7 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
 # Skills
 
 ## Programming Languages
-Since 2009, I was working with may languages:  
+Since 2009, I have worked with many languages:  
 - **C/C++**: 4 years professionally.  
 - **Python**: 1 year with personal projects and modifying scripts (e.g., python-can).  
 - **Bash**: 3 years automating routines in Linux for technician roles and configuring embedded Linux systems.  
@@ -215,7 +215,7 @@ Since 2009, I was working with may languages:
 - **IBM IMS Tool**: 3 years.
 
 ## Integrated Development Environments (IDEs)
-- **Eclipse** (IDEAS, STMCubeIDE, Code Composer Studio, Microchip Studio).  
+- **Eclipse IDEs** (STMCubeIDE, Code Composer Studio, Microchip Studio).  
 - **Visual Studio Code**.  
 - **KDevelop**.
 
@@ -243,6 +243,6 @@ Since 2009, I was working with may languages:
 ## Personal Interests
 
 **Technology Enthusiast** with a passion for open-source software and free tools. Self-taught learner who actively explores technologies beyond job requirements, including:
-- **Open Source Experience:** GNU/Linux user since 2008, developing personal projects documented in this technical blog posts and repositories.
-- **Additional Technical Skills:** Python programming, Docker containerization, 3D printing, and currently expanding expertise in Rust programming, RTOS development, KiCad PCB design, Jekyll static site generation, and Yocto Project for Raspberry Pi and  embedded systems.
+- **Open Source Experience:** GNU/Linux user since 2008, developing personal projects documented in this technical blog and repositories.
+- **Additional Technical Skills:** Python programming, Docker containerization, 3D printing, and currently expanding expertise in Rust programming, RTOS development, KiCad PCB design, Jekyll static site generation, and Yocto Project for Raspberry Pi and embedded systems.
 - **Continuous Learning:** Committed to staying current with emerging technologies through hands-on experimentation and personal project development, demonstrating adaptability and technical curiosity beyond traditional embedded systems work.
