@@ -122,7 +122,7 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
 - **Domina SCRUM con JIRA Agile - Metodologías Ágiles**: [UC-f61ab121-7c1e-437f-88dc-adce85728be5](https://www.udemy.com/certificate/UC-f61ab121-7c1e-437f-88dc-adce85728be5/)  
 - **Yocto Zero to Hero - Building Embedded Linux**: [UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa](https://www.udemy.com/certificate/UC-fc6ee01a-2b07-40d9-a0a5-86b67c4535fa/)
 
-# Skills
+# Embedded Skills
 
 ## Programming Languages
 
@@ -130,7 +130,7 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
 - **Python**
 - **Bash**
 - **CAPL**
-- **yaml**
+- **YAML**
 
 ## Automotive Tools
 - **Autosar** 
@@ -163,7 +163,7 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
   - Constructed systems for NXP, Texas Instruments, and Raspberry Pi devices.
 
 ## Debugging Tools
-- **J-link**
+- **J-Link**
 - **GDB, GNU Debugger**
 - **WinIdea**
 
@@ -174,7 +174,7 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
 - **IBM IMS Tool**
 
 ## Integrated Development Environments (IDEs)
-- **Eclipse IDEs** (STMCubeIDE, Code Composer Studio, Microchip Studio).  
+- **Eclipse IDEs** (STM32CubeIDE, Code Composer Studio, Microchip Studio).  
 - **Visual Studio Code**.  
 - **KDevelop**.
 
@@ -219,7 +219,7 @@ Huajuapan de León, Oaxaca - Electronic Engineer (Bachelor's Degree)
   - Writing manuals and support guides.  
   - Administering Linux and Windows servers for email, cache, databases, IPTables, and performing backups.
 
-## Skills and Tools
+# IT Support and Networking Skills
 ## Network & IT Services
 - **Hardware**:  
   - Network architecture wiring (RJ45, RJ11).  
