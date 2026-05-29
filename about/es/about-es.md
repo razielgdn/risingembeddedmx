@@ -5,7 +5,7 @@ key: quien-soy
 lang: es-MX
 aside:
    toc: true
-modify_date: 2024-07-04
+modify_date: 2026-05-26
 ---
 
 
@@ -59,7 +59,7 @@ En agosto de 2025 entré a Aptiv como ingeniero de software embebido en un proye
 
 También participo en depuración y análisis de causa raíz con CANoe y Lauterbach TRACE32, revisando trazas y logs de CAN para documentar propuestas de solución.
 
-# Miscelánea
+## Miscelánea
 Bueno, nací y crecí en el estado de Oaxaca, México. Lugar de paisajes hermosos en las montañas, ciudades pintorescas, playas paradisíacas, estepas montañas y desiertos,
 selva seca, selva húmeda, un gran número de pueblos originarios, deliciosa gastronomía, mucha cultura y desafortunadamente: falta de infraestructura, trabajos precarizados y muchos problemas sociales que pareciera que no dejan que el "progreso" sea rápido.   
 
