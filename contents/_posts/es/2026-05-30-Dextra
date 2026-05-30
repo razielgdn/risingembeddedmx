@@ -1,0 +1,96 @@
+---
+title: "Historias Laborales IV. Dextra"
+layout: article
+tags:
+    - trabajo
+    - blog
+    - español
+lang: es
+aside: 
+    toc: true
+---
+
+En esta serie de artículos, comparto mis experiencias laborales a lo largo de los años. En esta ocasión, hablaré sobre mi tiempo en Dextra, una empresa de tecnología donde trabajé durante un período significativo de mi carrera.
+
+## La pandemia
+
+Desde que se declaró la emergencia, fui recordado de CODE y regresé a Oaxaca, pasaron varios meses para lograr conseguir un empleo, dada la situación económica del mundo era de pura y total incertidumbre, técnicamente no había vacantes para desarrollo de software embebido y en general. Fueron meses sin ver algun anuncio de empleo de mi área de expertise. 
+Desde Mayo hasta Octubre buscaba vacantes en sitios de empleo y no encontraba nada, de cualquier manera, habia ahorrado algo de dinero así que no me preocupaba tanto. Esos meses me sirvieron para reconectar con mi familia, a la cual llevaba ya un año sin convivir demasiado, además esos días los dedique a recorrer el valle de Oaxaca en bicicleta, lo que ayudaba a despejar la mente y a mantenerme activo. 
+A la par que me la pase también Jugando videojuegos con mi hermano Abner que estaba en sus ultimos cuatrimestres de la carrera. Fue en está epoca donde desempolve mis guias de estudio que habia usado anteriormente para prepararme si es que caía alguna oportunidad de empleo. 
+
+En octubre cuando comenzaban a publicarse algunas vacantes en la industria, nuevamente apliqué a toda oportunidad que se me presentaba y fue así como conseguí varias entrevistas, esta vez ya con la experiencia de CODE en el currículum fue un tanto más sencillo lograr entrar a procesos de selección. 
+Si mi memoría no me falla, esta vez si me entrevistaron en Bosch, Continental, Dextra Technologies, Honeywell y Capgemini, en las cuales logre pasar varias etapas de selección. 
+
+Al final Dextra fue la primera que me ofreción una carta oferta y como en ese momento estaba necesitado de trabajo, acepte sin pensarlo mucho.
+
+Me incorporé a Dextra un lunes 14 de Diciembre del 2020, como me habían informado, estaría de manera remota un tiempo, hasta que se pudiera regresar a la oficina. Y de mi parte estuvo bien el trato. 
+Dado que intento ser transparente con mis experiencias y sueldos, puedo decir que mi sueldo de entrada fue de 3 veces el salario máximo que logre obtener en Oaxaca. Y era desarrollador Junior aun. 
+
+## El trabajo
+
+El primer mes estuvo muy relajado, me asignaron trainings para prepararme en los distintos campos que se requieren en el mundo automotriz, como son el uso de UDS (Unified Diagnostic Services), material de estudio de Lenguaje C, entre a algunas juntas para conocer las herramientas de Pruebas unitarias y el set de CANOE, que para el caso no comprendí nada. 
+
+A finales de enero de 2021, desafortunadamente enferme de Covid, lo que me dejo dos semanas sin poder hacer nada, de hecho le comenté del diagnostico inmediatamente a mi manager, que se limitó a decir que me recuperara pronto, que checara si sería necesaro el uso del seguro de Gastos medicos mayores y que me mantuviera en contacto. Afortunadamente nadie en la familia necesito hospitalización aunque sí la pasamos muy mal, con fiebre, dolor de cabeza, dolor muscular y pérdida del gusto y olfato. Aun recuerdo esas noches que parecian eternas de escalofríos y con la sensación de que me faltaba el aire al respirar.
+
+Después de recuperarme, me reincorpore al trabajo y me asignaron al CBC, uno de los tantos proyectos automotrices que traiamos en Dextra, computadora centrar de muchos vehículos de cierto consorcio de marcas gringas de coches. A la par que me dieron fecha para presentarme en Monterrey. El 28 de Febrero. 
+
+Dextra era una consultora de software, como nos gustada autodenominarnos una casa de mercenarios que eramos rentados al mejor postor el cliente al que yo estaba asignado era Continental, la misma empresa que no me contrato como empleado regular al no ser lo suficente bueno para sus estándares, entre ellos que mi inglés (aun malo, en el sentido que no tengo vocabulario fuera de lo técnico) no era el mas claro, mis calificaciones de egreso de la universidad no fueron tan buenas y además no tenía la experciencia que ellos buscaban. 
+
+Platicando con mis compañeros más adelante me enteré que no fui el único en esa situación. El punto es que teníamos proyectos bastante pesados que realizabamos en conjunto con ingenieros de Continental y en el caso del mio propio con Capgemini. 
+
+### El CBC
+
+Después de la semana de cuarentena por haber viajado me presente a la oficina de Dextra donde conocí a mi equipo de trabajo. 
+
+- Giulio, el líder supremo, un jarocho descendiente de italianos, siempre con una sonrisa en la cara y dispuesto a subir cerros, ir al gym y cuando se necesitara ponerse a jalar. 
+- Israel Barreras, un Sinaloense de esos acelerados, con un gran sentido del humor y a quien llegue a ostigar con mis preguntas sobre el proyecto, he de admitir que soy un poco lento para comprender nuevas cosas asi que tuve que hacerlo trabajar horas extras para explicarme lo que necesitaba aprender. 
+- Mario, un vato de allá de Sonora que sabía mas cosas de anime que de la vida, muy buen ingeniero, el puñetas nos abandono a la primera que pudo, pero que buenas se pusieron las como 3 carnitas asadas que se armo el isra para despedirlo. 
+- Joaquín, un personaje que será recurrente en estas historias supongo, un Regio de esos que hacen carnita asada cada semana, y mi guía espiritual en la senda de anorteñarme. Originalmente era parte del equipo de systemas, pero paso al lado de los desarrolladores más por necesidad que por vocación, y sería otro de esos amigos que hacen mas por ti que algunos familiares.
+- Habia otro par de integrantes en el equpo que tampoco duraron mucho, Evaristo, un vato que se fue pronto a otra empresa y un señor que nunca vimos en persona de nombre Gerardo también se fue a otra emrpesa después de un tiempo.
+
+Fue con ellos que aprendí a trabajar de lleno en el mundo automotriz, donde todos los features son para ayer, hay que hacer que todo funcione lo mejor posible y donde tocas código el 30% del tiempo y el resto es para documentacion, pruebas, juntas, peleas con el cliente, peleas con sistemas, regañar testers, etc.
+
+En el CBC me toco trabajar en el desarrollo de features relacionados con la parte de diagnostico del vehículo, lo que implicaba trabajar con protocolos como UDS, CAN, LIN, etc. Además de eso, también me asignaron tareas relacionadas con la integración de software y la validación de los mismos en el vehículo. Fue un reto bastante grande, pero también una gran oportunidad para aprender y crecer como ingeniero de software embebido en el mundo automotriz.
+
+En este proyecto fui creciendo en habilidades, experiencia y sueldo, al grado que a finales de 2021 ya habia subido significativamente mi salario y además me habia ganado un par de bonos. 
+
+Del lado del cliente estaban muy contentos con mi desempeño, les habia resuelto en tiempo y forma varios issues críticos que habian salido en el proyecto y no me pesaba dar el extra cuando se necesitaba implementar un cambio de último momento o resolver un bug que había salido en la validación.
+
+Varios de mis compañeros se comenzaron a cambiar de empresa, dado que les ofrecían mejores sueldos, trabajo 100% remoto, o siemplemente buscando algo mas acorde a sus objetivos personales. De mi parte nada mas veía crecer mis responsabilidades y aumentar mi sueldo además de que ya había desarrollado cierto expertice para cargar con ello. De hecho al final solo nos quedamos Joaquin y yo como responsables desde por ahi de noviembre del 2021 hasta el 2023 cuando se terminó el proyecto para Dextra.
+
+Asendí bastante rápido a nivel de desarrollador middle, y aunque no me sentía tan seguro de mis habilidades, el equipo y el cliente confiaban en mi trabajo y eso me motivaba a seguir aprendiendo y mejorando cada día.
+
+A inicios de 2022, ya estaba yo encargado de hacer la integración de los cambios de varios desarrolladores, además de liberar los releases, para ese punto, como ya mencioné solo eramos 2 Desarrolladores de parte de Dextra, los demás eran de Capgemini y Continental, entre ellos varios recien egresados de la universidad a quienes les dí sus onboardings y les ayude a entender el proyecto y realizar los procedimientos para que desempeñaran su trabajo de la mejor manera posible.
+
+Entre ellos estuvieon Luis Angel, Elio, David y la comadre Hana. A quienes nunca conocí en persona porque ellos trabajaban en Guadalajara, pero considero buenos amigos y se que les está llendo muy bien en su vida laboral.
+
+Sobre todo con Hana desarrollamos una buena amistad y de vez en cuando nos quejamos de nuestros jefes o las rachas de explotación. Ella es de esas que les gusta grabar potcasts de Whatsapp con detalles que da gusto escuchar. 
+
+Del lado de Dextra, junto con Joaquín tuvimos una etapa donde tuvimos que realizar varias debugg sessions con el cliente de Continental, donde las discusiones se ponian bastante pesadas con quienes nos daban la capa de aplicación y cada uno intentava imponer su voluntad sobre el otro. 
+En un issue de esos, me toco aplacar a un desarrollador de modelos de matlab, argumentando como su sofware incrementaba el cpu load del sistema casi al 100% por una variable no inicializada y una maquina de estados que se perdía.  
+
+Un par de semanas después mi manager me llamo para tener una conversacíon sobre mi desempleño, temí lo peor pero para sorpresa mia, me estaban promoviendo otro nivel, asi fue como pase a ser "Software Engineer II", a un escalón del seniority que hoy dia aun no logro conseguir.
+
+El proyecto del CBC termino para dextra a mediados del 2023, después de casi 3 años de trabajo intenso, donde aprendí muchísimo y tuve la oportunidad de trabajar con un gran equipo. 
+
+Ahi fue donde me transfirieron a otro proyecto, un modulo de luces y frenos para trailers. 
+
+### La compra de Dextra por Deloitte
+Desde mediados del 2021 supimos que habia platicas de Deloitte de hacerse con una parte de Dextra, al final fue una compra total que se consumo en 2022, lo que hizo que la empresa pasara por cambios significativos en su estructura y forma de trabajo.
+
+
+
+
+
+### El módulo de luces y frenos
+
+Antes de contar lo que vivi en este proyecto, debo mencionar que el buen Felipe llego a Dextra a mediados de 2021, si mal no recuerdo, y mi hermano consiguio empleo también en Dextra por ahi del año 2022. 
+
+
+
+### La conti área. 
+
+Los que estabamos asignados a Continental teníamos un espacio de trabajo especial dentro de las oficinas de Dextra, que se llamaba la "Conti Area". Era un espacio dedicado exclusivamente para los proyectos relacionados con Continental, donde teníamos acceso a herramientas y recursos específicos para trabajar en esos proyectos.
+
+Aqui conocí a varios de mis amigos fuera del proyecto, ya que la comunidad era muy unida y cualquiera te aconsejaba sobre las dudas que tuvieras, tanto técnicas como de la vida en sí. 
+
