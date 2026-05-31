@@ -14,83 +14,108 @@ En esta serie de artículos, comparto mis experiencias laborales a lo largo de l
 
 ## La pandemia
 
-Desde que se declaró la emergencia, fui recordado de CODE y regresé a Oaxaca, pasaron varios meses para lograr conseguir un empleo, dada la situación económica del mundo era de pura y total incertidumbre, técnicamente no había vacantes para desarrollo de software embebido y en general. Fueron meses sin ver algun anuncio de empleo de mi área de expertise. 
-Desde Mayo hasta Octubre buscaba vacantes en sitios de empleo y no encontraba nada, de cualquier manera, habia ahorrado algo de dinero así que no me preocupaba tanto. Esos meses me sirvieron para reconectar con mi familia, a la cual llevaba ya un año sin convivir demasiado, además esos días los dedique a recorrer el valle de Oaxaca en bicicleta, lo que ayudaba a despejar la mente y a mantenerme activo. 
-A la par que me la pase también Jugando videojuegos con mi hermano Abner que estaba en sus ultimos cuatrimestres de la carrera. Fue en está epoca donde desempolve mis guias de estudio que habia usado anteriormente para prepararme si es que caía alguna oportunidad de empleo. 
+Desde que se declaró la emergencia, fui recordado de CODE y regresé a Oaxaca. Pasaron varios meses para lograr conseguir un empleo; dada la situación económica del mundo era de pura y total incertidumbre, técnicamente no había vacantes para desarrollo de software embebido ni en general. Fueron meses sin ver algún anuncio de empleo de mi área de expertise. 
+Desde mayo hasta octubre buscaba vacantes en sitios de empleo y no encontraba nada; de cualquier manera, había ahorrado algo de dinero así que no me preocupaba tanto. Esos meses me sirvieron para reconectar con mi familia, a la cual llevaba ya un año sin convivir demasiado; además, esos días los dediqué a recorrer el valle de Oaxaca en bicicleta, lo que ayudaba a despejar la mente y a mantenerme activo. 
+A la par me la pasé también jugando videojuegos con mi hermano Abner, que estaba en sus últimos cuatrimestres de la carrera. Fue en esta época donde desempolvé mis guías de estudio que había usado anteriormente para prepararme, por si caía alguna oportunidad de empleo. 
 
 En octubre cuando comenzaban a publicarse algunas vacantes en la industria, nuevamente apliqué a toda oportunidad que se me presentaba y fue así como conseguí varias entrevistas, esta vez ya con la experiencia de CODE en el currículum fue un tanto más sencillo lograr entrar a procesos de selección. 
-Si mi memoría no me falla, esta vez si me entrevistaron en Bosch, Continental, Dextra Technologies, Honeywell y Capgemini, en las cuales logre pasar varias etapas de selección. 
+Si mi memoria no me falla, esta vez sí me entrevistaron en Bosch, Continental, Dextra Technologies, Honeywell y Capgemini, en las cuales logré pasar varias etapas de selección. 
 
-Al final Dextra fue la primera que me ofreción una carta oferta y como en ese momento estaba necesitado de trabajo, acepte sin pensarlo mucho.
+Al final Dextra fue la primera que me ofreció una carta oferta y como en ese momento estaba necesitado de trabajo, acepté sin pensarlo mucho.
 
 Me incorporé a Dextra un lunes 14 de Diciembre del 2020, como me habían informado, estaría de manera remota un tiempo, hasta que se pudiera regresar a la oficina. Y de mi parte estuvo bien el trato. 
-Dado que intento ser transparente con mis experiencias y sueldos, puedo decir que mi sueldo de entrada fue de 3 veces el salario máximo que logre obtener en Oaxaca. Y era desarrollador Junior aun. 
+Dado que intento ser transparente con mis experiencias y sueldos, puedo decir que mi sueldo de entrada fue de 3 veces el salario máximo que logré obtener en Oaxaca. Y era desarrollador junior aún. 
 
 ## El trabajo
 
 El primer mes estuvo muy relajado, me asignaron trainings para prepararme en los distintos campos que se requieren en el mundo automotriz, como son el uso de UDS (Unified Diagnostic Services), material de estudio de Lenguaje C, entre a algunas juntas para conocer las herramientas de Pruebas unitarias y el set de CANOE, que para el caso no comprendí nada. 
 
-A finales de enero de 2021, desafortunadamente enferme de Covid, lo que me dejo dos semanas sin poder hacer nada, de hecho le comenté del diagnostico inmediatamente a mi manager, que se limitó a decir que me recuperara pronto, que checara si sería necesaro el uso del seguro de Gastos medicos mayores y que me mantuviera en contacto. Afortunadamente nadie en la familia necesito hospitalización aunque sí la pasamos muy mal, con fiebre, dolor de cabeza, dolor muscular y pérdida del gusto y olfato. Aun recuerdo esas noches que parecian eternas de escalofríos y con la sensación de que me faltaba el aire al respirar.
+A finales de enero de 2021, desafortunadamente enfermé de Covid, lo que me dejó dos semanas sin poder hacer nada. De hecho le comenté del diagnóstico inmediatamente a mi manager, que se limitó a decir que me recuperara pronto, que checara si sería necesario el uso del seguro de gastos médicos mayores y que me mantuviera en contacto. Afortunadamente nadie en la familia necesitó hospitalización aunque sí la pasamos muy mal, con fiebre, dolor de cabeza, dolor muscular y pérdida del gusto y olfato. Aún recuerdo esas noches que parecían eternas de escalofríos y con la sensación de que me faltaba el aire al respirar.
 
-Después de recuperarme, me reincorpore al trabajo y me asignaron al CBC, uno de los tantos proyectos automotrices que traiamos en Dextra, computadora centrar de muchos vehículos de cierto consorcio de marcas gringas de coches. A la par que me dieron fecha para presentarme en Monterrey. El 28 de Febrero. 
+Después de recuperarme, me reincorporé al trabajo y me asignaron al CBC, uno de los tantos proyectos automotrices que traíamos en Dextra, computadora central de muchos vehículos de cierto consorcio de marcas gringas de coches. A la par que me dieron fecha para presentarme en Monterrey. El 28 de febrero. 
 
-Dextra era una consultora de software, como nos gustada autodenominarnos una casa de mercenarios que eramos rentados al mejor postor el cliente al que yo estaba asignado era Continental, la misma empresa que no me contrato como empleado regular al no ser lo suficente bueno para sus estándares, entre ellos que mi inglés (aun malo, en el sentido que no tengo vocabulario fuera de lo técnico) no era el mas claro, mis calificaciones de egreso de la universidad no fueron tan buenas y además no tenía la experciencia que ellos buscaban. 
+Dextra era una consultora de software; como nos gustaba autodenominarnos, una casa de mercenarios que éramos rentados al mejor postor. El cliente al que yo estaba asignado era Continental, la misma empresa que no me contrató como empleado regular al no ser lo suficientemente bueno para sus estándares; entre ellos que mi inglés (aún malo, en el sentido de que no tengo vocabulario fuera de lo técnico) no era el más claro, mis calificaciones de egreso de la universidad no fueron tan buenas y además no tenía la experiencia que ellos buscaban. 
 
-Platicando con mis compañeros más adelante me enteré que no fui el único en esa situación. El punto es que teníamos proyectos bastante pesados que realizabamos en conjunto con ingenieros de Continental y en el caso del mio propio con Capgemini. 
+Platicando con mis compañeros más adelante me enteré de que no fui el único en esa situación. El punto es que teníamos proyectos bastante pesados que realizábamos en conjunto con ingenieros de Continental y, en el caso del mío propio, con Capgemini. 
 
 ### El CBC
 
-Después de la semana de cuarentena por haber viajado me presente a la oficina de Dextra donde conocí a mi equipo de trabajo. 
+Después de la semana de cuarentena por haber viajado, me presenté a la oficina de Dextra donde conocí a mi equipo de trabajo. 
 
-- Giulio, el líder supremo, un jarocho descendiente de italianos, siempre con una sonrisa en la cara y dispuesto a subir cerros, ir al gym y cuando se necesitara ponerse a jalar. 
-- Israel Barreras, un Sinaloense de esos acelerados, con un gran sentido del humor y a quien llegue a ostigar con mis preguntas sobre el proyecto, he de admitir que soy un poco lento para comprender nuevas cosas asi que tuve que hacerlo trabajar horas extras para explicarme lo que necesitaba aprender. 
-- Mario, un vato de allá de Sonora que sabía mas cosas de anime que de la vida, muy buen ingeniero, el puñetas nos abandono a la primera que pudo, pero que buenas se pusieron las como 3 carnitas asadas que se armo el isra para despedirlo. 
-- Joaquín, un personaje que será recurrente en estas historias supongo, un Regio de esos que hacen carnita asada cada semana, y mi guía espiritual en la senda de anorteñarme. Originalmente era parte del equipo de systemas, pero paso al lado de los desarrolladores más por necesidad que por vocación, y sería otro de esos amigos que hacen mas por ti que algunos familiares.
-- Habia otro par de integrantes en el equpo que tampoco duraron mucho, Evaristo, un vato que se fue pronto a otra empresa y un señor que nunca vimos en persona de nombre Gerardo también se fue a otra emrpesa después de un tiempo.
+- Giulio, el líder supremo, un jarocho descendiente de italianos, siempre con una sonrisa en la cara y dispuesto a subir cerros, ir al gym y cuando se necesitara ponerse a jalar; broma de repente era workaholic el amigo, y nos tocó servirle de escuderos para sacar el trabajo de forma rápida cuando se necesitaba. 
+- Israel Barreras, un sinaloense de esos acelerados, con un gran sentido del humor y a quien llegué a hostigar con mis preguntas sobre el proyecto. He de admitir que soy un poco lento para comprender cosas nuevas, así que tuve que hacerlo trabajar horas extras para explicarme lo que necesitaba aprender. Cada que se descontrola, el número de cervezas que nos tomamos el buen Isra está presente. 
+  
+- Mario, un vato de allá de Sonora que sabía más cosas de anime que de la vida, muy buen ingeniero; el puñetas nos abandonó a la primera que pudo, pero qué buenas se pusieron las como 3 carnitas asadas que armó el Isra para despedirlo. 
+- Joaquín, un personaje que será recurrente en estas historias supongo, un regio de esos que hacen carnita asada cada semana y mi guía espiritual en la senda de anorteñarme. Originalmente era parte del equipo de sistemas, pero pasó al lado de los desarrolladores más por necesidad que por vocación, y sería otro de esos amigos que hacen más por ti que algunos familiares.
+- Había otro par de integrantes en el equipo que tampoco duraron mucho: Evaristo, un vato que se fue pronto a otra empresa, y un señor que nunca vimos en persona de nombre Gerardo, quien también se fue a otra empresa después de un tiempo.
 
-Fue con ellos que aprendí a trabajar de lleno en el mundo automotriz, donde todos los features son para ayer, hay que hacer que todo funcione lo mejor posible y donde tocas código el 30% del tiempo y el resto es para documentacion, pruebas, juntas, peleas con el cliente, peleas con sistemas, regañar testers, etc.
+Fue con ellos que aprendí a trabajar de lleno en el mundo automotriz, donde todos los features son para ayer, hay que hacer que todo funcione lo mejor posible y donde tocas código el 30% del tiempo; el resto es para documentación, pruebas, juntas, peleas con el cliente, peleas con sistemas, regañar testers, etc.
 
-En el CBC me toco trabajar en el desarrollo de features relacionados con la parte de diagnostico del vehículo, lo que implicaba trabajar con protocolos como UDS, CAN, LIN, etc. Además de eso, también me asignaron tareas relacionadas con la integración de software y la validación de los mismos en el vehículo. Fue un reto bastante grande, pero también una gran oportunidad para aprender y crecer como ingeniero de software embebido en el mundo automotriz.
+En el CBC me tocó trabajar en el desarrollo de features relacionados con la parte de diagnóstico del vehículo, lo que implicaba trabajar con protocolos como UDS, CAN, LIN, etc. Además de eso, también me asignaron tareas relacionadas con la integración de software y la validación de los mismos en el vehículo. Fue un reto bastante grande, pero también una gran oportunidad para aprender y crecer como ingeniero de software embebido en el mundo automotriz.
 
-En este proyecto fui creciendo en habilidades, experiencia y sueldo, al grado que a finales de 2021 ya habia subido significativamente mi salario y además me habia ganado un par de bonos. 
+En este proyecto fui creciendo en habilidades, experiencia y sueldo, al grado de que a finales de 2021 ya había subido significativamente mi salario y además me había ganado un par de bonos. 
 
-Del lado del cliente estaban muy contentos con mi desempeño, les habia resuelto en tiempo y forma varios issues críticos que habian salido en el proyecto y no me pesaba dar el extra cuando se necesitaba implementar un cambio de último momento o resolver un bug que había salido en la validación.
+Del lado del cliente estaban muy contentos con mi desempeño; les había resuelto en tiempo y forma varios issues críticos que habían salido en el proyecto y no me pesaba dar el extra cuando se necesitaba implementar un cambio de último momento o resolver un bug que había salido en la validación.
 
-Varios de mis compañeros se comenzaron a cambiar de empresa, dado que les ofrecían mejores sueldos, trabajo 100% remoto, o siemplemente buscando algo mas acorde a sus objetivos personales. De mi parte nada mas veía crecer mis responsabilidades y aumentar mi sueldo además de que ya había desarrollado cierto expertice para cargar con ello. De hecho al final solo nos quedamos Joaquin y yo como responsables desde por ahi de noviembre del 2021 hasta el 2023 cuando se terminó el proyecto para Dextra.
+Varios de mis compañeros se comenzaron a cambiar de empresa, dado que les ofrecían mejores sueldos, trabajo 100% remoto, o simplemente buscando algo más acorde a sus objetivos personales. De mi parte nada más veía crecer mis responsabilidades y aumentar mi sueldo, además de que ya había desarrollado cierto expertise para cargar con ello. De hecho, al final solo nos quedamos Joaquín y yo como responsables, desde por ahí de noviembre del 2021 hasta el 2023 cuando se terminó el proyecto para Dextra.
 
-Asendí bastante rápido a nivel de desarrollador middle, y aunque no me sentía tan seguro de mis habilidades, el equipo y el cliente confiaban en mi trabajo y eso me motivaba a seguir aprendiendo y mejorando cada día.
+Ascendí bastante rápido a nivel de desarrollador middle, y aunque no me sentía tan seguro de mis habilidades, el equipo y el cliente confiaban en mi trabajo y eso me motivaba a seguir aprendiendo y mejorando cada día.
 
-A inicios de 2022, ya estaba yo encargado de hacer la integración de los cambios de varios desarrolladores, además de liberar los releases, para ese punto, como ya mencioné solo eramos 2 Desarrolladores de parte de Dextra, los demás eran de Capgemini y Continental, entre ellos varios recien egresados de la universidad a quienes les dí sus onboardings y les ayude a entender el proyecto y realizar los procedimientos para que desempeñaran su trabajo de la mejor manera posible.
+A inicios de 2022, ya estaba yo encargado de hacer la integración de los cambios de varios desarrolladores, además de liberar los releases. Para ese punto, como ya mencioné, solo éramos 2 desarrolladores de parte de Dextra; los demás eran de Capgemini y Continental, entre ellos varios recién egresados de la universidad a quienes les di sus onboardings y les ayudé a entender el proyecto y realizar los procedimientos para que desempeñaran su trabajo de la mejor manera posible.
 
-Entre ellos estuvieon Luis Angel, Elio, David y la comadre Hana. A quienes nunca conocí en persona porque ellos trabajaban en Guadalajara, pero considero buenos amigos y se que les está llendo muy bien en su vida laboral.
+Entre ellos estuvieron Luis Ángel, Elio, David y la comadre Hana, a quienes nunca conocí en persona porque ellos trabajaban en Guadalajara, pero considero buenos amigos y sé que les está yendo muy bien en su vida laboral.
 
-Sobre todo con Hana desarrollamos una buena amistad y de vez en cuando nos quejamos de nuestros jefes o las rachas de explotación. Ella es de esas que les gusta grabar potcasts de Whatsapp con detalles que da gusto escuchar. 
+Sobre todo con Hana desarrollamos una buena amistad y de vez en cuando nos quejamos de nuestros jefes o las rachas de explotación laboral que vivimos. Ella es de esas que les gusta grabar podcasts de WhatsApp con detalles que da gusto escuchar. 
 
-Del lado de Dextra, junto con Joaquín tuvimos una etapa donde tuvimos que realizar varias debugg sessions con el cliente de Continental, donde las discusiones se ponian bastante pesadas con quienes nos daban la capa de aplicación y cada uno intentava imponer su voluntad sobre el otro. 
-En un issue de esos, me toco aplacar a un desarrollador de modelos de matlab, argumentando como su sofware incrementaba el cpu load del sistema casi al 100% por una variable no inicializada y una maquina de estados que se perdía.  
+Del lado de Dextra, junto con Joaquín tuvimos una etapa donde tuvimos que realizar varias debug sessions con el cliente de Continental, donde las discusiones se ponían bastante pesadas con quienes nos daban la capa de aplicación y cada uno intentaba imponer su voluntad sobre el otro. 
 
-Un par de semanas después mi manager me llamo para tener una conversacíon sobre mi desempleño, temí lo peor pero para sorpresa mia, me estaban promoviendo otro nivel, asi fue como pase a ser "Software Engineer II", a un escalón del seniority que hoy dia aun no logro conseguir.
+En un issue de esos, me tocó aplacar a un desarrollador de modelos de Matlab, argumentando cómo su software incrementaba el CPU load del sistema casi al 100% por una variable no inicializada y una máquina de estados que se perdía.  
 
-El proyecto del CBC termino para dextra a mediados del 2023, después de casi 3 años de trabajo intenso, donde aprendí muchísimo y tuve la oportunidad de trabajar con un gran equipo. 
+Un par de semanas después mi manager me llamó para tener una conversación sobre mi desempeño; temí lo peor, pero para sorpresa mía me estaban promoviendo otro nivel. Así fue como pasé a ser "Software Engineer II", a un escalón del seniority que hoy día aún no logro conseguir.
 
-Ahi fue donde me transfirieron a otro proyecto, un modulo de luces y frenos para trailers. 
+El proyecto del CBC terminó para Dextra a inicios del 2023, después de casi 3 años de trabajo intenso, donde aprendí muchísimo y tuve la oportunidad de trabajar con un gran equipo. 
+
+Ahí fue donde me transfirieron a otro proyecto, un módulo de luces y frenos para tráilers. 
 
 ### La compra de Dextra por Deloitte
-Desde mediados del 2021 supimos que habia platicas de Deloitte de hacerse con una parte de Dextra, al final fue una compra total que se consumo en 2022, lo que hizo que la empresa pasara por cambios significativos en su estructura y forma de trabajo.
+Desde mediados del 2021 supimos que había pláticas de Deloitte de hacerse con una parte de Dextra; al final fue una compra total que se consumó en 2022, lo que hizo que la empresa pasara por cambios significativos en su estructura y forma de trabajo.
 
+En este cambio se implementaron nuevas políticas y procedimientos, lo que generó un éxodo de empleados. El primer detonante fue que nos retiraron (por un par de semanas) el seguro de gastos médicos menores y, aparte de eso, tuvimos que pagar una cuota por nuestro seguro de gastos médicos mayores; ese gesto le costó a Dextra al menos 6 desarrolladores de alto nivel y experiencia. 
 
+Otra de las cuestiones fue que nos quitaron los bonos de productividad, y hubo cierta amenaza de quitarnos la "prestación" de los ubers. Desde que me uní a Dextra, las idas a la oficina eran solo cuando fuera necesario, así que se podían permitir pagarnos el viaje de Uber. Con el cambio de empresa, al inicio se nos dijo que se nos retirarían los ubers; al final los dejaron pero con un monto máximo. 
 
+He de aclarar que cada cambio que se intentaba implementar le costaba uno o dos empleados a la compañía. 
+Al final alinearon sus políticas y crearon algunos bonos, conservaron el seguro de gastos médicos menores y nos dieron el poderoso wellbeing, un bono para compra de equipo deportivo, pagar el gimnasio, comprar videojuegos y muchas otras cosas.
 
 
 ### El módulo de luces y frenos
 
-Antes de contar lo que vivi en este proyecto, debo mencionar que el buen Felipe llego a Dextra a mediados de 2021, si mal no recuerdo, y mi hermano consiguio empleo también en Dextra por ahi del año 2022. 
+Antes de contar lo que viví en este proyecto, debo mencionar que Felipe se unió a Dextra a mediados de 2021, si mal no recuerdo, y mi hermano consiguió empleo también en Dextra por ahí del año 2022. 
+
+El amigo Felipe, después de tomarse unos meses de vacaciones, decidió conseguir trabajo sin importarle que fuera lejos de la CDMX. 
+
+Aquí entra una anécdota: desde que yo me uní a Dextra, lo contacté para invitarlo a que se uniera, dado que si yo hacía la recomendación de su perfil había un bono de referencia nada despreciable, con el cual había prometido que compraría un asador para empezar con mi proceso de obtener la ciudadanía regia. 
+
+Pues Felipe prefirió no avisarme que ya estaba buscando empleo; lo contactó atracción de talento primero y yo me quedé sin bono. 
+Así que su carnita asada de bienvenida tuvo que ser en un asador hechizo que estaba en el balcón de mi departamento. 
+
+Cuando se unió a Dextra, lo asignaron al módulo de luces y frenos de tráiler, un proyecto que estaba en una etapa más temprana que el CBC, y donde le tocó ser pupilo de David F., un ingeniero senior con ya varios años de experiencia que se encargaba de liderar el proyecto. 
+
+Pasa algo curioso en cuanto a nuestras aptitudes y las tareas que nos encargan desarrollar: desde que estuvimos en CODE ingeniería, por alguna razón que aún no logro comprender del todo, a mí me asignaban tareas de alta urgencia, con fechas de entrega ajustadas y que tienen un nivel de dificultad alto. 
+En el caso de Felipe, le han asignado siempre tareas que, si bien son de alta dificultad y requieren un buen nivel de conocimientos, las fechas de entrega para él siempre han sido más flexibles, así que siempre vivimos diferente la concepción de la vida laboral. 
+
+En mi caso, tuve que tomar responsabilidades altas del proyecto del CBC desde que llevaba solo unos cuantos meses, y estuve desplegando releases con tiempos cortos en poco tiempo, lo que me llevaba a tener que dar esfuerzo y horas extras para cumplir con mis responsabilidades. 
+
+En el caso de Felipe, siempre ha logrado dosificar sus tareas de una mejor manera, permitiéndole muchas veces tener un poco más de tiempo libre para hacer otras actividades. 
+
+Regresando a la historia principal: cuando me asignaron al mismo proyecto que Felipe, fue por decisión de nuestro cliente, quien por cierto me había propuesto para estar primero en otra computadora central. Luego de 3 días me informaron que me cambiarían mejor al módulo de radiofrecuencia del sistema de llaves; pedí permisos y nuevamente, de un día para otro me informaron que me asignarían al módulo de luces y frenos, donde ya estaba Felipe.
+
+La razón fue, al parecer, que el cliente me estaba llevando a proyectos donde necesitaban a sus mejores desarrolladores. Fue ahí que nos unieron: del lado de Dextra, a Jesús Acosta (otro personaje que merece su propio artículo) y a mí; del lado de Continental, a Iván (otro compañero que estuvo en el CBC y me dio mentorías en ciertos temas), León y Edgar. Cuando le conté al Chuy por qué me trajeron de un lado para otro, me dijo la frase icónica: "Por si no te has dado cuenta, Pineda (el manager del lado de Continental) te asignó al Suicide Squad".  
 
 
+### La Conti área. 
 
-### La conti área. 
+Los que estábamos asignados a Continental teníamos un espacio de trabajo especial dentro de las oficinas de Dextra, que se llamaba la "Conti Area". Era un espacio dedicado exclusivamente para los proyectos relacionados con Continental, donde teníamos acceso a herramientas y recursos específicos para trabajar en esos proyectos.
 
-Los que estabamos asignados a Continental teníamos un espacio de trabajo especial dentro de las oficinas de Dextra, que se llamaba la "Conti Area". Era un espacio dedicado exclusivamente para los proyectos relacionados con Continental, donde teníamos acceso a herramientas y recursos específicos para trabajar en esos proyectos.
-
-Aqui conocí a varios de mis amigos fuera del proyecto, ya que la comunidad era muy unida y cualquiera te aconsejaba sobre las dudas que tuvieras, tanto técnicas como de la vida en sí. 
+Aquí conocí a varios de mis amigos fuera del proyecto, ya que la comunidad era muy unida y cualquiera te aconsejaba sobre las dudas que tuvieras, tanto técnicas como de la vida en sí. 
 
