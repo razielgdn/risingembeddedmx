@@ -10,6 +10,8 @@
 *.log.*
 
 /.vscode/
+/.kilo/
+/.github/copilot-instructions.md
 
 node_modules/
 .sass-cache/
@@ -27,3 +29,4 @@ _site/
 .jekyll-cache/
 .devcontainer/
 meta-rising-embedded-os
+
