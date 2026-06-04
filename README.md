@@ -51,7 +51,7 @@ risingembeddedmx/
 ├── assets/           # Images, documents, and static files
 ├── contents/         # Organized content collections
 │   ├── _3dprinting/  # 3D printing related content
-│   ├── _data/        # Content-specific data files
+│   ├── _notes/       # Quick notes and cheat sheets (Docker, Make)
 │   ├── _posts/       # Blog posts in Markdown format
 │   └── _projects/    # Individual project pages and tutorials
 │       ├── en/       # English project pages
@@ -67,7 +67,7 @@ risingembeddedmx/
   - **`_posts/`**: Blog entries documenting project progress, technical insights, and learning experiences
   - **`_projects/`**: Dedicated project pages with bilingual support (English/Spanish)
   - **`_3dprinting/`**: 3D printing projects and tutorials
-  - **`_data/`**: Content-specific configuration and data
+  - **`_notes/`**: Quick reference cheat sheets and notes (Docker, Make, etc.) with bilingual support
 - **`about/`**: Personal and professional information with bilingual support (English/Spanish)
 - **`assets/`**: All static content including circuit diagrams, code screenshots, and project photos
 
